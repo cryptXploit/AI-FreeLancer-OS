@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <marker id="ch4-arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0284C7" />
+    </marker>
+    <marker id="ch4-arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0D9488" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="0" width="960" height="540" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" rx="8" />
+
+  <!-- Top Header Banner -->
+  <rect x="20" y="16" width="920" height="44" rx="6" fill="#0F172A" />
+  <text x="480" y="43" text-anchor="middle" fill="#FFFFFF" font-size="14.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 4 MINDMAP: THE B.C.R. PRECISION PRICING &amp; MARGIN DEFENSE FORMULA</text>
+
+  <!-- Connectors from Central Hub to 5 Nodes -->
+  <path d="M 330 242 L 288 155" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch4-arrow-blue)" />
+  <path d="M 630 242 L 672 155" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch4-arrow-blue)" />
+  <path d="M 640 272 L 672 275" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#ch4-arrow-teal)" />
+  <path d="M 555 308 L 620 368" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#ch4-arrow-teal)" />
+  <path d="M 405 308 L 315 368" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch4-arrow-blue)" />
+
+  <!-- Central Hub -->
+  <rect x="308" y="214" width="344" height="98" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="2.5" />
+  <text x="480" y="242" text-anchor="middle" fill="#FFFFFF" font-size="12.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">THE B.C.R. PRICING ENGINE</text>
+  <text x="480" y="264" text-anchor="middle" fill="#0284C7" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Quote Price = (Base Hours × Target EHR)</text>
+  <text x="480" y="286" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">× Complexity Multiplier + Risk Buffer</text>
+
+  <!-- COMPONENT 1: Top Left -->
+  <rect x="24" y="74" width="284" height="124" rx="8" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" />
+  <rect x="24" y="74" width="284" height="30" rx="6" fill="#0284C7" />
+  <text x="166" y="94" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">COMPONENT 1 — BASE EXECUTION COST (B)</text>
+  <text x="36" y="122" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Granular Work Breakdown Structure (WBS)</text>
+  <text x="36" y="144" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• +15% Project Management &amp; Comms Overhead</text>
+  <text x="36" y="166" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• +15% QA &amp; 2-Round Revision Allowance</text>
+  <text x="36" y="186" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Formula: Base Hours = Craft Hours × 1.30</text>
+
+  <!-- COMPONENT 2: Top Right -->
+  <rect x="652" y="74" width="284" height="124" rx="8" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" />
+  <rect x="652" y="74" width="284" height="30" rx="6" fill="#0284C7" />
+  <text x="794" y="94" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">COMPONENT 2 — COMPLEXITY MULTIPLIER (C)</text>
+  <text x="664" y="122" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Stakeholder Count (1 Founder vs. Committee)</text>
+  <text x="664" y="144" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Technical / Creative Difficulty (1.0x to 1.5x)</text>
+  <text x="664" y="166" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Rush-Timeline Premium (+25% to +50%)</text>
+  <text x="664" y="186" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Protects Against High-Friction Delivery</text>
+
+  <!-- COMPONENT 3: Middle Right -->
+  <rect x="652" y="212" width="284" height="124" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+  <rect x="652" y="212" width="284" height="30" rx="6" fill="#0D9488" />
+  <text x="794" y="232" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">COMPONENT 3 — RISK &amp; FRICTION BUFFER (R)</text>
+  <text x="664" y="260" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Client Asset-Readiness Risk Score</text>
+  <text x="664" y="282" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Third-Party API / Vendor Dependency Risk</text>
+  <text x="664" y="304" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Fixed-Price Margin Buffer (+15% to +30%)</text>
+  <text x="664" y="324" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Eliminates Optimism-Bias Underquoting</text>
+
+  <!-- COMMERCIAL PAYMENT ARCHITECTURE: Bottom Left -->
+  <rect x="24" y="352" width="428" height="114" rx="8" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="24" y="352" width="428" height="30" rx="6" fill="#0F172A" />
+  <text x="238" y="372" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">COMMERCIAL PAYMENT ARCHITECTURE</text>
+  <text x="38" y="400" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• 50/50 or 40/30/30 milestones tied to calendar dates</text>
+  <text x="38" y="422" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Automatic 5-day late-payment work-pause trigger</text>
+  <text x="38" y="444" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Non-refundable deposit &amp; mid-project kill-fee clause</text>
+
+  <!-- PRICE OBJECTION PROTOCOL: Bottom Right -->
+  <rect x="508" y="352" width="428" height="114" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+  <rect x="508" y="352" width="428" height="30" rx="6" fill="#0D9488" />
+  <text x="722" y="372" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">PRICE OBJECTION PROTOCOL (TRADE-DOWN RULE)</text>
+  <text x="522" y="400" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Never discount the price for the exact same scope</text>
+  <text x="522" y="422" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Apply Scope-Down Counter-Offer (remove deliverables)</text>
+  <text x="522" y="444" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Or split cashflow into 40/30/30 date-locked milestones</text>
+
+  <!-- Bottom KPI Bar -->
+  <rect x="20" y="482" width="920" height="42" rx="6" fill="#0F172A" stroke="#0284C7" stroke-width="1.5" />
+  <text x="480" y="508" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TARGET OUTCOMES: Under-Quoted Projects: 0 | Gross Project Margin: &gt;= 70% | Unpaid Waiting Gaps: Eliminated via Date-Tied Milestones | Discounting Losses: $0</text>
+</svg>

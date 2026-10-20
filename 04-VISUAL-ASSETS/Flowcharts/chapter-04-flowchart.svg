@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560">
+  <defs>
+    <marker id="ch4-fc-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0F172A" />
+    </marker>
+    <marker id="ch4-fc-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0284C7" />
+    </marker>
+    <marker id="ch4-fc-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0D9488" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="0" width="960" height="560" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" rx="8" />
+
+  <!-- Top Header Banner -->
+  <rect x="20" y="14" width="920" height="42" rx="6" fill="#0F172A" />
+  <text x="480" y="40" text-anchor="middle" fill="#FFFFFF" font-size="14.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 4 DECISION FLOWCHART: DISCOUNT REQUEST &amp; PRICE OBJECTION DEFENSE</text>
+
+  <!-- Start Node -->
+  <rect x="190" y="68" width="580" height="42" rx="21" fill="#0F172A" stroke="#0284C7" stroke-width="2" />
+  <text x="480" y="94" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CLIENT SAYS: "YOUR PRICE IS ABOVE OUR BUDGET / CAN YOU DO IT FOR $X?"</text>
+  <path d="M 480 110 L 480 138" stroke="#0F172A" stroke-width="2.5" fill="none" marker-end="url(#ch4-fc-navy)" />
+
+  <!-- Gate 1 -->
+  <rect x="200" y="140" width="560" height="54" rx="8" fill="#0284C7" stroke="#0F172A" stroke-width="1.5" />
+  <text x="480" y="162" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 1: WALK-AWAY FLOOR AUDIT</text>
+  <text x="480" y="182" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Is their counter-budget below your B.C.R. Walk-Away Floor (Base Hours × Min EHR)?</text>
+
+  <!-- Gate 1 YES -> Action A (Left) -->
+  <path d="M 200 167 L 160 167 L 160 330" stroke="#0F172A" stroke-width="2.5" fill="none" marker-end="url(#ch4-fc-navy)" />
+  <rect x="65" y="215" width="190" height="24" rx="4" fill="#0F172A" />
+  <text x="160" y="231" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">YES (Below Walk-Away Floor)</text>
+
+  <!-- Gate 1 NO -> Gate 2 -->
+  <path d="M 575 194 L 620 226" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#ch4-fc-teal)" />
+  <rect x="595" y="198" width="175" height="22" rx="4" fill="#0D9488" />
+  <text x="682" y="213" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">NO (Above Walk-Away Floor)</text>
+
+  <!-- Gate 2 -->
+  <rect x="350" y="228" width="560" height="54" rx="8" fill="#0284C7" stroke="#0F172A" stroke-width="1.5" />
+  <text x="630" y="250" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 2: CASHFLOW TIMING VS. TOTAL BUDGET CAP</text>
+  <text x="630" y="270" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Is the objection about total budget size OR cashflow timing?</text>
+
+  <!-- Gate 2 Cashflow Timing -> Action B (Middle) -->
+  <path d="M 495 282 L 480 330" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#ch4-fc-teal)" />
+  <rect x="395" y="293" width="160" height="22" rx="4" fill="#0D9488" />
+  <text x="475" y="308" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Cashflow Timing Issue</text>
+
+  <!-- Gate 2 Total Budget Cap -> Action C (Right) -->
+  <path d="M 780 282 L 795 330" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch4-fc-blue)" />
+  <rect x="710" y="293" width="165" height="22" rx="4" fill="#0F172A" />
+  <text x="792" y="308" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Total Budget Cap Issue</text>
+
+  <!-- ACTION A (Left Box) -->
+  <rect x="24" y="334" width="284" height="148" rx="8" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="24" y="334" width="284" height="30" rx="6" fill="#0F172A" />
+  <text x="166" y="354" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION A — Floor Defense</text>
+  <text x="36" y="380" fill="#0284C7" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Do Not Discount Same Scope:</text>
+  <text x="36" y="402" fill="#1E293B" font-size="10" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">1. Never accept below Walk-Away Floor</text>
+  <text x="36" y="424" fill="#1E293B" font-size="10" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">2. Pivot to Tier 1 Diagnostic Starter</text>
+  <text x="36" y="446" fill="#1E293B" font-size="10" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">3. Or send Lean Scope Option (Prompt 4.3)</text>
+  <text x="36" y="468" fill="#0F172A" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Result: 100% EHR Integrity Preserved</text>
+
+  <!-- ACTION B (Middle Box) -->
+  <rect x="332" y="334" width="296" height="148" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+  <rect x="332" y="334" width="296" height="30" rx="6" fill="#0D9488" />
+  <text x="480" y="354" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION B — Milestone Restructuring</text>
+  <text x="346" y="380" fill="#0D9488" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Keep Full Price — Split Milestones:</text>
+  <text x="346" y="402" fill="#1E293B" font-size="10" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">1. 40% Deposit at Kickoff (Day 1)</text>
+  <text x="346" y="424" fill="#1E293B" font-size="10" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">2. 30% Milestone 2 (Calendar Day 15)</text>
+  <text x="346" y="446" fill="#1E293B" font-size="10" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">3. 30% Final Handover (Calendar Day 30)</text>
+  <text x="346" y="468" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Execute via Prompt 4.4 Clause Builder</text>
+
+  <!-- ACTION C (Right Box) -->
+  <rect x="652" y="334" width="284" height="148" rx="8" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" />
+  <rect x="652" y="334" width="284" height="30" rx="6" fill="#0284C7" />
+  <text x="794" y="354" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION C — The Trade-Down Rule</text>
+  <text x="664" y="380" fill="#0284C7" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Remove Scope to Match Budget:</text>
+  <text x="664" y="402" fill="#1E293B" font-size="10" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">1. Trim secondary pages/deliverables</text>
+  <text x="664" y="424" fill="#1E293B" font-size="10" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">2. Reduce revisions from 2 rounds to 1</text>
+  <text x="664" y="446" fill="#1E293B" font-size="10" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">3. Extend delivery timeline window</text>
+  <text x="664" y="468" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Execute via Prompt 4.3 Counter-Offer</text>
+
+  <!-- Bottom Banner -->
+  <rect x="20" y="500" width="920" height="44" rx="6" fill="#0F172A" stroke="#0D9488" stroke-width="1.5" />
+  <text x="480" y="527" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">IRONCLAD MARGIN RULE: Price and Scope are locked on a seesaw. If the price comes down by 20%, the scope MUST come down by 20%.</text>
+</svg>

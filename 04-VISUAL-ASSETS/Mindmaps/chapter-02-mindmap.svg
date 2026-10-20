@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <marker id="ch2-arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0284C7" />
+    </marker>
+    <marker id="ch2-arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0D9488" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="0" width="960" height="540" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" rx="8" />
+
+  <!-- Top Header Banner -->
+  <rect x="20" y="16" width="920" height="44" rx="6" fill="#0F172A" />
+  <text x="480" y="43" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 2 MINDMAP: THE 3-TIER PRODUCTIZED OFFER MATRIX</text>
+
+  <!-- Connectors from Central Hub to 5 Nodes -->
+  <path d="M 340 242 L 290 155" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch2-arrow-blue)" />
+  <path d="M 620 242 L 670 155" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch2-arrow-blue)" />
+  <path d="M 630 272 L 670 275" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#ch2-arrow-teal)" />
+  <path d="M 555 308 L 620 368" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#ch2-arrow-teal)" />
+  <path d="M 405 308 L 315 368" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch2-arrow-blue)" />
+
+  <!-- Central Hub -->
+  <rect x="320" y="216" width="320" height="96" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="2.5" />
+  <text x="480" y="244" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">PRODUCTIZED SERVICE ARCHITECTURE</text>
+  <text x="480" y="266" text-anchor="middle" fill="#0284C7" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Replacing Open-Ended Hourly Labor</text>
+  <text x="480" y="288" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">with Fixed-Scope Value Tiers</text>
+
+  <!-- TIER 01: Top Left -->
+  <rect x="24" y="74" width="284" height="126" rx="8" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" />
+  <rect x="24" y="74" width="284" height="30" rx="6" fill="#0284C7" />
+  <text x="166" y="94" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TIER 01 — DIAGNOSTIC STARTER (Paid Audit)</text>
+  <text x="36" y="122" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Low-friction entry ($250–$750 fixed fee)</text>
+  <text x="36" y="144" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• 5–7 day turnaround standalone roadmap</text>
+  <text x="36" y="166" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• 100% credit toward Tier 2 within 14 days</text>
+  <text x="36" y="186" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Role: Paid Discovery &amp; Trust Builder</text>
+
+  <!-- TIER 02: Top Right -->
+  <rect x="652" y="74" width="284" height="126" rx="8" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" />
+  <rect x="652" y="74" width="284" height="30" rx="6" fill="#0284C7" />
+  <text x="794" y="94" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TIER 02 — CORE TRANSFORMATION (Flagship)</text>
+  <text x="664" y="122" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Signature sprint ($1,500–$5,000 fixed fee)</text>
+  <text x="664" y="144" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Locked deliverable count &amp; 14–30 day window</text>
+  <text x="664" y="166" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Explicit revision cap (2 structured rounds)</text>
+  <text x="664" y="186" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Role: Primary High-Margin Revenue Engine</text>
+
+  <!-- TIER 03: Middle Right -->
+  <rect x="652" y="212" width="284" height="126" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+  <rect x="652" y="212" width="284" height="30" rx="6" fill="#0D9488" />
+  <text x="794" y="232" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TIER 03 — RETAINER PARTNER (Recurring)</text>
+  <text x="664" y="260" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Predictable MRR ($1,000–$3,500/month)</text>
+  <text x="664" y="282" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Defined monthly SLA deliverable capacity</text>
+  <text x="664" y="304" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Priority async access &amp; zero rollover rule</text>
+  <text x="664" y="324" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Role: High-Anchor &amp; Recurring Cashflow</text>
+
+  <!-- BOUNDARY SHIELD: Bottom Left -->
+  <rect x="24" y="352" width="428" height="114" rx="8" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="24" y="352" width="428" height="30" rx="6" fill="#0F172A" />
+  <text x="238" y="372" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">BOUNDARY SHIELD — EXPLICIT EXCLUSION ARCHITECTURE</text>
+  <text x="38" y="400" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Written "What Is Not Included" boundary clause on every tier</text>
+  <text x="38" y="422" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Pre-priced Add-On Menu &amp; out-of-scope Change Order rate</text>
+  <text x="38" y="444" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Client asset-readiness prerequisite gate before kickoff</text>
+
+  <!-- BUYER PSYCHOLOGY: Bottom Right -->
+  <rect x="508" y="352" width="428" height="114" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+  <rect x="508" y="352" width="428" height="30" rx="6" fill="#0D9488" />
+  <text x="722" y="372" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">BUYER PSYCHOLOGY — ANCHORING &amp; SELF-SELECTION</text>
+  <text x="522" y="400" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Eliminates "Should I hire you vs. a cheaper hourly freelancer?"</text>
+  <text x="522" y="422" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Shifts buyer frame to: "Which of your 3 tiers fits our budget?"</text>
+  <text x="522" y="444" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Rewards practitioner speed &amp; AI efficiency with higher EHR</text>
+
+  <!-- Bottom KPI Bar -->
+  <rect x="20" y="482" width="920" height="42" rx="6" fill="#0F172A" stroke="#0284C7" stroke-width="1.5" />
+  <text x="480" y="508" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TARGET OUTCOMES: Hourly Billing Dependency: 0% | Average Project Value: +45-80% | Scope Disputes: Eliminated Upstream | Client Self-Selection: 3-Option Anchor</text>
+</svg>
