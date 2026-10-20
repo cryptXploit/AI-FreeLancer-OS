@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%" style="font-family: 'Inter', Arial, sans-serif; background-color: #F8FAFC;">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+    </marker>
+  </defs>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="960" height="64" fill="#0F172A"/>
+  <text x="480" y="28" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 10 MINDMAP: THE 20-MINUTE FRIDAY CEO OPERATING CADENCE &amp; 90-DAY SCALING ENGINE</text>
+  <text x="480" y="48" text-anchor="middle" fill="#94A3B8" font-size="11.5" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Governing Cashflow, Effective Hourly Rate, Client Pruning, and Rate Increases in 20 Minutes Every Friday</text>
+
+  <!-- Connector Paths -->
+  <path d="M 365 255 C 310 255, 305 140, 275 140" fill="none" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <path d="M 365 275 C 310 275, 305 280, 275 280" fill="none" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <path d="M 365 295 C 310 295, 305 415, 275 415" fill="none" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <path d="M 595 262 C 650 262, 655 175, 685 175" fill="none" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+  <path d="M 595 288 C 650 288, 655 375, 685 375" fill="none" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- Central Hub -->
+  <rect x="365" y="208" width="230" height="134" rx="14" fill="#0F172A" stroke="#0284C7" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="395" y="196" width="170" height="22" rx="11" fill="#0284C7"/>
+  <text x="480" y="211" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">EXECUTIVE COMMAND HUB</text>
+  <text x="480" y="244" text-anchor="middle" fill="#FFFFFF" font-size="13.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">THE FREELANCE CEO</text>
+  <text x="480" y="264" text-anchor="middle" fill="#0D9488" font-size="13.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">DASHBOARD</text>
+  <line x1="385" y1="278" x2="575" y2="278" stroke="#334155" stroke-width="1"/>
+  <text x="480" y="298" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Transitioning from Reactive Technician</text>
+  <text x="480" y="314" text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">to High-Margin Business Owner</text>
+
+  <!-- Node 1: Top-Left (Metric 01: Cashflow & Effective Hourly Rate) -->
+  <rect x="24" y="82" width="250" height="116" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="24" y="82" width="250" height="28" rx="8" fill="#0284C7"/>
+  <text x="36" y="100" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">METRIC 01 — CASHFLOW &amp; EHR</text>
+  <text x="36" y="124" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 10.1 Margin Telemetry</text>
+  <text x="36" y="143" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Billed vs. collected revenue audit</text>
+  <text x="36" y="160" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Real EHR by client (Revenue ÷ Hours)</text>
+  <text x="36" y="177" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Zero overdue invoices past Day +7</text>
+
+  <!-- Node 2: Mid-Left (Metric 02: Capacity & Deep-Work Allocation) -->
+  <rect x="24" y="220" width="250" height="116" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="24" y="220" width="250" height="28" rx="8" fill="#0D9488"/>
+  <text x="36" y="238" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">METRIC 02 — CAPACITY &amp; CRAFT %</text>
+  <text x="36" y="262" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Protecting the 35–38 Hour Ceiling</text>
+  <text x="36" y="281" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Total weekly hours capped at 35–38h</text>
+  <text x="36" y="298" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Billable craft share target &gt;= 75%</text>
+  <text x="36" y="315" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Unbilled admin drag kept &lt; 15%</text>
+
+  <!-- Node 3: Bottom-Left (Metric 03: 90-Day Pipeline & Retainer Coverage) -->
+  <rect x="24" y="358" width="250" height="116" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="24" y="358" width="250" height="28" rx="8" fill="#0284C7"/>
+  <text x="36" y="376" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">METRIC 03 — 90-DAY PIPELINE</text>
+  <text x="36" y="400" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 10.2 Revenue Forecaster</text>
+  <text x="36" y="419" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Recurring retainer floor &gt;= 50% target</text>
+  <text x="36" y="436" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• 60-day forward visibility radar</text>
+  <text x="36" y="453" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Mandatory 3 warm follow-ups / week</text>
+
+  <!-- Node 4: Top-Right (The 80/20 Quarterly Client & Offer Pruning Audit) -->
+  <rect x="686" y="105" width="250" height="140" rx="10" fill="#FFFFFF" stroke="#0F172A" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="686" y="105" width="250" height="28" rx="8" fill="#0F172A"/>
+  <text x="698" y="123" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">80/20 QUARTERLY CLIENT PRUNING</text>
+  <text x="698" y="147" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 10.3 Keep / Reprice / Replace</text>
+  <text x="698" y="166" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Rank all accounts by EHR &amp; friction</text>
+  <text x="698" y="183" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Top 80%: Nurture &amp; expand retainers</text>
+  <text x="698" y="200" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Bottom 20%: Reprice +25% or offboard</text>
+  <text x="698" y="217" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">• Free capacity for high-EHR sprints</text>
+
+  <!-- Node 5: Bottom-Right (The 85% Capacity Rate-Raise Trigger) -->
+  <rect x="686" y="305" width="250" height="140" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="686" y="305" width="250" height="28" rx="8" fill="#0D9488"/>
+  <text x="698" y="323" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">85% CAPACITY RATE-RAISE TRIGGER</text>
+  <text x="698" y="347" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompts 10.4 &amp; 10.5 Scaling Engine</text>
+  <text x="698" y="366" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Utilization &gt; 85% for 2 straight weeks</text>
+  <text x="698" y="383" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Auto +15–25% rate jump on new leads</text>
+  <text x="698" y="400" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Delegate low-EHR tasks via SOPs</text>
+  <text x="698" y="417" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">• Scale income without adding hours</text>
+
+  <!-- Bottom KPI Bar -->
+  <rect x="24" y="490" width="912" height="38" rx="8" fill="#0F172A"/>
+  <text x="480" y="514" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TARGET OUTCOMES: Weekly CEO Review: 20 Mins | Retainer Floor: &gt;= 50% of Monthly Target | Workweek Cap: &lt;= 38 Hours | Net Profit Lift: +40-75%</text>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="100%" height="100%" style="font-family: 'Inter', Arial, sans-serif; background-color: #F8FAFC;">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+    </marker>
+  </defs>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="960" height="64" fill="#0F172A"/>
+  <text x="480" y="28" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 10 DECISION FLOWCHART: QUARTERLY CAPACITY, RATE-RAISE &amp; DELEGATION TRIAGE</text>
+  <text x="480" y="48" text-anchor="middle" fill="#94A3B8" font-size="11.5" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Executive Decision Tree Governing Pipeline Activation, Automatic Price Increases, Client Pruning, and SOP Delegation</text>
+
+  <!-- Start Node -->
+  <rect x="50" y="80" width="420" height="46" rx="23" fill="#0F172A" stroke="#0284C7" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="260" y="99" text-anchor="middle" fill="#0284C7" font-size="9" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">FRIDAY 2:00 PM CEO RITUAL</text>
+  <text x="260" y="116" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">20-MINUTE CEO SCORECARD &amp; MONTHLY EHR AUDIT COMPLETED</text>
+
+  <!-- Arrow Start -> Gate 1 -->
+  <line x1="260" y1="126" x2="260" y2="152" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+
+  <!-- Gate 1 Box -->
+  <rect x="50" y="156" width="420" height="96" rx="10" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="50" y="156" width="175" height="24" rx="6" fill="#0284C7"/>
+  <text x="137" y="172" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 1: PIPELINE COVERAGE</text>
+  <text x="260" y="198" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Is 60-Day Confirmed Revenue &gt;= 80% of Target?</text>
+  <text x="260" y="218" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">Do recurring retainers + signed sprints cover at least 80%</text>
+  <text x="260" y="235" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">of your monthly income goal for the next 60 days?</text>
+
+  <!-- Arrow Gate 1 -> Action A (NO) -->
+  <line x1="470" y1="204" x2="545" y2="204" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <rect x="478" y="183" width="60" height="18" rx="4" fill="#F0F9FF"/>
+  <text x="508" y="196" text-anchor="middle" fill="#0284C7" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">NO (GAP)</text>
+
+  <!-- Action A Box -->
+  <rect x="550" y="150" width="380" height="108" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="550" y="150" width="380" height="26" rx="8" fill="#0284C7"/>
+  <text x="564" y="167" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION A: ACTIVATE 3-BLOCK PIPELINE MODE NEXT WEEK</text>
+  <text x="564" y="190" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Fill Pipeline Before Current Sprints End (Prompt 10.2):</text>
+  <text x="564" y="208" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Dedicate afternoon Block 3 daily (60 mins) to warm pipeline</text>
+  <text x="564" y="225" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Send 5 Alumni 60-Day Check-Ins &amp; Referral Scripts (Prompt 9.5)</text>
+  <text x="564" y="242" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Follow up on open proposals (Prompt 3.5) &amp; pitch Tier 1 Audits</text>
+
+  <!-- Arrow Gate 1 -> Gate 2 (YES) -->
+  <line x1="260" y1="252" x2="260" y2="284" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <rect x="270" y="260" width="95" height="18" rx="4" fill="#F0FDFA"/>
+  <text x="317" y="273" text-anchor="middle" fill="#0D9488" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">YES (BOOKED)</text>
+
+  <!-- Gate 2 Box -->
+  <rect x="50" y="288" width="420" height="96" rx="10" fill="#FFFFFF" stroke="#0D9488" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="50" y="288" width="175" height="24" rx="6" fill="#0D9488"/>
+  <text x="137" y="304" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 2: CAPACITY TRIGGER</text>
+  <text x="260" y="330" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Billable Utilization &gt; 85% for 2+ Weeks?</text>
+  <text x="260" y="350" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">Have your booked production hours exceeded 85% of your</text>
+  <text x="260" y="367" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">35–38 hr weekly capacity ceiling for two consecutive weeks?</text>
+
+  <!-- Arrow Gate 2 -> Action B (YES) -->
+  <line x1="470" y1="336" x2="545" y2="336" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <rect x="478" y="315" width="60" height="18" rx="4" fill="#F0FDFA"/>
+  <text x="508" y="328" text-anchor="middle" fill="#0D9488" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">YES (&gt;85%)</text>
+
+  <!-- Action B Box -->
+  <rect x="550" y="282" width="380" height="108" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="550" y="282" width="380" height="26" rx="8" fill="#0D9488"/>
+  <text x="564" y="299" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION B: TRIGGER 85% RATE-RAISE &amp; 80/20 CLIENT PRUNE</text>
+  <text x="564" y="322" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Expand Margins Instead of Working Nights (Prompt 10.3):</text>
+  <text x="564" y="340" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Raise Tier 1/2/3 prices by +20% on all new incoming proposals</text>
+  <text x="564" y="357" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Run Prompt 10.3 to identify bottom-20% lowest-EHR account</text>
+  <text x="564" y="374" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">• Reprice legacy low-EHR account by +25% or replace with new tier</text>
+
+  <!-- Arrow Gate 2 -> Gate 3 (NO) -->
+  <line x1="260" y1="384" x2="260" y2="414" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+  <rect x="270" y="391" width="105" height="18" rx="4" fill="#F0F9FF"/>
+  <text x="322" y="404" text-anchor="middle" fill="#0F172A" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">NO (70-85% SWEET SPOT)</text>
+
+  <!-- Gate 3 & Action C Combined Row -->
+  <rect x="50" y="418" width="420" height="118" rx="10" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="50" y="418" width="185" height="24" rx="6" fill="#0F172A"/>
+  <text x="142" y="434" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 3: SYSTEM &amp; SOP SCALING</text>
+  <text x="260" y="460" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Any Repetitive Task Taking &gt; 3 Hrs/Week?</text>
+  <text x="260" y="480" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">Are you still doing repetitive formatting, data prep, QA,</text>
+  <text x="260" y="497" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">or admin tasks that belong in an AI prompt or VA SOP?</text>
+
+  <!-- Arrow Gate 3 -> Action C -->
+  <line x1="470" y1="477" x2="545" y2="477" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <rect x="482" y="456" width="52" height="18" rx="4" fill="#F0F9FF"/>
+  <text x="508" y="469" text-anchor="middle" fill="#0284C7" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">YES</text>
+
+  <!-- Action C Box -->
+  <rect x="550" y="418" width="380" height="118" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="566" y="432" width="245" height="20" rx="10" fill="#0284C7"/>
+  <text x="688" y="446" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION C: SYSTEMATIZE &amp; DELEGATE (PROMPT 10.4)</text>
+  <text x="566" y="470" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Execute One Weekly System Upgrade Every Friday:</text>
+  <text x="566" y="489" fill="#F8FAFC" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Run Prompt 10.4 to build a foolproof VA / Subcontractor SOP</text>
+  <text x="566" y="506" fill="#F8FAFC" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Or convert the bottleneck into a reusable AI prompt template</text>
+  <text x="566" y="523" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">• Lock 90-Day Scaling Roadmap via Prompt 10.5</text>
+</svg>

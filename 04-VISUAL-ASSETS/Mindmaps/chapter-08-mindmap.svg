@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%" style="font-family: 'Inter', Arial, sans-serif; background-color: #F8FAFC;">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+    </marker>
+  </defs>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="960" height="64" fill="#0F172A"/>
+  <text x="480" y="28" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 8 MINDMAP: THE 3-PILLAR ASYNC STATUS &amp; GUIDED FEEDBACK ENGINE</text>
+  <text x="480" y="48" text-anchor="middle" fill="#94A3B8" font-size="11.5" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Replacing Calendar-Shattering Check-In Calls with High-Trust Async Cadence and Single-Pass Approvals</text>
+
+  <!-- Connector Paths -->
+  <path d="M 365 255 C 310 255, 305 140, 275 140" fill="none" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <path d="M 365 275 C 310 275, 305 280, 275 280" fill="none" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <path d="M 365 295 C 310 295, 305 415, 275 415" fill="none" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <path d="M 595 262 C 650 262, 655 180, 685 180" fill="none" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+  <path d="M 595 288 C 650 288, 655 375, 685 375" fill="none" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- Central Hub -->
+  <rect x="365" y="210" width="230" height="130" rx="14" fill="#0F172A" stroke="#0284C7" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="405" y="198" width="150" height="22" rx="11" fill="#0284C7"/>
+  <text x="480" y="213" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CORE DELIVERY HUB</text>
+  <text x="480" y="246" text-anchor="middle" fill="#FFFFFF" font-size="13.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ASYNC COMMUNICATION</text>
+  <text x="480" y="266" text-anchor="middle" fill="#0D9488" font-size="13.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ARCHITECTURE</text>
+  <line x1="385" y1="280" x2="575" y2="280" stroke="#334155" stroke-width="1"/>
+  <text x="480" y="300" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Eliminating Unscheduled Status Calls</text>
+  <text x="480" y="316" text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">&amp; Vague Subjective Revision Loops</text>
+
+  <!-- Node 1: Top-Left (Pillar 01: Friday 3-Bullet Status Cadence) -->
+  <rect x="24" y="82" width="250" height="116" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="24" y="82" width="250" height="28" rx="8" fill="#0284C7"/>
+  <text x="36" y="100" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">PILLAR 01 — FRIDAY 3-BULLET PULSE</text>
+  <text x="36" y="124" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 8.1 Proactive Weekly Brief</text>
+  <text x="36" y="143" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• 1. Completed This Week (vs. Milestones)</text>
+  <text x="36" y="160" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• 2. In Progress Next Week (On Track)</text>
+  <text x="36" y="177" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• 3. Blockers / Client Action by Date X</text>
+
+  <!-- Node 2: Mid-Left (Pillar 02: 3-Minute Loom / Walkthrough Protocol) -->
+  <rect x="24" y="220" width="250" height="116" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="24" y="220" width="250" height="28" rx="8" fill="#0D9488"/>
+  <text x="36" y="238" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">PILLAR 02 — 3-MIN WALKTHROUGH</text>
+  <text x="36" y="262" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 8.2 Visual Rationale Script</text>
+  <text x="36" y="281" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Anchor commercial goal in first 30s</text>
+  <text x="36" y="298" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Walk through strategic trade-offs live</text>
+  <text x="36" y="315" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Pre-empt executive objections early</text>
+
+  <!-- Node 3: Bottom-Left (Pillar 03: The Guided Feedback Frame) -->
+  <rect x="24" y="358" width="250" height="116" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="24" y="358" width="250" height="28" rx="8" fill="#0284C7"/>
+  <text x="36" y="376" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">PILLAR 03 — GUIDED FEEDBACK FRAME</text>
+  <text x="36" y="400" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 8.3 Anti-Subjectivity Filter</text>
+  <text x="36" y="419" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Ban "Let me know your thoughts!"</text>
+  <text x="36" y="436" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Ask 3 targeted commercial questions</text>
+  <text x="36" y="453" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Reframe "make it pop" into B.R.I.E.F. specs</text>
+
+  <!-- Node 4: Top-Right (Meeting Deflection Circuit Breaker) -->
+  <rect x="686" y="110" width="250" height="135" rx="10" fill="#FFFFFF" stroke="#0F172A" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="686" y="110" width="250" height="28" rx="8" fill="#0F172A"/>
+  <text x="698" y="128" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">MEETING DEFLECTION GATE</text>
+  <text x="698" y="152" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 8.5 Unscheduled Call Filter</text>
+  <text x="698" y="171" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Protect 90-min morning Maker Blocks</text>
+  <text x="698" y="188" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Offer instant async resolution today</text>
+  <text x="698" y="205" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Require 2 written agenda bullets first</text>
+  <text x="698" y="222" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">• Route calls to afternoon office hours</text>
+
+  <!-- Node 5: Bottom-Right (Revision Round Consolidation Ledger) -->
+  <rect x="686" y="305" width="250" height="135" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="686" y="305" width="250" height="28" rx="8" fill="#0D9488"/>
+  <text x="698" y="323" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">REVISION CONSOLIDATION LEDGER</text>
+  <text x="698" y="347" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 8.4 Sign-Off &amp; Round Tracker</text>
+  <text x="698" y="366" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Stamp "Round 1 of 2" in every header</text>
+  <text x="698" y="383" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Itemize every completed edit vs. brief</text>
+  <text x="698" y="400" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Clients self-police minor micro-tweaks</text>
+  <text x="698" y="417" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">• Formal written phase-lock confirmation</text>
+
+  <!-- Bottom KPI Bar -->
+  <rect x="24" y="490" width="912" height="38" rx="8" fill="#0F172A"/>
+  <text x="480" y="514" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TARGET OUTCOMES: Unscheduled Status Calls: 0/Week | Avg Revision Rounds: &lt;= 1.2 | Sign-Off Speed: &lt; 24 Hours | Deep Work: 90-Min Blocks</text>
+</svg>

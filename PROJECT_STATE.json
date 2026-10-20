@@ -169,8 +169,8 @@
     },
     "phase_4": {
       "title": "Part IV Manuscripts + Back Matter (Chapters 8, 9, 10 & Vault)",
-      "status": "pending",
-      "verified": false
+      "status": "completed",
+      "verified": true
     },
     "phase_5": {
       "title": "Master Multi-Format Compiler (build.py — Full Book PDF, EPUB 3.0 & 10-Chapter Workbooks)",
@@ -200,6 +200,11 @@
     "chapter-04",
     "chapter-05",
     "chapter-06",
-    "chapter-07"
-  ]
+    "chapter-07",
+    "chapter-08",
+    "chapter-09",
+    "chapter-10"
+  ],
+  "front_matter_completed": true,
+  "back_matter_completed": true
 }

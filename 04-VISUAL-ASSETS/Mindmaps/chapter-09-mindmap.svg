@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%" style="font-family: 'Inter', Arial, sans-serif; background-color: #F8FAFC;">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+    </marker>
+  </defs>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="960" height="64" fill="#0F172A"/>
+  <text x="480" y="28" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 9 MINDMAP: THE OFFBOARD-TO-RETAINER BRIDGE &amp; LTV EXPANSION SYSTEM</text>
+  <text x="480" y="48" text-anchor="middle" fill="#94A3B8" font-size="11.5" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Turning Every Completed Sprint into Boutique Handover Proof, Published Case Studies, and Monthly Retainers</text>
+
+  <!-- Connector Paths -->
+  <path d="M 365 255 C 310 255, 305 140, 275 140" fill="none" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <path d="M 365 275 C 310 275, 305 280, 275 280" fill="none" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <path d="M 365 295 C 310 295, 305 415, 275 415" fill="none" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <path d="M 595 262 C 650 262, 655 175, 685 175" fill="none" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <path d="M 595 288 C 650 288, 655 375, 685 375" fill="none" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+
+  <!-- Central Hub -->
+  <rect x="365" y="208" width="230" height="134" rx="14" fill="#0F172A" stroke="#0D9488" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="395" y="196" width="170" height="22" rx="11" fill="#0D9488"/>
+  <text x="480" y="211" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 05 EXPANSION HUB</text>
+  <text x="480" y="244" text-anchor="middle" fill="#FFFFFF" font-size="13.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">THE OFFBOARD-TO-</text>
+  <text x="480" y="264" text-anchor="middle" fill="#0D9488" font-size="13.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">RETAINER BRIDGE</text>
+  <line x1="385" y1="278" x2="575" y2="278" stroke="#334155" stroke-width="1"/>
+  <text x="480" y="298" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Converting One-Off Projects into</text>
+  <text x="480" y="314" text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Recurring Revenue &amp; ROI Case Studies</text>
+
+  <!-- Node 1: Top-Left (Stage 01: Executive Handover Vault) -->
+  <rect x="24" y="82" width="250" height="116" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="24" y="82" width="250" height="28" rx="8" fill="#0284C7"/>
+  <text x="36" y="100" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 01 — HANDOVER VAULT</text>
+  <text x="36" y="124" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 9.1 Boutique Asset Package</text>
+  <text x="36" y="143" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Indexed master file &amp; source directory</text>
+  <text x="36" y="160" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• 5-min Loom owner maintenance guide</text>
+  <text x="36" y="177" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Clean credential &amp; IP release sign-off</text>
+
+  <!-- Node 2: Mid-Left (Stage 02: Before/After ROI Recap) -->
+  <rect x="24" y="220" width="250" height="116" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="24" y="220" width="250" height="28" rx="8" fill="#0D9488"/>
+  <text x="36" y="238" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 02 — BEFORE/AFTER ROI RECAP</text>
+  <text x="36" y="262" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Quantifying Commercial Value Shipped</text>
+  <text x="36" y="281" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Compare Day 1 baseline vs. final build</text>
+  <text x="36" y="298" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Highlight exact milestones &amp; dates hit</text>
+  <text x="36" y="315" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Anchor Peak-End emotional high point</text>
+
+  <!-- Node 3: Bottom-Left (Stage 03: Frictionless Case-Study Extraction) -->
+  <rect x="24" y="358" width="250" height="116" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="24" y="358" width="250" height="28" rx="8" fill="#0284C7"/>
+  <text x="36" y="376" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 03 — CASE-STUDY EXTRACTION</text>
+  <text x="36" y="400" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompts 9.2 &amp; 9.3 Proof Engine</text>
+  <text x="36" y="419" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• 4-question async ROI feedback prompt</text>
+  <text x="36" y="436" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Pre-written quote client approves in 60s</text>
+  <text x="36" y="453" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Convert notes into portfolio case study</text>
+
+  <!-- Node 4: Top-Right (Stage 04: Maintenance & Growth Gap Pitch) -->
+  <rect x="686" y="105" width="250" height="140" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="686" y="105" width="250" height="28" rx="8" fill="#0D9488"/>
+  <text x="698" y="123" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 04 — RETAINER BRIDGE PITCH</text>
+  <text x="698" y="147" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 9.4 Next-90-Day Roadmap</text>
+  <text x="698" y="166" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Diagnose 3 upcoming 90-day growth gaps</text>
+  <text x="698" y="183" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Option 1: Essential Maintenance Retainer</text>
+  <text x="698" y="200" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Option 2: Growth &amp; Optimization Partner</text>
+  <text x="698" y="217" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">• Zero-gap transition on 1st of next month</text>
+
+  <!-- Node 5: Bottom-Right (Stage 05: 60-Day Referral & Re-Engagement Loop) -->
+  <rect x="686" y="305" width="250" height="140" rx="10" fill="#FFFFFF" stroke="#0F172A" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="686" y="305" width="250" height="28" rx="8" fill="#0F172A"/>
+  <text x="698" y="323" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 05 — 60-DAY REFERRAL LOOP</text>
+  <text x="698" y="347" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Prompt 9.5 Warm Peer Introductions</text>
+  <text x="698" y="366" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• 30/60-day post-launch KPI check-in</text>
+  <text x="698" y="383" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Forwardable 3-sentence peer intro blurb</text>
+  <text x="698" y="400" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Pre-scope Phase 2 sprint from backlog</text>
+  <text x="698" y="417" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">• Compounding repeat &amp; referral pipeline</text>
+
+  <!-- Bottom KPI Bar -->
+  <rect x="24" y="490" width="912" height="38" rx="8" fill="#0F172A"/>
+  <text x="480" y="514" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TARGET OUTCOMES: One-Off to Retainer Conversion: 35-50% | Testimonial Rate: &gt;= 80% | Client LTV: 2.5x-4.0x Higher | Cold Outreach: -60%</text>
+</svg>

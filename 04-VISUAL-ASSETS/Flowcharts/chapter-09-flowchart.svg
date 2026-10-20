@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="100%" height="100%" style="font-family: 'Inter', Arial, sans-serif; background-color: #F8FAFC;">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-sky" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+    </marker>
+  </defs>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="960" height="64" fill="#0F172A"/>
+  <text x="480" y="28" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 9 DECISION FLOWCHART: POST-PROJECT LTV EXPANSION (RETAINER VS. SPRINT VS. REFERRAL)</text>
+  <text x="480" y="48" text-anchor="middle" fill="#94A3B8" font-size="11.5" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Deterministic Offboarding Sequence to Maximize Client Lifetime Value, Proof Capture, and Recurring Revenue</text>
+
+  <!-- Start Node -->
+  <rect x="50" y="80" width="420" height="44" rx="22" fill="#0F172A" stroke="#0D9488" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="260" y="99" text-anchor="middle" fill="#0D9488" font-size="9" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">MILESTONE COMPLETION TRIGGER</text>
+  <text x="260" y="115" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">FINAL PROJECT MILESTONE APPROVED &amp; SETTLED BY CLIENT</text>
+
+  <!-- Arrow Start -> Gate 1 -->
+  <line x1="260" y1="124" x2="260" y2="148" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+
+  <!-- Gate 1 Mandatory Step Box -->
+  <rect x="50" y="152" width="880" height="58" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="66" y="164" width="160" height="20" rx="5" fill="#0284C7"/>
+  <text x="146" y="178" text-anchor="middle" fill="#FFFFFF" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 1: MANDATORY HANDOVER</text>
+  <text x="242" y="178" fill="#0F172A" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Deliver Executive Handover Vault (Prompt 9.1) + Before/After ROI Recap + 60-Second Testimonial Draft (Prompt 9.2)</text>
+  <text x="242" y="197" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">Anchor Peak-End emotional high point by showcasing 100% of completed deliverables and making testimonial approval effortless.</text>
+
+  <!-- Arrow Gate 1 -> Gate 2 -->
+  <line x1="260" y1="210" x2="260" y2="238" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+
+  <!-- Gate 2 Box -->
+  <rect x="50" y="242" width="420" height="96" rx="10" fill="#FFFFFF" stroke="#0D9488" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="50" y="242" width="150" height="24" rx="6" fill="#0D9488"/>
+  <text x="125" y="258" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 2: RETAINER FIT</text>
+  <text x="260" y="283" text-anchor="middle" fill="#0F172A" font-size="12.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Ongoing Monthly Execution or Advisory Need?</text>
+  <text x="260" y="303" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">Does the client require ongoing optimization, content/code</text>
+  <text x="260" y="320" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">iteration, analytics monitoring, or fractional leadership?</text>
+
+  <!-- Arrow Gate 2 -> Action A (YES) -->
+  <line x1="470" y1="290" x2="545" y2="290" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <rect x="478" y="269" width="60" height="18" rx="4" fill="#F0FDFA"/>
+  <text x="508" y="282" text-anchor="middle" fill="#0D9488" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">YES (ONGOING)</text>
+
+  <!-- Action A Box -->
+  <rect x="550" y="236" width="380" height="108" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="550" y="236" width="380" height="26" rx="8" fill="#0D9488"/>
+  <text x="564" y="253" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION A: EXECUTE PROMPT 9.4 (RETAINER BRIDGE PITCH)</text>
+  <text x="564" y="276" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Pitch 2 Monthly Retainer Options Starting Next Month:</text>
+  <text x="564" y="294" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Tier 1: Essential Assurance &amp; Optimization Retainer ($/mo)</text>
+  <text x="564" y="311" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Tier 2: Growth Partner &amp; Continuous Execution Retainer ($/mo)</text>
+  <text x="564" y="328" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">• Waive re-onboarding fee if locked before the 1st of next month</text>
+
+  <!-- Arrow Gate 2 -> Gate 3 (NO) -->
+  <line x1="260" y1="338" x2="260" y2="368" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <rect x="270" y="345" width="95" height="18" rx="4" fill="#F0F9FF"/>
+  <text x="317" y="358" text-anchor="middle" fill="#0284C7" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">NO (ONE-OFF BUILD)</text>
+
+  <!-- Gate 3 Box -->
+  <rect x="50" y="372" width="420" height="86" rx="10" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="50" y="372" width="150" height="24" rx="6" fill="#0F172A"/>
+  <text x="125" y="388" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 3: PHASE-2 CHECK</text>
+  <text x="260" y="412" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Logical Phase-2 Sprint in 30–60 Days?</text>
+  <text x="260" y="432" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">Are there parked Phase-2 backlog items from Chapter 7 or an</text>
+  <text x="260" y="447" text-anchor="middle" fill="#1E293B" font-size="10.5" style="font-family: 'Inter', Arial, sans-serif;">adjacent bottleneck ready to solve after 30 days of live data?</text>
+
+  <!-- Arrow Gate 3 -> Action B (YES) -->
+  <line x1="470" y1="415" x2="545" y2="415" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-sky)"/>
+  <rect x="478" y="394" width="60" height="18" rx="4" fill="#F0F9FF"/>
+  <text x="508" y="407" text-anchor="middle" fill="#0284C7" font-size="9.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">YES (PHASE 2)</text>
+
+  <!-- Action B Box -->
+  <rect x="550" y="366" width="380" height="94" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="550" y="366" width="380" height="26" rx="8" fill="#0284C7"/>
+  <text x="564" y="383" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION B: LOCK 30-DAY AUDIT &amp; PRE-SCOPE PHASE 2</text>
+  <text x="564" y="406" fill="#0F172A" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Convert Parked Backlog into Next Fixed-Fee Sprint:</text>
+  <text x="564" y="424" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Put a 20-min "30-Day Post-Launch Telemetry Review" on calendar</text>
+  <text x="564" y="441" fill="#1E293B" font-size="10" style="font-family: 'Inter', Arial, sans-serif;">• Attach pre-priced Phase 2 Sprint scope from Portal Backlog</text>
+
+  <!-- Arrow Gate 3 -> Action C (NO) -->
+  <line x1="260" y1="458" x2="260" y2="480" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+
+  <!-- Final Action C Box -->
+  <rect x="50" y="484" width="880" height="62" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="508" fill="#0D9488" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION C (AND ALL COMPLETED CLIENTS): TRIGGER PROMPT 9.5 WARM REFERRAL ENGINE &amp; 60-DAY ALUMNI LOOP</text>
+  <text x="70" y="528" fill="#F8FAFC" font-size="10.5" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Publish Case Study (Prompt 9.3) + Send 60-Day Post-Launch Check-In + Provide Forwardable 3-Sentence Introduction Script for 2 Peer Founders</text>
+</svg>
