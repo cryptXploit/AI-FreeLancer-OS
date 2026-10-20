@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%" style="font-family: 'Inter', Arial, sans-serif; background-color: #F8FAFC;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+    </marker>
+  </defs>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="1200" height="84" fill="#0F172A"/>
+  <text x="600" y="36" text-anchor="middle" fill="#F8FAFC" font-size="20" font-weight="800" letter-spacing="1.2">CHAPTER 7 MINDMAP: THE P.V.P. SCOPE BOUNDARY &amp; CHANGE ORDER DEFENSE SYSTEM</text>
+  <text x="600" y="62" text-anchor="middle" fill="#94A3B8" font-size="13" font-weight="500">Converting Unpaid Scope Creep into Profitable Change Orders While Preserving Client Goodwill</text>
+
+  <!-- Connecting Lines from Central Hub -->
+  <path d="M 465 385 C 390 385, 380 195, 340 195" fill="none" stroke="#10B981" stroke-width="3" marker-end="url(#arrow-emerald)"/>
+  <path d="M 465 408 C 390 408, 380 415, 340 415" fill="none" stroke="#0F172A" stroke-width="3" marker-end="url(#arrow-navy)"/>
+  <path d="M 465 430 C 390 430, 380 615, 340 615" fill="none" stroke="#10B981" stroke-width="3" marker-end="url(#arrow-emerald)"/>
+  <path d="M 735 392 C 810 392, 820 240, 860 240" fill="none" stroke="#0F172A" stroke-width="3" marker-end="url(#arrow-navy)"/>
+  <path d="M 735 425 C 810 425, 820 555, 860 555" fill="none" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrow-amber)"/>
+
+  <!-- Central Hub -->
+  <rect x="465" y="330" width="270" height="150" rx="16" fill="#0F172A" stroke="#10B981" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="515" y="316" width="170" height="26" rx="13" fill="#10B981"/>
+  <text x="600" y="334" text-anchor="middle" fill="#0F172A" font-size="11" font-weight="800" letter-spacing="0.8">CORE SYSTEM HUB</text>
+  <text x="600" y="378" text-anchor="middle" fill="#F8FAFC" font-size="17" font-weight="800">THE P.V.P.</text>
+  <text x="600" y="402" text-anchor="middle" fill="#10B981" font-size="16" font-weight="800">BOUNDARY</text>
+  <text x="600" y="424" text-anchor="middle" fill="#F8FAFC" font-size="16" font-weight="800">PROTOCOL</text>
+  <line x1="495" y1="438" x2="705" y2="438" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="460" text-anchor="middle" fill="#94A3B8" font-size="11" font-weight="500">Pause • Validate Impact • Price Binary Choice</text>
+
+  <!-- Node 1: Top-Left (Step 01: Pause & Acknowledge Warmly) -->
+  <rect x="40" y="110" width="300" height="175" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="110" width="300" height="36" rx="10" fill="#10B981"/>
+  <text x="56" y="133" fill="#0F172A" font-size="12" font-weight="800">STEP 01: PAUSE &amp; ACKNOWLEDGE</text>
+  <text x="56" y="168" fill="#0F172A" font-size="14" font-weight="700">Warm Reception, Zero Instant Yes</text>
+  <text x="56" y="191" fill="#334155" font-size="12">• Never say "No" or get defensive</text>
+  <text x="56" y="211" fill="#334155" font-size="12">• Validate the commercial goal behind ask</text>
+  <text x="56" y="231" fill="#334155" font-size="12">• Decouple new request from active sprint</text>
+  <text x="56" y="251" fill="#334155" font-size="12">• Buy a 2-hour diagnostic buffer window</text>
+  <text x="56" y="271" fill="#059669" font-size="11" font-weight="700">Rule: Enthusiasm + Operational Pause</text>
+
+  <!-- Node 2: Mid-Left (Step 02: Validate Scope & Timeline Impact) -->
+  <rect x="40" y="315" width="300" height="190" rx="12" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="315" width="300" height="36" rx="10" fill="#0F172A"/>
+  <text x="56" y="338" fill="#F59E0B" font-size="12" font-weight="800">STEP 02: VALIDATE IMPACT</text>
+  <text x="56" y="373" fill="#0F172A" font-size="14" font-weight="700">Objective SOW &amp; Schedule Diagnostic</text>
+  <text x="56" y="396" fill="#334155" font-size="12">• Prompt 7.1: Audit ask against SOW line</text>
+  <text x="56" y="416" fill="#334155" font-size="12">• Calculate true engineering/creative hrs</text>
+  <text x="56" y="436" fill="#334155" font-size="12">• Quantify impact on current launch date</text>
+  <text x="56" y="456" fill="#334155" font-size="12">• Apply minimum $250 Change Order floor</text>
+  <text x="56" y="476" fill="#334155" font-size="12">• Frame boundary around protecting KPI</text>
+  <text x="56" y="495" fill="#0F172A" font-size="11" font-weight="700">Output: Objective Trade-Off Math</text>
+
+  <!-- Node 3: Bottom-Left (Step 03: Price the Binary Choice) -->
+  <rect x="40" y="530" width="300" height="175" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="530" width="300" height="36" rx="10" fill="#0F172A"/>
+  <text x="56" y="553" fill="#10B981" font-size="12" font-weight="800">STEP 03: PRICE BINARY CHOICE</text>
+  <text x="56" y="588" fill="#0F172A" font-size="14" font-weight="700">Prompt 7.2 Executive Options Script</text>
+  <text x="56" y="611" fill="#334155" font-size="12">• Option A: Approve Paid Change Order</text>
+  <text x="56" y="631" fill="#334155" font-size="12">• Option B: Swap equal-weight SOW item</text>
+  <text x="56" y="651" fill="#334155" font-size="12">• Option C: Park in Phase 2 Backlog</text>
+  <text x="56" y="671" fill="#334155" font-size="12">• Client chooses their own priority path</text>
+  <text x="56" y="691" fill="#059669" font-size="11" font-weight="700">Result: Zero Resentment, Paid Expansion</text>
+
+  <!-- Node 4: Top-Right (Stakeholder & Feedback Consolidation) -->
+  <rect x="860" y="125" width="300" height="230" rx="12" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="860" y="125" width="300" height="36" rx="10" fill="#0F172A"/>
+  <text x="876" y="148" fill="#10B981" font-size="12" font-weight="800">FEEDBACK CONSOLIDATION ENGINE</text>
+  <text x="876" y="182" fill="#0F172A" font-size="14" font-weight="700">Ending Multi-Stakeholder Whiplash</text>
+  <text x="876" y="206" fill="#334155" font-size="12">• Enforce Single Point of Contact (SPOC)</text>
+  <text x="876" y="228" fill="#334155" font-size="12">• Never execute piecemeal Slack edits</text>
+  <text x="876" y="250" fill="#334155" font-size="12">• Prompt 7.3: Synthesize 40+ raw comments</text>
+  <text x="876" y="272" fill="#334155" font-size="12">• Isolate direct stakeholder contradictions</text>
+  <text x="876" y="294" fill="#334155" font-size="12">• Prompt 7.4: Request SPOC tie-breaker</text>
+  <text x="876" y="316" fill="#334155" font-size="12">• Lock Revision Round Counter (1 of 2)</text>
+  <text x="876" y="340" fill="#0F172A" font-size="11" font-weight="700">Output: 1 Clean Revision Checklist</text>
+
+  <!-- Node 5: Bottom-Right (The 3-Stage Overdue Invoice Escalation Ladder) -->
+  <rect x="860" y="440" width="300" height="235" rx="12" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="860" y="440" width="300" height="36" rx="10" fill="#F59E0B"/>
+  <text x="876" y="463" fill="#0F172A" font-size="12" font-weight="800">3-STAGE INVOICE ESCALATION</text>
+  <text x="876" y="497" fill="#0F172A" font-size="14" font-weight="700">Calm, Deterministic Collections</text>
+  <text x="876" y="521" fill="#334155" font-size="12" font-weight="700">Stage 1 (Day +1 Overdue): Warm Nudge</text>
+  <text x="876" y="539" fill="#64748B" font-size="11">Assume AP oversight; resend 1-click pay link</text>
+  <text x="876" y="563" fill="#334155" font-size="12" font-weight="700">Stage 2 (Day +7 Overdue): Work Pause</text>
+  <text x="876" y="581" fill="#64748B" font-size="11">Automatic Pause Clause activated on sprint</text>
+  <text x="876" y="605" fill="#334155" font-size="12" font-weight="700">Stage 3 (Day +14 Overdue): Formal Notice</text>
+  <text x="876" y="623" fill="#64748B" font-size="11">Late fee applied + IP license hold warning</text>
+  <text x="876" y="655" fill="#B45309" font-size="11" font-weight="700">Prompt 7.5: Zero-Emotion Collection Scripts</text>
+
+  <!-- Bottom KPI Bar -->
+  <rect x="40" y="725" width="1120" height="54" rx="10" fill="#0F172A"/>
+  <text x="600" y="757" text-anchor="middle" fill="#F8FAFC" font-size="14" font-weight="700">TARGET KPI: <tspan fill="#10B981">70%+ Out-of-Scope Asks Converted to Paid Change Orders</tspan>  |  <tspan fill="#F59E0B">0 Unpaid Scope Hours</tspan>  |  <tspan fill="#10B981">100% On-Time Collections</tspan></text>
+</svg>

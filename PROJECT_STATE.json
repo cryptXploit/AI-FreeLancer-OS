@@ -164,8 +164,8 @@
     },
     "phase_3": {
       "title": "Part III Manuscripts + Visuals (Chapters 5, 6 & 7)",
-      "status": "pending",
-      "verified": false
+      "status": "completed",
+      "verified": true
     },
     "phase_4": {
       "title": "Part IV Manuscripts + Back Matter (Chapters 8, 9, 10 & Vault)",
@@ -197,6 +197,9 @@
     "chapter-01",
     "chapter-02",
     "chapter-03",
-    "chapter-04"
+    "chapter-04",
+    "chapter-05",
+    "chapter-06",
+    "chapter-07"
   ]
 }

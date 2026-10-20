@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <marker id="ch5-arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0284C7" />
+    </marker>
+    <marker id="ch5-arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0D9488" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="0" width="960" height="540" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" rx="8" />
+
+  <!-- Top Header Banner -->
+  <rect x="20" y="16" width="920" height="44" rx="6" fill="#0F172A" />
+  <text x="480" y="43" text-anchor="middle" fill="#FFFFFF" font-size="14.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 5 MINDMAP: THE 48-HOUR AUTOMATED CLIENT ONBOARDING ENGINE</text>
+
+  <!-- Connectors from Central Hub to 5 Gate Nodes -->
+  <path d="M 335 242 L 288 155" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch5-arrow-blue)" />
+  <path d="M 625 242 L 672 155" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch5-arrow-blue)" />
+  <path d="M 635 272 L 672 275" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#ch5-arrow-teal)" />
+  <path d="M 555 308 L 620 368" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#ch5-arrow-teal)" />
+  <path d="M 405 308 L 315 368" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#ch5-arrow-blue)" />
+
+  <!-- Central Hub -->
+  <rect x="310" y="214" width="340" height="98" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="2.5" />
+  <text x="480" y="242" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ZERO-FRICTION KICKOFF ARCHITECTURE</text>
+  <text x="480" y="264" text-anchor="middle" fill="#0284C7" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Moving from Signed Contract to</text>
+  <text x="480" y="286" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Production-Ready Alignment in 48 Hours</text>
+
+  <!-- GATE 01: Top Left -->
+  <rect x="24" y="74" width="284" height="124" rx="8" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" />
+  <rect x="24" y="74" width="284" height="30" rx="6" fill="#0284C7" />
+  <text x="166" y="94" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 01 — COMMERCIAL &amp; DEPOSIT CLEARANCE</text>
+  <text x="36" y="122" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Signed scope &amp; exclusion agreement</text>
+  <text x="36" y="144" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Cleared 50% initial deposit invoice</text>
+  <text x="36" y="166" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Automated welcome packet dispatch trigger</text>
+  <text x="36" y="186" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Hour 00: Commercial Lock Confirmed</text>
+
+  <!-- GATE 02: Top Right -->
+  <rect x="652" y="74" width="284" height="124" rx="8" fill="#F0F9FF" stroke="#0284C7" stroke-width="2" />
+  <rect x="652" y="74" width="284" height="30" rx="6" fill="#0284C7" />
+  <text x="794" y="94" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 02 — PRE-FLIGHT ASSET &amp; CREDENTIAL VAULT</text>
+  <text x="664" y="122" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Structured intake questionnaire (Prompt 5.1)</text>
+  <text x="664" y="144" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Brand &amp; technical login upload checklist</text>
+  <text x="664" y="166" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Strict "100% Asset Rule" before kickoff call</text>
+  <text x="664" y="186" fill="#0284C7" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Hours 01–24: Pre-Flight Vault Verification</text>
+
+  <!-- GATE 03: Middle Right -->
+  <rect x="652" y="212" width="284" height="124" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+  <rect x="652" y="212" width="284" height="30" rx="6" fill="#0D9488" />
+  <text x="794" y="232" text-anchor="middle" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 03 — COMMUNICATION RULES OF ENGAGEMENT</text>
+  <text x="664" y="260" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Single-channel policy (Zero WhatsApp/SMS)</text>
+  <text x="664" y="282" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• 24h business-day response SLA &amp; office hours</text>
+  <text x="664" y="304" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Friday 3-bullet async status cadence</text>
+  <text x="664" y="324" fill="#0D9488" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Executed via Prompt 5.2 Welcome Charter</text>
+
+  <!-- GATE 04: Bottom Left -->
+  <rect x="24" y="352" width="428" height="114" rx="8" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="24" y="352" width="428" height="30" rx="6" fill="#0F172A" />
+  <text x="238" y="372" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 04 — THE 30-MINUTE ALIGNMENT KICKOFF CALL</text>
+  <text x="38" y="400" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Single Point-of-Contact (SPOC) sign-off authority lock</text>
+  <text x="38" y="422" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Commercial ROI metric &amp; pre-mortem risk review (Prompt 5.3)</text>
+  <text x="38" y="444" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Written Milestone Lock Summary within 2 hours (Prompt 5.4)</text>
+
+  <!-- GATE 05: Bottom Right -->
+  <rect x="508" y="352" width="428" height="114" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+  <rect x="508" y="352" width="428" height="30" rx="6" fill="#0D9488" />
+  <text x="722" y="372" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 05 — TIMELINE PAUSE &amp; ESCALATION CIRCUIT BREAKER</text>
+  <text x="522" y="400" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Automatic Day-for-Day delivery shift on missing client files</text>
+  <text x="522" y="422" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Protects practitioner evenings from client-side stalls</text>
+  <text x="522" y="444" fill="#1E293B" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Enforced via Prompt 5.5 Circuit-Breaker Notice</text>
+
+  <!-- Bottom KPI Bar -->
+  <rect x="20" y="482" width="920" height="42" rx="6" fill="#0F172A" stroke="#0D9488" stroke-width="1.5" />
+  <text x="480" y="508" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TARGET OUTCOMES: Onboarding Setup Time: &lt;= 20 Mins | Missing-Asset Delays: 0 Days | Unscheduled Client Pings: -80% | Kickoff-to-Delivery Velocity: +40%</text>
+</svg>

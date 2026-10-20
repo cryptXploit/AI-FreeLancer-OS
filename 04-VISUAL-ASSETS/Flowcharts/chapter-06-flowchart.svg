@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%" style="font-family: 'Inter', Arial, sans-serif; background-color: #F8FAFC;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+    </marker>
+  </defs>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="1200" height="80" fill="#0F172A"/>
+  <text x="600" y="34" text-anchor="middle" fill="#F8FAFC" font-size="19" font-weight="800" letter-spacing="1.1">CHAPTER 6 DECISION FLOWCHART: DELIVERABLE QUALITY ASSURANCE &amp; HALLUCINATION GATE</text>
+  <text x="600" y="58" text-anchor="middle" fill="#94A3B8" font-size="13" font-weight="500">Mandatory Pre-Submission Triage Before Any Client-Facing Asset Leaves Your Studio</text>
+
+  <!-- Start Node -->
+  <rect x="110" y="102" width="440" height="58" rx="29" fill="#0F172A" stroke="#10B981" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="330" y="128" text-anchor="middle" fill="#10B981" font-size="11" font-weight="800" letter-spacing="0.8">START QA PIPELINE</text>
+  <text x="330" y="146" text-anchor="middle" fill="#F8FAFC" font-size="13" font-weight="700">AI-ASSISTED DRAFT OR TECHNICAL DELIVERABLE ASSEMBLED</text>
+
+  <!-- Arrow Start -> Gate 1 -->
+  <line x1="330" y1="160" x2="330" y2="195" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+
+  <!-- Gate 1 Box -->
+  <rect x="90" y="198" width="480" height="100" rx="12" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="90" y="198" width="110" height="28" rx="6" fill="#0F172A"/>
+  <text x="145" y="216" text-anchor="middle" fill="#F59E0B" font-size="11" font-weight="800">GATE 1 CHECK</text>
+  <text x="330" y="242" text-anchor="middle" fill="#0F172A" font-size="14" font-weight="800">Brief &amp; Constraint Alignment Check</text>
+  <text x="330" y="264" text-anchor="middle" fill="#334155" font-size="12">Does the draft satisfy 100% of SOW success criteria, audience KPIs,</text>
+  <text x="330" y="282" text-anchor="middle" fill="#334155" font-size="12">and negative constraints defined in the 20% Human Architecture Brief?</text>
+
+  <!-- Arrow Gate 1 -> Action A (NO) -->
+  <line x1="570" y1="248" x2="685" y2="248" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrow-amber)"/>
+  <rect x="598" y="226" width="60" height="20" rx="4" fill="#FEF3C7"/>
+  <text x="628" y="240" text-anchor="middle" fill="#B45309" font-size="11" font-weight="800">NO / FAIL</text>
+
+  <!-- Action A Box -->
+  <rect x="690" y="198" width="450" height="100" rx="12" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="710" y="224" fill="#B45309" font-size="12" font-weight="800">ACTION A: RE-ANCHOR &amp; REGENERATE SUB-MODULE</text>
+  <text x="710" y="246" fill="#0F172A" font-size="12" font-weight="600">• Run Prompt 6.5 (Pre-Submission Alignment Audit)</text>
+  <text x="710" y="266" fill="#334155" font-size="12">• Isolate exact missing SOW criteria or violated constraint</text>
+  <text x="710" y="284" fill="#334155" font-size="12">• Re-run Prompt 6.3 on the failing module only (never full draft)</text>
+
+  <!-- Arrow Gate 1 -> Gate 2 (YES) -->
+  <line x1="330" y1="298" x2="330" y2="345" stroke="#10B981" stroke-width="3" marker-end="url(#arrow-emerald)"/>
+  <rect x="340" y="310" width="68" height="20" rx="4" fill="#D1FAE5"/>
+  <text x="374" y="324" text-anchor="middle" fill="#065F46" font-size="11" font-weight="800">YES / PASS</text>
+
+  <!-- Gate 2 Box -->
+  <rect x="90" y="348" width="480" height="100" rx="12" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="90" y="348" width="110" height="28" rx="6" fill="#0F172A"/>
+  <text x="145" y="366" text-anchor="middle" fill="#F59E0B" font-size="11" font-weight="800">GATE 2 CHECK</text>
+  <text x="330" y="392" text-anchor="middle" fill="#0F172A" font-size="14" font-weight="800">Fact, Code &amp; Logic Verification Check</text>
+  <text x="330" y="414" text-anchor="middle" fill="#334155" font-size="12">Are all statistics, URLs, API methods, formulas, and domain claims</text>
+  <text x="330" y="432" text-anchor="middle" fill="#334155" font-size="12">independently verified against primary client data or live execution?</text>
+
+  <!-- Arrow Gate 2 -> Action B (NO) -->
+  <line x1="570" y1="398" x2="685" y2="398" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrow-amber)"/>
+  <rect x="598" y="376" width="60" height="20" rx="4" fill="#FEF3C7"/>
+  <text x="628" y="390" text-anchor="middle" fill="#B45309" font-size="11" font-weight="800">NO / FAIL</text>
+
+  <!-- Action B Box -->
+  <rect x="690" y="348" width="450" height="100" rx="12" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="710" y="374" fill="#B45309" font-size="12" font-weight="800">ACTION B: PURGE UNVERIFIED CLAIMS &amp; FIX LOGIC</text>
+  <text x="710" y="396" fill="#0F172A" font-size="12" font-weight="600">• Strip all unverified statistics, citations, or synthetic URLs</text>
+  <text x="710" y="416" fill="#334155" font-size="12">• Replace with verified client telemetry or primary benchmarks</text>
+  <text x="710" y="434" fill="#334155" font-size="12">• Compile/test all code blocks and spreadsheet formulas live</text>
+
+  <!-- Arrow Gate 2 -> Gate 3 (YES) -->
+  <line x1="330" y1="448" x2="330" y2="495" stroke="#10B981" stroke-width="3" marker-end="url(#arrow-emerald)"/>
+  <rect x="340" y="460" width="68" height="20" rx="4" fill="#D1FAE5"/>
+  <text x="374" y="474" text-anchor="middle" fill="#065F46" font-size="11" font-weight="800">YES / PASS</text>
+
+  <!-- Gate 3 Box -->
+  <rect x="90" y="498" width="480" height="100" rx="12" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="90" y="498" width="110" height="28" rx="6" fill="#0F172A"/>
+  <text x="145" y="516" text-anchor="middle" fill="#F59E0B" font-size="11" font-weight="800">GATE 3 CHECK</text>
+  <text x="330" y="542" text-anchor="middle" fill="#0F172A" font-size="14" font-weight="800">Red-Team Critique &amp; Voice Calibration Audit</text>
+  <text x="330" y="564" text-anchor="middle" fill="#334155" font-size="12">Does the deliverable pass Prompt 6.4 (Devil's Advocate Critique)</text>
+  <text x="330" y="582" text-anchor="middle" fill="#334155" font-size="12">with zero AI clichés and 100% alignment to the Client Voice Card?</text>
+
+  <!-- Arrow Gate 3 -> Action C (NO) -->
+  <line x1="570" y1="548" x2="685" y2="548" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrow-amber)"/>
+  <rect x="598" y="526" width="60" height="20" rx="4" fill="#FEF3C7"/>
+  <text x="628" y="540" text-anchor="middle" fill="#B45309" font-size="11" font-weight="800">NO / FAIL</text>
+
+  <!-- Action C Box -->
+  <rect x="690" y="498" width="450" height="100" rx="12" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="710" y="524" fill="#B45309" font-size="12" font-weight="800">ACTION C: EXECUTE 20% HUMAN EDITORIAL POLISH</text>
+  <text x="710" y="546" fill="#0F172A" font-size="12" font-weight="600">• Rewrite opening hooks, transitions, and executive conclusions</text>
+  <text x="710" y="566" fill="#334155" font-size="12">• Resolve every vulnerability flagged by Prompt 6.4 Red-Team</text>
+  <text x="710" y="584" fill="#334155" font-size="12">• Inject specific client terminology and asymmetrical cadence</text>
+
+  <!-- Arrow Gate 3 -> Action D (YES) -->
+  <line x1="330" y1="598" x2="330" y2="645" stroke="#10B981" stroke-width="3" marker-end="url(#arrow-emerald)"/>
+  <rect x="340" y="610" width="68" height="20" rx="4" fill="#D1FAE5"/>
+  <text x="374" y="624" text-anchor="middle" fill="#065F46" font-size="11" font-weight="800">YES / PASS</text>
+
+  <!-- Final Action D Box -->
+  <rect x="90" y="648" width="1050" height="112" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="115" y="666" width="210" height="26" rx="13" fill="#10B981"/>
+  <text x="220" y="684" text-anchor="middle" fill="#0F172A" font-size="11" font-weight="800" letter-spacing="0.8">GATE 4: APPROVED FOR DELIVERY</text>
+  <text x="115" y="714" fill="#F8FAFC" font-size="16" font-weight="800">ACTION D: PACKAGE WITH EXECUTIVE CONTEXT WALKTHROUGH &amp; SUBMIT TO CLIENT PORTAL</text>
+  <text x="115" y="738" fill="#94A3B8" font-size="12.5" font-weight="500">Attach 3-Bullet Strategic Trade-Off Summary + 3-Minute Async Video Walkthrough + Explicit Single-Consolidated-Feedback Instruction</text>
+</svg>

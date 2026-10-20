@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%" style="font-family: 'Inter', Arial, sans-serif; background-color: #F8FAFC;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+    </marker>
+  </defs>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="1200" height="84" fill="#0F172A"/>
+  <text x="600" y="36" text-anchor="middle" fill="#F8FAFC" font-size="20" font-weight="800" letter-spacing="1.2">CHAPTER 6 MINDMAP: THE SANDWICH EXECUTION &amp; 4-GATE QUALITY CONTROL PROTOCOL</text>
+  <text x="600" y="62" text-anchor="middle" fill="#94A3B8" font-size="13" font-weight="500">Cutting Deliverable Production Time by 45% to 60% While Eliminating AI Slop and Revision Loops</text>
+
+  <!-- Connecting Lines from Central Hub -->
+  <path d="M 480 390 C 390 390, 380 195, 340 195" fill="none" stroke="#0F172A" stroke-width="3" marker-end="url(#arrow-navy)"/>
+  <path d="M 480 410 C 390 410, 380 420, 340 420" fill="none" stroke="#10B981" stroke-width="3" marker-end="url(#arrow-emerald)"/>
+  <path d="M 480 430 C 390 430, 380 615, 340 615" fill="none" stroke="#0F172A" stroke-width="3" marker-end="url(#arrow-navy)"/>
+  <path d="M 720 395 C 810 395, 820 245, 860 245" fill="none" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrow-amber)"/>
+  <path d="M 720 425 C 810 425, 820 555, 860 555" fill="none" stroke="#10B981" stroke-width="3" marker-end="url(#arrow-emerald)"/>
+
+  <!-- Central Hub -->
+  <rect x="465" y="330" width="270" height="150" rx="16" fill="#0F172A" stroke="#10B981" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="515" y="316" width="170" height="26" rx="13" fill="#10B981"/>
+  <text x="600" y="334" text-anchor="middle" fill="#0F172A" font-size="11" font-weight="800" letter-spacing="0.8">CORE SYSTEM HUB</text>
+  <text x="600" y="378" text-anchor="middle" fill="#F8FAFC" font-size="17" font-weight="800">THE 20 / 60 / 20</text>
+  <text x="600" y="402" text-anchor="middle" fill="#10B981" font-size="16" font-weight="800">SANDWICH EXECUTION</text>
+  <text x="600" y="424" text-anchor="middle" fill="#F8FAFC" font-size="15" font-weight="700">MODEL</text>
+  <line x1="495" y1="438" x2="705" y2="438" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="460" text-anchor="middle" fill="#94A3B8" font-size="11" font-weight="500">Human Strategy + AI Velocity + Human QA</text>
+
+  <!-- Node 1: Top-Left (Layer 01: Top Bread 20% Human Architecture) -->
+  <rect x="40" y="110" width="300" height="175" rx="12" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="110" width="300" height="36" rx="10" fill="#0F172A"/>
+  <text x="56" y="133" fill="#F59E0B" font-size="12" font-weight="800">LAYER 01: TOP BREAD (20% HUMAN)</text>
+  <text x="56" y="168" fill="#0F172A" font-size="14" font-weight="700">Strategic Context &amp; Architecture</text>
+  <text x="56" y="191" fill="#334155" font-size="12">• Define thesis, edge cases &amp; angle</text>
+  <text x="56" y="211" fill="#334155" font-size="12">• Inject Golden Samples &amp; Brand Voice</text>
+  <text x="56" y="231" fill="#334155" font-size="12">• Lock negative constraints &amp; non-goals</text>
+  <text x="56" y="251" fill="#334155" font-size="12">• Prompt 6.1: Deconstruct into 6-8 blocks</text>
+  <text x="56" y="271" fill="#0F172A" font-size="11" font-weight="700">Output: Locked Pre-Prompt Blueprint</text>
+
+  <!-- Node 2: Mid-Left (Layer 02: Middle Filling 60% AI Heavy Lifting) -->
+  <rect x="40" y="315" width="300" height="190" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="315" width="300" height="36" rx="10" fill="#10B981"/>
+  <text x="56" y="338" fill="#0F172A" font-size="12" font-weight="800">LAYER 02: MIDDLE FILLING (60% AI)</text>
+  <text x="56" y="373" fill="#0F172A" font-size="14" font-weight="700">Modular Sub-Component Execution</text>
+  <text x="56" y="396" fill="#334155" font-size="12">• Never run single-shot monolith prompts</text>
+  <text x="56" y="416" fill="#334155" font-size="12">• Prompt 6.2: Calibrate Voice DNA Card</text>
+  <text x="56" y="436" fill="#334155" font-size="12">• Prompt 6.3: Execute section-by-section</text>
+  <text x="56" y="456" fill="#334155" font-size="12">• Transform raw transcripts &amp; data tables</text>
+  <text x="56" y="476" fill="#334155" font-size="12">• Generate boilerplate code &amp; scaffolding</text>
+  <text x="56" y="495" fill="#059669" font-size="11" font-weight="700">Output: Verified Modular Draft Blocks</text>
+
+  <!-- Node 3: Bottom-Left (Layer 03: Bottom Bread 20% Human Editorial Polish) -->
+  <rect x="40" y="530" width="300" height="175" rx="12" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="530" width="300" height="36" rx="10" fill="#0F172A"/>
+  <text x="56" y="553" fill="#10B981" font-size="12" font-weight="800">LAYER 03: BOTTOM BREAD (20% HUMAN)</text>
+  <text x="56" y="588" fill="#0F172A" font-size="14" font-weight="700">Editorial Judgement &amp; Nuance</text>
+  <text x="56" y="611" fill="#334155" font-size="12">• Strip robotic transitions &amp; symmetries</text>
+  <text x="56" y="631" fill="#334155" font-size="12">• Inject proprietary domain benchmarks</text>
+  <text x="56" y="651" fill="#334155" font-size="12">• Verify tactical specificity &amp; rhythm</text>
+  <text x="56" y="671" fill="#334155" font-size="12">• Attach Executive Context Walkthrough</text>
+  <text x="56" y="691" fill="#0F172A" font-size="11" font-weight="700">Output: Practitioner-Grade Deliverable</text>
+
+  <!-- Node 4: Top-Right (The 4-Gate Pre-Submission QA Matrix) -->
+  <rect x="860" y="125" width="300" height="235" rx="12" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="860" y="125" width="300" height="36" rx="10" fill="#F59E0B"/>
+  <text x="876" y="148" fill="#0F172A" font-size="12" font-weight="800">4-GATE PRE-SUBMISSION QA MATRIX</text>
+  <text x="876" y="182" fill="#0F172A" font-size="13" font-weight="700">Mandatory Verification Before Delivery</text>
+  <text x="876" y="206" fill="#334155" font-size="12" font-weight="700">Gate 1: Brief &amp; Constraint Alignment</text>
+  <text x="876" y="223" fill="#64748B" font-size="11">100% check against SOW &amp; Prompt 6.5 audit</text>
+  <text x="876" y="246" fill="#334155" font-size="12" font-weight="700">Gate 2: Fact, Code &amp; Logic Verification</text>
+  <text x="876" y="263" fill="#64748B" font-size="11">Zero hallucinated stats, URLs, or APIs</text>
+  <text x="876" y="286" fill="#334155" font-size="12" font-weight="700">Gate 3: Tone, Voice &amp; AI-Cliché Purge</text>
+  <text x="876" y="303" fill="#64748B" font-size="11">Zero banned tokens; matches Voice DNA</text>
+  <text x="876" y="326" fill="#334155" font-size="12" font-weight="700">Gate 4: Executive Packaging &amp; Framing</text>
+  <text x="876" y="343" fill="#64748B" font-size="11">Trade-off summary + clear approval ask</text>
+
+  <!-- Node 5: Bottom-Right (Modular SOP Asset Reuse & Prompt Chaining) -->
+  <rect x="860" y="445" width="300" height="225" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="860" y="445" width="300" height="36" rx="10" fill="#0F172A"/>
+  <text x="876" y="468" fill="#10B981" font-size="12" font-weight="800">MODULAR SOP ASSET REUSE ENGINE</text>
+  <text x="876" y="503" fill="#0F172A" font-size="14" font-weight="700">Compounding Production Assets</text>
+  <text x="876" y="527" fill="#334155" font-size="12">• Convert custom fixes into reusable SOPs</text>
+  <text x="876" y="549" fill="#334155" font-size="12">• Store Client Voice Cards in Notion Vault</text>
+  <text x="876" y="571" fill="#334155" font-size="12">• Maintain Golden Sample Library by niche</text>
+  <text x="876" y="593" fill="#334155" font-size="12">• Prompt 6.4: Red-Team Stress-Test Loop</text>
+  <text x="876" y="615" fill="#334155" font-size="12">• Archive verified code &amp; copy modules</text>
+  <text x="876" y="645" fill="#059669" font-size="11" font-weight="700">Result: Every Project Faster Than the Last</text>
+
+  <!-- Bottom KPI Bar -->
+  <rect x="40" y="725" width="1120" height="54" rx="10" fill="#0F172A"/>
+  <text x="600" y="757" text-anchor="middle" fill="#F8FAFC" font-size="14" font-weight="700">TARGET KPI: <tspan fill="#10B981">45%–60% Reduction in Production Hours</tspan>  |  <tspan fill="#F59E0B">&lt; 1.0 Revision Round per Deliverable</tspan>  |  <tspan fill="#10B981">100% Hallucination-Free Delivery</tspan></text>
+</svg>
