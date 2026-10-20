@@ -1,0 +1,199 @@
+{
+  "product_id": "ai-freelancer-os-v1",
+  "title": "The AI Freelancer Operating System",
+  "subtitle": "A Practical System to Organize Clients, Automate Repetitive Work, Manage Projects, and Build a More Productive Freelance Business",
+  "version": "1.0.0",
+  "studio_name": "Digital Knowledge Product Studio",
+  "category": "Category of One — Commercial Hybrid Knowledge Product & SaaS-Lite Ecosystem",
+  "target_markets": [
+    "United States (US)",
+    "United Kingdom (UK)",
+    "Canada (CA)",
+    "Australia (AU)"
+  ],
+  "target_audience": {
+    "roles": [
+      "Independent Freelancers",
+      "Solopreneurs",
+      "Consultants",
+      "Virtual Assistants",
+      "Digital Service Providers"
+    ],
+    "experience_band": "1-5 years",
+    "revenue_band_usd_monthly": "$2,000-$8,000/month"
+  },
+  "value_ladder": {
+    "tier_0_free": {
+      "tier_id": "tier_0_free",
+      "name": "The Freelancer Leak Audit Kit (Free Tier Lead Magnet)",
+      "price_usd": 0.0,
+      "billing_model": "free_lead_magnet",
+      "platforms": [
+        "Gumroad ($0+ Version)",
+        "Web Landing Page"
+      ],
+      "deliverables": [
+        "Sample Chapter 1 PDF",
+        "Printable Worksheet 1.1 (7-Day Time & Revenue Leak Audit)",
+        "Free Tier Access to Interactive Effective Hourly Rate (EHR) Leak Calculator inside Web Companion App"
+      ]
+    },
+    "tier_1_essential": {
+      "tier_id": "tier_1_essential",
+      "name": "Essential Edition",
+      "price_ebook_usd": 9.99,
+      "price_paperback_usd": 16.99,
+      "billing_model": "one_time_retail",
+      "platforms": [
+        "Amazon KDP (eBook & Print Paperback)",
+        "Draft2Digital (EPUB 3.0 to Apple Books, Kobo, Barnes & Noble, Everand, Libraries)"
+      ],
+      "deliverables": [
+        "Complete 10-Chapter Practical Operating Manual (PDF, Reflowable EPUB 3.0, Print Paperback)",
+        "50 Tested AI Prompt Workflows (5 per chapter)",
+        "10 Vector Mindmaps (.svg)",
+        "10 Decision Flowcharts (.svg)",
+        "KDP-compliant link to download complimentary ancillary printable checklists"
+      ]
+    },
+    "tier_2_interactive": {
+      "tier_id": "tier_2_interactive",
+      "name": "Interactive Workbook Edition",
+      "price_usd": 24.0,
+      "billing_model": "one_time_direct",
+      "platforms": [
+        "Gumroad"
+      ],
+      "deliverables": [
+        "Everything in Tier 1 (Complete 10-Chapter Manual in PDF & EPUB 3.0)",
+        "10-Chapter Printable & Interactive Fillable Workbook (US Letter 8.5\"x11\" and ISO A4)",
+        "Hyperlinked Tablet Digital Planner (iPad GoodNotes / Notability / reMarkable)",
+        "Copy-Paste AI Prompt Vault"
+      ]
+    },
+    "tier_3_complete_os": {
+      "tier_id": "tier_3_complete_os",
+      "name": "Complete Freelancer Operating System (Flagship Bundle)",
+      "price_usd": 49.0,
+      "billing_model": "one_time_flagship_bundle",
+      "platforms": [
+        "Gumroad"
+      ],
+      "deliverables": [
+        "Everything in Tiers 1 & 2",
+        "Full Pro Offline/Online Interactive Web Companion App (freelancer-os-app.html) featuring B.C.R. Scope & 3-Tier Proposal Pricing Calculator, Dynamic 50-Prompt & Boundary Script Builder, and Weekly CEO Scorecard with LocalStorage + JSON/PDF export",
+        "5-Database Minimalist Notion Freelancer OS (Leads CRM, Active Projects, Client Portal, Prompt Vault, Weekly CEO Review)",
+        "Editable Pricing & Onboarding Spreadsheets"
+      ]
+    },
+    "tier_4_subscription": {
+      "tier_id": "tier_4_subscription",
+      "name": "Living OS & Pro Vault Pass",
+      "price_monthly_usd": 9.0,
+      "price_annual_usd": 49.0,
+      "billing_model": "recurring_subscription",
+      "platforms": [
+        "Gumroad Memberships"
+      ],
+      "deliverables": [
+        "Monthly role-specific AI workflow drops",
+        "New client boundary & negotiation script packs",
+        "Continuous prompt calibration for new LLM releases (GPT-5/Claude/Gemini)",
+        "Lifetime unlocks for all future studio micro-tools"
+      ]
+    }
+  },
+  "design_tokens": {
+    "primary": "#0F172A",
+    "accent": "#0284C7",
+    "secondary": "#0D9488",
+    "text": "#1E293B",
+    "muted": "#64748B",
+    "bg": "#FFFFFF",
+    "heading_font": "Inter",
+    "body_font": "Inter",
+    "mono_font": "JetBrains Mono",
+    "body_font_size_floor_pt": 10.5,
+    "table_code_font_size_floor_pt": 9.5
+  },
+  "editorial_guardrails": {
+    "language": "American English",
+    "min_words_per_chapter": 3500,
+    "target_words_chapter_1": 3800,
+    "max_paragraph_words": 65,
+    "required_sections_per_chapter": 14,
+    "prompts_per_chapter": 5,
+    "banned_words": [
+      "delve",
+      "tapestry",
+      "testament",
+      "beacon",
+      "symphony",
+      "unlock",
+      "unleash",
+      "skyrocket",
+      "supercharge",
+      "game-changer",
+      "pivotal",
+      "realm",
+      "foster",
+      "underscore",
+      "utilize",
+      "leverage"
+    ],
+    "banned_phrases": [
+      "in today's fast-paced world",
+      "ever-evolving landscape",
+      "it is important to remember",
+      "in conclusion",
+      "without further ado",
+      "let's dive in",
+      "look no further"
+    ]
+  },
+  "roadmap_phases": {
+    "phase_1": {
+      "title": "Studio Foundation, State Lock, QA Engine & Chapter 1 Package",
+      "status": "completed",
+      "verified": true
+    },
+    "phase_2": {
+      "title": "Part I & II Manuscripts + Visuals (Chapters 2, 3 & 4)",
+      "status": "pending",
+      "verified": false
+    },
+    "phase_3": {
+      "title": "Part III Manuscripts + Visuals (Chapters 5, 6 & 7)",
+      "status": "pending",
+      "verified": false
+    },
+    "phase_4": {
+      "title": "Part IV Manuscripts + Back Matter (Chapters 8, 9, 10 & Vault)",
+      "status": "pending",
+      "verified": false
+    },
+    "phase_5": {
+      "title": "Master Multi-Format Compiler (build.py — Full Book PDF, EPUB 3.0 & 10-Chapter Workbooks)",
+      "status": "pending",
+      "verified": false
+    },
+    "phase_6": {
+      "title": "SaaS-Lite Interactive Web Companion App (freelancer-os-app.html)",
+      "status": "pending",
+      "verified": false
+    },
+    "phase_7": {
+      "title": "Notion OS Database Kit & Editable Pricing Spreadsheets",
+      "status": "pending",
+      "verified": false
+    },
+    "phase_8": {
+      "title": "Marketing Funnel Landing Page, Subscription Setup & Release Packaging",
+      "status": "pending",
+      "verified": false
+    }
+  },
+  "chapters_completed": [
+    "chapter-01"
+  ]
+}

@@ -1,0 +1,146 @@
+product_id: "ai-freelancer-os-v1"
+version: "1.0.0"
+
+bibliographic_metadata:
+  title: "The AI Freelancer Operating System"
+  subtitle: "A Practical System to Organize Clients, Automate Repetitive Work, Manage Projects, and Build a More Productive Freelance Business"
+  edition: "First Commercial Hybrid Edition (2026)"
+  publisher: "Digital Knowledge Product Studio"
+  imprint: "Practitioner Systems Press"
+  language: "en-US"
+  publication_year: 2026
+  copyright_holder: "Digital Knowledge Product Studio"
+  copyright_notice: "Copyright © 2026 Digital Knowledge Product Studio. All rights reserved. No part of this publication or its accompanying operational frameworks may be reproduced, distributed, or resold in commercial template packs without prior written permission from the publisher, except for purchaser internal business execution."
+  kdp_ai_disclosure:
+    classification: "AI-Assisted Content (per Amazon KDP Content Guidelines)"
+    statement: "This work was architected, structured, edited, and verified by human systems engineers and freelance operations practitioners. Large language models were used as research assistants, structural drafting aids, and prompt calibration sandboxes under strict human editorial governance. Every operational formula, pricing model, and workflow protocol has been manually audited for real-world commercial accuracy."
+  legal_and_tax_disclaimer: "DISCLAIMER: This publication and its accompanying calculators, contract clauses, and Notion schemas are provided strictly for operational and educational purposes. The author and publisher are not licensed attorneys, certified public accountants (CPAs), or registered tax advisors in the United States, United Kingdom, Canada, Australia, or any other jurisdiction. Contract boundary scripts, kill-fee structures, change-order templates, and international tax withholding references (including IRS Form W-8BEN and income tax treaties) do not constitute formal legal or tax advice. Readers should consult qualified legal and accounting professionals in their local jurisdiction before executing binding commercial agreements or tax filings."
+
+target_audience:
+  geographic_markets:
+    - "United States (US)"
+    - "United Kingdom (UK)"
+    - "Canada (CA)"
+    - "Australia (AU)"
+  experience_level: "1 to 5 years independent operating experience"
+  monthly_revenue_band_usd: "$2,000 to $8,000 per month"
+  primary_segments:
+    - "Independent Freelancers (UX/UI, Webflow, Full-Stack Dev, Copywriting, Design)"
+    - "Solopreneurs & Fractional Specialists"
+    - "Independent Management & Marketing Consultants"
+    - "Executive Virtual Assistants & Operations Managers"
+    - "Boutique Digital Service Providers"
+  core_pain_points:
+    - "35% to 40% of weekly working hours lost to unpaid administrative friction and inbox chaos"
+    - "Severe Effective Hourly Rate (EHR) erosion caused by unbilled revisions and scope creep"
+    - "Slow, custom-written project proposals taking 2 to 4 hours per lead with low conversion"
+    - "Delayed project kickoffs caused by missing client credentials, assets, and scattered onboarding"
+    - "Prompt-dump fatigue from generic AI prompt lists that lack operational context or quality gates"
+    - "Over-engineered Notion workspaces that require more maintenance than actual billable client work"
+
+commercial_value_ladder:
+  tier_0_free:
+    name: "Tier 0 — Free Tier (The Freelancer Leak Audit Kit)"
+    price_usd: 0.00
+    platforms:
+      - "Gumroad ($0+ Free Version)"
+      - "Studio Web Landing Page"
+    included_assets:
+      - "Sample Chapter 1 PDF"
+      - "Printable Worksheet 1.1 (7-Day Time & Revenue Leak Audit)"
+      - "Free Tier access to the Interactive Effective Hourly Rate (EHR) Leak Calculator inside the Web Companion App"
+  tier_1_essential:
+    name: "Tier 1 — Essential Edition"
+    price_ebook_usd: 9.99
+    price_paperback_usd: 16.99
+    platforms:
+      - "Amazon KDP (Kindle eBook & Print Paperback)"
+      - "Draft2Digital (Reflowable EPUB 3.0 to Apple Books, Kobo, Barnes & Noble, Everand, Public Libraries)"
+    included_assets:
+      - "Complete 10-Chapter Practical Operating Manual (PDF, Reflowable EPUB 3.0, Print Paperback)"
+      - "50 Tested AI Prompt Workflows (5 per chapter)"
+      - "10 Vector Mindmaps (.svg)"
+      - "10 Decision Flowcharts (.svg)"
+      - "KDP-compliant link to download complimentary ancillary printable checklists"
+  tier_2_interactive:
+    name: "Tier 2 — Interactive Workbook Edition"
+    price_usd: 24.00
+    billing: "One-Time Purchase"
+    platforms:
+      - "Gumroad"
+    included_assets:
+      - "Everything in Tier 1"
+      - "10-Chapter Printable & Interactive Fillable Workbook (US Letter 8.5\"x11\" and ISO A4)"
+      - "Hyperlinked Tablet Digital Planner (iPad GoodNotes / Notability / reMarkable)"
+      - "Copy-Paste AI Prompt Vault"
+  tier_3_complete_os:
+    name: "Tier 3 — Complete Freelancer Operating System (Flagship Bundle)"
+    price_usd: 49.00
+    billing: "One-Time Flagship Bundle"
+    platforms:
+      - "Gumroad"
+    included_assets:
+      - "Everything in Tiers 1 & 2"
+      - "Full Pro Offline/Online Interactive Web Companion App (freelancer-os-app.html) featuring B.C.R. Scope & 3-Tier Proposal Pricing Calculator, Dynamic 50-Prompt & Boundary Script Builder, and Weekly CEO Scorecard with LocalStorage + JSON/PDF export"
+      - "5-Database Minimalist Notion Freelancer OS (Leads CRM, Active Projects, Client Portal, Prompt Vault, Weekly CEO Review)"
+      - "Editable Pricing & Onboarding Spreadsheets"
+  tier_4_subscription:
+    name: "Tier 4 — Living OS & Pro Vault Pass"
+    price_monthly_usd: 9.00
+    price_annual_usd: 49.00
+    billing: "Recurring Subscription"
+    platforms:
+      - "Gumroad Memberships"
+    included_assets:
+      - "Monthly role-specific AI workflow drops"
+      - "New client boundary & negotiation script packs"
+      - "Continuous prompt calibration for new LLM releases (GPT-5/Claude/Gemini)"
+      - "Lifetime unlocks for all future studio micro-tools"
+
+formatting_specifications:
+  kdp_print_paperback:
+    trim_size: "6.0 x 9.0 in (152.4 x 228.6 mm)"
+    bleed_setting: "No Bleed (margins strictly compliant with KDP gutter and outside edge tolerances)"
+    margins:
+      inside_gutter_in: 0.75
+      outside_in: 0.625
+      top_in: 0.75
+      bottom_in: 0.75
+    resolution_dpi: 300
+    color_profile: "Standard Black & White / High-Contrast Grayscale-Safe Vector Diagrams"
+  digital_workbooks:
+    formats:
+      - "US Letter (8.5 x 11.0 in / 215.9 x 279.4 mm)"
+      - "ISO A4 (210 x 297 mm / 8.27 x 11.69 in)"
+      - "Hyperlinked Tablet Landscape/Portrait PDF (GoodNotes, Notability, reMarkable)"
+    interactivity: "AcroForm interactive text fields, checkboxes, and internal navigation links"
+    resolution_dpi: 300
+  ebook_distribution:
+    standard: "EPUB 3.0 Reflowable"
+    accessibility: "Semantic HTML5 hierarchy, alt-text on all 20 vector diagrams, responsive tables"
+  typography_and_design_tokens:
+    primary_color: "#0F172A"
+    accent_color: "#0284C7"
+    secondary_color: "#0D9488"
+    body_text_color: "#1E293B"
+    muted_text_color: "#64748B"
+    background_color: "#FFFFFF"
+    heading_font: "Inter"
+    body_font: "Inter"
+    monospace_font: "JetBrains Mono"
+    body_font_floor_pt: 10.5
+    table_and_code_floor_pt: 9.5
+
+amazon_kdp_seo:
+  backend_keyword_phrases:
+    - "freelance business management system"
+    - "ai workflow automation for freelancers"
+    - "client onboarding scope creep defense"
+    - "solopreneur consulting pricing guide"
+    - "productized service proposal templates"
+    - "freelance project management workbook"
+    - "independent contractor productivity os"
+  bisac_categories:
+    - "BUS094000 — BUSINESS & ECONOMICS / Small Business"
+    - "BUS083000 — BUSINESS & ECONOMICS / Home-Based Businesses"
+    - "COM004000 — COMPUTERS / Artificial Intelligence / General"

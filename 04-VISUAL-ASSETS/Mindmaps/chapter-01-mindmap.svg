@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0284C7" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0D9488" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="0" width="960" height="540" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" rx="8" />
+
+  <!-- Top Header Banner -->
+  <rect x="20" y="16" width="920" height="44" rx="6" fill="#0F172A" />
+  <text x="480" y="43" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 1 MINDMAP: THE 5-STAGE CLIENT LIFECYCLE ENGINE</text>
+
+  <!-- Connector Paths from Central Hub to 5 Stage Nodes -->
+  <path d="M 355 245 L 285 155" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#arrow-accent)" />
+  <path d="M 605 245 L 675 155" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#arrow-accent)" />
+  <path d="M 615 275 L 685 280" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#arrow-teal)" />
+  <path d="M 555 305 L 620 375" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#arrow-teal)" />
+  <path d="M 405 305 L 305 375" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#arrow-accent)" />
+
+  <!-- Central Hub -->
+  <rect x="330" y="218" width="300" height="94" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="2.5" />
+  <text x="480" y="246" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">THE AI FREELANCER OPERATING SYSTEM</text>
+  <text x="480" y="268" text-anchor="middle" fill="#0284C7" font-size="13" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">5-Stage Client Lifecycle Engine</text>
+  <text x="480" y="292" text-anchor="middle" fill="#FFFFFF" font-size="10.5" font-weight="500" style="font-family: 'Inter', Arial, sans-serif;">Circuit-Breaker Gates Against Scope &amp; Time Leaks</text>
+
+  <!-- STAGE 01: Top Left -->
+  <rect x="24" y="76" width="276" height="122" rx="8" fill="#F8FAFC" stroke="#0284C7" stroke-width="2" />
+  <rect x="24" y="76" width="276" height="30" rx="6" fill="#0284C7" />
+  <text x="162" y="96" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 01 — INPUT GATE: Attract &amp; Lead Triage</text>
+  <text x="38" y="124" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Productized 3-Tier Offer Matrix</text>
+  <text x="38" y="148" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Pre-Call Red-Flag Diagnostic</text>
+  <text x="38" y="172" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• 10-Min B.R.I.E.F. Proposal Draft</text>
+
+  <!-- STAGE 02: Top Right -->
+  <rect x="660" y="76" width="276" height="122" rx="8" fill="#F8FAFC" stroke="#0284C7" stroke-width="2" />
+  <rect x="660" y="76" width="276" height="30" rx="6" fill="#0284C7" />
+  <text x="798" y="96" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 02 — COMMERCIAL GATE: Scope &amp; Margin Defense</text>
+  <text x="674" y="124" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Base + Complexity + Risk Formula</text>
+  <text x="674" y="148" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Explicit Exclusion Clauses</text>
+  <text x="674" y="172" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Milestone &amp; Kill-Fee Schedule</text>
+
+  <!-- STAGE 03: Middle Right -->
+  <rect x="660" y="214" width="276" height="122" rx="8" fill="#F8FAFC" stroke="#0D9488" stroke-width="2" />
+  <rect x="660" y="214" width="276" height="30" rx="6" fill="#0D9488" />
+  <text x="798" y="234" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 03 — KICKOFF GATE: 48-Hour Client Onboarding</text>
+  <text x="674" y="262" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Asset &amp; Credential Gatekeeper</text>
+  <text x="674" y="286" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Communication Rules Brief</text>
+  <text x="674" y="310" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Stakeholder Sign-Off Matrix</text>
+
+  <!-- STAGE 04: Bottom Right -->
+  <rect x="520" y="352" width="416" height="114" rx="8" fill="#F8FAFC" stroke="#0D9488" stroke-width="2" />
+  <rect x="520" y="352" width="416" height="30" rx="6" fill="#0D9488" />
+  <text x="728" y="372" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 04 — DELIVERY GATE: Execute &amp; Boundary Control</text>
+  <text x="536" y="400" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Sandwich AI Execution Method (20% Human / 60% AI / 20% QA)</text>
+  <text x="536" y="424" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• P.V.P. Scope-Creep Change Order (Pause / Validate / Price)</text>
+  <text x="536" y="448" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Friday 3-Bullet Async Status (Done / In-Flight / Blockers)</text>
+
+  <!-- STAGE 05: Bottom Left -->
+  <rect x="24" y="352" width="416" height="114" rx="8" fill="#F8FAFC" stroke="#0284C7" stroke-width="2" />
+  <rect x="24" y="352" width="416" height="30" rx="6" fill="#0284C7" />
+  <text x="232" y="372" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">STAGE 05 — EXPANSION GATE: Offboard &amp; Retainer Bridge</text>
+  <text x="40" y="400" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Clean Handover SOP Vault &amp; Final Deliverable Sign-Off</text>
+  <text x="40" y="424" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• ROI Case-Study Extraction &amp; High-Proof Testimonial Capture</text>
+  <text x="40" y="448" fill="#0F172A" font-size="11" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">• Next-90-Day Retainer Pitch &amp; Warm Referral Loop</text>
+
+  <!-- Bottom KPI Bar -->
+  <rect x="20" y="482" width="920" height="42" rx="6" fill="#0F172A" stroke="#0D9488" stroke-width="1.5" />
+  <text x="480" y="508" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">TARGET OPERATIONAL OUTCOMES: Admin Time: &lt; 15% of Week | Proposal Turnaround: &lt;= 15 Mins | Unbilled Revisions: 0 | Effective Hourly Rate: +35-60%</text>
+</svg>

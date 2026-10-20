@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560">
+  <defs>
+    <marker id="fc-arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0F172A" />
+    </marker>
+    <marker id="fc-arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0284C7" />
+    </marker>
+    <marker id="fc-arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0D9488" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="0" width="960" height="560" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" rx="8" />
+
+  <!-- Top Header Banner -->
+  <rect x="20" y="14" width="920" height="42" rx="6" fill="#0F172A" />
+  <text x="480" y="40" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">CHAPTER 1 DECISION FLOWCHART: DAILY TASK &amp; BOTTLENECK TRIAGE</text>
+
+  <!-- Start Node -->
+  <rect x="310" y="72" width="340" height="44" rx="22" fill="#0F172A" stroke="#0284C7" stroke-width="2" />
+  <text x="480" y="99" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">INCOMING TASK OR CLIENT REQUEST</text>
+
+  <!-- Connector Start to Gate 1 -->
+  <path d="M 480 116 L 480 144" stroke="#0F172A" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow-navy)" />
+
+  <!-- Gate 1 Node -->
+  <rect x="285" y="146" width="390" height="52" rx="8" fill="#0284C7" stroke="#0F172A" stroke-width="1.5" />
+  <text x="480" y="168" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 1: SCOPE CIRCUIT BREAKER</text>
+  <text x="480" y="187" text-anchor="middle" fill="#FFFFFF" font-size="12.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Is this task inside signed project scope?</text>
+
+  <!-- Gate 1 NO Branch to Action A (Left) -->
+  <path d="M 285 172 L 165 172 L 165 316" stroke="#0F172A" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow-navy)" />
+  <rect x="100" y="218" width="130" height="24" rx="4" fill="#0F172A" />
+  <text x="165" y="234" text-anchor="middle" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">NO (Scope Creep)</text>
+
+  <!-- Gate 1 YES Branch to Gate 2 (Right/Center) -->
+  <path d="M 675 172 L 640 172" stroke="none" fill="none" />
+  <path d="M 580 198 L 620 228" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow-teal)" />
+  <rect x="605" y="198" width="126" height="22" rx="4" fill="#0D9488" />
+  <text x="668" y="213" text-anchor="middle" fill="#FFFFFF" font-size="10.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">YES (Valid Task)</text>
+
+  <!-- Gate 2 Node -->
+  <rect x="370" y="230" width="550" height="54" rx="8" fill="#0284C7" stroke="#0F172A" stroke-width="1.5" />
+  <text x="645" y="252" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">GATE 2: AUTOMATION &amp; COGNITIVE LOAD FILTER</text>
+  <text x="645" y="272" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Is it repetitive admin, structuring, or first-drafting (&gt;15 mins)?</text>
+
+  <!-- Gate 2 YES Branch to Action B (Middle) -->
+  <path d="M 510 284 L 480 316" stroke="#0D9488" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow-teal)" />
+  <rect x="405" y="289" width="136" height="22" rx="4" fill="#0D9488" />
+  <text x="473" y="304" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">YES (60% AI Layer)</text>
+
+  <!-- Gate 2 NO Branch to Action C (Right) -->
+  <path d="M 785 284 L 795 316" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow-blue)" />
+  <rect x="710" y="289" width="175" height="22" rx="4" fill="#0F172A" />
+  <text x="797" y="304" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">NO (High-Skill Core Craft)</text>
+
+  <!-- ACTION A: Boundary Defense (Left Box) -->
+  <rect x="24" y="320" width="284" height="132" rx="8" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="24" y="320" width="284" height="30" rx="6" fill="#0F172A" />
+  <text x="166" y="340" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION A — Boundary Defense</text>
+  <text x="38" y="366" fill="#0284C7" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Trigger P.V.P. Change Order:</text>
+  <text x="38" y="388" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">1. Pause execution immediately</text>
+  <text x="38" y="410" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">2. Run Prompt 1.4 Boundary Reply</text>
+  <text x="38" y="432" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">3. Quote cost &amp; timeline add-on</text>
+
+  <!-- ACTION B: AI Workflow Engine (Center Box) -->
+  <rect x="332" y="320" width="296" height="132" rx="8" fill="#F8FAFC" stroke="#0D9488" stroke-width="2" />
+  <rect x="332" y="320" width="296" height="30" rx="6" fill="#0D9488" />
+  <text x="480" y="340" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION B — AI Workflow Engine</text>
+  <text x="346" y="366" fill="#0D9488" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Run Sandwich Protocol:</text>
+  <text x="346" y="388" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">1. Feed structured brief variables</text>
+  <text x="346" y="410" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">2. Execute Prompts 1.2–1.4</text>
+  <text x="346" y="432" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">3. Apply 5-min human editorial QA</text>
+
+  <!-- ACTION C: Protected Deep-Work Block (Right Box) -->
+  <rect x="652" y="320" width="284" height="132" rx="8" fill="#F8FAFC" stroke="#0284C7" stroke-width="2" />
+  <rect x="652" y="320" width="284" height="30" rx="6" fill="#0284C7" />
+  <text x="794" y="340" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">ACTION C — Protected Deep-Work Block</text>
+  <text x="666" y="366" fill="#0284C7" font-size="11" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">Assign to Daily 3-Block Priority Matrix:</text>
+  <text x="666" y="388" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">1. Schedule into 90-Min Maker Block</text>
+  <text x="666" y="410" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">2. Mute Slack &amp; email notifications</text>
+  <text x="666" y="432" fill="#0F172A" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">3. Log actual minutes in Worksheet 1.1</text>
+
+  <!-- Convergence Lines to Bottom Node -->
+  <path d="M 166 452 L 166 476 L 480 476 L 480 492" stroke="#0F172A" stroke-width="2" fill="none" marker-end="url(#fc-arrow-navy)" />
+  <path d="M 480 452 L 480 492" stroke="#0D9488" stroke-width="2" fill="none" marker-end="url(#fc-arrow-teal)" />
+  <path d="M 794 452 L 794 476 L 480 476" stroke="#0284C7" stroke-width="2" fill="none" />
+
+  <!-- Bottom Convergence Node -->
+  <rect x="140" y="494" width="680" height="48" rx="8" fill="#0F172A" stroke="#0D9488" stroke-width="2" />
+  <text x="480" y="515" text-anchor="middle" fill="#FFFFFF" font-size="12.5" font-weight="700" style="font-family: 'Inter', Arial, sans-serif;">FRIDAY 15-MIN RETRO (PROMPT 1.5 + WORKSHEET 1.1)</text>
+  <text x="480" y="533" text-anchor="middle" fill="#0284C7" font-size="10.5" font-weight="600" style="font-family: 'Inter', Arial, sans-serif;">Audit Bucket A/B/C/D Hours • Convert Top Leak into SOP • Recalculate Actual Effective Hourly Rate (EHR)</text>
+</svg>
