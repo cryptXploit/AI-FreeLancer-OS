@@ -4,7 +4,7 @@
   "subtitle": "A Practical System to Organize Clients, Automate Repetitive Work, Manage Projects, and Build a More Productive Freelance Business",
   "version": "1.0.0",
   "studio_name": "Digital Knowledge Product Studio",
-  "category": "Category of One — Commercial Hybrid Knowledge Product & SaaS-Lite Ecosystem",
+  "category": "Category of One \u2014 Commercial Hybrid Knowledge Product & SaaS-Lite Ecosystem",
   "target_markets": [
     "United States (US)",
     "United Kingdom (UK)",
@@ -173,9 +173,9 @@
       "verified": true
     },
     "phase_5": {
-      "title": "Master Multi-Format Compiler (build.py — Full Book PDF, EPUB 3.0 & 10-Chapter Workbooks)",
-      "status": "pending",
-      "verified": false
+      "title": "Master Multi-Format Compiler (build.py \u2014 Full Book PDF, EPUB 3.0 & 10-Chapter Workbooks)",
+      "status": "completed",
+      "verified": true
     },
     "phase_6": {
       "title": "SaaS-Lite Interactive Web Companion App (freelancer-os-app.html)",
@@ -206,5 +206,48 @@
     "chapter-10"
   ],
   "front_matter_completed": true,
-  "back_matter_completed": true
+  "back_matter_completed": true,
+  "compiled_deliverables_phase5": {
+    "complete_book_pdf": {
+      "path": "09-EXPORTS/PDF/the-ai-freelancer-os-complete-book.pdf",
+      "pages": 168,
+      "size_kb": 2821.8
+    },
+    "kdp_paperback_6x9_pdf": {
+      "path": "09-EXPORTS/PRINT/the-ai-freelancer-os-kdp-paperback-6x9.pdf",
+      "pages": 146,
+      "size_kb": 2669.0
+    },
+    "reflowable_epub3": {
+      "path": "09-EXPORTS/EPUB/the-ai-freelancer-os.epub",
+      "xhtml_files": 13,
+      "svg_diagrams": 20,
+      "size_kb": 260.0
+    },
+    "workbook_us_letter_pdf": {
+      "path": "09-EXPORTS/PRINT/the-ai-freelancer-os-workbook-us-letter.pdf",
+      "pages": 36,
+      "size_kb": 724.5
+    },
+    "workbook_a4_pdf": {
+      "path": "09-EXPORTS/PRINT/the-ai-freelancer-os-workbook-a4.pdf",
+      "pages": 34,
+      "size_kb": 714.4
+    },
+    "tablet_planner_landscape_pdf": {
+      "path": "09-EXPORTS/PDF/the-ai-freelancer-os-tablet-planner.pdf",
+      "pages": 49,
+      "size_kb": 901.5
+    },
+    "tier0_lead_magnet_sample_pdf": {
+      "path": "09-EXPORTS/PDF/tier0-free-sample-chapter01-and-audit.pdf",
+      "pages": 38,
+      "size_kb": 734.7
+    },
+    "chapter_01_standalone_workbook_pdf": {
+      "path": "05-WORKBOOKS/chapter-01-workbook.pdf",
+      "pages": 5,
+      "size_kb": 178.0
+    }
+  }
 }
