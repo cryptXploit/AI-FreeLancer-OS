@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3774 2775" width="3774" height="2775">
+  <defs>
+    <linearGradient id="wrapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full Bleed Canvas (3774 x 2775) -->
+  <rect width="3774" height="2775" fill="url(#wrapBg)"/>
+  <rect x="0" y="0" width="3774" height="36" fill="url(#barGrad)"/>
+  <rect x="0" y="2739" width="3774" height="36" fill="url(#barGrad)"/>
+
+  <!-- ==================================================================== -->
+  <!-- BACK COVER ZONE (X: 38 to 1837, Trim Center X: 937)                  -->
+  <!-- ==================================================================== -->
+  <rect x="130" y="130" width="1610" height="74" rx="10" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+  <text x="165" y="177" font-family="JetBrains Mono, Consolas, monospace" font-size="25" font-weight="800" fill="#2DD4BF">STOP LOSING 38% OF YOUR WEEK TO UNBILLED ADMIN &amp; SCOPE CREEP</text>
+
+  <text x="130" y="290" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="900" fill="#FFFFFF">Turn Your Solo Practice Into a High-Margin,</text>
+  <text x="130" y="355" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="900" fill="#38BDF8">Systematized Operating System.</text>
+
+  <text x="130" y="435" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="500" fill="#CBD5E1">Independent freelancers, consultants, and digital service providers rarely fail from a lack</text>
+  <text x="130" y="478" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="500" fill="#CBD5E1">of craft skill. They stall because custom proposals, missing onboarding assets, unpriced</text>
+  <text x="130" y="521" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="500" fill="#CBD5E1">revisions, and reactive Slack threads quietly erode a $75/hour target rate down to $26.80/hour.</text>
+
+  <text x="130" y="595" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">This practitioner manual installs five deterministic operational gates across your business:</text>
+
+  <!-- Back Cover 5-Gate Architecture Table Card -->
+  <rect x="130" y="635" width="1610" height="1140" rx="20" fill="#1E293B" stroke="#334155" stroke-width="3"/>
+
+  <g transform="translate(170, 675)">
+    <rect x="0" y="0" width="1530" height="190" rx="12" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+    <text x="35" y="52" font-family="JetBrains Mono, Consolas, monospace" font-size="27" font-weight="800" fill="#38BDF8">01 // DIAGNOSTIC &amp; PRODUCTIZED POSITIONING (CHAPTERS 1–2)</text>
+    <text x="35" y="100" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#FFFFFF">Audit your True Effective Hourly Rate (EHR) across Buckets A, B, C, and D, eliminate custom</text>
+    <text x="35" y="140" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#94A3B8">scope-from-scratch quoting, and package your expertise into a 3-Tier Offer Matrix.</text>
+  </g>
+
+  <g transform="translate(170, 890)">
+    <rect x="0" y="0" width="1530" height="190" rx="12" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+    <text x="35" y="52" font-family="JetBrains Mono, Consolas, monospace" font-size="27" font-weight="800" fill="#38BDF8">02 // 10-MINUTE PROPOSALS &amp; B.C.R. PRICING ENGINE (CHAPTERS 3–4)</text>
+    <text x="35" y="100" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#FFFFFF">Score inbound leads with the 20-point P.A.C.E. filter, generate 3-option B.R.I.E.F. proposals</text>
+    <text x="35" y="140" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#94A3B8">in 10 minutes, and defend margins using Base + Complexity + Risk Buffer math.</text>
+  </g>
+
+  <g transform="translate(170, 1105)">
+    <rect x="0" y="0" width="1530" height="190" rx="12" fill="#0F172A" stroke="#0D9488" stroke-width="2"/>
+    <text x="35" y="52" font-family="JetBrains Mono, Consolas, monospace" font-size="27" font-weight="800" fill="#2DD4BF">03 // 48-HOUR ONBOARDING &amp; 20/60/20 AI EXECUTION (CHAPTERS 5–6)</text>
+    <text x="35" y="100" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#FFFFFF">Enforce the 48-Hour Pre-Flight Asset Gate before kickoff and accelerate delivery using</text>
+    <text x="35" y="140" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#94A3B8">the 20% Human Architecture / 60% AI Draft / 20% 4-Gate QA Sandwich Workflow.</text>
+  </g>
+
+  <g transform="translate(170, 1320)">
+    <rect x="0" y="0" width="1530" height="190" rx="12" fill="#0F172A" stroke="#0D9488" stroke-width="2"/>
+    <text x="35" y="52" font-family="JetBrains Mono, Consolas, monospace" font-size="27" font-weight="800" fill="#2DD4BF">04 // P.V.P. SCOPE DEFENSE &amp; ASYNC UPDATES (CHAPTERS 7–8)</text>
+    <text x="35" y="100" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#FFFFFF">Convert unbilled scope creep into paid Change Orders with 12 word-for-word boundary scripts</text>
+    <text x="35" y="140" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#94A3B8">and cut revision cycles in half using 3-Pillar Async Updates and Loom walkthroughs.</text>
+  </g>
+
+  <g transform="translate(170, 1535)">
+    <rect x="0" y="0" width="1530" height="190" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="2"/>
+    <text x="35" y="52" font-family="JetBrains Mono, Consolas, monospace" font-size="27" font-weight="800" fill="#FBBF24">05 // THE RETAINER BRIDGE &amp; WEEKLY CEO SCORECARD (CHAPTERS 9–10)</text>
+    <text x="35" y="100" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#FFFFFF">Convert completed projects into recurring monthly retainers 48 hours after handover and</text>
+    <text x="35" y="140" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#94A3B8">run the 20-Minute Friday CEO Ritual with automatic 85% capacity rate-raise triggers.</text>
+  </g>
+
+  <!-- Back Cover Bottom Left: Included Companion Assets Summary -->
+  <rect x="130" y="1825" width="960" height="440" rx="18" fill="#0B1120" stroke="#0284C7" stroke-width="2"/>
+  <text x="170" y="1890" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="#38BDF8">INSIDE THIS COMPLETE OPERATING MANUAL:</text>
+  <text x="170" y="1950" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#E2E8F0">• 50 Tested AI Workflow Prompts with Verification Rules</text>
+  <text x="170" y="2005" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#E2E8F0">• 20 High-Contrast Vector System Mindmaps &amp; Decision Trees</text>
+  <text x="170" y="2060" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#E2E8F0">• 10 Chapter Action Worksheets &amp; Implementation Scorecards</text>
+  <text x="170" y="2115" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#E2E8F0">• 12 Ready-to-Send Client Boundary &amp; Negotiation Scripts</text>
+  <text x="170" y="2170" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#2DD4BF">• Complimentary Download Link for Printable Checklists &amp; Tools</text>
+
+  <text x="130" y="2580" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" fill="#94A3B8">CATEGORY: BUSINESS &amp; ECONOMICS / SMALL BUSINESS &amp; AI OPERATIONS</text>
+  <text x="130" y="2630" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">PRACTITIONER SYSTEMS PRESS • DIGITAL KNOWLEDGE PRODUCT STUDIO</text>
+
+  <!-- Reserved White KDP ISBN Barcode Box (2.0in x 1.2in = 600 x 360 px) -->
+  <rect x="1140" y="2275" width="600" height="360" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="1440" y="2445" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" fill="#475569" text-anchor="middle">AMAZON KDP ISBN BARCODE ZONE</text>
+  <text x="1440" y="2485" font-family="JetBrains Mono, Consolas, monospace" font-size="20" font-weight="600" fill="#64748B" text-anchor="middle">2.00" x 1.20" (600 x 360 px @ 300 DPI)</text>
+
+  <!-- ==================================================================== -->
+  <!-- CENTER SPINE ZONE (X: 1837.5 to 1936.5, Center X: 1887, Width: 99px) -->
+  <!-- ==================================================================== -->
+  <rect x="1837.5" y="36" width="99" height="2703" fill="#090E1A" stroke="#1E293B" stroke-width="1"/>
+  <g transform="translate(1887, 1387) rotate(90)">
+    <text x="0" y="10" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" letter-spacing="2" text-anchor="middle">THE AI FREELANCER OPERATING SYSTEM   •   PRACTITIONER SYSTEMS PRESS</text>
+  </g>
+
+  <!-- ==================================================================== -->
+  <!-- FRONT COVER ZONE (X: 1936.5 to 3736.5, Trim Width: 1800px)           -->
+  <!-- ==================================================================== -->
+  <g transform="translate(1936.5, 0)">
+    <rect x="130" y="120" width="1540" height="76" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <text x="170" y="168" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" fill="#38BDF8" letter-spacing="3">PRACTITIONER SYSTEMS PRESS • COMMERCIAL OPERATING MANUAL</text>
+
+    <text x="130" y="360" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800" fill="#38BDF8" letter-spacing="4">THE COMPLETE 5-GATE SYSTEM</text>
+    <text x="130" y="515" font-family="Inter, Arial, sans-serif" font-size="140" font-weight="900" fill="#FFFFFF" letter-spacing="-2">THE AI</text>
+    <text x="130" y="665" font-family="Inter, Arial, sans-serif" font-size="140" font-weight="900" fill="#FFFFFF" letter-spacing="-2">FREELANCER</text>
+    <text x="130" y="815" font-family="Inter, Arial, sans-serif" font-size="132" font-weight="900" fill="#38BDF8" letter-spacing="-2">OPERATING</text>
+    <text x="130" y="965" font-family="Inter, Arial, sans-serif" font-size="132" font-weight="900" fill="#2DD4BF" letter-spacing="-2">SYSTEM</text>
+
+    <rect x="130" y="1015" width="460" height="8" fill="#0284C7"/>
+    <text x="130" y="1080" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="600" fill="#E2E8F0">A Practical System to Organize Clients, Automate Repetitive Work,</text>
+    <text x="130" y="1132" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="600" fill="#E2E8F0">Manage Projects, and Build a More Productive Freelance Business</text>
+
+    <!-- Front Schematic Box -->
+    <rect x="130" y="1200" width="1540" height="880" rx="22" fill="#0B1120" stroke="#334155" stroke-width="3"/>
+    <text x="180" y="1265" font-family="JetBrains Mono, Consolas, monospace" font-size="27" font-weight="700" fill="#38BDF8">5-STAGE LIFECYCLE ARCHITECTURE // SYSTEM OVER THEORY</text>
+
+    <rect x="180" y="1305" width="1440" height="125" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <text x="220" y="1360" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#38BDF8">STAGE 01–02: ATTRACT, FILTER, SCOPE &amp; PRICE</text>
+    <text x="220" y="1402" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500" fill="#CBD5E1">7-Day EHR Leak Audit • 3-Tier Offer Matrix • 10-Min B.R.I.E.F. Proposals • B.C.R. Pricing</text>
+
+    <rect x="180" y="1455" width="1440" height="125" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <text x="220" y="1510" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#2DD4BF">STAGE 03: ZERO-FRICTION 48-HOUR ONBOARDING GATE</text>
+    <text x="220" y="1552" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500" fill="#CBD5E1">Pre-Flight Asset Verification • Day-for-Day Timeline Shift • Single-Link Client Hub</text>
+
+    <rect x="180" y="1605" width="1440" height="125" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <text x="220" y="1660" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#2DD4BF">STAGE 04: 20/60/20 EXECUTION &amp; P.V.P. SCOPE DEFENSE</text>
+    <text x="220" y="1702" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500" fill="#CBD5E1">Voice DNA Calibration • 4-Gate QA • Paid Change Orders • 3-Pillar Async Status</text>
+
+    <rect x="180" y="1755" width="1440" height="125" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="220" y="1810" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#FBBF24">STAGE 05: RETAINER BRIDGE &amp; WEEKLY FRIDAY CEO REVIEW</text>
+    <text x="220" y="1852" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500" fill="#CBD5E1">Executive Handover Vault • 48-Hr Retainer Pitch • 80/20 Client Roster • 85% Rate Trigger</text>
+
+    <text x="900" y="1965" font-family="JetBrains Mono, Consolas, monospace" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="middle">50 AI WORKFLOW PROMPTS  •  20 VECTOR DIAGRAMS  •  12 BOUNDARY SCRIPTS</text>
+    <text x="900" y="2020" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600" fill="#38BDF8" text-anchor="middle">Includes 10 Chapter Action Workbooks &amp; Operational Scorecards</text>
+
+    <!-- Front Bottom Attribution -->
+    <rect x="130" y="2160" width="1540" height="460" rx="20" fill="#0B1120" stroke="#1E293B" stroke-width="2"/>
+    <text x="900" y="2290" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#94A3B8" text-anchor="middle">DESIGNED FOR INDEPENDENT SERVICE PROVIDERS IN US, UK, CA &amp; AU</text>
+    <text x="900" y="2390" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="900" fill="#FFFFFF" letter-spacing="3" text-anchor="middle">DIGITAL KNOWLEDGE PRODUCT STUDIO</text>
+    <text x="900" y="2480" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="700" fill="#2DD4BF" text-anchor="middle">FIRST COMMERCIAL HYBRID EDITION (2026)</text>
+  </g>
+</svg>

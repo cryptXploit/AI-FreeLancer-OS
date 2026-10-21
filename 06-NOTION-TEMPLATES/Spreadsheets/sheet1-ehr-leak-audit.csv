@@ -1,0 +1,27 @@
+THE AI FREELANCER OPERATING SYSTEM — TAB 1: 7-DAY TIME & REVENUE LEAK DIAGNOSTIC (EHR AUDIT),,,,
+"Synced with Chapter 1, Prompt 1.1 & Worksheet 1.1 • Edit yellow/white input cells in Column C; Column C/D formulas calculate automatically.",,,,
+,,,,
+Line ID,Diagnostic Metric / Operational Parameter,Current Baseline Value,Unit / Format,Target Benchmark & Diagnostic Notes
+Line 01,Stated Target Billable Hourly Rate,75.0,$/hr,Your goal hourly rate for scoped client work
+Line 02,Weekly Gross Revenue Billed (7-Day Audit Window),1300.0,$/week,Gross project + retainer fees earned this week
+Line 03,Bucket A: Core Billable Craft Hours,26.5,hrs/week,Target >= 65.0% of total weekly working hours
+Line 04,Bucket B: Unbilled Client Friction & Scope Creep Hours,8.0,hrs/week,Target <= 5.0% (Enforce Script 5 & Script 7)
+Line 05,"Bucket C: Unpaid Sales, Proposals & Discovery Calls",5.5,hrs/week,Target <= 15.0% (Deploy 10-Min B.R.I.E.F. Engine)
+Line 06,Bucket D: Internal Admin & Context-Switching Drag,8.5,hrs/week,Target <= 15.0% (Batch into 30-Min Midday Sprint)
+Line 07,Total Real Working Hours Logged (Buckets A+B+C+D),=SUM(C7:C10),hrs/week,Live Formula: Sum of all 4 weekly time buckets
+Line 08,Total Unbilled Shadow Labor Hours (Buckets B+C+D),=SUM(C8:C10),hrs/week,Live Formula: Hours worked at $0 direct billing
+Line 09,Billable Craft Utilization Ratio (Bucket A %),=C7/C11,%,Live Formula: Bucket A Hours / Total Real Hours
+Line 10,True Effective Hourly Rate (Realized EHR),"=ROUND(C6/C11,2)",$/hr,Live Formula: Weekly Gross Revenue / Total Real Hours
+Line 11,Hourly Rate Erosion vs. Stated Target Rate,=C14-C5,$/hr,Live Formula: True EHR minus Stated Target Rate
+Line 12,Weekly Unbilled Revenue Leak (Opportunity Cost),"=ROUND(C12*C5,2)",$/week,Live Formula: Unbilled Hours * Stated Target Rate
+Line 13,Monthly Unbilled Revenue Leak (4.33 Weeks),"=ROUND(C16*4.33,2)",$/month,Live Formula: Weekly Revenue Leak * 4.33 weeks
+Line 14,Annualized 48-Week Unbilled Revenue Leak,"=ROUND(C16*48,2)",$/year,Live Formula: Recoverable annual capacity value
+Line 15,90-Day AI OS 55% Recovery Projection (Annualized),"=ROUND(C18*0.55,2)",$/year,Live Formula: 55% shadow-labor recovery via AI OS
+,,,,
+Gate ID,5-Stage Client Lifecycle Bottleneck Scorecard,Gate Score (1-5),Max Score,Automated Gate Diagnostic Status
+Stage 01,Attract & Filter (3-Tier Offer Matrix & P.A.C.E. Lead Filter),2,5,"=IF(C22<=2,""PRIORITY FIX: Install Ch 2-3 Offer & Lead Filter"",""HEALTHY GATE"")"
+Stage 02,Scope & Price (10-Min B.R.I.E.F. & B.C.R. Pricing Formula),2,5,"=IF(C23<=2,""PRIORITY FIX: Deploy Ch 3-4 B.C.R. Pricing Engine"",""HEALTHY GATE"")"
+Stage 03,Onboard & Align (48-Hr Pre-Flight Asset Gate & Kickoff Hold),3,5,"=IF(C24<=2,""PRIORITY FIX: Enforce Ch 5 48-Hr Asset Gate"",""MODERATE — MONITOR"")"
+Stage 04,Execute & Protect (20/60/20 Sandwich & P.V.P. Change Orders),2,5,"=IF(C25<=2,""PRIORITY FIX: Activate Ch 6-8 Scope Defense"",""HEALTHY GATE"")"
+Stage 05,Offboard & Retain (Retainer Bridge & 20-Min Friday CEO Review),3,5,"=IF(C26<=2,""PRIORITY FIX: Install Ch 9-10 Retainer Bridge"",""MODERATE — MONITOR"")"
+TOTAL,Composite 5-Stage Operating System Readiness Score,=SUM(C22:C26),=SUM(D22:D26),"=IF(C27<18,""SYSTEM UPGRADE REQUIRED (<18/25)"",""OPERATING SYSTEM LOCKED"")"

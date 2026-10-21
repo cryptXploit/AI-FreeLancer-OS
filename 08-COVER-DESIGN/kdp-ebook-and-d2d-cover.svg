@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2560" width="1600" height="2560">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="55%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Slate Navy Background -->
+  <rect width="1600" height="2560" fill="url(#bgGrad)"/>
+
+  <!-- Architectural Blueprint Grid Overlay -->
+  <g stroke="#334155" stroke-width="1" opacity="0.35">
+    <line x1="120" y1="0" x2="120" y2="2560"/>
+    <line x1="400" y1="0" x2="400" y2="2560"/>
+    <line x1="800" y1="0" x2="800" y2="2560"/>
+    <line x1="1200" y1="0" x2="1200" y2="2560"/>
+    <line x1="1480" y1="0" x2="1480" y2="2560"/>
+    <line x1="0" y1="220" x2="1600" y2="220"/>
+    <line x1="0" y1="1080" x2="1600" y2="1080"/>
+    <line x1="0" y1="1960" x2="1600" y2="1960"/>
+    <line x1="0" y1="2340" x2="1600" y2="2340"/>
+  </g>
+
+  <!-- Top Accent Bar -->
+  <rect x="0" y="0" width="1600" height="28" fill="url(#accentGrad)"/>
+
+  <!-- Top Imprint Pill -->
+  <rect x="120" y="90" width="1360" height="76" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+  <text x="160" y="138" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#38BDF8" letter-spacing="3">PRACTITIONER SYSTEMS PRESS • COMMERCIAL OPERATING MANUAL</text>
+  <text x="1440" y="138" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" fill="#2DD4BF" text-anchor="end">EDITION v1.0</text>
+
+  <!-- Main Title Block -->
+  <text x="120" y="340" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800" fill="#38BDF8" letter-spacing="4">THE COMPLETE 5-GATE SYSTEM</text>
+  <text x="120" y="490" font-family="Inter, Arial, sans-serif" font-size="132" font-weight="900" fill="#FFFFFF" letter-spacing="-2">THE AI</text>
+  <text x="120" y="635" font-family="Inter, Arial, sans-serif" font-size="132" font-weight="900" fill="#FFFFFF" letter-spacing="-2">FREELANCER</text>
+  <text x="120" y="780" font-family="Inter, Arial, sans-serif" font-size="124" font-weight="900" fill="#38BDF8" letter-spacing="-2">OPERATING</text>
+  <text x="120" y="920" font-family="Inter, Arial, sans-serif" font-size="124" font-weight="900" fill="#2DD4BF" letter-spacing="-2">SYSTEM</text>
+
+  <!-- Subtitle Rule & Copy -->
+  <rect x="120" y="970" width="420" height="8" fill="#0284C7"/>
+  <text x="120" y="1035" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" fill="#E2E8F0">A Practical System to Organize Clients, Automate Repetitive Work,</text>
+  <text x="120" y="1085" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" fill="#E2E8F0">Manage Projects, and Build a More Productive Freelance Business</text>
+
+  <!-- Center Architectural Diagram Card: 5-Stage Lifecycle Engine -->
+  <rect x="120" y="1145" width="1360" height="770" rx="24" fill="#0B1120" stroke="#334155" stroke-width="3"/>
+  <rect x="120" y="1145" width="1360" height="68" rx="24" fill="#1E293B"/>
+  <text x="165" y="1188" font-family="JetBrains Mono, Consolas, monospace" font-size="25" font-weight="700" fill="#38BDF8">SYSTEM ARCHITECTURE // THE 5-STAGE CLIENT LIFECYCLE &amp; MARGIN ENGINE</text>
+  <text x="1435" y="1188" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" fill="#2DD4BF" text-anchor="end">TARGET EHR: $85+/HR</text>
+
+  <!-- 5 Stage Nodes Inside Diagram -->
+  <g transform="translate(160, 1255)">
+    <rect x="0" y="0" width="1280" height="105" rx="14" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="190" height="105" rx="14" fill="#0284C7"/>
+    <text x="95" y="62" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 01</text>
+    <text x="225" y="46" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF">ATTRACT &amp; FILTER INBOUND PIPELINE</text>
+    <text x="225" y="82" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="500" fill="#94A3B8">3-Tier Productized Offer Matrix • P.A.C.E. Lead Scorer • Red-Flag Filter</text>
+    <text x="1245" y="60" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" fill="#38BDF8" text-anchor="end">CH 01–03</text>
+  </g>
+
+  <g transform="translate(160, 1380)">
+    <rect x="0" y="0" width="1280" height="105" rx="14" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="190" height="105" rx="14" fill="#0284C7"/>
+    <text x="95" y="62" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 02</text>
+    <text x="225" y="46" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF">SCOPE &amp; PRICE WITH B.C.R. PRECISION</text>
+    <text x="225" y="82" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="500" fill="#94A3B8">10-Minute B.R.I.E.F. Proposals • Base + Complexity + Risk Buffer • Zero-Discount Defense</text>
+    <text x="1245" y="60" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" fill="#38BDF8" text-anchor="end">CH 03–04</text>
+  </g>
+
+  <g transform="translate(160, 1505)">
+    <rect x="0" y="0" width="1280" height="105" rx="14" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="190" height="105" rx="14" fill="#0D9488"/>
+    <text x="95" y="62" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 03</text>
+    <text x="225" y="46" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF">ZERO-FRICTION 48-HOUR ONBOARDING GATE</text>
+    <text x="225" y="82" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="500" fill="#94A3B8">Pre-Flight Asset Vault • Day-for-Day Timeline Shift Rule • Async SLA Charter</text>
+    <text x="1245" y="60" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" fill="#2DD4BF" text-anchor="end">CH 05</text>
+  </g>
+
+  <g transform="translate(160, 1630)">
+    <rect x="0" y="0" width="1280" height="105" rx="14" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="190" height="105" rx="14" fill="#0D9488"/>
+    <text x="95" y="62" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 04</text>
+    <text x="225" y="46" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF">EXECUTE, QA &amp; DEFEND SCOPE BOUNDARIES</text>
+    <text x="225" y="82" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="500" fill="#94A3B8">20/60/20 Sandwich Execution • P.V.P. Change Orders • 3-Pillar Async Updates</text>
+    <text x="1245" y="60" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" fill="#2DD4BF" text-anchor="end">CH 06–08</text>
+  </g>
+
+  <g transform="translate(160, 1755)">
+    <rect x="0" y="0" width="1280" height="105" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="0" y="0" width="190" height="105" rx="14" fill="#D97706"/>
+    <text x="95" y="62" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 05</text>
+    <text x="225" y="46" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF">OFFBOARD, RETAIN &amp; SCALE AS WEEKLY CEO</text>
+    <text x="225" y="82" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="500" fill="#94A3B8">Executive Handover Vault • 48-Hr Retainer Bridge • 20-Min Friday CEO Scorecard</text>
+    <text x="1245" y="60" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" fill="#FBBF24" text-anchor="end">CH 09–10</text>
+  </g>
+
+  <!-- 3 Feature Metric Badges -->
+  <rect x="120" y="1965" width="430" height="165" rx="16" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+  <text x="335" y="2035" font-family="JetBrains Mono, Consolas, monospace" font-size="52" font-weight="800" fill="#38BDF8" text-anchor="middle">50 PROMPTS</text>
+  <text x="335" y="2085" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="600" fill="#CBD5E1" text-anchor="middle">Tested AI Workflows &amp; QA Rules</text>
+
+  <rect x="585" y="1965" width="430" height="165" rx="16" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+  <text x="800" y="2035" font-family="JetBrains Mono, Consolas, monospace" font-size="52" font-weight="800" fill="#2DD4BF" text-anchor="middle">20 DIAGRAMS</text>
+  <text x="800" y="2085" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="600" fill="#CBD5E1" text-anchor="middle">Mindmaps &amp; Decision Trees</text>
+
+  <rect x="1050" y="1965" width="430" height="165" rx="16" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+  <text x="1265" y="2035" font-family="JetBrains Mono, Consolas, monospace" font-size="52" font-weight="800" fill="#FBBF24" text-anchor="middle">12 SCRIPTS</text>
+  <text x="1265" y="2085" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="600" fill="#CBD5E1" text-anchor="middle">Client Boundary &amp; Price Defense</text>
+
+  <!-- Bottom Author & Studio Attribution Footer -->
+  <rect x="120" y="2190" width="1360" height="240" rx="18" fill="#0B1120" stroke="#1E293B" stroke-width="2"/>
+  <text x="800" y="2265" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#94A3B8" text-anchor="middle">ARCHITECTED FOR INDEPENDENT FREELANCERS, CONSULTANTS &amp; SOLOPRENEURS</text>
+  <text x="800" y="2330" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900" fill="#FFFFFF" letter-spacing="3" text-anchor="middle">DIGITAL KNOWLEDGE PRODUCT STUDIO</text>
+  <text x="800" y="2385" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="600" fill="#38BDF8" text-anchor="middle">US • UK • CANADA • AUSTRALIA // HYBRID EDITION WITH INTERACTIVE WORKSHEETS</text>
+
+  <rect x="0" y="2532" width="1600" height="28" fill="url(#accentGrad)"/>
+</svg>

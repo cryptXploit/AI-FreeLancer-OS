@@ -1,0 +1,24 @@
+THE AI FREELANCER OPERATING SYSTEM — TAB 2: WBS ESTIMATOR & B.C.R. 3-TIER PROPOSAL PRICING ENGINE,,,,
+"Synced with Chapters 2, 3 & 4 and Worksheet 4.1 • Base + Complexity + Risk Buffer Formula & Milestone Payment Split",,,,
+,,,,
+WBS ID,Project Deliverable / Work Breakdown Module,Optimistic Base Hrs,Admin & Prep Multiplier (%),Weighted Base Hours (Formula)
+WBS-01,"Discovery Synthesis, Voice DNA & Architecture Blueprint",4.5,0.2,"=ROUND(C5*(1+D5),2)"
+WBS-02,Core Wireframe & Information Hierarchy System,6.5,0.2,"=ROUND(C6*(1+D6),2)"
+WBS-03,Primary High-Conversion Deliverable Build (Core Pages/Modules),12.0,0.2,"=ROUND(C7*(1+D7),2)"
+WBS-04,"Responsive Breakpoints, CMS & Technical Integration",5.5,0.2,"=ROUND(C8*(1+D8),2)"
+WBS-05,Copy Calibration & Conversion Micro-Copy Polish,3.5,0.2,"=ROUND(C9*(1+D9),2)"
+WBS-06,4-Gate Pre-Submission QA & Red-Team Verification Audit,3.0,0.2,"=ROUND(C10*(1+D10),2)"
+WBS-07,Consolidated SPOC Revision Round Execution (2 Rounds),4.0,0.2,"=ROUND(C11*(1+D11),2)"
+WBS-08,Executive Handover Vault & 3 Custom Video SOPs,2.5,0.2,"=ROUND(C12*(1+D12),2)"
+WBS-SUM,Total Weighted Base Hours (Including 20% Admin/Prep Buffer),=SUM(C5:C12),=AVERAGE(D5:D12),=SUM(E5:E12)
+,,,,
+Param ID,B.C.R. Pricing Engine & 3-Tier Anchor Matrix,Input / Formula Value,50% Kickoff Deposit,25% Midpoint / 25% Final
+BCR-01,Target Hourly Billable Rate ($/hr),85.0,,Baseline practitioner hourly rate
+BCR-02,Technical & Stakeholder Complexity Multiplier (C),1.15,,1.00x Standard | 1.15x Moderate | 1.30x High | 1.50x Rush
+BCR-03,Client Dependency & Scope Risk Buffer (R %),0.2,,15% Low Risk | 20% Standard | 25% High | 35% Legacy Stack
+BCR-04,Direct Pass-Through Software / Font / Licensing Costs ($),150.0,,Billed at 1.0x cost outside labor margin
+BCR-05,B.C.R. Risk-Adjusted Equivalent Hours,"=ROUND(E13*C17*(1+C18),2)",,Formula: Weighted Base Hrs * Complexity * (1 + Risk%)
+TIER-1,Option 1: Essential Baseline Package Price (1.00x B.C.R.),"=ROUND(((C20*C16)+C19)/50,0)*50","=ROUND(C21*0.50,2)","=ROUND(C21*0.25,2)"
+TIER-2,Option 2: Core Transformation Anchor Price (1.35x B.C.R.),"=ROUND((((C20*C16)*1.35)+C19)/50,0)*50","=ROUND(C22*0.50,2)","=ROUND(C22*0.25,2)"
+TIER-3,Option 3: Turnkey & Retainer Partner Price (1.85x B.C.R.),"=ROUND((((C20*C16)*1.85)+C19)/50,0)*50","=ROUND(C23*0.50,2)","=ROUND(C23*0.25,2)"
+FLOOR,Hard Walk-Away Minimum Negotiation Floor (0.85x Tier 2),"=ROUND((C22*0.85)/50,0)*50","=ROUND(C24*0.50,2)","=ROUND(C24*0.25,2)"

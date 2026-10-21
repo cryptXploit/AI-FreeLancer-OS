@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="gBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="60%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="gAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#gBg)"/>
+  <rect x="0" y="0" width="1280" height="10" fill="url(#gAccent)"/>
+
+  <!-- Subtle Grid Lines -->
+  <g stroke="#334155" stroke-width="1" opacity="0.28">
+    <line x1="60" y1="0" x2="60" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="1220" y1="0" x2="1220" y2="720"/>
+    <line x1="0" y1="95" x2="1280" y2="95"/>
+    <line x1="0" y1="635" x2="1280" y2="635"/>
+  </g>
+
+  <!-- Top Header Bar -->
+  <rect x="60" y="28" width="840" height="50" rx="8" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+  <text x="82" y="59" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="800" fill="#38BDF8" letter-spacing="1.5">TIER 3 FLAGSHIP BUNDLE • COMPLETE HYBRID PRODUCT &amp; SOFTWARE ECOSYSTEM</text>
+
+  <!-- Price Badge Top Right -->
+  <rect x="920" y="24" width="300" height="58" rx="12" fill="#0284C7"/>
+  <text x="1070" y="61" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="900" fill="#FFFFFF" text-anchor="middle">$49 COMPLETE OS</text>
+
+  <!-- Main Display Title & Right Telemetry Callout -->
+  <text x="60" y="132" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#2DD4BF" letter-spacing="2.2">THE AI FREELANCER OPERATING SYSTEM • DIGITAL KNOWLEDGE PRODUCT STUDIO</text>
+  <text x="60" y="192" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="900" fill="#FFFFFF" letter-spacing="-1">The Complete AI Freelancer</text>
+  <text x="60" y="248" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="900" fill="#38BDF8" letter-spacing="-1">Operating System Bundle</text>
+  <text x="60" y="288" font-family="Inter, Arial, sans-serif" font-size="18.5" font-weight="500" fill="#CBD5E1">Full Pro SaaS-Lite Web App + 5-Database Notion OS Kit + 4-Tab Excel Pricing Matrix + All Book &amp; Workbook Editions</text>
+
+  <!-- 5-Stage Lifecycle Pill Bar -->
+  <rect x="60" y="304" width="1160" height="32" rx="6" fill="#0B1120" stroke="#334155" stroke-width="1"/>
+  <text x="80" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#38BDF8">STAGE 1: ATTRACT</text>
+  <text x="310" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#38BDF8">STAGE 2: B.C.R. PRICE</text>
+  <text x="565" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#2DD4BF">STAGE 3: 48H ONBOARD</text>
+  <text x="825" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#2DD4BF">STAGE 4: 20/60/20 QA</text>
+  <text x="1060" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#FBBF24">STAGE 5: CEO SCALE</text>
+
+  <!-- 4 Deliverable Feature Cards (2x2 Grid) -->
+  <g transform="translate(60, 350)">
+    <rect x="0" y="0" width="565" height="125" rx="14" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="18" y="18" width="110" height="30" rx="6" fill="#0F172A"/>
+    <text x="73" y="39" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8" text-anchor="middle">SUITE 01</text>
+    <text x="18" y="74" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">Pro SaaS-Lite Web Companion App</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="15.5" font-weight="500" fill="#94A3B8">Offline/Online HTML5 App: EHR Audit, B.C.R. Pricing &amp; 62-Item Studio</text>
+  </g>
+
+  <g transform="translate(655, 350)">
+    <rect x="0" y="0" width="565" height="125" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="18" y="18" width="110" height="30" rx="6" fill="#0F172A"/>
+    <text x="73" y="39" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#2DD4BF" text-anchor="middle">SUITE 02</text>
+    <text x="18" y="74" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">5-Database Minimalist Notion OS Kit</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="15.5" font-weight="500" fill="#94A3B8">Leads CRM, Active Projects, 62-Item Vault, CEO Scorecard &amp; Client Portal</text>
+  </g>
+
+  <g transform="translate(60, 492)">
+    <rect x="0" y="0" width="565" height="125" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="18" y="18" width="110" height="30" rx="6" fill="#0F172A"/>
+    <text x="73" y="39" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#2DD4BF" text-anchor="middle">SUITE 03</text>
+    <text x="18" y="74" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">4-Tab Excel &amp; CSV Financial Matrix</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="15.5" font-weight="500" fill="#94A3B8">Live Formulas for WBS Pricing, 80/20 Client Roster &amp; 90-Day Cashflow</text>
+  </g>
+
+  <g transform="translate(655, 492)">
+    <rect x="0" y="0" width="565" height="125" rx="14" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="18" y="18" width="110" height="30" rx="6" fill="#0F172A"/>
+    <text x="73" y="39" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8" text-anchor="middle">SUITE 04</text>
+    <text x="18" y="74" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">All 7 Book, Print &amp; Workbook Editions</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="15.5" font-weight="500" fill="#94A3B8">Complete Manual PDF, EPUB 3.0, US Letter/A4 Workbooks &amp; Tablet Planner</text>
+  </g>
+
+  <!-- Bottom Telemetry Strip -->
+  <rect x="60" y="638" width="1160" height="54" rx="10" fill="#0B1120" stroke="#334155" stroke-width="1.5"/>
+  <text x="85" y="671" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#E2E8F0">FLAGSHIP ALL-IN-ONE SYSTEM • ZERO SUBSCRIPTIONS REQUIRED • LOCAL &amp; CLOUD READY</text>
+  <text x="1195" y="671" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="800" fill="#38BDF8" text-anchor="end">MOST POPULAR PRACTITIONER TIER</text>
+
+  <rect x="0" y="710" width="1280" height="10" fill="url(#gAccent)"/>
+</svg>

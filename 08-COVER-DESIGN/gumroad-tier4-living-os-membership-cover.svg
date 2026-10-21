@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="gBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="60%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="gAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#gBg)"/>
+  <rect x="0" y="0" width="1280" height="10" fill="url(#gAccent)"/>
+
+  <!-- Subtle Grid Lines -->
+  <g stroke="#334155" stroke-width="1" opacity="0.28">
+    <line x1="60" y1="0" x2="60" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="1220" y1="0" x2="1220" y2="720"/>
+    <line x1="0" y1="95" x2="1280" y2="95"/>
+    <line x1="0" y1="635" x2="1280" y2="635"/>
+  </g>
+
+  <!-- Top Header Bar -->
+  <rect x="60" y="28" width="840" height="50" rx="8" fill="#1E293B" stroke="#0D9488" stroke-width="1.5"/>
+  <text x="82" y="59" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="800" fill="#38BDF8" letter-spacing="1.5">TIER 4 CONTINUOUS EXPANSION PASS • MONTHLY AI WORKFLOW &amp; SCRIPT DROPS</text>
+
+  <!-- Price Badge Top Right -->
+  <rect x="920" y="24" width="300" height="58" rx="12" fill="#0D9488"/>
+  <text x="1070" y="61" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="900" fill="#FFFFFF" text-anchor="middle">$9/MO • $49/YR</text>
+
+  <!-- Main Display Title & Right Telemetry Callout -->
+  <text x="60" y="132" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#2DD4BF" letter-spacing="2.2">THE AI FREELANCER OPERATING SYSTEM • DIGITAL KNOWLEDGE PRODUCT STUDIO</text>
+  <text x="60" y="192" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="900" fill="#FFFFFF" letter-spacing="-1">Living OS &amp; Pro Workflow</text>
+  <text x="60" y="248" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="900" fill="#38BDF8" letter-spacing="-1">Vault Membership Pass</text>
+  <text x="60" y="288" font-family="Inter, Arial, sans-serif" font-size="18.5" font-weight="500" fill="#CBD5E1">Continuous LLM Prompt Calibration, Niche-Specific Workflow Packs, New Boundary Scripts &amp; Micro-Tool Releases</text>
+
+  <!-- 5-Stage Lifecycle Pill Bar -->
+  <rect x="60" y="304" width="1160" height="32" rx="6" fill="#0B1120" stroke="#334155" stroke-width="1"/>
+  <text x="80" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#38BDF8">STAGE 1: ATTRACT</text>
+  <text x="310" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#38BDF8">STAGE 2: B.C.R. PRICE</text>
+  <text x="565" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#2DD4BF">STAGE 3: 48H ONBOARD</text>
+  <text x="825" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#2DD4BF">STAGE 4: 20/60/20 QA</text>
+  <text x="1060" y="325" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" fill="#FBBF24">STAGE 5: CEO SCALE</text>
+
+  <!-- 4 Deliverable Feature Cards (2x2 Grid) -->
+  <g transform="translate(60, 350)">
+    <rect x="0" y="0" width="565" height="125" rx="14" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="18" y="18" width="110" height="30" rx="6" fill="#0F172A"/>
+    <text x="73" y="39" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8" text-anchor="middle">DROP 01</text>
+    <text x="18" y="74" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">Monthly Role-Specific Workflow Packs</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="15.5" font-weight="500" fill="#94A3B8">Calibrated Prompt Chains for Design, Dev, Copy &amp; Consulting</text>
+  </g>
+
+  <g transform="translate(655, 350)">
+    <rect x="0" y="0" width="565" height="125" rx="14" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="18" y="18" width="110" height="30" rx="6" fill="#0F172A"/>
+    <text x="73" y="39" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#2DD4BF" text-anchor="middle">DROP 02</text>
+    <text x="18" y="74" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">Expanded Negotiation &amp; Retainer Scripts</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="15.5" font-weight="500" fill="#94A3B8">Fresh Commercial Clauses &amp; Enterprise Procurement Playbooks</text>
+  </g>
+
+  <g transform="translate(60, 492)">
+    <rect x="0" y="0" width="565" height="125" rx="14" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="18" y="18" width="110" height="30" rx="6" fill="#0F172A"/>
+    <text x="73" y="39" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#2DD4BF" text-anchor="middle">DROP 03</text>
+    <text x="18" y="74" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">Multi-Model LLM Calibration Updates</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="15.5" font-weight="500" fill="#94A3B8">Tuned System Prompts for Claude, GPT &amp; Gemini Releases</text>
+  </g>
+
+  <g transform="translate(655, 492)">
+    <rect x="0" y="0" width="565" height="125" rx="14" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="18" y="18" width="110" height="30" rx="6" fill="#0F172A"/>
+    <text x="73" y="39" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8" text-anchor="middle">DROP 04</text>
+    <text x="18" y="74" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#FFFFFF">All Future Studio Web Micro-Tools</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="15.5" font-weight="500" fill="#94A3B8">Complimentary Pro Access to Every New Calculator &amp; Utility</text>
+  </g>
+
+  <!-- Bottom Telemetry Strip -->
+  <rect x="60" y="638" width="1160" height="54" rx="10" fill="#0B1120" stroke="#334155" stroke-width="1.5"/>
+  <text x="85" y="671" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="700" fill="#E2E8F0">GUMROAD MEMBERSHIP PASS • CANCEL ANYTIME OR SAVE 55% ON ANNUAL BILLING</text>
+  <text x="1195" y="671" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="800" fill="#38BDF8" text-anchor="end">CONTINUOUS OPERATING UPGRADES</text>
+
+  <rect x="0" y="710" width="1280" height="10" fill="url(#gAccent)"/>
+</svg>

@@ -1,0 +1,17 @@
+"THE AI FREELANCER OPERATING SYSTEM — TAB 4: 12-WEEK ROLLING CASHFLOW, PIPELINE & TAX RESERVE FORECASTER",,,,,,,,
+"Synced with Chapter 10 Financial Governance • Tracks Retainer Floor, Milestone Invoices, Weighted Pipeline, Overhead & 25% Tax Reserve",,,,,,,,
+,,,,,,,,
+Week #,Week Starting Date,Confirmed Retainer Baseline ($),Scheduled Milestone Invoices ($),Weighted Pipeline Inflow ($),Total Projected Gross Inflow ($),Operating & Software Overhead ($),Tax Reserve Allocation (25% Formula),Net Owner Take-Home Profit ($)
+Week 01,2026-11-02,1050.0,1350.0,0.0,=SUM(C5:E5),145.0,"=ROUND((F5-G5)*0.25,2)",=F5-G5-H5
+Week 02,2026-11-09,1050.0,1200.0,350.0,=SUM(C6:E6),145.0,"=ROUND((F6-G6)*0.25,2)",=F6-G6-H6
+Week 03,2026-11-16,1050.0,1350.0,450.0,=SUM(C7:E7),145.0,"=ROUND((F7-G7)*0.25,2)",=F7-G7-H7
+Week 04,2026-11-23,1050.0,1100.0,600.0,=SUM(C8:E8),145.0,"=ROUND((F8-G8)*0.25,2)",=F8-G8-H8
+Week 05,2026-11-30,1350.0,1250.0,500.0,=SUM(C9:E9),155.0,"=ROUND((F9-G9)*0.25,2)",=F9-G9-H9
+Week 06,2026-12-07,1350.0,1350.0,650.0,=SUM(C10:E10),155.0,"=ROUND((F10-G10)*0.25,2)",=F10-G10-H10
+Week 07,2026-12-14,1350.0,1400.0,500.0,=SUM(C11:E11),155.0,"=ROUND((F11-G11)*0.25,2)",=F11-G11-H11
+Week 08,2026-12-21,1350.0,950.0,400.0,=SUM(C12:E12),155.0,"=ROUND((F12-G12)*0.25,2)",=F12-G12-H12
+Week 09,2026-12-28,1650.0,1100.0,550.0,=SUM(C13:E13),160.0,"=ROUND((F13-G13)*0.25,2)",=F13-G13-H13
+Week 10,2027-01-04,1650.0,1500.0,750.0,=SUM(C14:E14),160.0,"=ROUND((F14-G14)*0.25,2)",=F14-G14-H14
+Week 11,2027-01-11,1650.0,1350.0,800.0,=SUM(C15:E15),160.0,"=ROUND((F15-G15)*0.25,2)",=F15-G15-H15
+Week 12,2027-01-18,1650.0,1600.0,850.0,=SUM(C16:E16),160.0,"=ROUND((F16-G16)*0.25,2)",=F16-G16-H16
+90-DAY TOTAL,12-Week Quarter Summary,=SUM(C5:C16),=SUM(D5:D16),=SUM(E5:E16),=SUM(F5:F16),=SUM(G5:G16),=SUM(H5:H16),=SUM(I5:I16)
