@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <linearGradient id="csBg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="csBar4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1600" fill="url(#csBg4)"/>
+  <rect x="0" y="0" width="1200" height="14" fill="url(#csBar4)"/>
+
+  <!-- TOP HEADER BAR -->
+  <rect x="44" y="34" width="1112" height="148" rx="16" fill="#1E293B" stroke="#0284C7" stroke-width="2.5"/>
+  <text x="72" y="72" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#38BDF8" letter-spacing="1.5">CHAPTER 04 VISUAL CHEAT SHEET // PART II: PIPELINE TRIAGE &amp; PROPOSALS</text>
+  <rect x="880" y="48" width="252" height="36" rx="8" fill="#0D9488"/>
+  <text x="1006" y="71" font-family="JetBrains Mono, Consolas, monospace" font-size="13.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">10 MINS TO PRICE</text>
+
+  <text x="72" y="118" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="900" fill="#FFFFFF">Ch 04: Precision Pricing, Estimation &amp; Margin Defense</text>
+  <text x="72" y="154" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#CBD5E1">Eliminating Underquoting With the B.C.R. Formula &amp; The Zero-Discount Scope Trade-Down Protocol</text>
+
+  <!-- PANEL 1 (TOP-LEFT): 60-SECOND EXECUTIVE TL;DR -->
+  <rect x="44" y="206" width="546" height="330" rx="16" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+  <rect x="44" y="206" width="546" height="48" rx="16" fill="#0284C7"/>
+  <text x="68" y="236" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 01 // THE 60-SECOND EXECUTIVE TL;DR</text>
+
+  <text x="68" y="288" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">1. Practitioners underquote by 35%+ because they price optimistic ex</text>
+  <text x="68" y="310" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">ecution hours with zero risk buffer.</text>
+
+  <text x="68" y="366" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">2. Break every project into an 8-line Work Breakdown Structure (WBS)</text>
+  <text x="68" y="388" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8"> and apply the B.C.R. Pricing Formula.</text>
+
+  <text x="68" y="444" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">3. Never discount your price for the same scope—always trade down sc</text>
+  <text x="68" y="466" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">ope modules to match a lower budget.</text>
+
+  <rect x="68" y="488" width="498" height="32" rx="6" fill="#1E293B"/>
+  <text x="317" y="509" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#38BDF8" text-anchor="middle">GATE 02: PRECISION PRICING &amp; MARGIN DEFENSE</text>
+
+  <!-- PANEL 2 (TOP-RIGHT): CORE NAMED FRAMEWORK & FORMULA -->
+  <rect x="610" y="206" width="546" height="330" rx="16" fill="#0F172A" stroke="#0D9488" stroke-width="2"/>
+  <rect x="610" y="206" width="546" height="48" rx="16" fill="#0D9488"/>
+  <text x="634" y="236" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 02 // CORE NAMED FRAMEWORK &amp; EQUATION</text>
+
+  <text x="634" y="292" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#2DD4BF">THE B.C.R. PRECISION PRICING EQUATION</text>
+  <rect x="634" y="312" width="498" height="104" rx="12" fill="#1E293B" stroke="#2DD4BF" stroke-width="2"/>
+  <text x="883" y="356" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Package Price = [ (Weighted WBS Hrs * Target Rate) * Com</text>
+  <text x="883" y="386" font-family="JetBrains Mono, Consolas, monospace" font-size="13.5" font-weight="700" fill="#38BDF8" text-anchor="middle">plexity (C) * (1 + Risk R%) ] + Pass-Throughs</text>
+
+  <text x="634" y="452" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#E2E8F0">OPERATIONAL BENCHMARK RULE:</text>
+  <text x="634" y="478" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">Milestone Billing Law: 50% Upfront Deposit  •  25% Midpoint Prototype  •  25% Pre-Transfer Final</text>
+  <text x="634" y="512" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#FBBF24">SYNCED WORKBOOK: Worksheet 4.1 (US Letter, A4, Word &amp; Web App)</text>
+
+  <!-- PANEL 3 (MIDDLE FULL-WIDTH): 4-STEP VISUAL EXECUTION PIPELINE -->
+  <rect x="44" y="560" width="1112" height="430" rx="16" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <rect x="44" y="560" width="1112" height="48" rx="16" fill="#1E293B"/>
+  <text x="68" y="590" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#38BDF8">PANEL 03 // STEP-BY-STEP EXECUTION FLOW (60-SECOND ACTION PIPELINE)</text>
+
+  <g transform="translate(68, 630)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0284C7"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 01 // MAP WBS HOURS</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Estimate optimistic hours across 8 WBS lines and add +20</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">% admin/prep buffer.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">GATE CHECK 01 --&gt; VERIFY BASELINE INPUTS</text>
+  </g>
+
+  <g transform="translate(612, 630)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0284C7"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 02 // APPLY C &amp; R</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Multiply by Complexity (1.15x-1.50x) and Risk Buffer (+1</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">5% to +35%).</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">GATE CHECK 02 --&gt; RUN AI SYNTHESIS PROMPT</text>
+  </g>
+
+  <g transform="translate(68, 808)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0D9488"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 03 // SET WALK-AWAY</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Lock your Hard Walk-Away Floor at 0.85x of Option 2 befo</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">re sending.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#2DD4BF">GATE CHECK 03 --&gt; APPLY HUMAN QA FILTER</text>
+  </g>
+
+  <g transform="translate(612, 808)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0D9488"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 04 // TRADE DOWN SCOPE</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">If client asks for a discount, offer to remove secondary</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1"> deliverables via Script 03.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#2DD4BF">GATE CHECK 04 --&gt; LOCK PERMANENT SYSTEM</text>
+  </g>
+
+  <!-- PANEL 4 (BOTTOM-LEFT): THE 5 CHAPTER AI PROMPTS QUICK-CALLER -->
+  <rect x="44" y="1014" width="556" height="456" rx="16" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+  <rect x="44" y="1014" width="556" height="48" rx="16" fill="#0284C7"/>
+  <text x="68" y="1044" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 04 // 5 CHAPTER AI PROMPTS QUICK-CALLER</text>
+  
+    <rect x="64" y="1090" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1090" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1126" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 4.1</text>
+    <text x="196" y="1116" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Work Breakdown Structure (WBS) &amp; Hidden-Hour Est...</text>
+    <text x="196" y="1138" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Whenever pricing a new productized tier or evaluating ...</text>
+
+    <rect x="64" y="1162" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1162" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1198" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 4.2</text>
+    <text x="196" y="1188" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Project Complexity &amp; Client Dependency Risk Scor...</text>
+    <text x="196" y="1210" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Immediately after Prompt 4.1 to lock the exact dollar ...</text>
+
+    <rect x="64" y="1234" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1234" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1270" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 4.3</text>
+    <text x="196" y="1260" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Scope-Down Counter-Offer Generator (Protecting Y...</text>
+    <text x="196" y="1282" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Whenever a prospect asks for a discount or counters wi...</text>
+
+    <rect x="64" y="1306" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1306" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1342" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 4.4</text>
+    <text x="196" y="1332" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Date-Locked Payment Milestone, Pause-Trigger &amp; K...</text>
+    <text x="196" y="1354" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: When assembling your 1-page service agreement or updat...</text>
+
+    <rect x="64" y="1378" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1378" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1414" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 4.5</text>
+    <text x="196" y="1404" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Legacy Client Rate-Increase Notification &amp; Grand...</text>
+    <text x="196" y="1426" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Once your new productized tiers are live and you are r...</text>
+
+  <!-- PANEL 5 (BOTTOM-RIGHT): RED-FLAG CIRCUIT BREAKERS & TARGET KPI -->
+  <rect x="620" y="1014" width="536" height="456" rx="16" fill="#0F172A" stroke="#F59E0B" stroke-width="2"/>
+  <rect x="620" y="1014" width="536" height="48" rx="16" fill="#D97706"/>
+  <text x="644" y="1044" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 05 // RED-FLAG CIRCUIT BREAKERS &amp; KPI</text>
+
+  <rect x="640" y="1084" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1114" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 01: Accepting &#x27;Net-30&#x27; or &#x27;50% on launch&#x27; terms that </text>
+  <text x="658" y="1138" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">hand 100% of control to the client.</text>
+
+  <rect x="640" y="1176" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1206" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 02: Cutting your price by 20% without removing a sing</text>
+  <text x="658" y="1230" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">le deliverable from the Statement of Work.</text>
+
+  <rect x="640" y="1268" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1298" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 03: Ignoring multi-stakeholder review committees when</text>
+  <text x="658" y="1322" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0"> calculating your Risk Buffer (R%).</text>
+
+  <rect x="640" y="1362" width="496" height="90" rx="10" fill="#162238" stroke="#2DD4BF" stroke-width="2"/>
+  <text x="658" y="1394" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">30-DAY TARGET KPI: 100% of Projects Billed at 50/25/25 Split Wit</text>
+  <text x="658" y="1416" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#FFFFFF">h &gt;= $85/hr Realized Margin</text>
+  <text x="658" y="1438" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#FBBF24">EMERGENCY CIRCUIT-BREAKER: Deploy Prompt 4.2 (B.C.R. Calculator) &amp; Zero-Discount Trade-Down Matrix</text>
+
+  <!-- BOTTOM FOOTER BAR -->
+  <rect x="44" y="1494" width="1112" height="68" rx="12" fill="#1E293B"/>
+  <text x="72" y="1534" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8">THE AI FREELANCER OPERATING SYSTEM  •  60-SECOND VISUAL SHORTCUT ATLAS (PAGE 6 OF 12)</text>
+  <text x="1128" y="1534" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#2DD4BF" text-anchor="end">CHAPTER 04 / 10</text>
+  <rect x="0" y="1586" width="1200" height="14" fill="url(#csBar4)"/>
+</svg>

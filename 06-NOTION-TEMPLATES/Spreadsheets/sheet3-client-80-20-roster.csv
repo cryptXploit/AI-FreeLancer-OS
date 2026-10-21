@@ -1,10 +1,10 @@
-THE AI FREELANCER OPERATING SYSTEM — TAB 3: 80/20 CLIENT PROFITABILITY ROSTER & 85% RATE-RAISE TRIGGER,,,,,,,
+THE AI FREELANCER OPERATING SYSTEM — TAB 03: 80/20 CLIENT PROFITABILITY ROSTER & 85% RATE-RAISE TRIGGER,,,,,,,
 Synced with Chapter 10 & Worksheet 10.1 • Automatically isolates Whale-Trap accounts vs. Star Retainer accounts,,,,,,,
 ,,,,,,,
 Account ID,Active Client / Retainer Account,Monthly Gross Fee ($),Real Monthly Hours,Realized Client EHR ($/hr),Revenue Share (%),Friction Score (1-5),Automated 80/20 CEO Action Recommendation
 CLI-01,Apex FinTech Cloud (Growth Retainer),2800.0,24.0,"=ROUND(C5/D5,2)",=C5/$C$13,1,"=IF(AND(E5>=85,G5<=2),""RETAIN & EXPAND"",IF(OR(E5<65,G5>=4),""PRUNE / REPLACE"",""RE-PRICE +20%""))"
 CLI-02,Verde Beverage Co. (Brand & Packaging Sprint),2200.0,21.5,"=ROUND(C6/D6,2)",=C6/$C$13,2,"=IF(AND(E6>=85,G6<=2),""RETAIN & EXPAND"",IF(OR(E6<65,G6>=4),""PRUNE / REPLACE"",""RE-PRICE +20%""))"
-CLI-03,BeaconHill Software (Onboarding Redesign),1800.0,16.0,"=ROUND(C7/D7,2)",=C7/$C$13,2,"=IF(AND(E7>=85,G7<=2),""RETAIN & EXPAND"",IF(OR(E7<65,G7>=4),""PRUNE / REPLACE"",""RE-PRICE +20%""))"
+CLI-03,VantagePoint Software (Onboarding Redesign),1800.0,16.0,"=ROUND(C7/D7,2)",=C7/$C$13,2,"=IF(AND(E7>=85,G7<=2),""RETAIN & EXPAND"",IF(OR(E7<65,G7>=4),""PRUNE / REPLACE"",""RE-PRICE +20%""))"
 CLI-04,NorthStar Logistics (Legacy Custom Account),1500.0,29.5,"=ROUND(C8/D8,2)",=C8/$C$13,5,"=IF(AND(E8>=85,G8<=2),""RETAIN & EXPAND"",IF(OR(E8<65,G8>=4),""PRUNE / REPLACE"",""RE-PRICE +20%""))"
 CLI-05,Clarity Health Analytics (Care Retainer),1250.0,9.5,"=ROUND(C9/D9,2)",=C9/$C$13,1,"=IF(AND(E9>=85,G9<=2),""RETAIN & EXPAND"",IF(OR(E9<65,G9>=4),""PRUNE / REPLACE"",""RE-PRICE +20%""))"
 CLI-06,Solstice Apparel Group (E-Commerce Sprint),1100.0,12.0,"=ROUND(C10/D10,2)",=C10/$C$13,2,"=IF(AND(E10>=85,G10<=2),""RETAIN & EXPAND"",IF(OR(E10<65,G10>=4),""PRUNE / REPLACE"",""RE-PRICE +20%""))"

@@ -1,0 +1,20 @@
+COMMERCIAL MILESTONE & CHANGE ORDER INVOICE — #INV-2026-104,,,,
+"Billed From: [Your Studio Name]  •  Billed To: Apex FinTech Cloud (Attn: Elena Rostova, SPOC)  •  Terms: Due Within 5 Calendar Days",,,,
+,,,,
+Item Code,Deliverable / Milestone / Change Order Description,Quantity / Hrs,Unit Rate ($),Line Total (Formula)
+MS-01,Option 2: Core Transformation Sprint — 50% Kickoff Deposit (Paid 2026-10-15),1.0,2475.0,"=ROUND(C5*D5,2)"
+MS-02,Option 2: Core Transformation Sprint — 25% Midpoint Prototype Milestone,1.0,1237.5,"=ROUND(C6*D6,2)"
+MS-03,Option 2: Core Transformation Sprint — 25% Final Pre-Transfer Balance,1.0,1237.5,"=ROUND(C7*D7,2)"
+CO-01,Approved P.V.P. Change Order #CO-2026-001 (2 Regional UK/AU Landing Pages),1.0,490.0,"=ROUND(C8*D8,2)"
+CO-02,Approved P.V.P. Change Order #CO-2026-001 (Custom HubSpot Webhook Mapping),1.0,295.0,"=ROUND(C9*D9,2)"
+PT-01,Pass-Through Commercial Font & Plugin License (At 1.0x Direct Cost),1.0,150.0,"=ROUND(C10*D10,2)"
+,,,,
+SUMMARY,Invoice Financial Summary & Milestone Settlement Tracker,Parameter,Notes / Terms,Amount (USD)
+SUBTOTAL,Gross Contract + Approved Change Orders Subtotal,,Sum of Lines 5–10,=SUM(E5:E10)
+TAX-RATE,Applicable Sales / VAT / GST Rate (If Required by Jurisdiction),0.0,Edit C14 if VAT/GST applies,"=ROUND(E13*C14,2)"
+TOTAL,Total Gross Invoice Amount (Including Tax),,Total Contract Value,=E13+E14
+PAID-DEP,Less: Payments & Deposits Already Received to Date,,50% Kickoff + 25% Midpoint Paid,3712.5
+DAYS-LATE,Days Past Invoice Due Date (Enter 0 if Current),0,Triggers Day +3/+7/+14 Escalation,"=IF(C17>=14,150,0)"
+BAL-DUE,CURRENT BALANCE DUE UPON RECEIPT (PRE-TRANSFER GATE),,Payable via Stripe / ACH / Payoneer,=E15-E16+E17
+SPLIT-50,Reference: Standard 50% Kickoff Deposit on Gross Total,,Milestone 1 Gate,"=ROUND(E15*0.50,2)"
+STATUS,Automated Payment Gate & IP Transfer Governance Status,,Section 6.3 & 7.2 MSA Rule,"=IF(E18<=0,""PAID IN FULL — IP TRANSFERRED"",IF(C17>=7,""OVERDUE >=7 DAYS — PAUSE STAGING (SCRIPT 10)"",""OPEN — AWAITING SETTLEMENT PRIOR TO LIVE PUSH""))"

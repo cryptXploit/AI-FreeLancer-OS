@@ -1,0 +1,78 @@
+{
+  "blueprint_id": "ai-freelancer-os-automation-02",
+  "name": "02 \u2014 Deposit Paid to 48-Hour Pre-Flight Onboarding Gate & Notion Client Portal Provisioner",
+  "version": "1.0.0",
+  "compatible_platforms": [
+    "Make.com",
+    "n8n",
+    "Zapier"
+  ],
+  "lifecycle_gate": "Gate 3: Zero-Friction 48-Hour Client Onboarding",
+  "synced_prompts": [
+    "Prompt 5.1 (48-Hour Pre-Flight Welcome & Asset Gate)",
+    "Script 05 (Missing Asset Hold Notice)"
+  ],
+  "synced_notion_database": "02-Active-Projects-and-Gates.csv",
+  "trigger": {
+    "module_id": "mod_01_payment_webhook",
+    "type": "stripe.checkout.session.completed",
+    "description": "Triggers when a client pays their 50% Kickoff Deposit invoice via Stripe, Payoneer, or Wise.",
+    "payload_schema": {
+      "invoice_id": "string",
+      "client_company": "string",
+      "spoc_name": "string",
+      "spoc_email": "string",
+      "selected_tier_name": "string",
+      "contract_total_usd": "number",
+      "deposit_paid_usd": "number",
+      "scoped_hours_budget": "number"
+    }
+  },
+  "modules": [
+    {
+      "module_id": "mod_02_duplicate_client_portal",
+      "type": "notion.duplicate_template_page",
+      "source_template": "05-Client-Portal-and-Handover-Hub.md",
+      "new_page_title": "{{trigger.client_company}} \u2014 Client Command & Handover Portal",
+      "output_fields": [
+        "portal_page_id",
+        "portal_share_url"
+      ]
+    },
+    {
+      "module_id": "mod_03_create_active_project_row",
+      "type": "notion.create_database_item",
+      "target_database": "02-Active-Projects-and-Gates",
+      "field_mapping": {
+        "Project ID": "PRJ-{{formatDate(now, 'YYYY')}}-{{randomInt(100,999)}}",
+        "Project / Sprint Name": "{{trigger.client_company}} \u2014 {{trigger.selected_tier_name}}",
+        "Client Account": "{{trigger.client_company}}",
+        "Current Lifecycle Gate": "Gate 3: Onboard & Align",
+        "Package Tier": "{{trigger.selected_tier_name}}",
+        "Contract Value ($)": "{{trigger.contract_total_usd}}",
+        "Deposit Status": "50% Deposit Paid (${{trigger.deposit_paid_usd}})",
+        "48h Pre-Flight Assets": "Pending SPOC Upload (48h Clock Active)",
+        "Scoped Hours": "{{trigger.scoped_hours_budget}}",
+        "Logged Hours": 0.5,
+        "Target EHR ($/hr)": 85.0,
+        "Revision Rounds Used": "0 of 2 Used",
+        "Next Action": "Verify 5 Pre-Flight Assets within 48 Business Hours"
+      }
+    },
+    {
+      "module_id": "mod_04_send_welcome_packet_email",
+      "type": "email.send_transactional",
+      "recipient": "{{trigger.spoc_email}}",
+      "subject": "Welcome Aboard: {{trigger.client_company}} Client Portal & 48-Hour Pre-Flight Asset Gate",
+      "attachments": [
+        "06-Client-Welcome-Packet-and-48h-Onboarding-Guide.docx"
+      ],
+      "body_template": "Hi {{trigger.spoc_name}}, your 50% Kickoff Deposit is confirmed and your production slot is reserved! Bookmark your live Client Command Portal here: {{mod_02_duplicate_client_portal.portal_share_url}}. Please upload the 5 Pre-Flight items inside Section 2 within 48 hours so our production clock officially begins."
+    },
+    {
+      "module_id": "mod_05_48h_watchdog_timer",
+      "type": "scheduler.delay_48_business_hours",
+      "follow_up_condition": "If Notion '48h Pre-Flight Assets' != '100% Verified' after 48 hours, prepare Script 05 (Missing Asset Hold & Day-for-Day Timeline Shift Notice) draft for SPOC."
+    }
+  ]
+}

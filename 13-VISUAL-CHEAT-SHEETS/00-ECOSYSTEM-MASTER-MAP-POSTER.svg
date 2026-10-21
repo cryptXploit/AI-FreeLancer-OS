@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+  <defs>
+    <linearGradient id="posterBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="posterAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1100" fill="url(#posterBg)"/>
+  <rect x="0" y="0" width="1600" height="12" fill="url(#posterAccent)"/>
+
+  <!-- Header Banner -->
+  <rect x="36" y="28" width="1528" height="92" rx="14" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+  <text x="64" y="62" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="800" fill="#38BDF8" letter-spacing="2">VISUAL SHORTCUT ATLAS // MASTER WALL POSTER (00-ECOSYSTEM-MASTER-MAP)</text>
+  <text x="64" y="98" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF">THE AI FREELANCER OPERATING SYSTEM — 5-GATE ARCHITECTURE &amp; TOOLKIT MAP</text>
+  <rect x="1250" y="46" width="290" height="56" rx="10" fill="#0284C7"/>
+  <text x="1395" y="81" font-family="JetBrains Mono, Consolas, monospace" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">TARGET EHR: $85+/HR</text>
+
+  <!-- 5 Lifecycle Gate Columns Across Middle -->
+  <!-- GATE 01 -->
+  <g transform="translate(36, 142)">
+    <rect x="0" y="0" width="292" height="540" rx="14" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="292" height="54" rx="14" fill="#0284C7"/>
+    <text x="146" y="34" font-family="JetBrains Mono, Consolas, monospace" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 01: ATTRACT &amp; FILTER</text>
+    <text x="18" y="84" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#38BDF8">Chapters 01, 02 &amp; 03</text>
+    <text x="18" y="112" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 7-Day EHR &amp; Shadow Labor Audit</text>
+    <text x="18" y="138" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• Daily 90-Min Maker Block Rhythm</text>
+    <text x="18" y="164" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 3-Tier Productized Offer Matrix</text>
+    <text x="18" y="190" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 20-Point P.A.C.E. Lead Scorer</text>
+    <rect x="16" y="215" width="260" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="242" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">AI PROMPTS &amp; SCRIPTS:</text>
+    <text x="30" y="268" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompts 1.1–1.5 (Leak Audit)</text>
+    <text x="30" y="292" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompts 2.1–2.5 (3-Tier Matrix)</text>
+    <text x="30" y="316" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompt 3.1 (P.A.C.E. Lead Triage)</text>
+    <text x="30" y="340" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#FBBF24">• Scripts 01, 02 &amp; 04 (Lead Filter)</text>
+    <rect x="16" y="378" width="260" height="142" rx="10" fill="#162238" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="30" y="405" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#38BDF8">PLUG-AND-PLAY TOOLS:</text>
+    <text x="30" y="430" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Web App Module 1 (EHR Audit)</text>
+    <text x="30" y="454" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Excel Tab 01 (EHR Leak Audit)</text>
+    <text x="30" y="478" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Notion DB 01 (Leads Pipeline)</text>
+    <text x="30" y="502" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#2DD4BF">• Automation Blueprint 01 (.json)</text>
+  </g>
+
+  <!-- GATE 02 -->
+  <g transform="translate(345, 142)">
+    <rect x="0" y="0" width="292" height="540" rx="14" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="292" height="54" rx="14" fill="#0284C7"/>
+    <text x="146" y="34" font-family="JetBrains Mono, Consolas, monospace" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 02: SCOPE &amp; PRICE</text>
+    <text x="18" y="84" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#38BDF8">Chapters 03 &amp; 04</text>
+    <text x="18" y="112" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 10-Min B.R.I.E.F. Proposal Engine</text>
+    <text x="18" y="138" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 8-Line WBS Hours Estimator</text>
+    <text x="18" y="164" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• B.C.R. Pricing (Base+Complex+Risk)</text>
+    <text x="18" y="190" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• Zero-Discount Scope Trade-Down</text>
+    <rect x="16" y="215" width="260" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="242" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">AI PROMPTS &amp; SCRIPTS:</text>
+    <text x="30" y="268" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompt 3.3 (B.R.I.E.F. Proposal)</text>
+    <text x="30" y="292" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompts 4.1–4.5 (B.C.R. Pricing)</text>
+    <text x="30" y="316" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompt 4.4 (Discount Defense)</text>
+    <text x="30" y="340" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#FBBF24">• Script 03 (7-Day Slot Hold Notice)</text>
+    <rect x="16" y="378" width="260" height="142" rx="10" fill="#162238" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="30" y="405" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#38BDF8">PLUG-AND-PLAY TOOLS:</text>
+    <text x="30" y="430" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Word 03 (B.R.I.E.F. Proposal .docx)</text>
+    <text x="30" y="454" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Word 04 (MSA &amp; SOW Contract .docx)</text>
+    <text x="30" y="478" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• PPTX Deck 01 (12-Slide Pitch Deck)</text>
+    <text x="30" y="502" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#2DD4BF">• Excel Tab 02 (B.C.R. Pricing Engine)</text>
+  </g>
+
+  <!-- GATE 03 -->
+  <g transform="translate(654, 142)">
+    <rect x="0" y="0" width="292" height="540" rx="14" fill="#0F172A" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="292" height="54" rx="14" fill="#0D9488"/>
+    <text x="146" y="34" font-family="JetBrains Mono, Consolas, monospace" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 03: 48H ONBOARDING</text>
+    <text x="18" y="84" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#2DD4BF">Chapter 05 Architecture</text>
+    <text x="18" y="112" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 50% Deposit Clearance Gate</text>
+    <text x="18" y="138" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 48-Hour Pre-Flight Asset Vault</text>
+    <text x="18" y="164" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• Day-for-Day Timeline Shift Rule</text>
+    <text x="18" y="190" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• Single Point of Contact (SPOC)</text>
+    <rect x="16" y="215" width="260" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="242" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">AI PROMPTS &amp; SCRIPTS:</text>
+    <text x="30" y="268" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompt 5.1 (Welcome &amp; Asset Gate)</text>
+    <text x="30" y="292" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompt 5.2 (Kickoff Brief Builder)</text>
+    <text x="30" y="316" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompts 5.3–5.5 (SLA &amp; Portal Setup)</text>
+    <text x="30" y="340" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#FBBF24">• Script 05 (Missing Asset Hold Notice)</text>
+    <rect x="16" y="378" width="260" height="142" rx="10" fill="#162238" stroke="#0D9488" stroke-width="1.5"/>
+    <text x="30" y="405" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">PLUG-AND-PLAY TOOLS:</text>
+    <text x="30" y="430" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Word 06 (Welcome Packet .docx)</text>
+    <text x="30" y="454" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• PPTX Deck 02 (10-Slide Kickoff Deck)</text>
+    <text x="30" y="478" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Notion 05 (Client Command Hub)</text>
+    <text x="30" y="502" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#38BDF8">• Automation Blueprint 02 (.json)</text>
+  </g>
+
+  <!-- GATE 04 -->
+  <g transform="translate(963, 142)">
+    <rect x="0" y="0" width="292" height="540" rx="14" fill="#0F172A" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="292" height="54" rx="14" fill="#0D9488"/>
+    <text x="146" y="34" font-family="JetBrains Mono, Consolas, monospace" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 04: EXECUTE &amp; DEFEND</text>
+    <text x="18" y="84" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#2DD4BF">Chapters 06, 07 &amp; 08</text>
+    <text x="18" y="112" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 20/60/20 Sandwich Execution</text>
+    <text x="18" y="138" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 4-Gate Pre-Submission QA Audit</text>
+    <text x="18" y="164" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• P.V.P. Change Order Protocol</text>
+    <text x="18" y="190" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 3-Pillar Friday Digest &amp; 3m Loom</text>
+    <rect x="16" y="215" width="260" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="242" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">AI PROMPTS &amp; SCRIPTS:</text>
+    <text x="30" y="268" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompts 6.1–6.5 (Voice DNA &amp; QA)</text>
+    <text x="30" y="292" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompts 7.1–7.5 (P.V.P. Defense)</text>
+    <text x="30" y="316" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompts 8.1–8.5 (Async &amp; Looms)</text>
+    <text x="30" y="340" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#FBBF24">• Scripts 06, 07, 08, 09 &amp; 10</text>
+    <rect x="16" y="378" width="260" height="142" rx="10" fill="#162238" stroke="#0D9488" stroke-width="1.5"/>
+    <text x="30" y="405" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">PLUG-AND-PLAY TOOLS:</text>
+    <text x="30" y="430" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Word 05 (P.V.P. Change Order .docx)</text>
+    <text x="30" y="454" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Excel Tab 05 (Invoice Generator)</text>
+    <text x="30" y="478" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Excel Tab 06 (Daily 3-Block Log)</text>
+    <text x="30" y="502" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#38BDF8">• Web App Module 3 (62-Item Studio)</text>
+  </g>
+
+  <!-- GATE 05 -->
+  <g transform="translate(1272, 142)">
+    <rect x="0" y="0" width="292" height="540" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="0" y="0" width="292" height="54" rx="14" fill="#D97706"/>
+    <text x="146" y="34" font-family="JetBrains Mono, Consolas, monospace" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">GATE 05: RETAIN &amp; SCALE</text>
+    <text x="18" y="84" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#FBBF24">Chapters 09 &amp; 10</text>
+    <text x="18" y="112" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• Executive Handover &amp; 3 Video SOPs</text>
+    <text x="18" y="138" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 48-Hr Offboard-to-Retainer Bridge</text>
+    <text x="18" y="164" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 20-Min Friday CEO Scorecard</text>
+    <text x="18" y="190" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E2E8F0">• 80/20 Roster &amp; 85% Rate Trigger</text>
+    <rect x="16" y="215" width="260" height="145" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="242" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FBBF24">AI PROMPTS &amp; SCRIPTS:</text>
+    <text x="30" y="268" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompts 9.1–9.5 (Handover &amp; Bridge)</text>
+    <text x="30" y="292" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">• Prompts 10.1–10.5 (CEO &amp; 80/20)</text>
+    <text x="30" y="316" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#FBBF24">• Script 11 (48h Retainer Bridge)</text>
+    <text x="30" y="340" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#FBBF24">• Script 12 (Legacy +25% Rate Reset)</text>
+    <rect x="16" y="378" width="260" height="142" rx="10" fill="#162238" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="30" y="405" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FBBF24">PLUG-AND-PLAY TOOLS:</text>
+    <text x="30" y="430" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Word 07 (Handover &amp; Retainer .docx)</text>
+    <text x="30" y="454" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• PPTX Deck 03 (10-Slide ROI &amp; Pitch)</text>
+    <text x="30" y="478" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#E2E8F0">• Excel Tabs 00, 03, 04 &amp; 07</text>
+    <text x="30" y="502" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#38BDF8">• Automation Blueprint 03 (.json)</text>
+  </g>
+
+  <!-- Bottom Full-Width Ecosystem Asset Matrix -->
+  <rect x="36" y="704" width="1528" height="356" rx="16" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <rect x="36" y="704" width="1528" height="48" rx="16" fill="#1E293B"/>
+  <text x="64" y="734" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="800" fill="#38BDF8">COMPLETE 8-PILLAR ULTRA-PREMIUM PRODUCT ECOSYSTEM DIRECTORY (QUICK FILE LOCATOR)</text>
+
+  <!-- 4 Bottom Summary Columns -->
+  <g transform="translate(60, 772)">
+    <rect x="0" y="0" width="356" height="264" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8">01 // BOOKS, WORKBOOKS &amp; ATLAS</text>
+    <text x="20" y="62" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• Complete Manual PDF (168 Pages / 75k Words)</text>
+    <text x="20" y="88" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• KDP 6x9 Print PDF + Reflowable EPUB 3.0</text>
+    <text x="20" y="114" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• US Letter &amp; ISO A4 Fillable Workbooks</text>
+    <text x="20" y="140" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• 49-Page Landscape iPad Tablet Planner PDF</text>
+    <text x="20" y="166" font-family="Inter, Arial, sans-serif" font-size="13" fill="#2DD4BF">• 12-Page Visual Shortcut Atlas PDF (NEW)</text>
+    <text x="20" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#2DD4BF">• 31 Vector SVGs (20 Diagrams + 11 Posters)</text>
+    <text x="20" y="226" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#94A3B8">FOLDER: 09-EXPORTS/ &amp; 13-VISUAL-CHEAT-SHEETS/</text>
+  </g>
+
+  <g transform="translate(434, 772)">
+    <rect x="0" y="0" width="356" height="264" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#2DD4BF">02 // WORD (.DOCX) &amp; PPTX SUITE</text>
+    <text x="20" y="62" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• 01 Complete Editable Book Manuscript (.docx)</text>
+    <text x="20" y="88" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• 02 Complete 10-Ch Action Workbook (.docx)</text>
+    <text x="20" y="114" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• 03 Client 3-Tier B.R.I.E.F. Proposal (.docx)</text>
+    <text x="20" y="140" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• 04 Master Service Agreement &amp; SOW (.docx)</text>
+    <text x="20" y="166" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• 05 Change Order + 06 Welcome + 07 Handover</text>
+    <text x="20" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#38BDF8">• 3 Editable 16:9 PowerPoint Decks (32 Slides)</text>
+    <text x="20" y="226" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#94A3B8">FOLDER: 12-EDITABLE-OFFICE-SUITE/</text>
+  </g>
+
+  <g transform="translate(808, 772)">
+    <rect x="0" y="0" width="356" height="264" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8">03 // 8-TAB EXCEL &amp; 5-DB NOTION OS</text>
+    <text x="20" y="62" font-family="Inter, Arial, sans-serif" font-size="13" fill="#2DD4BF">• Tab 00 Executive Dashboard (3 Live Charts)</text>
+    <text x="20" y="88" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• Tab 01 EHR Audit + Tab 02 B.C.R. Pricing</text>
+    <text x="20" y="114" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• Tab 03 80/20 Roster + Tab 04 90d Cashflow</text>
+    <text x="20" y="140" font-family="Inter, Arial, sans-serif" font-size="13" fill="#2DD4BF">• Tab 05 Invoice + Tab 06 Time + Tab 07 Tax</text>
+    <text x="20" y="166" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• 5-Database Minimalist Notion OS Import Kit</text>
+    <text x="20" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• 62-Item AI Prompt &amp; Script CSV Database</text>
+    <text x="20" y="226" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#94A3B8">FOLDER: 06-NOTION-TEMPLATES/Spreadsheets/</text>
+  </g>
+
+  <g transform="translate(1182, 772)">
+    <rect x="0" y="0" width="356" height="264" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FBBF24">04 // WEB APP, DESIGN &amp; AUTOMATION</text>
+    <text x="20" y="62" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• SaaS-Lite Web Companion App (318 KB HTML)</text>
+    <text x="20" y="88" font-family="Inter, Arial, sans-serif" font-size="13" fill="#2DD4BF">• Interactive Design &amp; Photo Customizer Studio</text>
+    <text x="20" y="114" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• Upload Custom Photos/Logos -> Export PNG/SVG</text>
+    <text x="20" y="140" font-family="Inter, Arial, sans-serif" font-size="13" fill="#2DD4BF">• 3 Make/Zapier/n8n JSON Automation Flows</text>
+    <text x="20" y="166" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• Interactive Funnel Page &amp; 5-Email Sequence</text>
+    <text x="20" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#E2E8F0">• Pro Activation Code: FREELANCER-OS-PRO-2026</text>
+    <text x="20" y="226" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#94A3B8">FOLDER: 07-TOOLS/ • 08-COVERS/ • 14-AUTO/</text>
+  </g>
+
+  <rect x="0" y="1088" width="1600" height="12" fill="url(#posterAccent)"/>
+</svg>

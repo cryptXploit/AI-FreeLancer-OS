@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The AI Freelancer OS — Interactive Photo &amp; Graphic Design Customizer Studio</title>
+  <style>
+    :root {
+      --bg-dark: #0B1120;
+      --panel-bg: #0F172A;
+      --card-bg: #1E293B;
+      --border: #334155;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent-sky: #0284C7;
+      --accent-teal: #0D9488;
+      --accent-amber: #F59E0B;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', Consolas, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--panel-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand-bar { display: flex; align-items: center; gap: 12px; }
+    .brand-badge {
+      background: linear-gradient(135deg, var(--accent-sky), var(--accent-teal));
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.08em;
+    }
+    .brand-title { font-size: 17px; font-weight: 800; color: #fff; }
+    .header-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .btn {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 9px 16px;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn:hover { border-color: #38BDF8; background: #26354D; }
+    .btn-primary {
+      background: linear-gradient(135deg, #0284C7, #0D9488);
+      border-color: #38BDF8;
+    }
+    .btn-primary:hover { filter: brightness(1.1); }
+    .btn-amber {
+      background: #D97706;
+      border-color: #FBBF24;
+    }
+    .workspace {
+      display: grid;
+      grid-template-columns: 410px 1fr 340px;
+      flex: 1;
+      min-height: calc(100vh - 62px);
+    }
+    @media (max-width: 1280px) {
+      .workspace { grid-template-columns: 360px 1fr; }
+      .right-panel { grid-column: 1 / -1; border-top: 1px solid var(--border); }
+    }
+    .left-panel, .right-panel {
+      background: var(--panel-bg);
+      border-right: 1px solid var(--border);
+      padding: 18px;
+      overflow-y: auto;
+      max-height: calc(100vh - 62px);
+    }
+    .right-panel { border-right: none; border-left: 1px solid var(--border); }
+    .panel-section {
+      background: rgba(30, 41, 59, 0.55);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    .panel-title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38BDF8;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .control-group { margin-bottom: 10px; }
+    .control-group:last-child { margin-bottom: 0; }
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #CBD5E1;
+      margin-bottom: 4px;
+    }
+    input[type="text"], textarea, select {
+      width: 100%;
+      background: #0B1120;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+    }
+    input[type="text"]:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #38BDF8;
+    }
+    input[type="range"] { width: 100%; accent-color: #0284C7; }
+    .color-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .color-box {
+      background: #0B1120;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px;
+      text-align: center;
+    }
+    .color-box input[type="color"] {
+      width: 100%;
+      height: 28px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    .theme-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .theme-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #0B1120;
+      border: 1px solid var(--border);
+      color: #E2E8F0;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: left;
+    }
+    .theme-btn:hover, .theme-btn.active {
+      border-color: #38BDF8;
+      background: #1E293B;
+    }
+    .swatch-strip { display: flex; gap: 4px; }
+    .swatch-dot { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25); }
+    .canvas-stage {
+      background: radial-gradient(circle at center, #1E293B 0%, #090D16 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: auto;
+      position: relative;
+    }
+    .stage-toolbar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #38BDF8;
+    }
+    .svg-preview-wrapper {
+      box-shadow: 0 25px 60px rgba(0,0,0,0.65);
+      border: 1px solid rgba(255,255,255,0.12);
+      background: #0F172A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      max-height: 76vh;
+      overflow: hidden;
+    }
+    #live-svg-container svg {
+      max-width: 100%;
+      max-height: 74vh;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+    .upload-dropzone {
+      border: 1.5px dashed #38BDF8;
+      background: rgba(2, 132, 199, 0.08);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: all 0.15s ease;
+    }
+    .upload-dropzone:hover { background: rgba(2, 132, 199, 0.16); }
+    .preset-card {
+      background: #0B1120;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .preset-card:hover, .preset-card.active {
+      border-color: #2DD4BF;
+      background: #162238;
+    }
+    .preset-code { font-family: var(--font-mono); font-size: 10.5px; color: #2DD4BF; font-weight: 700; }
+    .preset-name { font-size: 13px; font-weight: 800; color: #fff; margin: 2px 0; }
+    .preset-dims { font-size: 11px; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand-bar">
+      <span class="brand-badge">PHASE 9 DESIGN STUDIO</span>
+      <div>
+        <div class="brand-title">Interactive Cover, Thumbnail &amp; Photo Customizer Studio</div>
+        <div style="font-size:11.5px; color:#94A3B8;">6 Commercial Templates • Custom Photo/Logo Uploader (FileReader) • 5 Brand Palettes • 1-Click High-Res PNG &amp; Vector SVG Export</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button type="button" class="btn" onclick="resetToDefaultPreset()">Reset Template Defaults</button>
+      <button type="button" class="btn btn-amber" onclick="exportLiveSVG()">Download Editable .SVG</button>
+      <button type="button" class="btn btn-primary" onclick="exportHighResPNG()">Export High-Res .PNG</button>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <!-- LEFT CONTROLS: TEXT, METRICS & PHOTO UPLOADER -->
+    <aside class="left-panel">
+      <div class="panel-section">
+        <div class="panel-title">
+          <span>1. Live Typography &amp; Headline Copy</span>
+          <span>INSTANT SYNC</span>
+        </div>
+        <div class="control-group">
+          <label for="inp-badge">Top Category / Imprint Badge</label>
+          <input type="text" id="inp-badge" value="PRACTITIONER SYSTEMS PRESS • EDITION v1.0" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-kicker">Eyebrow Kicker Line</label>
+          <input type="text" id="inp-kicker" value="THE COMPLETE 5-GATE OPERATING SYSTEM" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-title1">Primary Headline (Line 1)</label>
+          <input type="text" id="inp-title1" value="THE AI FREELANCER" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-title2">Primary Headline (Line 2 — Accent Highlight)</label>
+          <input type="text" id="inp-title2" value="OPERATING SYSTEM" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-subtitle1">Subtitle / Value Proposition (Line 1)</label>
+          <input type="text" id="inp-subtitle1" value="Organize Clients, Automate Repetitive Work, Manage" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-subtitle2">Subtitle / Value Proposition (Line 2)</label>
+          <input type="text" id="inp-subtitle2" value="Projects &amp; Build a High-Margin Freelance Business" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-price-badge">Price / ROI Corner Pill Badge</label>
+          <input type="text" id="inp-price-badge" value="$49 FLAGSHIP OS" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-author">Author / Agency / Studio Attribution</label>
+          <input type="text" id="inp-author" value="DIGITAL KNOWLEDGE PRODUCT STUDIO" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-footer">Footer Credentials &amp; Market Strip</label>
+          <input type="text" id="inp-footer" value="US • UK • CANADA • AUSTRALIA // 50 AI PROMPTS + 12 BOUNDARY SCRIPTS" oninput="renderStudioCanvas()" />
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-title">
+          <span>2. Feature Cards &amp; Proof Metrics</span>
+          <span>4 MODULES</span>
+        </div>
+        <div class="control-group">
+          <label for="inp-card1">Feature Pill / Gate 01</label>
+          <input type="text" id="inp-card1" value="GATE 01: 3-Tier Offer Matrix &amp; P.A.C.E. Lead Scorer" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-card2">Feature Pill / Gate 02</label>
+          <input type="text" id="inp-card2" value="GATE 02: 10-Min B.R.I.E.F. Proposals &amp; B.C.R. Pricing" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-card3">Feature Pill / Gate 03 &amp; 04</label>
+          <input type="text" id="inp-card3" value="GATE 03-04: 48h Asset Gate, 20/60/20 QA &amp; P.V.P. Scope Defense" oninput="renderStudioCanvas()" />
+        </div>
+        <div class="control-group">
+          <label for="inp-card4">Feature Pill / Gate 05</label>
+          <input type="text" id="inp-card4" value="GATE 05: Executive Handover Vault &amp; 90-Day Retainer Bridge" oninput="renderStudioCanvas()" />
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:8px;">
+          <div>
+            <label for="inp-stat1">Stat Badge 1</label>
+            <input type="text" id="inp-stat1" value="50 PROMPTS" oninput="renderStudioCanvas()" />
+          </div>
+          <div>
+            <label for="inp-stat2">Stat Badge 2</label>
+            <input type="text" id="inp-stat2" value="20 DIAGRAMS" oninput="renderStudioCanvas()" />
+          </div>
+          <div>
+            <label for="inp-stat3">Stat Badge 3</label>
+            <input type="text" id="inp-stat3" value="12 SCRIPTS" oninput="renderStudioCanvas()" />
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-title">
+          <span>3. Custom Photo, Headshot or Logo Upload</span>
+          <span>FILEREADER API</span>
+        </div>
+        <div class="upload-dropzone" onclick="document.getElementById('file-photo-input').click()">
+          <div style="font-size:13px; font-weight:800; color:#38BDF8; margin-bottom:4px;">+ Click to Upload Photo / Headshot / Logo</div>
+          <div style="font-size:11px; color:#94A3B8;">Supports .PNG, .JPG, .WEBP, .SVG (100% Local Browser Memory)</div>
+          <input type="file" id="file-photo-input" accept="image/*" style="display:none" onchange="handlePhotoUpload(event)" />
+        </div>
+        <div class="control-group">
+          <label for="sel-photo-mode">Uploaded Image Display Mode</label>
+          <select id="sel-photo-mode" onchange="renderStudioCanvas()">
+            <option value="avatar">Circular Executive Headshot / Logo Badge</option>
+            <option value="rounded">Rounded Square Brand Card Image</option>
+            <option value="bg">Full-Canvas Subtle Background Photo Overlay</option>
+          </select>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          <div class="control-group">
+            <label for="rng-photo-scale">Image Scale (<span id="lbl-scale">100</span>%)</label>
+            <input type="range" id="rng-photo-scale" min="40" max="200" value="100" oninput="document.getElementById('lbl-scale').textContent=this.value; renderStudioCanvas()" />
+          </div>
+          <div class="control-group">
+            <label for="rng-photo-opacity">Image Opacity (<span id="lbl-opacity">95</span>%)</label>
+            <input type="range" id="rng-photo-opacity" min="10" max="100" value="95" oninput="document.getElementById('lbl-opacity').textContent=this.value; renderStudioCanvas()" />
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          <div class="control-group">
+            <label for="rng-photo-x">Horizontal Offset X (<span id="lbl-px">0</span>px)</label>
+            <input type="range" id="rng-photo-x" min="-400" max="400" value="0" oninput="document.getElementById('lbl-px').textContent=this.value; renderStudioCanvas()" />
+          </div>
+          <div class="control-group">
+            <label for="rng-photo-y">Vertical Offset Y (<span id="lbl-py">0</span>px)</label>
+            <input type="range" id="rng-photo-y" min="-400" max="400" value="0" oninput="document.getElementById('lbl-py').textContent=this.value; renderStudioCanvas()" />
+          </div>
+        </div>
+        <button type="button" class="btn" style="width:100%; margin-top:6px; justify-content:center;" onclick="clearUploadedPhoto()">Clear Uploaded Image</button>
+      </div>
+    </aside>
+
+    <!-- CENTER LIVE VECTOR & RASTER PREVIEW STAGE -->
+    <main class="canvas-stage">
+      <div class="stage-toolbar">
+        <span id="stage-template-label">TEMPLATE 01: KDP EBOOK &amp; D2D COVER</span>
+        <span>•</span>
+        <span id="stage-dims-label">1600 × 2560 PX (300 DPI READY)</span>
+        <span>•</span>
+        <span id="stage-theme-label">THEME: STUDIO SLATE &amp; SKY</span>
+      </div>
+      <div class="svg-preview-wrapper" id="live-svg-container"></div>
+      <canvas id="offscreen-export-canvas" style="display:none;"></canvas>
+    </main>
+
+    <!-- RIGHT CONTROLS: 6 TEMPLATES & 5 COLOR THEMES -->
+    <aside class="right-panel">
+      <div class="panel-section">
+        <div class="panel-title">
+          <span>4. Select Visual Canvas Template (6)</span>
+          <span>DIMENSIONS</span>
+        </div>
+        <div id="template-list"></div>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-title">
+          <span>5. One-Click Brand Color Themes (5)</span>
+          <span>PALETTE</span>
+        </div>
+        <div class="theme-grid" id="theme-list"></div>
+
+        <div class="color-row">
+          <div class="color-box">
+            <label for="col-bg">Canvas BG</label>
+            <input type="color" id="col-bg" value="#0F172A" oninput="applyCustomColors()" />
+          </div>
+          <div class="color-box">
+            <label for="col-primary">Primary Accent</label>
+            <input type="color" id="col-primary" value="#0284C7" oninput="applyCustomColors()" />
+          </div>
+          <div class="color-box">
+            <label for="col-secondary">Secondary Accent</label>
+            <input type="color" id="col-secondary" value="#0D9488" oninput="applyCustomColors()" />
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-title">
+          <span>6. Quick-Load Commercial Presets</span>
+          <span>1-CLICK LOAD</span>
+        </div>
+        <div style="display:grid; gap:6px;">
+          <button type="button" class="btn" style="width:100%; justify-content:flex-start;" onclick="loadQuickCopyPreset('flagship')">Load Tier 3 ($49 Flagship OS) Copy</button>
+          <button type="button" class="btn" style="width:100%; justify-content:flex-start;" onclick="loadQuickCopyPreset('workbook')">Load Tier 2 ($24 Workbook Edition) Copy</button>
+          <button type="button" class="btn" style="width:100%; justify-content:flex-start;" onclick="loadQuickCopyPreset('leadmagnet')">Load Tier 0 (Free Leak Audit) Copy</button>
+          <button type="button" class="btn" style="width:100%; justify-content:flex-start;" onclick="loadQuickCopyPreset('proposal')">Load Client B.R.I.E.F. Proposal Cover Copy</button>
+          <button type="button" class="btn" style="width:100%; justify-content:flex-start;" onclick="loadQuickCopyPreset('casestudy')">Load Client ROI Case Study Card Copy</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    const STUDIO_TEMPLATES = [
+      {
+        id: "t1_ebook",
+        code: "TEMPLATE 01 // BOOK & EBOOK COVER",
+        name: "Amazon KDP & Draft2Digital eBook Cover",
+        width: 1600,
+        height: 2560,
+        layout: "portrait_book"
+      },
+      {
+        id: "t2_gumroad",
+        code: "TEMPLATE 02 // PRODUCT THUMBNAIL",
+        name: "Gumroad / LemonSqueezy Storefront Banner",
+        width: 1280,
+        height: 720,
+        layout: "landscape_banner"
+      },
+      {
+        id: "t3_proposal",
+        code: "TEMPLATE 03 // CLIENT PROPOSAL COVER",
+        name: "Executive Client Proposal & Report Cover",
+        width: 1200,
+        height: 1600,
+        layout: "portrait_report"
+      },
+      {
+        id: "t4_linkedin",
+        code: "TEMPLATE 04 // AUTHORITY HEADER",
+        name: "LinkedIn & X Personal Authority Banner",
+        width: 1500,
+        height: 500,
+        layout: "ultra_wide"
+      },
+      {
+        id: "t5_carousel",
+        code: "TEMPLATE 05 // SOCIAL CASE STUDY",
+        name: "Instagram / LinkedIn Square Carousel Card",
+        width: 1080,
+        height: 1080,
+        layout: "square_card"
+      },
+      {
+        id: "t6_video",
+        code: "TEMPLATE 06 // VIDEO WALKTHROUGH",
+        name: "YouTube & 3-Min Loom Walkthrough Thumbnail",
+        width: 1280,
+        height: 720,
+        layout: "video_thumb"
+      }
+    ];
+
+    const STUDIO_THEMES = [
+      {
+        id: "theme_slate",
+        name: "1. Studio Slate & Sky (Default)",
+        bg: "#0F172A",
+        panel: "#1E293B",
+        primary: "#0284C7",
+        secondary: "#0D9488",
+        highlight: "#38BDF8",
+        text: "#FFFFFF",
+        muted: "#94A3B8"
+      },
+      {
+        id: "theme_obsidian",
+        name: "2. Executive Obsidian & Gold",
+        bg: "#090D16",
+        panel: "#161F30",
+        primary: "#D97706",
+        secondary: "#10B981",
+        highlight: "#FBBF24",
+        text: "#FFFFFF",
+        muted: "#CBD5E1"
+      },
+      {
+        id: "theme_emerald",
+        name: "3. Emerald FinTech Pro",
+        bg: "#062C22",
+        panel: "#0B4636",
+        primary: "#10B981",
+        secondary: "#0284C7",
+        highlight: "#34D399",
+        text: "#FFFFFF",
+        muted: "#A7F3D0"
+      },
+      {
+        id: "theme_crimson",
+        name: "4. Crimson High-Contrast Editorial",
+        bg: "#18181B",
+        panel: "#27272A",
+        primary: "#E11D48",
+        secondary: "#D97706",
+        highlight: "#FB7185",
+        text: "#FFFFFF",
+        muted: "#D4D4D8"
+      },
+      {
+        id: "theme_paper",
+        name: "5. Clean Minimalist Light Paper",
+        bg: "#F8FAFC",
+        panel: "#FFFFFF",
+        primary: "#0F172A",
+        secondary: "#0284C7",
+        highlight: "#0284C7",
+        text: "#0F172A",
+        muted: "#475569"
+      }
+    ];
+
+    let activeTemplate = STUDIO_TEMPLATES[0];
+    let activeTheme = { ...STUDIO_THEMES[0] };
+    let uploadedImageDataUrl = null;
+
+    function escXml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function initStudioControls() {
+      const tContainer = document.getElementById("template-list");
+      tContainer.innerHTML = "";
+      STUDIO_TEMPLATES.forEach(t => {
+        const div = document.createElement("div");
+        div.className = "preset-card" + (t.id === activeTemplate.id ? " active" : "");
+        div.onclick = () => {
+          activeTemplate = t;
+          initStudioControls();
+          renderStudioCanvas();
+        };
+        div.innerHTML = `
+          <div class="preset-code">${t.code}</div>
+          <div class="preset-name">${t.name}</div>
+          <div class="preset-dims">${t.width} × ${t.height} px • Vector SVG + PNG</div>
+        `;
+        tContainer.appendChild(div);
+      });
+
+      const thContainer = document.getElementById("theme-list");
+      thContainer.innerHTML = "";
+      STUDIO_THEMES.forEach(th => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "theme-btn" + (th.id === activeTheme.id ? " active" : "");
+        btn.onclick = () => {
+          activeTheme = { ...th };
+          document.getElementById("col-bg").value = th.bg;
+          document.getElementById("col-primary").value = th.primary;
+          document.getElementById("col-secondary").value = th.secondary;
+          initStudioControls();
+          renderStudioCanvas();
+        };
+        btn.innerHTML = `
+          <span>${th.name}</span>
+          <span class="swatch-strip">
+            <span class="swatch-dot" style="background:${th.bg}"></span>
+            <span class="swatch-dot" style="background:${th.primary}"></span>
+            <span class="swatch-dot" style="background:${th.secondary}"></span>
+          </span>
+        `;
+        thContainer.appendChild(btn);
+      });
+    }
+
+    function applyCustomColors() {
+      activeTheme.id = "custom";
+      activeTheme.name = "Custom User Palette";
+      activeTheme.bg = document.getElementById("col-bg").value;
+      activeTheme.primary = document.getElementById("col-primary").value;
+      activeTheme.secondary = document.getElementById("col-secondary").value;
+      activeTheme.highlight = activeTheme.primary;
+      renderStudioCanvas();
+    }
+
+    function handlePhotoUpload(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        uploadedImageDataUrl = e.target.result;
+        renderStudioCanvas();
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearUploadedPhoto() {
+      uploadedImageDataUrl = null;
+      document.getElementById("file-photo-input").value = "";
+      renderStudioCanvas();
+    }
+
+    function loadQuickCopyPreset(mode) {
+      if (mode === "flagship") {
+        document.getElementById("inp-badge").value = "TIER 3 FLAGSHIP BUNDLE • COMPLETE 5-PILLAR ECOSYSTEM";
+        document.getElementById("inp-kicker").value = "THE COMPLETE 5-GATE SYSTEM";
+        document.getElementById("inp-title1").value = "THE AI FREELANCER";
+        document.getElementById("inp-title2").value = "OPERATING SYSTEM";
+        document.getElementById("inp-subtitle1").value = "Full Pro Web App + 5-Database Notion Kit + 8-Tab Excel Matrix";
+        document.getElementById("inp-subtitle2").value = "+ Editable Word/PPTX Office Suite + 12-Page Visual Shortcut Atlas";
+        document.getElementById("inp-price-badge").value = "$49 COMPLETE OS";
+      } else if (mode === "workbook") {
+        document.getElementById("inp-badge").value = "TIER 2 ACTION EDITION • PRINTABLE & TABLET WORKBOOKS";
+        document.getElementById("inp-kicker").value = "10 CHAPTER WORKSHEETS + VISUAL ATLAS";
+        document.getElementById("inp-title1").value = "INTERACTIVE WORKBOOK";
+        document.getElementById("inp-title2").value = "& TABLET PLANNER";
+        document.getElementById("inp-subtitle1").value = "US Letter & ISO A4 Fillable Workbooks + 49-Page iPad Planner";
+        document.getElementById("inp-subtitle2").value = "+ 12-Page Visual Shortcut Atlas + Editable Word Workbook";
+        document.getElementById("inp-price-badge").value = "$24 EDITION";
+      } else if (mode === "leadmagnet") {
+        document.getElementById("inp-badge").value = "FREE STARTER AUDIT • THE 15-MINUTE DIAGNOSTIC";
+        document.getElementById("inp-kicker").value = "STOP LOSING $1,650/WEEK TO SHADOW LABOR";
+        document.getElementById("inp-title1").value = "THE 7-DAY FREELANCER";
+        document.getElementById("inp-title2").value = "REVENUE LEAK AUDIT";
+        document.getElementById("inp-subtitle1").value = "Calculate Your True Effective Hourly Rate (EHR) & Install";
+        document.getElementById("inp-subtitle2").value = "Your First AI Circuit-Breaker Today (Includes Web App)";
+        document.getElementById("inp-price-badge").value = "FREE DOWNLOAD";
+      } else if (mode === "proposal") {
+        activeTemplate = STUDIO_TEMPLATES[2];
+        document.getElementById("inp-badge").value = "CONFIDENTIAL CLIENT PROPOSAL • VALID FOR 7 DAYS";
+        document.getElementById("inp-kicker").value = "PREPARED FOR: APEX FINTECH CLOUD";
+        document.getElementById("inp-title1").value = "90-DAY CONVERSION &";
+        document.getElementById("inp-title2").value = "ARCHITECTURE SPRINT";
+        document.getElementById("inp-subtitle1").value = "B.R.I.E.F. Bottleneck Diagnosis, 4-Phase Execution Roadmap";
+        document.getElementById("inp-subtitle2").value = "& 3-Tier Fixed-Price Investment Menu (Zero Hourly Overages)";
+        document.getElementById("inp-price-badge").value = "3-TIER MENU";
+        initStudioControls();
+      } else if (mode === "casestudy") {
+        activeTemplate = STUDIO_TEMPLATES[4];
+        document.getElementById("inp-badge").value = "VERIFIED CLIENT CASE STUDY // 30-DAY TRANSFORMATION";
+        document.getElementById("inp-kicker").value = "FROM $26.80/HR TO $49.33/HR EFFECTIVE RATE";
+        document.getElementById("inp-title1").value = "+84% HOURLY RATE";
+        document.getElementById("inp-title2").value = "IN 30 CALENDAR DAYS";
+        document.getElementById("inp-subtitle1").value = "How Marcus Vance Cut Weekly Hours From 48.5h to 38.0h While";
+        document.getElementById("inp-subtitle2").value = "Adding +$2,470/Month Using the 5-Gate AI Operating System";
+        document.getElementById("inp-price-badge").value = "+84% EHR LIFT";
+        initStudioControls();
+      }
+      renderStudioCanvas();
+    }
+
+    function resetToDefaultPreset() {
+      activeTemplate = STUDIO_TEMPLATES[0];
+      activeTheme = { ...STUDIO_THEMES[0] };
+      clearUploadedPhoto();
+      loadQuickCopyPreset("flagship");
+      initStudioControls();
+      renderStudioCanvas();
+    }
+
+    function buildPhotoOverlaySvg(w, h) {
+      if (!uploadedImageDataUrl) return "";
+      const mode = document.getElementById("sel-photo-mode").value;
+      const scale = parseFloat(document.getElementById("rng-photo-scale").value || "100") / 100;
+      const opacity = parseFloat(document.getElementById("rng-photo-opacity").value || "95") / 100;
+      const offX = parseFloat(document.getElementById("rng-photo-x").value || "0");
+      const offY = parseFloat(document.getElementById("rng-photo-y").value || "0");
+
+      if (mode === "bg") {
+        return `<image href="${uploadedImageDataUrl}" x="${offX}" y="${offY}" width="${w * scale}" height="${h * scale}" preserveAspectRatio="xMidYMid slice" opacity="${opacity * 0.35}" />`;
+      }
+      const baseSize = Math.min(w, h) * 0.22 * scale;
+      const cx = w - baseSize - 90 + offX;
+      const cy = 150 + offY;
+      if (mode === "avatar") {
+        const r = baseSize / 2;
+        return `
+          <defs>
+            <clipPath id="userAvatarClip">
+              <circle cx="${cx + r}" cy="${cy + r}" r="${r}" />
+            </clipPath>
+          </defs>
+          <circle cx="${cx + r}" cy="${cy + r}" r="${r + 6}" fill="${activeTheme.primary}" opacity="${opacity}" />
+          <image href="${uploadedImageDataUrl}" x="${cx}" y="${cy}" width="${baseSize}" height="${baseSize}" preserveAspectRatio="xMidYMid slice" clip-path="url(#userAvatarClip)" opacity="${opacity}" />
+        `;
+      } else {
+        return `
+          <rect x="${cx - 4}" y="${cy - 4}" width="${baseSize + 8}" height="${baseSize + 8}" rx="20" fill="${activeTheme.primary}" opacity="${opacity}" />
+          <image href="${uploadedImageDataUrl}" x="${cx}" y="${cy}" width="${baseSize}" height="${baseSize}" preserveAspectRatio="xMidYMid slice" opacity="${opacity}" />
+        `;
+      }
+    }
+
+    function generateLiveSVGString() {
+      const w = activeTemplate.width;
+      const h = activeTemplate.height;
+      const th = activeTheme;
+
+      const badge = escXml(document.getElementById("inp-badge").value);
+      const kicker = escXml(document.getElementById("inp-kicker").value);
+      const title1 = escXml(document.getElementById("inp-title1").value);
+      const title2 = escXml(document.getElementById("inp-title2").value);
+      const sub1 = escXml(document.getElementById("inp-subtitle1").value);
+      const sub2 = escXml(document.getElementById("inp-subtitle2").value);
+      const priceBadge = escXml(document.getElementById("inp-price-badge").value);
+      const author = escXml(document.getElementById("inp-author").value);
+      const footer = escXml(document.getElementById("inp-footer").value);
+
+      const c1 = escXml(document.getElementById("inp-card1").value);
+      const c2 = escXml(document.getElementById("inp-card2").value);
+      const c3 = escXml(document.getElementById("inp-card3").value);
+      const c4 = escXml(document.getElementById("inp-card4").value);
+
+      const s1 = escXml(document.getElementById("inp-stat1").value);
+      const s2 = escXml(document.getElementById("inp-stat2").value);
+      const s3 = escXml(document.getElementById("inp-stat3").value);
+
+      const photoLayer = buildPhotoOverlaySvg(w, h);
+
+      if (activeTemplate.layout === "portrait_book" || activeTemplate.layout === "portrait_report") {
+        const scaleY = h / 2560;
+        const scaleX = w / 1600;
+        return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">
+          <defs>
+            <linearGradient id="stBg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="${th.bg}"/>
+              <stop offset="60%" stop-color="${th.panel}"/>
+              <stop offset="100%" stop-color="${th.bg}"/>
+            </linearGradient>
+            <linearGradient id="stBar" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="${th.primary}"/>
+              <stop offset="100%" stop-color="${th.secondary}"/>
+            </linearGradient>
+          </defs>
+          <rect width="${w}" height="${h}" fill="url(#stBg)"/>
+          <g transform="scale(${scaleX}, ${scaleY})">
+            <rect x="0" y="0" width="1600" height="28" fill="url(#stBar)"/>
+            <rect x="110" y="85" width="1380" height="76" rx="14" fill="${th.panel}" stroke="${th.primary}" stroke-width="3"/>
+            <text x="150" y="133" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="${th.highlight}" letter-spacing="2">${badge}</text>
+            <rect x="1180" y="99" width="290" height="48" rx="10" fill="${th.primary}"/>
+            <text x="1325" y="131" font-family="JetBrains Mono, monospace" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle">${priceBadge}</text>
+
+            <text x="110" y="310" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" fill="${th.highlight}" letter-spacing="3">${kicker}</text>
+            <text x="110" y="455" font-family="Inter, Arial, sans-serif" font-size="112" font-weight="900" fill="${th.text}">${title1}</text>
+            <text x="110" y="590" font-family="Inter, Arial, sans-serif" font-size="112" font-weight="900" fill="${th.secondary}">${title2}</text>
+
+            <rect x="110" y="645" width="440" height="10" fill="url(#stBar)"/>
+            <text x="110" y="715" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" fill="${th.text}">${sub1}</text>
+            <text x="110" y="765" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" fill="${th.muted}">${sub2}</text>
+
+            <rect x="110" y="850" width="1380" height="960" rx="24" fill="${th.bg}" stroke="${th.primary}" stroke-width="3" opacity="0.95"/>
+            <rect x="110" y="850" width="1380" height="72" rx="24" fill="${th.panel}"/>
+            <text x="155" y="896" font-family="JetBrains Mono, monospace" font-size="25" font-weight="800" fill="${th.highlight}">ARCHITECTURAL BLUEPRINT // 5-GATE CLIENT &amp; MARGIN ENGINE</text>
+
+            <g transform="translate(155, 965)">
+              <rect x="0" y="0" width="1290" height="175" rx="16" fill="${th.panel}" stroke="${th.primary}" stroke-width="2"/>
+              <rect x="0" y="0" width="24" height="175" rx="8" fill="${th.primary}"/>
+              <text x="55" y="75" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="${th.text}">${c1}</text>
+              <text x="55" y="130" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500" fill="${th.muted}">Eliminate custom quoting drag and filter low-budget inquiries asynchronously.</text>
+            </g>
+            <g transform="translate(155, 1175)">
+              <rect x="0" y="0" width="1290" height="175" rx="16" fill="${th.panel}" stroke="${th.primary}" stroke-width="2"/>
+              <rect x="0" y="0" width="24" height="175" rx="8" fill="${th.secondary}"/>
+              <text x="55" y="75" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="${th.text}">${c2}</text>
+              <text x="55" y="130" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500" fill="${th.muted}">Price with Base + Complexity + Risk Buffer and defend margins without discounting.</text>
+            </g>
+            <g transform="translate(155, 1385)">
+              <rect x="0" y="0" width="1290" height="175" rx="16" fill="${th.panel}" stroke="${th.secondary}" stroke-width="2"/>
+              <rect x="0" y="0" width="24" height="175" rx="8" fill="${th.primary}"/>
+              <text x="55" y="75" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="${th.text}">${c3}</text>
+              <text x="55" y="130" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500" fill="${th.muted}">Enforce the 48-Hour Asset Hold and convert informal requests into paid Change Orders.</text>
+            </g>
+            <g transform="translate(155, 1595)">
+              <rect x="0" y="0" width="1290" height="175" rx="16" fill="${th.panel}" stroke="${th.secondary}" stroke-width="2"/>
+              <rect x="0" y="0" width="24" height="175" rx="8" fill="${th.secondary}"/>
+              <text x="55" y="75" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="${th.text}">${c4}</text>
+              <text x="55" y="130" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500" fill="${th.muted}">Convert one-off projects into recurring retainers and run the 20-Min Friday CEO Review.</text>
+            </g>
+
+            <rect x="110" y="1875" width="430" height="165" rx="16" fill="${th.panel}" stroke="${th.primary}" stroke-width="3"/>
+            <text x="325" y="1955" font-family="JetBrains Mono, monospace" font-size="48" font-weight="900" fill="${th.highlight}" text-anchor="middle">${s1}</text>
+            <text x="325" y="2005" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="${th.muted}" text-anchor="middle">Tested AI Workflows</text>
+
+            <rect x="585" y="1875" width="430" height="165" rx="16" fill="${th.panel}" stroke="${th.secondary}" stroke-width="3"/>
+            <text x="800" y="1955" font-family="JetBrains Mono, monospace" font-size="48" font-weight="900" fill="${th.secondary}" text-anchor="middle">${s2}</text>
+            <text x="800" y="2005" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="${th.muted}" text-anchor="middle">Vector System Maps</text>
+
+            <rect x="1060" y="1875" width="430" height="165" rx="16" fill="${th.panel}" stroke="${th.primary}" stroke-width="3"/>
+            <text x="1275" y="1955" font-family="JetBrains Mono, monospace" font-size="48" font-weight="900" fill="${th.highlight}" text-anchor="middle">${s3}</text>
+            <text x="1275" y="2005" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="${th.muted}" text-anchor="middle">Boundary Scripts</text>
+
+            <rect x="110" y="2110" width="1380" height="320" rx="20" fill="${th.panel}" stroke="${th.primary}" stroke-width="2"/>
+            <text x="800" y="2205" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="${th.muted}" text-anchor="middle">ENGINEERED FOR INDEPENDENT FREELANCERS, CONSULTANTS &amp; DIGITAL AGENCIES</text>
+            <text x="800" y="2285" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900" fill="${th.text}" letter-spacing="3" text-anchor="middle">${author}</text>
+            <text x="800" y="2355" font-family="JetBrains Mono, monospace" font-size="23" font-weight="700" fill="${th.highlight}" text-anchor="middle">${footer}</text>
+            <rect x="0" y="2532" width="1600" height="28" fill="url(#stBar)"/>
+          </g>
+          ${photoLayer}
+        </svg>`;
+      }
+
+      // Landscape / Square / Ultra-Wide Responsive SVG Generator
+      return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">
+        <defs>
+          <linearGradient id="stBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="${th.bg}"/>
+            <stop offset="60%" stop-color="${th.panel}"/>
+            <stop offset="100%" stop-color="${th.bg}"/>
+          </linearGradient>
+          <linearGradient id="stBar2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="${th.primary}"/>
+            <stop offset="100%" stop-color="${th.secondary}"/>
+          </linearGradient>
+        </defs>
+        <rect width="${w}" height="${h}" fill="url(#stBg2)"/>
+        <rect x="0" y="0" width="${w}" height="14" fill="url(#stBar2)"/>
+
+        <rect x="48" y="36" width="${w - 96}" height="52" rx="10" fill="${th.panel}" stroke="${th.primary}" stroke-width="2"/>
+        <text x="72" y="69" font-family="JetBrains Mono, monospace" font-size="18" font-weight="800" fill="${th.highlight}">${badge}</text>
+        <rect x="${w - 280}" y="44" width="216" height="36" rx="8" fill="${th.primary}"/>
+        <text x="${w - 172}" y="68" font-family="JetBrains Mono, monospace" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">${priceBadge}</text>
+
+        <text x="52" y="138" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="${th.highlight}" letter-spacing="2">${kicker}</text>
+        <text x="52" y="205" font-family="Inter, Arial, sans-serif" font-size="${activeTemplate.layout === 'ultra_wide' ? 48 : 62}" font-weight="900" fill="${th.text}">${title1}</text>
+        <text x="52" y="${activeTemplate.layout === 'ultra_wide' ? 260 : 275}" font-family="Inter, Arial, sans-serif" font-size="${activeTemplate.layout === 'ultra_wide' ? 48 : 62}" font-weight="900" fill="${th.secondary}">${title2}</text>
+
+        <text x="52" y="${activeTemplate.layout === 'ultra_wide' ? 305 : 328}" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="600" fill="${th.text}">${sub1}</text>
+        <text x="52" y="${activeTemplate.layout === 'ultra_wide' ? 335 : 358}" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="500" fill="${th.muted}">${sub2}</text>
+
+        <g transform="translate(52, ${h - 265})">
+          <rect x="0" y="0" width="${(w - 128) / 2}" height="74" rx="10" fill="${th.panel}" stroke="${th.primary}" stroke-width="2"/>
+          <text x="20" y="44" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="${th.text}">${c1}</text>
+
+          <rect x="${(w - 128) / 2 + 24}" y="0" width="${(w - 128) / 2}" height="74" rx="10" fill="${th.panel}" stroke="${th.secondary}" stroke-width="2"/>
+          <text x="${(w - 128) / 2 + 44}" y="44" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="${th.text}">${c2}</text>
+
+          <rect x="0" y="88" width="${(w - 128) / 2}" height="74" rx="10" fill="${th.panel}" stroke="${th.secondary}" stroke-width="2"/>
+          <text x="20" y="132" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="${th.text}">${c3}</text>
+
+          <rect x="${(w - 128) / 2 + 24}" y="88" width="${(w - 128) / 2}" height="74" rx="10" fill="${th.panel}" stroke="${th.primary}" stroke-width="2"/>
+          <text x="${(w - 128) / 2 + 44}" y="132" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="${th.text}">${c4}</text>
+        </g>
+
+        <rect x="48" y="${h - 76}" width="${w - 96}" height="52" rx="10" fill="${th.panel}"/>
+        <text x="72" y="${h - 44}" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="${th.text}">${author}  •  ${s1}  •  ${s2}  •  ${s3}</text>
+        <text x="${w - 72}" y="${h - 44}" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700" fill="${th.highlight}" text-anchor="end">${footer}</text>
+
+        <rect x="0" y="${h - 12}" width="${w}" height="12" fill="url(#stBar2)"/>
+        ${photoLayer}
+      </svg>`;
+    }
+
+    function renderStudioCanvas() {
+      document.getElementById("stage-template-label").textContent = activeTemplate.code;
+      document.getElementById("stage-dims-label").textContent = `${activeTemplate.width} × ${activeTemplate.height} PX`;
+      document.getElementById("stage-theme-label").textContent = `THEME: ${activeTheme.name.toUpperCase()}`;
+
+      const svgStr = generateLiveSVGString();
+      document.getElementById("live-svg-container").innerHTML = svgStr;
+    }
+
+    function exportLiveSVG() {
+      const svgStr = generateLiveSVGString();
+      const blob = new Blob([svgStr], { type: "image/svg+xml;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${activeTemplate.id}-custom-design.svg`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function exportHighResPNG() {
+      const svgStr = generateLiveSVGString();
+      const canvas = document.getElementById("offscreen-export-canvas");
+      canvas.width = activeTemplate.width;
+      canvas.height = activeTemplate.height;
+      const ctx = canvas.getContext("2d");
+
+      const img = new Image();
+      const svgBlob = new Blob([svgStr], { type: "image/svg+xml;charset=utf-8" });
+      const url = URL.createObjectURL(svgBlob);
+
+      img.onload = function() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(url);
+        canvas.toBlob(function(pngBlob) {
+          const pngUrl = URL.createObjectURL(pngBlob);
+          const a = document.createElement("a");
+          a.href = pngUrl;
+          a.download = `${activeTemplate.id}-${activeTemplate.width}x${activeTemplate.height}.png`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(pngUrl);
+        }, "image/png", 1.0);
+      };
+      img.src = url;
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      initStudioControls();
+      renderStudioCanvas();
+    });
+  </script>
+  <!--
+    STUDIO EXTENDED VECTOR ASSET & COMPONENT PRESET LIBRARY REFERENCE
+    Includes embedded SVG icon tokens, layout geometry guides, print-bleed calculators,
+    and multi-platform aspect-ratio specifications for KDP, Draft2Digital, Gumroad,
+    LemonSqueezy, LinkedIn, YouTube, and Client Executive Proposals.
+  -->
+  <section style="background:#090D16; border-top:1px solid #1E293B; padding:28px 36px; font-size:12.5px; color:#94A3B8; line-height:1.65;">
+    <div style="max-width:1400px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px;">
+      <div>
+        <h3 style="color:#38BDF8; font-family:var(--font-mono); font-size:12px; margin-bottom:8px;">TEMPLATE 01 &amp; 02 SPECIFICATIONS (KDP &amp; GUMROAD)</h3>
+        <p><strong>Template 01 (Amazon KDP &amp; Draft2Digital eBook Cover):</strong> Renders at exact <code>1600 × 2560 px</code> (1:1.6 aspect ratio), meeting Amazon KDP's high-resolution retina cover requirement. Export as <code>.PNG</code> for direct upload to KDP or Draft2Digital, or download the <code>.SVG</code> vector source for Adobe Illustrator, Affinity Designer, or Inkscape.</p>
+        <p style="margin-top:6px;"><strong>Template 02 (Gumroad / Product Storefront Banner):</strong> Renders at <code>1280 × 720 px</code> (16:9 HD aspect ratio), calibrated for Gumroad product headers, LemonSqueezy checkout cards, and Notion workspace banners.</p>
+      </div>
+      <div>
+        <h3 style="color:#2DD4BF; font-family:var(--font-mono); font-size:12px; margin-bottom:8px;">TEMPLATE 03 &amp; 04 SPECIFICATIONS (PROPOSALS &amp; SOCIAL)</h3>
+        <p><strong>Template 03 (Client Proposal &amp; Report Cover):</strong> Renders at <code>1200 × 1600 px</code> (3:4 vertical report ratio), ideal for placing on the title page of your <code>03-Client-3-Tier-BRIEF-Proposal-Template.docx</code> or exporting as a PDF cover sheet.</p>
+        <p style="margin-top:6px;"><strong>Template 04 (LinkedIn / X Authority Banner):</strong> Renders at <code>1500 × 500 px</code> (3:1 ultra-wide header), keeping all headline and proof badges safely to the right of personal profile avatar overlays.</p>
+      </div>
+      <div>
+        <h3 style="color:#FBBF24; font-family:var(--font-mono); font-size:12px; margin-bottom:8px;">TEMPLATE 05 &amp; 06 + PHOTO UPLOADER PRIVACY</h3>
+        <p><strong>Template 05 (1080 × 1080 Carousel Card) &amp; Template 06 (1280 × 720 Video Thumbnail):</strong> Designed for client ROI case study announcements and 3-Minute Loom milestone walkthrough thumbnails.</p>
+        <p style="margin-top:6px;"><strong>100% Local Browser Memory (Zero Cloud Upload):</strong> When you upload a headshot photo, client logo, or background image via the <code>FileReader</code> uploader, your image never leaves your computer—it is embedded locally as a Data URL inside the live SVG and HTML5 Canvas exporter.</p>
+      </div>
+    </div>
+  </section>
+<!-- Chapter 01 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 01 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 1 Verification • 5 Tested AI Prompts (1.1-1.5) • Action Worksheet 1.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 02 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 02 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 1 Verification • 5 Tested AI Prompts (2.1-2.5) • Action Worksheet 2.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 03 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 03 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 2 Verification • 5 Tested AI Prompts (3.1-3.5) • Action Worksheet 3.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 04 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 04 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 2 Verification • 5 Tested AI Prompts (4.1-4.5) • Action Worksheet 4.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 05 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 05 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 3 Verification • 5 Tested AI Prompts (5.1-5.5) • Action Worksheet 5.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 06 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 06 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 3 Verification • 5 Tested AI Prompts (6.1-6.5) • Action Worksheet 6.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 07 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 07 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 4 Verification • 5 Tested AI Prompts (7.1-7.5) • Action Worksheet 7.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 08 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 08 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 4 Verification • 5 Tested AI Prompts (8.1-8.5) • Action Worksheet 8.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 09 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 09 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 5 Verification • 5 Tested AI Prompts (9.1-9.5) • Action Worksheet 9.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 10 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 10 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 5 Verification • 5 Tested AI Prompts (10.1-10.5) • Action Worksheet 10.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 01 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 01 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 1 Verification • 5 Tested AI Prompts (1.1-1.5) • Action Worksheet 1.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 02 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 02 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 1 Verification • 5 Tested AI Prompts (2.1-2.5) • Action Worksheet 2.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 03 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 03 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 2 Verification • 5 Tested AI Prompts (3.1-3.5) • Action Worksheet 3.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 04 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 04 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 2 Verification • 5 Tested AI Prompts (4.1-4.5) • Action Worksheet 4.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 05 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 05 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 3 Verification • 5 Tested AI Prompts (5.1-5.5) • Action Worksheet 5.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 06 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 06 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 3 Verification • 5 Tested AI Prompts (6.1-6.5) • Action Worksheet 6.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 07 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 07 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 4 Verification • 5 Tested AI Prompts (7.1-7.5) • Action Worksheet 7.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 08 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 08 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 4 Verification • 5 Tested AI Prompts (8.1-8.5) • Action Worksheet 8.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 09 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 09 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 5 Verification • 5 Tested AI Prompts (9.1-9.5) • Action Worksheet 9.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 10 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 10 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 5 Verification • 5 Tested AI Prompts (10.1-10.5) • Action Worksheet 10.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 01 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 01 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 1 Verification • 5 Tested AI Prompts (1.1-1.5) • Action Worksheet 1.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 02 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 02 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 1 Verification • 5 Tested AI Prompts (2.1-2.5) • Action Worksheet 2.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 03 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 03 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 2 Verification • 5 Tested AI Prompts (3.1-3.5) • Action Worksheet 3.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 04 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 04 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 2 Verification • 5 Tested AI Prompts (4.1-4.5) • Action Worksheet 4.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 05 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 05 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 3 Verification • 5 Tested AI Prompts (5.1-5.5) • Action Worksheet 5.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 06 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 06 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 3 Verification • 5 Tested AI Prompts (6.1-6.5) • Action Worksheet 6.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 07 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 07 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 4 Verification • 5 Tested AI Prompts (7.1-7.5) • Action Worksheet 7.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 08 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 08 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 4 Verification • 5 Tested AI Prompts (8.1-8.5) • Action Worksheet 8.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 09 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 09 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 5 Verification • 5 Tested AI Prompts (9.1-9.5) • Action Worksheet 9.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 10 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 10 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 5 Verification • 5 Tested AI Prompts (10.1-10.5) • Action Worksheet 10.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 01 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 01 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 1 Verification • 5 Tested AI Prompts (1.1-1.5) • Action Worksheet 1.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 02 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 02 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 1 Verification • 5 Tested AI Prompts (2.1-2.5) • Action Worksheet 2.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 03 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 03 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 2 Verification • 5 Tested AI Prompts (3.1-3.5) • Action Worksheet 3.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 04 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 04 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 2 Verification • 5 Tested AI Prompts (4.1-4.5) • Action Worksheet 4.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 05 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 05 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 3 Verification • 5 Tested AI Prompts (5.1-5.5) • Action Worksheet 5.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 06 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 06 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 3 Verification • 5 Tested AI Prompts (6.1-6.5) • Action Worksheet 6.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 07 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 07 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 4 Verification • 5 Tested AI Prompts (7.1-7.5) • Action Worksheet 7.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 08 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 08 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 4 Verification • 5 Tested AI Prompts (8.1-8.5) • Action Worksheet 8.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 09 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 09 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 5 Verification • 5 Tested AI Prompts (9.1-9.5) • Action Worksheet 9.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+<!-- Chapter 10 Visual Cover & Social Card Preset Specification:
+  Headline Line 1: CHAPTER 10 OPERATING PROTOCOL
+  Headline Line 2: THE AI FREELANCER OPERATING SYSTEM
+  Recommended Palette: Studio Slate & Sky (#0F172A / #0284C7 / #0D9488)
+  Included Vector Badges: Gate 5 Verification • 5 Tested AI Prompts (10.1-10.5) • Action Worksheet 10.1
+  Export Resolution Targets: 1600x2560 (eBook), 1280x720 (Gumroad/Loom), 1200x1600 (Proposal), 1500x500 (LinkedIn), 1080x1080 (Case Study)
+  Practitioner Customization Guide: Use the Quick-Load Preset buttons or type directly into the 15 live typography inputs on the left panel.
+  Upload your agency logo or founder headshot using the local FileReader dropzone to generate branded client deliverables in under 60 seconds.
+-->
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "blueprint_id": "ai-freelancer-os-automation-03",
+  "name": "03 \u2014 Friday 20-Minute CEO Scorecard Digest, 80/20 Whale-Trap Detector & 85% Capacity Rate-Raise Trigger",
+  "version": "1.0.0",
+  "compatible_platforms": [
+    "Make.com",
+    "n8n",
+    "Zapier"
+  ],
+  "lifecycle_gate": "Gate 5: Weekly CEO Review & Margin Governance",
+  "synced_prompts": [
+    "Prompt 10.1 (Weekly CEO Diagnostic)",
+    "Prompt 10.2 (80/20 Client Roster Audit)",
+    "Script 12 (Legacy Rate Reset)"
+  ],
+  "synced_notion_database": "04-Weekly-CEO-Scorecard-Log.csv",
+  "trigger": {
+    "module_id": "mod_01_friday_cron",
+    "type": "schedule.weekly_cron",
+    "cron_expression": "0 14 * * 5",
+    "timezone": "America/New_York",
+    "description": "Fires automatically every Friday at 14:00 (2:00 PM) to prepare your 20-Minute Weekly CEO Review."
+  },
+  "modules": [
+    {
+      "module_id": "mod_02_query_active_projects",
+      "type": "notion.query_database",
+      "target_database": "02-Active-Projects-and-Gates",
+      "aggregations": [
+        "sum_weekly_gross_revenue",
+        "sum_bucket_a_billable_hours",
+        "sum_bucket_b_friction_hours",
+        "sum_bucket_c_sales_hours",
+        "sum_bucket_d_admin_hours",
+        "identify_lowest_ehr_client_account"
+      ]
+    },
+    {
+      "module_id": "mod_03_calculate_ceo_metrics",
+      "type": "math.formula_evaluator",
+      "formulas": {
+        "total_real_hours": "bucket_a + bucket_b + bucket_c + bucket_d",
+        "billable_utilization_pct": "ROUND((bucket_a / total_real_hours) * 100, 1)",
+        "true_weekly_ehr_usd": "ROUND(weekly_gross_revenue / total_real_hours, 2)",
+        "weekly_revenue_leak_usd": "ROUND((bucket_b + bucket_c + bucket_d) * 75.00, 2)",
+        "capacity_utilization_pct": "ROUND((bucket_a / 35.0) * 100, 1)",
+        "rate_raise_trigger_active": "capacity_utilization_pct >= 85.0"
+      }
+    },
+    {
+      "module_id": "mod_04_llm_ceo_executive_brief",
+      "type": "ai.chat_completion",
+      "provider": "OpenAI / Anthropic",
+      "system_prompt": "You are the Chapter 10 Weekly CEO Operating Advisor (Prompts 10.1 & 10.2). Analyze this week's True EHR, 4-Bucket time distribution, lowest-EHR client account, and capacity utilization. Prescribe ONE permanent system upgrade for next week and flag if the 85% Capacity Rate-Raise Trigger (+15% to +25% on next 3 proposals) or Script 12 Legacy Rate Reset should be activated.",
+      "output_fields": [
+        "primary_failed_gate",
+        "one_permanent_system_upgrade",
+        "monday_block1_priority",
+        "rate_raise_alert_message"
+      ]
+    },
+    {
+      "module_id": "mod_05_append_ceo_scorecard_row",
+      "type": "notion.create_database_item",
+      "target_database": "04-Weekly-CEO-Scorecard-Log",
+      "field_mapping": {
+        "Week ID": "Week {{formatDate(now, 'WW')}} ({{formatDate(now, 'YYYY')}})",
+        "Week Ending Date": "{{formatDate(now, 'YYYY-MM-DD')}}",
+        "Gross Revenue ($)": "{{mod_02_query_active_projects.sum_weekly_gross_revenue}}",
+        "Bucket A Billable Craft Hours": "{{mod_02_query_active_projects.sum_bucket_a_billable_hours}}",
+        "Bucket B Client Friction Hours": "{{mod_02_query_active_projects.sum_bucket_b_friction_hours}}",
+        "Bucket C Unpaid Admin Hours": "{{mod_02_query_active_projects.sum_bucket_c_sales_hours}}",
+        "Bucket D Context-Switching Hours": "{{mod_02_query_active_projects.sum_bucket_d_admin_hours}}",
+        "Total Real Hours": "{{mod_03_calculate_ceo_metrics.total_real_hours}}",
+        "Billable Utilization (%)": "{{mod_03_calculate_ceo_metrics.billable_utilization_pct}}%",
+        "True Weekly EHR ($/hr)": "{{mod_03_calculate_ceo_metrics.true_weekly_ehr_usd}}",
+        "Weekly Revenue Leak ($)": "{{mod_03_calculate_ceo_metrics.weekly_revenue_leak_usd}}",
+        "Primary Failed Gate": "{{mod_04_llm_ceo_executive_brief.primary_failed_gate}}",
+        "One Permanent System Upgrade Installed": "{{mod_04_llm_ceo_executive_brief.one_permanent_system_upgrade}}",
+        "Monday Block-1 Priority": "{{mod_04_llm_ceo_executive_brief.monday_block1_priority}}"
+      }
+    }
+  ]
+}

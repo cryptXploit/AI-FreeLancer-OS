@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <linearGradient id="csBg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="csBar6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1600" fill="url(#csBg6)"/>
+  <rect x="0" y="0" width="1200" height="14" fill="url(#csBar6)"/>
+
+  <!-- TOP HEADER BAR -->
+  <rect x="44" y="34" width="1112" height="148" rx="16" fill="#1E293B" stroke="#0284C7" stroke-width="2.5"/>
+  <text x="72" y="72" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#38BDF8" letter-spacing="1.5">CHAPTER 06 VISUAL CHEAT SHEET // PART III: ONBOARDING, EXECUTION &amp; SCOPE</text>
+  <rect x="880" y="48" width="252" height="36" rx="8" fill="#0D9488"/>
+  <text x="1006" y="71" font-family="JetBrains Mono, Consolas, monospace" font-size="13.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">42% FASTER BUILD</text>
+
+  <text x="72" y="118" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="900" fill="#FFFFFF">Ch 06: AI-Assisted Project Execution &amp; Quality Control</text>
+  <text x="72" y="154" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#CBD5E1">Executing Deliverables via the 20/60/20 Sandwich Protocol, Voice DNA &amp; 4-Gate Pre-Submission QA</text>
+
+  <!-- PANEL 1 (TOP-LEFT): 60-SECOND EXECUTIVE TL;DR -->
+  <rect x="44" y="206" width="546" height="330" rx="16" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+  <rect x="44" y="206" width="546" height="48" rx="16" fill="#0284C7"/>
+  <text x="68" y="236" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 01 // THE 60-SECOND EXECUTIVE TL;DR</text>
+
+  <text x="68" y="288" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">1. Raw one-shot AI outputs look generic and destroy client trust; pu</text>
+  <text x="68" y="310" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">re manual drafting destroys your margin.</text>
+
+  <text x="68" y="366" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">2. Use the 20/60/20 Sandwich: 20% Human Architecture -&gt; 60% AI Accel</text>
+  <text x="68" y="388" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">erated Build -&gt; 20% Human QA Polish.</text>
+
+  <text x="68" y="444" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">3. Run every deliverable through the 4-Gate Pre-Submission QA Audit </text>
+  <text x="68" y="466" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">before the client ever sees a link.</text>
+
+  <rect x="68" y="488" width="498" height="32" rx="6" fill="#1E293B"/>
+  <text x="317" y="509" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#38BDF8" text-anchor="middle">GATE 04: 20/60/20 EXECUTION &amp; 4-GATE QA</text>
+
+  <!-- PANEL 2 (TOP-RIGHT): CORE NAMED FRAMEWORK & FORMULA -->
+  <rect x="610" y="206" width="546" height="330" rx="16" fill="#0F172A" stroke="#0D9488" stroke-width="2"/>
+  <rect x="610" y="206" width="546" height="48" rx="16" fill="#0D9488"/>
+  <text x="634" y="236" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 02 // CORE NAMED FRAMEWORK &amp; EQUATION</text>
+
+  <text x="634" y="292" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#2DD4BF">THE 20 / 60 / 20 SANDWICH EXECUTION RATIO</text>
+  <rect x="634" y="312" width="498" height="104" rx="12" fill="#1E293B" stroke="#2DD4BF" stroke-width="2"/>
+  <text x="883" y="356" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Total Build Time = 20% Human Strategy &amp; Voice DNA + 60% </text>
+  <text x="883" y="386" font-family="JetBrains Mono, Consolas, monospace" font-size="13.5" font-weight="700" fill="#38BDF8" text-anchor="middle">AI Assembly + 20% 4-Gate Red-Team QA</text>
+
+  <text x="634" y="452" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#E2E8F0">OPERATIONAL BENCHMARK RULE:</text>
+  <text x="634" y="478" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">Quality Benchmark: Compress Production Hours by 40%+ With Zero Robotic AI Tone Defects</text>
+  <text x="634" y="512" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#FBBF24">SYNCED WORKBOOK: Worksheet 6.1 (US Letter, A4, Word &amp; Web App)</text>
+
+  <!-- PANEL 3 (MIDDLE FULL-WIDTH): 4-STEP VISUAL EXECUTION PIPELINE -->
+  <rect x="44" y="560" width="1112" height="430" rx="16" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <rect x="44" y="560" width="1112" height="48" rx="16" fill="#1E293B"/>
+  <text x="68" y="590" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#38BDF8">PANEL 03 // STEP-BY-STEP EXECUTION FLOW (60-SECOND ACTION PIPELINE)</text>
+
+  <g transform="translate(68, 630)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0284C7"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 01 // VOICE DNA LOCK</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Extract client&#x27;s tone, vocabulary, and banned words into</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1"> a Voice DNA Profile.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">GATE CHECK 01 --&gt; VERIFY BASELINE INPUTS</text>
+  </g>
+
+  <g transform="translate(612, 630)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0284C7"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 02 // HUMAN BLUEPRINT</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Architect the structural outline, conversion logic, and </text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">component hierarchy.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">GATE CHECK 02 --&gt; RUN AI SYNTHESIS PROMPT</text>
+  </g>
+
+  <g transform="translate(68, 808)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0D9488"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 03 // MODULAR AI RUNS</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Execute chained prompts section-by-section rather than o</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">ne giant prompt.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#2DD4BF">GATE CHECK 03 --&gt; APPLY HUMAN QA FILTER</text>
+  </g>
+
+  <g transform="translate(612, 808)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0D9488"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 04 // 4-GATE QA AUDIT</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Verify Scope Compliance, Technical/Speed, Voice DNA &amp; Ed</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">ge-Case Red-Teaming.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#2DD4BF">GATE CHECK 04 --&gt; LOCK PERMANENT SYSTEM</text>
+  </g>
+
+  <!-- PANEL 4 (BOTTOM-LEFT): THE 5 CHAPTER AI PROMPTS QUICK-CALLER -->
+  <rect x="44" y="1014" width="556" height="456" rx="16" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+  <rect x="44" y="1014" width="556" height="48" rx="16" fill="#0284C7"/>
+  <text x="68" y="1044" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 04 // 5 CHAPTER AI PROMPTS QUICK-CALLER</text>
+  
+    <rect x="64" y="1090" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1090" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1126" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 6.1</text>
+    <text x="196" y="1116" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">The 20% Human Architecture &amp; Modular Task Decons...</text>
+    <text x="196" y="1138" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: At the beginning of your production block (Layer 1: To...</text>
+
+    <rect x="64" y="1162" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1162" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1198" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 6.2</text>
+    <text x="196" y="1188" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">The Client Brand Voice &amp; Style Calibration Engin...</text>
+    <text x="196" y="1210" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Once during your first project with a new client (or w...</text>
+
+    <rect x="64" y="1234" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1234" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1270" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 6.3</text>
+    <text x="196" y="1260" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">The 60% Heavy-Lifting Modular Draft &amp; Code Synth...</text>
+    <text x="196" y="1282" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Sequentially for each module during Layer 2 (60% AI He...</text>
+
+    <rect x="64" y="1306" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1306" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1342" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 6.4</text>
+    <text x="196" y="1332" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">The Devil&#x27;s Advocate Red-Team Deliverable Stress...</text>
+    <text x="196" y="1354" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Immediately after assembling all modules (Gate 3 of th...</text>
+
+    <rect x="64" y="1378" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1378" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1414" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 6.5</text>
+    <text x="196" y="1404" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">The 4-Gate Pre-Submission Alignment &amp; Hallucinat...</text>
+    <text x="196" y="1426" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: As your final 5-minute check before uploading the deli...</text>
+
+  <!-- PANEL 5 (BOTTOM-RIGHT): RED-FLAG CIRCUIT BREAKERS & TARGET KPI -->
+  <rect x="620" y="1014" width="536" height="456" rx="16" fill="#0F172A" stroke="#F59E0B" stroke-width="2"/>
+  <rect x="620" y="1014" width="536" height="48" rx="16" fill="#D97706"/>
+  <text x="644" y="1044" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 05 // RED-FLAG CIRCUIT BREAKERS &amp; KPI</text>
+
+  <rect x="640" y="1084" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1114" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 01: Pasting raw, unedited LLM output containing robot</text>
+  <text x="658" y="1138" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">ic filler words into a client deliverable.</text>
+
+  <rect x="640" y="1176" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1206" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 02: Pasting confidential client financial data or cre</text>
+  <text x="658" y="1230" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">dentials into public consumer AI training chats.</text>
+
+  <rect x="640" y="1268" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1298" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 03: Sending a staging link to a client without testin</text>
+  <text x="658" y="1322" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">g mobile breakpoints and form validation first.</text>
+
+  <rect x="640" y="1362" width="496" height="90" rx="10" fill="#162238" stroke="#2DD4BF" stroke-width="2"/>
+  <text x="658" y="1394" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">30-DAY TARGET KPI: Cut Core Deliverable Drafting Time by 40%+ &amp; </text>
+  <text x="658" y="1416" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#FFFFFF">Pass 100% of 4-Gate QA Audits</text>
+  <text x="658" y="1438" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#FBBF24">EMERGENCY CIRCUIT-BREAKER: Deploy Prompt 6.1 (Voice DNA) &amp; Prompt 6.4 (4-Gate Pre-Submission Auditor)</text>
+
+  <!-- BOTTOM FOOTER BAR -->
+  <rect x="44" y="1494" width="1112" height="68" rx="12" fill="#1E293B"/>
+  <text x="72" y="1534" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8">THE AI FREELANCER OPERATING SYSTEM  •  60-SECOND VISUAL SHORTCUT ATLAS (PAGE 8 OF 12)</text>
+  <text x="1128" y="1534" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#2DD4BF" text-anchor="end">CHAPTER 06 / 10</text>
+  <rect x="0" y="1586" width="1200" height="14" fill="url(#csBar6)"/>
+</svg>

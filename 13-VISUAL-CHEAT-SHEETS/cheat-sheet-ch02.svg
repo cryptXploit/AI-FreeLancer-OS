@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <linearGradient id="csBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="csBar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1600" fill="url(#csBg2)"/>
+  <rect x="0" y="0" width="1200" height="14" fill="url(#csBar2)"/>
+
+  <!-- TOP HEADER BAR -->
+  <rect x="44" y="34" width="1112" height="148" rx="16" fill="#1E293B" stroke="#0284C7" stroke-width="2.5"/>
+  <text x="72" y="72" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#38BDF8" letter-spacing="1.5">CHAPTER 02 VISUAL CHEAT SHEET // PART I: DIAGNOSTICS &amp; POSITIONING</text>
+  <rect x="880" y="48" width="252" height="36" rx="8" fill="#0D9488"/>
+  <text x="1006" y="71" font-family="JetBrains Mono, Consolas, monospace" font-size="13.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">30 MINS TO PACKAGE</text>
+
+  <text x="72" y="118" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="900" fill="#FFFFFF">Ch 02: Positioning &amp; Productized Service Packaging</text>
+  <text x="72" y="154" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#CBD5E1">Replacing Custom Hourly Quotes With a High-Margin 3-Tier Productized Offer Matrix</text>
+
+  <!-- PANEL 1 (TOP-LEFT): 60-SECOND EXECUTIVE TL;DR -->
+  <rect x="44" y="206" width="546" height="330" rx="16" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+  <rect x="44" y="206" width="546" height="48" rx="16" fill="#0284C7"/>
+  <text x="68" y="236" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 01 // THE 60-SECOND EXECUTIVE TL;DR</text>
+
+  <text x="68" y="288" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">1. Selling custom hourly labor punishes you for getting faster and i</text>
+  <text x="68" y="310" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">nvites client micromanagement.</text>
+
+  <text x="68" y="366" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">2. Package your core skill into 3 fixed-scope tiers: Option 1 Baseli</text>
+  <text x="68" y="388" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">ne, Option 2 Core, Option 3 Turnkey.</text>
+
+  <text x="68" y="444" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">3. Attach a written Hard Scope Boundary Charter to every tier so cli</text>
+  <text x="68" y="466" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">ents know what is excluded upfront.</text>
+
+  <rect x="68" y="488" width="498" height="32" rx="6" fill="#1E293B"/>
+  <text x="317" y="509" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#38BDF8" text-anchor="middle">GATE 01: PRODUCTIZED PACKAGING</text>
+
+  <!-- PANEL 2 (TOP-RIGHT): CORE NAMED FRAMEWORK & FORMULA -->
+  <rect x="610" y="206" width="546" height="330" rx="16" fill="#0F172A" stroke="#0D9488" stroke-width="2"/>
+  <rect x="610" y="206" width="546" height="48" rx="16" fill="#0D9488"/>
+  <text x="634" y="236" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 02 // CORE NAMED FRAMEWORK &amp; EQUATION</text>
+
+  <text x="634" y="292" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#2DD4BF">3-TIER PRODUCTIZED PRICE ANCHORING RATIO</text>
+  <rect x="634" y="312" width="498" height="104" rx="12" fill="#1E293B" stroke="#2DD4BF" stroke-width="2"/>
+  <text x="883" y="356" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Tier 1 (1.0x Floor)  |  Tier 2 Recommended (1.35x-1.55x)</text>
+  <text x="883" y="386" font-family="JetBrains Mono, Consolas, monospace" font-size="13.5" font-weight="700" fill="#38BDF8" text-anchor="middle">  |  Tier 3 Turnkey (1.85x-2.25x)</text>
+
+  <text x="634" y="452" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#E2E8F0">OPERATIONAL BENCHMARK RULE:</text>
+  <text x="634" y="478" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">Target Conversion Split: 15% Option 1  •  65% Option 2 (Core)  •  20% Option 3 (Turnkey)</text>
+  <text x="634" y="512" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#FBBF24">SYNCED WORKBOOK: Worksheet 2.1 (US Letter, A4, Word &amp; Web App)</text>
+
+  <!-- PANEL 3 (MIDDLE FULL-WIDTH): 4-STEP VISUAL EXECUTION PIPELINE -->
+  <rect x="44" y="560" width="1112" height="430" rx="16" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <rect x="44" y="560" width="1112" height="48" rx="16" fill="#1E293B"/>
+  <text x="68" y="590" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#38BDF8">PANEL 03 // STEP-BY-STEP EXECUTION FLOW (60-SECOND ACTION PIPELINE)</text>
+
+  <g transform="translate(68, 630)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0284C7"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 01 // ISOLATE OUTCOME</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Define the #1 expensive business bottleneck your best cl</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">ients pay to solve.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">GATE CHECK 01 --&gt; VERIFY BASELINE INPUTS</text>
+  </g>
+
+  <g transform="translate(612, 630)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0284C7"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 02 // BUILD 3 TIERS</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Structure Option 1 (Baseline), Option 2 (Core), and Opti</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">on 3 (Turnkey).</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">GATE CHECK 02 --&gt; RUN AI SYNTHESIS PROMPT</text>
+  </g>
+
+  <g transform="translate(68, 808)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0D9488"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 03 // CAP REVISIONS</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Lock 2 consolidated SPOC revision rounds and explicit ex</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">clusions per tier.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#2DD4BF">GATE CHECK 03 --&gt; APPLY HUMAN QA FILTER</text>
+  </g>
+
+  <g transform="translate(612, 808)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0D9488"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 04 // ADD DIAGNOSTIC</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Create a $450-$1,250 Paid Diagnostic Blueprint for uncer</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">tain prospects.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#2DD4BF">GATE CHECK 04 --&gt; LOCK PERMANENT SYSTEM</text>
+  </g>
+
+  <!-- PANEL 4 (BOTTOM-LEFT): THE 5 CHAPTER AI PROMPTS QUICK-CALLER -->
+  <rect x="44" y="1014" width="556" height="456" rx="16" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+  <rect x="44" y="1014" width="556" height="48" rx="16" fill="#0284C7"/>
+  <text x="68" y="1044" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 04 // 5 CHAPTER AI PROMPTS QUICK-CALLER</text>
+  
+    <rect x="64" y="1090" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1090" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1126" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 2.1</text>
+    <text x="196" y="1116" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Past Project Outcome &amp; ROI Pattern Miner</text>
+    <text x="196" y="1138" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: During Step 1 when deciding which service to productiz...</text>
+
+    <rect x="64" y="1162" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1162" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1198" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 2.2</text>
+    <text x="196" y="1188" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">3-Tier Productized Package Architect</text>
+    <text x="196" y="1210" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Immediately after completing Prompt 2.1 to lock your t...</text>
+
+    <rect x="64" y="1234" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1234" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1270" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 2.3</text>
+    <text x="196" y="1260" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Exclusion List &amp; &quot;What Is Not Included&quot; Clause B...</text>
+    <text x="196" y="1282" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: During Step 3 before publishing your One-Page Service ...</text>
+
+    <rect x="64" y="1306" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1306" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1342" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 2.4</text>
+    <text x="196" y="1332" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">One-Page Service Tear-Sheet Copywriter</text>
+    <text x="196" y="1354" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Once your 3 tiers (Prompt 2.2) and Exclusion Shield (P...</text>
+
+    <rect x="64" y="1378" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1378" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1414" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 2.5</text>
+    <text x="196" y="1404" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Niche Value Proposition &amp; Positioning Stress-Tes...</text>
+    <text x="196" y="1426" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Whenever updating your website hero section, LinkedIn ...</text>
+
+  <!-- PANEL 5 (BOTTOM-RIGHT): RED-FLAG CIRCUIT BREAKERS & TARGET KPI -->
+  <rect x="620" y="1014" width="536" height="456" rx="16" fill="#0F172A" stroke="#F59E0B" stroke-width="2"/>
+  <rect x="620" y="1014" width="536" height="48" rx="16" fill="#D97706"/>
+  <text x="644" y="1044" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 05 // RED-FLAG CIRCUIT BREAKERS &amp; KPI</text>
+
+  <rect x="640" y="1084" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1114" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 01: Sending a single-price quote that forces the buye</text>
+  <text x="658" y="1138" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">r into a binary &#x27;Yes or No&#x27; decision.</text>
+
+  <rect x="640" y="1176" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1206" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 02: Writing &#x27;Unlimited Revisions&#x27; or leaving delivera</text>
+  <text x="658" y="1230" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">ble quantities vague (&#x27;a few pages&#x27;).</text>
+
+  <rect x="640" y="1268" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1298" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 03: Letting prospects pick and choose custom line ite</text>
+  <text x="658" y="1322" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">ms like an a-la-carte restaurant menu.</text>
+
+  <rect x="640" y="1362" width="496" height="90" rx="10" fill="#162238" stroke="#2DD4BF" stroke-width="2"/>
+  <text x="658" y="1394" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">30-DAY TARGET KPI: Increase Average Project Deal Size by +35% to</text>
+  <text x="658" y="1416" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#FFFFFF"> +50% via Option 2/3 Anchoring</text>
+  <text x="658" y="1438" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#FBBF24">EMERGENCY CIRCUIT-BREAKER: Deploy Script 04 (Converting &#x27;What Is Your Hourly Rate?&#x27; to Fixed Tiers)</text>
+
+  <!-- BOTTOM FOOTER BAR -->
+  <rect x="44" y="1494" width="1112" height="68" rx="12" fill="#1E293B"/>
+  <text x="72" y="1534" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8">THE AI FREELANCER OPERATING SYSTEM  •  60-SECOND VISUAL SHORTCUT ATLAS (PAGE 4 OF 12)</text>
+  <text x="1128" y="1534" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#2DD4BF" text-anchor="end">CHAPTER 02 / 10</text>
+  <rect x="0" y="1586" width="1200" height="14" fill="url(#csBar2)"/>
+</svg>

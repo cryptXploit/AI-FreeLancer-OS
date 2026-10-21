@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <linearGradient id="csBg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="csBar5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1600" fill="url(#csBg5)"/>
+  <rect x="0" y="0" width="1200" height="14" fill="url(#csBar5)"/>
+
+  <!-- TOP HEADER BAR -->
+  <rect x="44" y="34" width="1112" height="148" rx="16" fill="#1E293B" stroke="#0284C7" stroke-width="2.5"/>
+  <text x="72" y="72" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#38BDF8" letter-spacing="1.5">CHAPTER 05 VISUAL CHEAT SHEET // PART III: ONBOARDING, EXECUTION &amp; SCOPE</text>
+  <rect x="880" y="48" width="252" height="36" rx="8" fill="#0D9488"/>
+  <text x="1006" y="71" font-family="JetBrains Mono, Consolas, monospace" font-size="13.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">48-HOUR GATE</text>
+
+  <text x="72" y="118" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="900" fill="#FFFFFF">Ch 05: Zero-Friction Client Onboarding &amp; Kickoff Architecture</text>
+  <text x="72" y="154" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#CBD5E1">Enforcing the 48-Hour Pre-Flight Asset Gate &amp; Single-Link Notion Client Command Portal</text>
+
+  <!-- PANEL 1 (TOP-LEFT): 60-SECOND EXECUTIVE TL;DR -->
+  <rect x="44" y="206" width="546" height="330" rx="16" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+  <rect x="44" y="206" width="546" height="48" rx="16" fill="#0284C7"/>
+  <text x="68" y="236" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 01 // THE 60-SECOND EXECUTIVE TL;DR</text>
+
+  <text x="68" y="288" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">1. Mid-project delays almost always originate in Week 1 from startin</text>
+  <text x="68" y="310" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">g work before client assets are ready.</text>
+
+  <text x="68" y="366" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">2. Provision a single-link Client Command Portal immediately upon 50</text>
+  <text x="68" y="388" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">% Kickoff Deposit clearance.</text>
+
+  <text x="68" y="444" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#F8FAFC">3. Enforce the 48-Hour Pre-Flight Asset Gate: the delivery clock sta</text>
+  <text x="68" y="466" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">rts only when 100% of assets are verified.</text>
+
+  <rect x="68" y="488" width="498" height="32" rx="6" fill="#1E293B"/>
+  <text x="317" y="509" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#38BDF8" text-anchor="middle">GATE 03: 48-HOUR ONBOARDING GATE</text>
+
+  <!-- PANEL 2 (TOP-RIGHT): CORE NAMED FRAMEWORK & FORMULA -->
+  <rect x="610" y="206" width="546" height="330" rx="16" fill="#0F172A" stroke="#0D9488" stroke-width="2"/>
+  <rect x="610" y="206" width="546" height="48" rx="16" fill="#0D9488"/>
+  <text x="634" y="236" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 02 // CORE NAMED FRAMEWORK &amp; EQUATION</text>
+
+  <text x="634" y="292" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#2DD4BF">DAY-FOR-DAY TIMELINE SHIFT EQUATION</text>
+  <rect x="634" y="312" width="498" height="104" rx="12" fill="#1E293B" stroke="#2DD4BF" stroke-width="2"/>
+  <text x="883" y="356" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Adjusted Milestone Date = Original Target Date + MAX(0, </text>
+  <text x="883" y="386" font-family="JetBrains Mono, Consolas, monospace" font-size="13.5" font-weight="700" fill="#38BDF8" text-anchor="middle">Asset Verification Delay in Business Days)</text>
+
+  <text x="634" y="452" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#E2E8F0">OPERATIONAL BENCHMARK RULE:</text>
+  <text x="634" y="478" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">Golden Onboarding Law: Zero Production Work Commences Prior to 50% Deposit + 5 Verified Assets</text>
+  <text x="634" y="512" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#FBBF24">SYNCED WORKBOOK: Worksheet 5.1 (US Letter, A4, Word &amp; Web App)</text>
+
+  <!-- PANEL 3 (MIDDLE FULL-WIDTH): 4-STEP VISUAL EXECUTION PIPELINE -->
+  <rect x="44" y="560" width="1112" height="430" rx="16" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+  <rect x="44" y="560" width="1112" height="48" rx="16" fill="#1E293B"/>
+  <text x="68" y="590" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#38BDF8">PANEL 03 // STEP-BY-STEP EXECUTION FLOW (60-SECOND ACTION PIPELINE)</text>
+
+  <g transform="translate(68, 630)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0284C7"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 01 // PROVISION HUB</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Duplicate 05-Client-Portal-and-Handover-Hub.md inside No</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">tion in 3 minutes.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">GATE CHECK 01 --&gt; VERIFY BASELINE INPUTS</text>
+  </g>
+
+  <g transform="translate(612, 630)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0284C7"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 02 // SEND WELCOME</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Email Client Welcome Packet (.docx) + Pre-Flight Asset C</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">hecklist (Prompt 5.1).</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8">GATE CHECK 02 --&gt; RUN AI SYNTHESIS PROMPT</text>
+  </g>
+
+  <g transform="translate(68, 808)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0D9488"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 03 // VERIFY 5 ITEMS</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Confirm Brand Tokens, Copy, Logins, Voice DNA Form &amp; SPO</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1">C Designation.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#2DD4BF">GATE CHECK 03 --&gt; APPLY HUMAN QA FILTER</text>
+  </g>
+
+  <g transform="translate(612, 808)">
+    <rect x="0" y="0" width="520" height="155" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="38" rx="12" fill="#0D9488"/>
+    <text x="18" y="25" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF">STEP 04 // LOCK KICKOFF</text>
+    <text x="18" y="76" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#F8FAFC">Run 15-Minute Alignment Deck (.pptx) or send 3-Min Async</text>
+    <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#CBD5E1"> Kickoff Loom.</text>
+    <text x="18" y="136" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="700" fill="#2DD4BF">GATE CHECK 04 --&gt; LOCK PERMANENT SYSTEM</text>
+  </g>
+
+  <!-- PANEL 4 (BOTTOM-LEFT): THE 5 CHAPTER AI PROMPTS QUICK-CALLER -->
+  <rect x="44" y="1014" width="556" height="456" rx="16" fill="#0F172A" stroke="#0284C7" stroke-width="2"/>
+  <rect x="44" y="1014" width="556" height="48" rx="16" fill="#0284C7"/>
+  <text x="68" y="1044" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 04 // 5 CHAPTER AI PROMPTS QUICK-CALLER</text>
+  
+    <rect x="64" y="1090" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1090" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1126" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 5.1</text>
+    <text x="196" y="1116" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Custom Client Intake Questionnaire &amp; Technical A...</text>
+    <text x="196" y="1138" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Once per productized package tier (and customized in 3...</text>
+
+    <rect x="64" y="1162" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1162" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1198" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 5.2</text>
+    <text x="196" y="1188" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Client Welcome Packet &amp; Communication Rules-of-E...</text>
+    <text x="196" y="1210" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Immediately upon deposit clearance (`Gate 01 ➔ Gate 03...</text>
+
+    <rect x="64" y="1234" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1234" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1270" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 5.3</text>
+    <text x="196" y="1260" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">30-Minute Kickoff Call Agenda, Risk Diagnostic &amp;...</text>
+    <text x="196" y="1282" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Thirty minutes before hosting a live client kickoff ca...</text>
+
+    <rect x="64" y="1306" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1306" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1342" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 5.4</text>
+    <text x="196" y="1332" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Post-Kickoff Summary &amp; Locked Milestone Sign-Off...</text>
+    <text x="196" y="1354" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: Within 2 hours of completing the 30-Minute Alignment K...</text>
+
+    <rect x="64" y="1378" width="516" height="62" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="64" y="1378" width="118" height="62" rx="8" fill="#0284C7"/>
+    <text x="123" y="1414" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">Prompt 5.5</text>
+    <text x="196" y="1404" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Polite &quot;Missing Assets = Shifted Delivery Date&quot; ...</text>
+    <text x="196" y="1426" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Trigger: At Hour 48 post-deposit if the Pre-Flight Asset Vault ...</text>
+
+  <!-- PANEL 5 (BOTTOM-RIGHT): RED-FLAG CIRCUIT BREAKERS & TARGET KPI -->
+  <rect x="620" y="1014" width="536" height="456" rx="16" fill="#0F172A" stroke="#F59E0B" stroke-width="2"/>
+  <rect x="620" y="1014" width="536" height="48" rx="16" fill="#D97706"/>
+  <text x="644" y="1044" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#FFFFFF">PANEL 05 // RED-FLAG CIRCUIT BREAKERS &amp; KPI</text>
+
+  <rect x="640" y="1084" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1114" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 01: Starting wireframe or code work while waiting for</text>
+  <text x="658" y="1138" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0"> the client&#x27;s 50% deposit to clear.</text>
+
+  <rect x="640" y="1176" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1206" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 02: Allowing a client to email 14 scattered attachmen</text>
+  <text x="658" y="1230" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">ts instead of uploading to the Pre-Flight Vault.</text>
+
+  <rect x="640" y="1268" width="496" height="78" rx="10" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="658" y="1298" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FCA5A5">RED FLAG 03: Compressing your weekend or QA time to make up fo</text>
+  <text x="658" y="1322" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">r a client&#x27;s 6-day delay in sending copy.</text>
+
+  <rect x="640" y="1362" width="496" height="90" rx="10" fill="#162238" stroke="#2DD4BF" stroke-width="2"/>
+  <text x="658" y="1394" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">30-DAY TARGET KPI: Eliminate 100% of Mid-Sprint Asset Stalls &amp; C</text>
+  <text x="658" y="1416" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#FFFFFF">ap Onboarding Setup at &lt;= 20 Mins</text>
+  <text x="658" y="1438" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#FBBF24">EMERGENCY CIRCUIT-BREAKER: Deploy Script 05 (Polite Project Hold &amp; Day-for-Day Timeline Shift Notice)</text>
+
+  <!-- BOTTOM FOOTER BAR -->
+  <rect x="44" y="1494" width="1112" height="68" rx="12" fill="#1E293B"/>
+  <text x="72" y="1534" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#38BDF8">THE AI FREELANCER OPERATING SYSTEM  •  60-SECOND VISUAL SHORTCUT ATLAS (PAGE 7 OF 12)</text>
+  <text x="1128" y="1534" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#2DD4BF" text-anchor="end">CHAPTER 05 / 10</text>
+  <rect x="0" y="1586" width="1200" height="14" fill="url(#csBar5)"/>
+</svg>
