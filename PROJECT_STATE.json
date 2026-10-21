@@ -189,8 +189,8 @@
     },
     "phase_8": {
       "title": "Marketing Funnel Landing Page, Subscription Setup & Release Packaging",
-      "status": "pending",
-      "verified": false
+      "status": "completed",
+      "verified": true
     }
   },
   "chapters_completed": [
@@ -344,5 +344,50 @@
     },
     "paperback_wrap_pdf_bytes": 158167,
     "cover_spec_words": 1012
+  },
+  "status": "COMPLETED_PRODUCTION_READY",
+  "compiled_deliverables_phase8": {
+    "marketing_landing_page": {
+      "path": "10-MARKETING/index.html",
+      "size_bytes": 281490,
+      "size_kb": 274.9
+    },
+    "marketing_runbooks": {
+      "marketplace-listings-and-bd-launch-runbook.md": 2250,
+      "email-funnel-and-upsell-sequence.md": 2910,
+      "tier4-monthly-vault-drop-01.md": 2804
+    },
+    "release_zip_bundles": {
+      "Tier0-Free-Leak-Audit-Starter-Kit.zip": {
+        "file_count": 6,
+        "size_bytes": 1211680,
+        "size_mb": 1.16,
+        "corrupt": null
+      },
+      "Tier1-KDP-and-D2D-Publisher-Upload-Pack.zip": {
+        "file_count": 9,
+        "size_bytes": 8406419,
+        "size_mb": 8.02,
+        "corrupt": null
+      },
+      "Tier2-Interactive-Workbook-and-Planner-Edition.zip": {
+        "file_count": 27,
+        "size_bytes": 5364551,
+        "size_mb": 5.12,
+        "corrupt": null
+      },
+      "Tier3-Complete-AI-Freelancer-OS-Flagship-Bundle.zip": {
+        "file_count": 39,
+        "size_bytes": 5498236,
+        "size_mb": 5.24,
+        "corrupt": null
+      },
+      "Tier4-Living-OS-Pro-Vault-Membership-Pack.zip": {
+        "file_count": 40,
+        "size_bytes": 5506449,
+        "size_mb": 5.25,
+        "corrupt": null
+      }
+    }
   }
 }
