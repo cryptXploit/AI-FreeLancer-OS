@@ -4,6 +4,8 @@
   "subtitle": "A Practical System to Organize Clients, Automate Repetitive Work, Manage Projects, and Build a More Productive Freelance Business",
   "version": "1.0.0",
   "studio_name": "Digital Knowledge Product Studio",
+  "github_repository": "https://github.com/cryptXploit/AI-FreeLancer-OS.git",
+  "auto_push_on_commit": true,
   "category": "Category of One \u2014 Commercial Hybrid Knowledge Product & SaaS-Lite Ecosystem",
   "target_markets": [
     "United States (US)",
