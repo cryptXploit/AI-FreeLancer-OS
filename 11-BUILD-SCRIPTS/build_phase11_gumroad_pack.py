@@ -1357,7 +1357,7 @@ In Gumroad's Product Editor (or `Settings -> Refund policy`), enable **`Specify 
   - **Refund period:** Select **`No refunds`**
   - **Fine print (Copy-Paste):**
     ```text
-    Because you can test our complete Chapter 1 Manual, Fillable Workbook, Visual Cheat Sheet, and Interactive Web App for $0 (by selecting "Tier 0: Free Starter Kit ($0)" before upgrading), all paid digital downloads containing editable Word contracts, Excel source formulas, Notion databases, and unlocked Pro software keys are final sale. If you purchase Tier 1 ($19) or Tier 2 ($39) and wish to upgrade to Tier 3 ($59), email us and we will send you a credit code so you only pay the price difference.
+    Because you can test our complete Chapter 1 Manual, Fillable Workbook, Visual Cheat Sheet, and Interactive Web App for $0 (by selecting "Tier 0: Free Starter Kit ($0)" before upgrading), all paid digital downloads containing editable Word contracts, Excel source formulas, Notion databases, and activated Pro software keys are final sale. If you purchase Tier 1 ($19) or Tier 2 ($39) and wish to upgrade to Tier 3 ($59), email us and we will send you a credit code so you only pay the price difference.
     ```
 
 ---

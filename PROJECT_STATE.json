@@ -408,7 +408,7 @@
     }
   },
   "current_phase": 11,
-  "last_updated": "2026-10-30T20:50:57.812367+00:00",
+  "last_updated": "2026-10-30T21:14:44.512581+00:00",
   "phases_completed": [
     1,
     2,
@@ -432,9 +432,9 @@
     ],
     "markdown_guides": {
       "00-LOCKED-UNIFIED-4-VERSION-AND-MEMBERSHIP-SETUP.md": {
-        "word_count": 1606,
+        "word_count": 2092,
         "min_required": 1000,
-        "bytes": 10956,
+        "bytes": 14268,
         "passed": true
       },
       "01-LISTING-1-FREE-STARTER-KIT-EXACT-FIELDS.md": {
@@ -468,17 +468,17 @@
         "passed": true
       }
     },
-    "total_markdown_words": 12290,
+    "total_markdown_words": 12776,
     "zip_archives": {
       "Tier4-Living-OS-Pro-Vault-Membership-Pack.zip": {
-        "size_bytes": 13749872,
+        "size_bytes": 13751105,
         "size_mb": 13.11,
         "file_count": 109,
         "has_gumroad_pack": true,
         "crc_ok": true
       },
       "tier4-vip-living-career-vault-edition.zip": {
-        "size_bytes": 13749872,
+        "size_bytes": 13751105,
         "size_mb": 13.11,
         "file_count": 109,
         "has_gumroad_pack": true,
