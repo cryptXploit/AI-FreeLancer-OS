@@ -58,6 +58,41 @@ Scroll down to **`Versions`**, click **`Add version`** four times, and arrange t
 > **Why Top-to-Bottom Ordering (`$59 -> $39 -> $19 -> $0`) Is Critical:**  
 > On Gumroad, **the #1 top version in your Versions list is automatically pre-selected** when a visitor lands on your page! By putting **`⭐ Tier 3 ($59)`** first, your main price badge and default checkout selection stay anchored on your flagship `$59` bundle, while anyone who wants to try the free sample can click **`Tier 0 ($0)`** at the bottom of the list.
 
+### Step 4 — Product Summary, Call to Action & 9 Additional Details (`Product Info` Section)
+- **Call to action:** Select **`I want this!`**
+- **Summary (Copy-Paste Into the `Summary` Box):**
+  ```text
+  The complete 5-Gate Operating System for independent freelancers, consultants & solo agencies (Available in 4 Editions: $0 Free Audit Kit / $19 Book / $39 Workbook & Visual Atlas / $59 Complete 83-File OS). Includes 168-Page Manual, 12-Page Visual Shortcut Atlas, 50 AI Prompts, 12 Scripts, Pro Web App, 8-Tab Charted Excel, 5-DB Notion OS, 7 Word Contracts & 3 PPTX Decks. By OMAR SUNNY.
+  ```
+- **Additional details (Click `Add detail` 9 times and copy-paste these exact `Attribute` : `Value` pairs):**
+
+| Attribute (Left Input Box) | Value (Right Input Box) |
+| :--- | :--- |
+| `System Architect & Author` | `OMAR SUNNY` |
+| `Available Editions` | `4 Versions ($59 Complete OS / $39 Workbook / $19 Book / $0 Starter)` |
+| `Core Operating Manual` | `168 Pages (75,158 Words) in PDF, EPUB 3.0, Print & Word .DOCX` |
+| `Visual Shortcut Atlas` | `12-Page Full-Color Infographic Atlas PDF + 31 Vector SVGs/PNGs` |
+| `AI Prompts & Scripts` | `50 Tested AI Workflow Prompts + 12 Client Boundary Scripts` |
+| `Interactive Software` | `Offline HTML5 Web App (freelancer-os-app.html) + Design Studio` |
+| `Excel & Notion Systems` | `8-Tab Charted Excel Command Center (299 Formulas) + 5-DB Notion OS` |
+| `Agency Office Suite` | `7 Editable Word (.docx) Contracts/Proposals + 3 PPTX Decks (32 Slides)` |
+| `Automation Blueprints` | `3 Importable Make.com / Zapier / n8n JSON Workflow Files` |
+
+### Step 5 — Product-Specific Refund Policy (`Product Tab -> Refund Policy`)
+In Gumroad's Product Editor (or `Settings -> Refund policy`), enable **`Specify a refund policy for this product`** and enter these exact fields:
+- **Refund period:** Select **`30-day money back guarantee`** *(or `No refunds` if you prefer strict digital-download protection; both options are provided below)*:
+- **Option A — High-Conversion 14/30-Day Action-Based Guarantee (Recommended for Maximum Conversion):**
+  - **Fine print (Optional — Copy-Paste):**
+    ```text
+    Protected by our 14-Day Practitioner Implementation Guarantee: Run the 7-Day EHR Leak Audit (Module 1), use the B.C.R. 3-Tier Proposal Pricing Engine (Module 2) or P.V.P. Change Order Script on one client request, and if the system does not immediately uncover or recover at least 10x your investment in billable margin, reply to your Gumroad receipt email within 14 days for a full 100% refund.
+    ```
+- **Option B — Strict Digital Vault Protection (`No refunds` — If You Want Zero Chargeback/Download Abuse):**
+  - **Refund period:** Select **`No refunds`**
+  - **Fine print (Copy-Paste):**
+    ```text
+    Because you can test our complete Chapter 1 Manual, Fillable Workbook, Visual Cheat Sheet, and Interactive Web App for $0 (by selecting "Tier 0: Free Starter Kit ($0)" before upgrading), all paid digital downloads containing editable Word contracts, Excel source formulas, Notion databases, and unlocked Pro software keys are final sale. If you purchase Tier 1 ($19) or Tier 2 ($39) and wish to upgrade to Tier 3 ($59), email us and we will send you a credit code so you only pay the price difference.
+    ```
+
 ---
 
 ## 3. EXACT SETUP FOR PRODUCT LINK #2 (RECURRING VIP MEMBERSHIP: `$9/MO` OR `$49/YR`)
