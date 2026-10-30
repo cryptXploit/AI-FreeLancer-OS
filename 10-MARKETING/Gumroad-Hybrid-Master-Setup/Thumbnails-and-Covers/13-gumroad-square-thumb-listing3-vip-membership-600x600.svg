@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060B16"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#162238"/>
+    </linearGradient>
+    <linearGradient id="vipGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="600" height="600" fill="url(#bg3)"/>
+  <rect x="10" y="10" width="580" height="580" rx="22" fill="none" stroke="#F59E0B" stroke-width="2" opacity="0.65"/>
+  <rect x="0" y="0" width="600" height="10" fill="url(#vipGrad)"/>
+
+  <!-- Top VIP Membership Badges -->
+  <rect x="32" y="28" width="310" height="40" rx="8" fill="#D97706"/>
+  <text x="187" y="54" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5">VIP MONTHLY VAULT PASS</text>
+  <rect x="358" y="28" width="210" height="40" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="463" y="53" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FBBF24" text-anchor="middle">$9/MO OR $49/YR</text>
+
+  <!-- Main Headline Block -->
+  <text x="32" y="104" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#38BDF8" letter-spacing="2.2">CONTINUOUS AI WORKFLOW &amp; SCRIPT EXPANSION</text>
+  <text x="32" y="150" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900" fill="#FFFFFF" letter-spacing="-1">LIVING FREELANCER</text>
+  <text x="32" y="194" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900" fill="#FBBF24" letter-spacing="-1">PRO VAULT PASS</text>
+  <text x="32" y="224" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#2DD4BF">MONTHLY NICHE WORKFLOWS, SCRIPTS &amp; FULL FLAGSHIP OS</text>
+
+  <!-- Center Membership Benefits Stack -->
+  <rect x="32" y="246" width="536" height="248" rx="16" fill="#0B1120" stroke="#F59E0B" stroke-width="2"/>
+  <rect x="32" y="246" width="536" height="36" rx="16" fill="#1E293B"/>
+  <text x="52" y="269" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="800" fill="#FBBF24">VIP MEMBER ACCESS // 84 FILES + MONTHLY DROPS</text>
+  <text x="548" y="269" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="800" fill="#2DD4BF" text-anchor="end">SAVE 55% YEARLY</text>
+
+  <g transform="translate(50, 296)">
+    <rect x="0" y="0" width="500" height="54" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="0" y="0" width="110" height="54" rx="8" fill="#D97706"/>
+    <text x="55" y="33" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">FULL OS KIT</text>
+    <text x="126" y="24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Instant Access to Entire 83-File Tier 3 Flagship OS</text>
+    <text x="126" y="43" font-family="Inter, Arial, sans-serif" font-size="12" fill="#CBD5E1">All Books, Workbooks, Web App, 8-Tab Excel, Word &amp; PPTX</text>
+  </g>
+
+  <g transform="translate(50, 360)">
+    <rect x="0" y="0" width="500" height="54" rx="8" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+    <rect x="0" y="0" width="110" height="54" rx="8" fill="#0284C7"/>
+    <text x="55" y="33" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">MONTHLY DROP</text>
+    <text x="126" y="24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">5 New High-Ticket AI Workflows + 3 Scripts Monthly</text>
+    <text x="126" y="43" font-family="Inter, Arial, sans-serif" font-size="12" fill="#CBD5E1">Includes Drop #01: Paid Diagnostic &amp; Retainer Expansion Pack</text>
+  </g>
+
+  <g transform="translate(50, 424)">
+    <rect x="0" y="0" width="500" height="54" rx="8" fill="#1E293B" stroke="#0D9488" stroke-width="1.5"/>
+    <rect x="0" y="0" width="110" height="54" rx="8" fill="#0D9488"/>
+    <text x="55" y="33" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">PRO TOOLS</text>
+    <text x="126" y="24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Continuous LLM Calibration &amp; All New Web Calculators</text>
+    <text x="126" y="43" font-family="Inter, Arial, sans-serif" font-size="12" fill="#CBD5E1">Tuned for Claude, GPT &amp; Gemini + Priority Template Updates</text>
+  </g>
+
+  <!-- Bottom Author & System Architect Attribution Bar -->
+  <rect x="32" y="510" width="536" height="62" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="300" y="535" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#38BDF8" text-anchor="middle" letter-spacing="2">THE AI FREELANCER OPERATING SYSTEM • VIP VAULT</text>
+  <text x="300" y="557" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">BY OMAR SUNNY • SYSTEM ARCHITECT: OMAR SUNNY</text>
+
+  <rect x="0" y="590" width="600" height="10" fill="url(#vipGrad)"/>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="600" height="600" fill="url(#bg2)"/>
+  <rect x="10" y="10" width="580" height="580" rx="22" fill="none" stroke="#334155" stroke-width="2"/>
+  <rect x="0" y="0" width="600" height="10" fill="url(#goldGrad)"/>
+
+  <!-- Top Gold & Sky Badges -->
+  <rect x="32" y="28" width="334" height="40" rx="8" fill="#D97706"/>
+  <text x="199" y="54" font-family="JetBrains Mono, Consolas, monospace" font-size="15.5" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5">COMPLETE AI FREELANCER OS</text>
+  <rect x="380" y="28" width="188" height="40" rx="8" fill="#0284C7"/>
+  <text x="474" y="53" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">3 TIER EDITIONS</text>
+
+  <!-- Main Headline Block -->
+  <text x="32" y="102" font-family="Inter, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#FBBF24" letter-spacing="2.2">5-GATE CLIENT, PRICING &amp; EXECUTION SYSTEM</text>
+  <text x="32" y="148" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900" fill="#FFFFFF" letter-spacing="-1">THE AI FREELANCER</text>
+  <text x="32" y="192" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="900" fill="#38BDF8" letter-spacing="-1">OPERATING SYSTEM</text>
+  <text x="32" y="222" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="700" fill="#2DD4BF">50 AI PROMPTS • WEB APP • 8-TAB EXCEL • NOTION OS</text>
+
+  <!-- Center 3D Multi-Device & 8-Pillar Grid -->
+  <rect x="32" y="242" width="536" height="252" rx="16" fill="#0B1120" stroke="#0284C7" stroke-width="2"/>
+  <rect x="32" y="242" width="536" height="36" rx="16" fill="#1E293B"/>
+  <text x="52" y="265" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="800" fill="#38BDF8">FLAGSHIP 83-FILE HYBRID BUNDLE</text>
+  <text x="548" y="265" font-family="JetBrains Mono, Consolas, monospace" font-size="12.5" font-weight="800" fill="#FBBF24" text-anchor="end">$19 • $39 • $59</text>
+
+  <!-- 2x2 Feature Cards Inside Center Box -->
+  <g transform="translate(48, 290)">
+    <rect x="0" y="0" width="244" height="88" rx="10" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="14" y="24" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="800" fill="#38BDF8">01 // BOOKS &amp; VISUAL ATLAS</text>
+    <text x="14" y="46" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">168p Manual + 12p Visual Atlas</text>
+    <text x="14" y="66" font-family="Inter, Arial, sans-serif" font-size="11.5" fill="#CBD5E1">EPUB 3.0 + US Letter/A4 + iPad Planner</text>
+
+    <rect x="260" y="0" width="244" height="88" rx="10" fill="#1E293B" stroke="#0D9488" stroke-width="1.5"/>
+    <text x="274" y="24" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="800" fill="#2DD4BF">02 // PRO SAAS-LITE WEB APP</text>
+    <text x="274" y="46" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">4 Interactive Browser Modules</text>
+    <text x="274" y="66" font-family="Inter, Arial, sans-serif" font-size="11.5" fill="#CBD5E1">EHR Audit, B.C.R. Pricer &amp; 62 Prompts</text>
+
+    <rect x="0" y="100" width="244" height="88" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="0" y="100" width="244" height="88" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="14" y="124" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="800" fill="#FBBF24">03 // 8-TAB EXCEL + NOTION OS</text>
+    <text x="14" y="146" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">299 Formulas + 4 Live Charts</text>
+    <text x="14" y="166" font-family="Inter, Arial, sans-serif" font-size="11.5" fill="#CBD5E1">5 Notion Databases + Invoice &amp; Tax</text>
+
+    <rect x="260" y="100" width="244" height="88" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="274" y="124" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="800" fill="#38BDF8">04 // WORD, PPTX &amp; AUTOMATION</text>
+    <text x="274" y="146" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">7 Word Docs + 3 PPTX Decks</text>
+    <text x="274" y="166" font-family="Inter, Arial, sans-serif" font-size="11.5" fill="#CBD5E1">MSA Contract, Proposal + 3 JSON Flows</text>
+  </g>
+
+  <!-- Bottom Author & System Architect Attribution Bar -->
+  <rect x="32" y="510" width="536" height="62" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+  <text x="300" y="535" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#FBBF24" text-anchor="middle" letter-spacing="2">DIGITAL KNOWLEDGE PRODUCT STUDIO • FLAGSHIP EDITION</text>
+  <text x="300" y="557" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">BY OMAR SUNNY • SYSTEM ARCHITECT: OMAR SUNNY</text>
+
+  <rect x="0" y="590" width="600" height="10" fill="url(#goldGrad)"/>
+</svg>

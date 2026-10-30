@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="600" height="600" fill="url(#bg1)"/>
+  <rect x="10" y="10" width="580" height="580" rx="22" fill="none" stroke="#1E293B" stroke-width="2"/>
+  <rect x="0" y="0" width="600" height="10" fill="url(#tealGrad)"/>
+
+  <!-- Top Badge Bar -->
+  <rect x="32" y="30" width="320" height="40" rx="8" fill="#0D9488"/>
+  <text x="192" y="56" font-family="JetBrains Mono, Consolas, monospace" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5">$0 FREE AUDIT STARTER KIT</text>
+  <rect x="368" y="30" width="200" height="40" rx="8" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+  <text x="468" y="55" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="700" fill="#38BDF8" text-anchor="middle">8 FILES INCLUDED</text>
+
+  <!-- Headline Hierarchy -->
+  <text x="32" y="108" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#2DD4BF" letter-spacing="2.5">15-MINUTE DIAGNOSTIC SYSTEM</text>
+  <text x="32" y="154" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900" fill="#FFFFFF" letter-spacing="-1">7-DAY TIME &amp;</text>
+  <text x="32" y="200" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900" fill="#38BDF8" letter-spacing="-1">EHR LEAK AUDIT</text>
+  <text x="32" y="232" font-family="Inter, Arial, sans-serif" font-size="15.5" font-weight="600" fill="#CBD5E1">Calculate True Effective Hourly Rate + Stop Shadow Labor</text>
+
+  <!-- Center 3D Stack / Diagnostic Card Graphic -->
+  <rect x="32" y="254" width="536" height="238" rx="16" fill="#0B1120" stroke="#0D9488" stroke-width="2"/>
+  <rect x="32" y="254" width="536" height="38" rx="16" fill="#162238"/>
+  <text x="52" y="278" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#2DD4BF">STARTER KIT STACK // INSTANT DOWNLOAD</text>
+  <text x="548" y="278" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#38BDF8" text-anchor="end">EHR CALCULATOR</text>
+
+  <!-- 3 Visual Deliverable Pills Inside Stack -->
+  <g transform="translate(50, 306)">
+    <rect x="0" y="0" width="500" height="48" rx="8" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+    <rect x="0" y="0" width="96" height="48" rx="8" fill="#0284C7"/>
+    <text x="48" y="30" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">BOOK + PDF</text>
+    <text x="112" y="23" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Chapter 1 Operating Manual + Fillable Workbook</text>
+    <text x="112" y="40" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">5-Stage Operating Model &amp; 4-Bucket Shadow Labor Audit</text>
+  </g>
+
+  <g transform="translate(50, 364)">
+    <rect x="0" y="0" width="500" height="48" rx="8" fill="#1E293B" stroke="#0D9488" stroke-width="1.5"/>
+    <rect x="0" y="0" width="96" height="48" rx="8" fill="#0D9488"/>
+    <text x="48" y="30" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">WEB APP</text>
+    <text x="112" y="23" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Offline HTML5 EHR Leak Calculator + Daily Planner</text>
+    <text x="112" y="40" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Runs in Any Browser (`freelancer-os-app.html`) + CSV Sheet</text>
+  </g>
+
+  <g transform="translate(50, 422)">
+    <rect x="0" y="0" width="500" height="48" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="0" y="0" width="96" height="48" rx="8" fill="#D97706"/>
+    <text x="48" y="30" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">2 POSTERS</text>
+    <text x="112" y="23" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Master 5-Gate Ecosystem Map + Ch 1 Visual Cheat Sheet</text>
+    <text x="112" y="40" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">High-Res Infographics for Desk Reference (`1600x1100` &amp; `1200x1600`)</text>
+  </g>
+
+  <!-- Bottom Author & System Architect Attribution Bar -->
+  <rect x="32" y="510" width="536" height="62" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="300" y="535" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#38BDF8" text-anchor="middle" letter-spacing="2">THE AI FREELANCER OPERATING SYSTEM</text>
+  <text x="300" y="557" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">BY OMAR SUNNY • SYSTEM ARCHITECT: OMAR SUNNY</text>
+
+  <rect x="0" y="590" width="600" height="10" fill="url(#tealGrad)"/>
+</svg>

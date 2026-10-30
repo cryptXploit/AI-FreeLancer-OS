@@ -1,0 +1,78 @@
+{
+  "phase": 11,
+  "timestamp": "2026-10-30T20:34:16.510183+00:00",
+  "author": "OMAR SUNNY",
+  "square_thumbnails": {
+    "11-gumroad-square-thumb-listing1-free-audit-600x600": {
+      "svg_bytes": 5551,
+      "png_bytes": 115464,
+      "dimensions": "600x600",
+      "author_credit_verified": true,
+      "copied_to_marketing_pack": true
+    },
+    "12-gumroad-square-thumb-listing2-flagship-os-600x600": {
+      "svg_bytes": 5825,
+      "png_bytes": 124447,
+      "dimensions": "600x600",
+      "author_credit_verified": true,
+      "copied_to_marketing_pack": true
+    },
+    "13-gumroad-square-thumb-listing3-vip-membership-600x600": {
+      "svg_bytes": 5580,
+      "png_bytes": 128437,
+      "dimensions": "600x600",
+      "author_credit_verified": true,
+      "copied_to_marketing_pack": true
+    }
+  },
+  "markdown_guides": {
+    "01-LISTING-1-FREE-STARTER-KIT-EXACT-FIELDS.md": {
+      "word_count": 1844,
+      "min_required": 1500,
+      "bytes": 12789,
+      "passed": true
+    },
+    "02-LISTING-2-FLAGSHIP-3-VERSION-PRODUCT-EXACT-FIELDS.md": {
+      "word_count": 3071,
+      "min_required": 2500,
+      "bytes": 21813,
+      "passed": true
+    },
+    "03-LISTING-3-VIP-RECURRING-MEMBERSHIP-EXACT-FIELDS.md": {
+      "word_count": 1925,
+      "min_required": 1800,
+      "bytes": 13445,
+      "passed": true
+    },
+    "04-GUMROAD-CHECKOUT-UPSELLS-COUPONS-AND-WORKFLOWS.md": {
+      "word_count": 2036,
+      "min_required": 1800,
+      "bytes": 14357,
+      "passed": true
+    },
+    "05-AI-COVER-AND-THUMBNAIL-IMAGE-GENERATION-PROMPTS.md": {
+      "word_count": 1808,
+      "min_required": 1800,
+      "bytes": 11898,
+      "passed": true
+    }
+  },
+  "zip_archives": {
+    "Tier4-Living-OS-Pro-Vault-Membership-Pack.zip": {
+      "size_bytes": 13744873,
+      "size_mb": 13.11,
+      "file_count": 108,
+      "has_gumroad_pack": true,
+      "crc_ok": true
+    },
+    "tier4-vip-living-career-vault-edition.zip": {
+      "size_bytes": 13744873,
+      "size_mb": 13.11,
+      "file_count": 108,
+      "has_gumroad_pack": true,
+      "crc_ok": true
+    }
+  },
+  "errors": [],
+  "total_markdown_words": 10684
+}
