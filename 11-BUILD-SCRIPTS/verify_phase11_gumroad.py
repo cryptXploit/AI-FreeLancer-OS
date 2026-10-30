@@ -170,8 +170,9 @@ def main():
         else:
             print(f"  [OK] Cover copy verified: {cov} ({cpath.stat().st_size:,} bytes)")
 
-    # 3. Verify 5 Markdown Playbooks & Word-Count Gates
+    # 3. Verify Master Gumroad Playbooks & Word-Count Gates
     md_specs = [
+        ("00-LOCKED-UNIFIED-4-VERSION-AND-MEMBERSHIP-SETUP.md", 1000),
         ("01-LISTING-1-FREE-STARTER-KIT-EXACT-FIELDS.md", 1500),
         ("02-LISTING-2-FLAGSHIP-3-VERSION-PRODUCT-EXACT-FIELDS.md", 2500),
         ("03-LISTING-3-VIP-RECURRING-MEMBERSHIP-EXACT-FIELDS.md", 1800),
