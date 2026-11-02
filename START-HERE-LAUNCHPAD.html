@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🚀 Start Here — AI Freelancer Operating System</title>
+<style>
+  /* ── Reset & Base ────────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:        #0B1120;
+    --surface:   #0F1A2E;
+    --surface2:  #162035;
+    --border:    #1E3050;
+    --teal:      #0D9488;
+    --teal-lt:   #14B8A6;
+    --cyan:      #38BDF8;
+    --cyan-lt:   #7DD3FC;
+    --gold:      #F59E0B;
+    --gold-lt:   #FCD34D;
+    --white:     #F0F4FF;
+    --muted:     #94A3B8;
+    --danger:    #EF4444;
+    --success:   #22C55E;
+    --font-mono: "JetBrains Mono", Consolas, "Courier New", monospace;
+    --font-sans: Inter, "Segoe UI", Arial, sans-serif;
+    --radius:    8px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── Layout ──────────────────────────────────────────────────────────── */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── Nav Bar ─────────────────────────────────────────────────────────── */
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    position: sticky; top: 0; z-index: 100;
+  }
+  nav .inner {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 960px; margin: 0 auto; padding: 0 24px;
+  }
+  .nav-brand {
+    font-family: var(--font-mono);
+    font-size: 0.85rem; color: var(--cyan); letter-spacing: 0.05em;
+  }
+  .tier-badge {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    padding: 4px 12px; border-radius: 20px;
+    background: var(--teal); color: #fff;
+    transition: background 0.3s;
+  }
+  .tier-badge.t0 { background: #475569; }
+  .tier-badge.t1 { background: #6366F1; }
+  .tier-badge.t2 { background: var(--teal); }
+  .tier-badge.t3 { background: linear-gradient(90deg, #D97706, #F59E0B); color: #000; }
+
+  /* ── Hero / Section 1 ────────────────────────────────────────────────── */
+  #hero {
+    padding: 64px 0 40px;
+    text-align: center;
+    background: radial-gradient(ellipse 80% 60% at 50% -20%, #0D9488 0%, transparent 60%),
+                var(--bg);
+  }
+  .hero-title {
+    font-family: var(--font-mono);
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .hero-title span { color: var(--cyan); }
+  .hero-sub {
+    font-size: 1rem; color: var(--muted);
+    margin-bottom: 40px;
+  }
+
+  /* ── Quick-Start Tracker ─────────────────────────────────────────────── */
+  .tracker {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 32px;
+    max-width: 600px; margin: 0 auto;
+    text-align: left;
+  }
+  .tracker h3 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem; color: var(--cyan);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .tracker-step {
+    display: flex; align-items: flex-start; gap: 12px;
+    margin-bottom: 12px; cursor: pointer;
+  }
+  .tracker-step input[type="checkbox"] {
+    width: 18px; height: 18px; flex-shrink: 0;
+    accent-color: var(--teal); margin-top: 2px; cursor: pointer;
+  }
+  .tracker-step label {
+    font-size: 0.9rem; cursor: pointer;
+    transition: color 0.2s;
+  }
+  .tracker-step input:checked + label { color: var(--teal-lt); text-decoration: line-through; }
+  .tracker-progress {
+    margin-top: 16px;
+    height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;
+  }
+  .tracker-progress-bar {
+    height: 100%; width: 0%; background: var(--teal);
+    border-radius: 3px; transition: width 0.4s ease;
+  }
+
+  /* ── Section titles ──────────────────────────────────────────────────── */
+  .section { padding: 48px 0; }
+  .section-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem; color: var(--teal);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-heading {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 700; color: var(--white);
+    margin-bottom: 28px;
+  }
+  hr.section-rule {
+    border: none; border-top: 1px solid var(--border);
+    margin: 0 0 48px;
+  }
+
+  /* ── Action Buttons / Section 2 ──────────────────────────────────────── */
+  .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .action-btn {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  }
+  .action-btn:hover {
+    border-color: var(--cyan);
+    background: var(--surface2);
+    transform: translateY(-2px);
+  }
+  .action-btn .btn-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .action-btn .btn-label { flex: 1; }
+  .action-btn .btn-label small { display: block; color: var(--muted); font-size: 0.75rem; font-weight: 400; }
+  .action-btn.locked {
+    opacity: 0.55; cursor: not-allowed; pointer-events: none;
+    border-style: dashed;
+  }
+  .action-btn.locked .btn-label small { color: var(--danger); }
+  .action-btn.primary { border-color: var(--teal); }
+  .action-btn.primary:hover { border-color: var(--teal-lt); }
+
+  /* ── Value Ladder Table / Section 3 ─────────────────────────────────── */
+  .table-wrap { overflow-x: auto; margin-bottom: 32px; }
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  thead th {
+    background: var(--surface);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--border);
+    text-align: center;
+    white-space: nowrap;
+  }
+  thead th:first-child { text-align: left; }
+  thead th.col-star {
+    background: linear-gradient(180deg, #1A2A10, #0F1A0A);
+    color: var(--gold);
+  }
+  tbody td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    vertical-align: middle;
+  }
+  tbody td:first-child {
+    text-align: left; color: var(--white); font-weight: 500;
+  }
+  tbody tr:hover td { background: var(--surface2); }
+  tbody tr:nth-child(even) td { background: rgba(15,26,46,0.4); }
+  .check  { color: var(--success); font-size: 1.1rem; }
+  .cross  { color: var(--danger);  font-size: 1.1rem; }
+  .partial { color: var(--gold);   font-size: 0.85rem; }
+
+  /* ── CTA Cards ───────────────────────────────────────────────────────── */
+  .cta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: var(--radius);
+    font-weight: 700; font-size: 1rem;
+    text-decoration: none; cursor: pointer;
+    transition: transform 0.15s, filter 0.15s;
+  }
+  .cta-btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+  .cta-gold {
+    background: linear-gradient(90deg, #D97706, #F59E0B);
+    color: #000;
+  }
+  .cta-diamond {
+    background: linear-gradient(90deg, #6366F1, #38BDF8);
+    color: #fff;
+  }
+
+  /* ── Section 4 — License ─────────────────────────────────────────────── */
+  .license-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    max-width: 480px;
+  }
+  .license-box h3 {
+    font-family: var(--font-mono);
+    font-size: 0.8rem; color: var(--cyan);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .license-row { display: flex; gap: 10px; }
+  .license-input {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .license-input:focus { border-color: var(--cyan); }
+  .license-btn {
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .license-btn:hover { background: var(--teal-lt); }
+  .license-msg {
+    margin-top: 10px; font-size: 0.85rem;
+    min-height: 20px;
+  }
+  .license-msg.ok  { color: var(--success); }
+  .license-msg.err { color: var(--danger); }
+
+  /* ── Footer ──────────────────────────────────────────────────────────── */
+  footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 24px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: var(--font-mono);
+  }
+  footer a { color: var(--cyan); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ── Hidden utility ──────────────────────────────────────────────────── */
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────────────────── -->
+<nav>
+  <div class="inner">
+    <span class="nav-brand">⚡ AI FREELANCER OS — LAUNCHPAD</span>
+    <span class="tier-badge t0" id="tierBadge">Tier 0 — Free</span>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 1 — Welcome Header & Quick-Start Tracker
+═══════════════════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <h1 class="hero-title">🚀 THE <span>AI FREELANCER</span> OPERATING SYSTEM</h1>
+    <p class="hero-sub">By <strong style="color:#F0F4FF">OMAR SUNNY</strong> — Your 5-Gate Client Lifecycle Command Center</p>
+
+    <div class="tracker">
+      <h3>⚡ 3-Step Quick-Start Progress Tracker</h3>
+
+      <div class="tracker-step">
+        <input type="checkbox" id="step1" />
+        <label for="step1">Step 1: Run your 7-Day EHR Leak Audit (Module 1)</label>
+      </div>
+      <div class="tracker-step">
+        <input type="checkbox" id="step2" />
+        <label for="step2">Step 2: Copy your first AI Prompt into Claude / ChatGPT</label>
+      </div>
+      <div class="tracker-step">
+        <input type="checkbox" id="step3" />
+        <label for="step3">Step 3: Import the Free Notion Starter Database</label>
+      </div>
+
+      <div class="tracker-progress">
+        <div class="tracker-progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 2 — 1-Click Action Buttons
+═══════════════════════════════════════════════════════════════════════ -->
+<hr class="section-rule" />
+<section class="section" id="actions">
+  <div class="container">
+    <p class="section-title">// QUICK ACCESS</p>
+    <h2 class="section-heading">1-Click Action Hub</h2>
+
+    <div class="actions-grid">
+
+      <!-- Always visible -->
+      <a class="action-btn primary"
+         href="../07-INTERACTIVE-TOOLS/freelancer-os-app.html"
+         id="btnApp">
+        <span class="btn-icon">🚀</span>
+        <span class="btn-label">
+          Launch Interactive Web App
+          <small>All 4 Modules (tier-gated)</small>
+        </span>
+      </a>
+
+      <!-- Tier 0+ -->
+      <a class="action-btn"
+         href="../09-EXPORTS/PDF/tier0-free-sample-chapter01-and-audit.pdf"
+         id="btnFreePDF">
+        <span class="btn-icon">📖</span>
+        <span class="btn-label">
+          Free Sample Chapter 1 PDF
+          <small>7-Day EHR Leak Audit Included</small>
+        </span>
+      </a>
+
+      <!-- Tier 1+ -->
+      <a class="action-btn" id="btnWorkbook"
+         href="../05-WORKBOOKS/chapter-01-workbook.pdf">
+        <span class="btn-icon">📝</span>
+        <span class="btn-label">
+          Fillable Action Workbook
+          <small>Chapter 1 — PDF Workbook</small>
+        </span>
+      </a>
+
+      <!-- Tier 3 only -->
+      <a class="action-btn locked" id="btnExcel"
+         href="../12-EDITABLE-OFFICE-SUITE/the-ai-freelancer-os-financial-and-pricing-matrix.xlsx">
+        <span class="btn-icon">📊</span>
+        <span class="btn-label">
+          Excel Command Center
+          <small>🔒 Tier 3 Flagship Only</small>
+        </span>
+      </a>
+
+      <!-- Tier 1+ folder -->
+      <a class="action-btn" id="btnBlueprints"
+         href="../14-AUTOMATION-BLUEPRINTS/">
+        <span class="btn-icon">⚡</span>
+        <span class="btn-label">
+          Automation Blueprints Folder
+          <small>JSON n8n / Make / Zapier Blueprints</small>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 3 — Value Ladder & Upgrade Matrix
+═══════════════════════════════════════════════════════════════════════ -->
+<hr class="section-rule" />
+<section class="section" id="matrix">
+  <div class="container">
+    <p class="section-title">// WHAT YOU GET</p>
+    <h2 class="section-heading">Interactive Value Ladder &amp; Upgrade Comparison</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Tier 0<br/><span style="color:#7DD3FC;font-weight:400">Free</span></th>
+            <th>Tier 1<br/><span style="color:#7DD3FC;font-weight:400">$19</span></th>
+            <th>Tier 2<br/><span style="color:#7DD3FC;font-weight:400">$39</span></th>
+            <th class="col-star">⭐ Tier 3<br/><span style="color:#FCD34D;font-weight:400">$59</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>168-Page Manual PDF + EPUB</td>
+            <td><span class="cross">❌</span><br/><span class="partial">Sample Only</span></td>
+            <td><span class="check">✅</span></td>
+            <td><span class="check">✅</span></td>
+            <td><span class="check">✅</span></td>
+          </tr>
+          <tr>
+            <td>50 AI Prompts + 12 Client Scripts</td>
+            <td><span class="partial">Ch.1 Only</span></td>
+            <td><span class="check">✅</span></td>
+            <td><span class="check">✅</span></td>
+            <td><span class="check">✅</span></td>
+          </tr>
+          <tr>
+            <td>12-Page Visual Shortcut Atlas</td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="check">✅</span></td>
+            <td><span class="check">✅</span></td>
+          </tr>
+          <tr>
+            <td>Fillable Workbooks + iPad Planner</td>
+            <td><span class="partial">Ch.1 Only</span></td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="check">✅</span></td>
+            <td><span class="check">✅</span></td>
+          </tr>
+          <tr>
+            <td>Pro Web App (All 4 Modules)</td>
+            <td><span class="partial">Module 1</span></td>
+            <td><span class="partial">Module 1</span></td>
+            <td><span class="partial">Modules 1–2</span></td>
+            <td><span class="check">✅ All 4</span></td>
+          </tr>
+          <tr>
+            <td>8-Tab Charted Excel Command Center</td>
+            <td><span class="partial">Free Lite (3 tabs)</span></td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="check">✅ Full 8 Tabs</span></td>
+          </tr>
+          <tr>
+            <td>5-Database Notion OS Kit</td>
+            <td><span class="partial">Starter DB</span></td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="check">✅ All 5 DBs</span></td>
+          </tr>
+          <tr>
+            <td>7 Word Contracts + 3 PPTX Decks</td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="partial">Workbook Only</span></td>
+            <td><span class="check">✅</span></td>
+          </tr>
+          <tr>
+            <td>3 JSON Automation Blueprints</td>
+            <td><span class="partial">Blueprint 1</span></td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="cross">❌</span></td>
+            <td><span class="check">✅ All 3</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cta-row">
+      <a class="cta-btn cta-gold"
+         href="https://sunnyomar.gumroad.com/l/ai-freelancer-os"
+         target="_blank" rel="noopener">
+        ⭐ Upgrade to Complete Flagship OS Bundle ($59)
+      </a>
+      <a class="cta-btn cta-diamond"
+         href="https://sunnyomar.gumroad.com/l/ai-freelancer-vip-vault"
+         target="_blank" rel="noopener">
+        💎 Join VIP Membership ($9/mo or $49/yr — All 84 Files + Monthly Drops)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 4 — License Key Entry
+═══════════════════════════════════════════════════════════════════════ -->
+<hr class="section-rule" />
+<section class="section" id="license">
+  <div class="container">
+    <p class="section-title">// ACTIVATION</p>
+    <h2 class="section-heading">Enter Your License Key</h2>
+
+    <div class="license-box">
+      <h3>🔑 Activate Your Tier</h3>
+      <div class="license-row">
+        <input class="license-input" type="text" id="licenseInput"
+               placeholder="e.g. FREELANCER-OS-PRO-2026"
+               autocomplete="off" spellcheck="false" />
+        <button class="license-btn" id="activateBtn">Activate</button>
+      </div>
+      <p class="license-msg" id="licenseMsg"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════════════ -->
+<footer>
+  System Architect &amp; Author: <strong style="color:#F0F4FF">OMAR SUNNY</strong> |
+  Digital Knowledge Product Studio |
+  <a href="https://sunnyomar.gumroad.com" target="_blank">sunnyomar.gumroad.com</a> |
+  &copy; 2026
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     JAVASCRIPT — Tier Detection, localStorage, Progress Tracker
+═══════════════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  "use strict";
+
+  /* ── Keys ─────────────────────────────────────────────────────────── */
+  var KEYS = {
+    "FREELANCER-OS-PRO-2026":  3,
+    "STUDIO-TIER2-2026":       2,
+    "STUDIO-PRO-OS-2026":      3
+  };
+
+  /* ── Tier state ───────────────────────────────────────────────────── */
+  var currentTier = 0;
+
+  function detectTierFromPath() {
+    var href = window.location.href.toLowerCase();
+    if (href.indexOf("tier3") !== -1 || href.indexOf("flagship") !== -1) return 3;
+    if (href.indexOf("tier2") !== -1 || href.indexOf("workbook") !== -1) return 2;
+    if (href.indexOf("tier1") !== -1) return 1;
+    return 0;
+  }
+
+  function loadStoredTier() {
+    try {
+      var saved = localStorage.getItem("aifos_tier");
+      if (saved) return parseInt(saved, 10) || 0;
+    } catch(e) {}
+    return 0;
+  }
+
+  function saveTier(t) {
+    try { localStorage.setItem("aifos_tier", String(t)); } catch(e) {}
+  }
+
+  function applyTier(tier) {
+    currentTier = tier;
+    var badge = document.getElementById("tierBadge");
+    var labels = ["Tier 0 — Free", "Tier 1 — Book ($19)", "Tier 2 — Pro ($39)", "Tier 3 — Flagship ($59)"];
+    var classes = ["t0", "t1", "t2", "t3"];
+    badge.textContent = labels[tier] || labels[0];
+    badge.className = "tier-badge " + (classes[tier] || "t0");
+
+    /* Excel — Tier 3 only */
+    var btnExcel = document.getElementById("btnExcel");
+    if (tier >= 3) {
+      btnExcel.classList.remove("locked");
+      btnExcel.querySelector("small").textContent = "8-Tab Full Command Center";
+    } else {
+      btnExcel.classList.add("locked");
+      btnExcel.querySelector("small").textContent = "🔒 Tier 3 Flagship Only";
+    }
+
+    /* Workbook — Tier 2+ */
+    var btnWB = document.getElementById("btnWorkbook");
+    if (tier >= 2) {
+      btnWB.querySelector("small").textContent = "All Chapters — Fillable PDF";
+    } else {
+      btnWB.querySelector("small").textContent = "Chapter 1 Preview";
+    }
+
+    /* Blueprints — Tier 3 gets all */
+    var btnBP = document.getElementById("btnBlueprints");
+    if (tier >= 3) {
+      btnBP.querySelector("small").textContent = "All 3 Blueprints Unlocked";
+    } else if (tier === 0) {
+      btnBP.querySelector("small").textContent = "Blueprint 1 only";
+    }
+  }
+
+  /* ── Quick-Start Progress Tracker ────────────────────────────────── */
+  var steps = ["step1", "step2", "step3"];
+
+  function loadProgress() {
+    steps.forEach(function(id) {
+      try {
+        var val = localStorage.getItem("aifos_" + id);
+        if (val === "1") document.getElementById(id).checked = true;
+      } catch(e) {}
+    });
+    updateProgressBar();
+  }
+
+  function updateProgressBar() {
+    var done = steps.filter(function(id) {
+      return document.getElementById(id).checked;
+    }).length;
+    var pct = Math.round((done / steps.length) * 100);
+    document.getElementById("progressBar").style.width = pct + "%";
+  }
+
+  steps.forEach(function(id) {
+    document.getElementById(id).addEventListener("change", function() {
+      try { localStorage.setItem("aifos_" + id, this.checked ? "1" : "0"); } catch(e) {}
+      updateProgressBar();
+    });
+  });
+
+  /* ── License Activation ──────────────────────────────────────────── */
+  document.getElementById("activateBtn").addEventListener("click", function() {
+    var key = (document.getElementById("licenseInput").value || "").trim().toUpperCase();
+    var msg = document.getElementById("licenseMsg");
+
+    if (KEYS[key] !== undefined) {
+      var tier = KEYS[key];
+      saveTier(tier);
+      applyTier(tier);
+      msg.className = "license-msg ok";
+      msg.textContent = "✅ Tier " + tier + " activated! Your access has been upgraded.";
+    } else if (key === "") {
+      msg.className = "license-msg err";
+      msg.textContent = "⚠️ Please enter your license key.";
+    } else {
+      msg.className = "license-msg err";
+      msg.textContent = "❌ Invalid key. Check your Gumroad purchase confirmation email.";
+    }
+  });
+
+  document.getElementById("licenseInput").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") document.getElementById("activateBtn").click();
+  });
+
+  /* ── Init ─────────────────────────────────────────────────────────── */
+  var pathTier  = detectTierFromPath();
+  var storedTier = loadStoredTier();
+  applyTier(Math.max(pathTier, storedTier));
+  loadProgress();
+
+})();
+</script>
+</body>
+</html>

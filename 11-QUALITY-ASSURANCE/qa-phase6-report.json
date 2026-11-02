@@ -1,11 +1,11 @@
 {
   "phase": 6,
   "title": "SaaS-Lite Interactive Web Companion App (freelancer-os-app.html)",
-  "timestamp_utc": "2026-10-20T19:58:38.980633+00:00",
+  "timestamp_utc": "2026-11-02T15:17:28.541883+00:00",
   "overall_status": "PASSED",
   "metrics": {
-    "app_size_bytes": 318070,
-    "app_size_kb": 310.6,
+    "app_size_bytes": 359742,
+    "app_size_kb": 351.3,
     "readme_word_count": 1114,
     "prompts_embedded": 50,
     "scripts_embedded": 12,
@@ -28,12 +28,12 @@
     {
       "check": "Primary Web App File & Size (>= 120,000 bytes)",
       "passed": true,
-      "details": "07-INTERACTIVE-TOOLS\\freelancer-os-app.html (318,070 bytes / 310.6 KB)"
+      "details": "07-INTERACTIVE-TOOLS\\freelancer-os-app.html (359,742 bytes / 351.3 KB)"
     },
     {
       "check": "Hybrid Bundle Mirror Sync",
       "passed": true,
-      "details": "09-EXPORTS\\HYBRID-BUNDLE\\freelancer-os-app.html (318,070 bytes, exact byte match=True)"
+      "details": "09-EXPORTS\\HYBRID-BUNDLE\\freelancer-os-app.html (359,742 bytes, exact byte match=True)"
     },
     {
       "check": "README-WEB-APP.md Word Count (>= 700 words)",

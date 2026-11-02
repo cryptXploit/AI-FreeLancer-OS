@@ -762,9 +762,82 @@
       border: 1px solid var(--border);
     }
 
+    /* Phase 10: 3-Tier License & Preview Bar + Dynamic Thirst Engine + CRUD Styles */
+    .tier-license-bar {
+      background: linear-gradient(90deg, #0B1120 0%, #1E293B 100%);
+      border-bottom: 1px solid #334155;
+      color: #F8FAFC;
+      padding: 8px 20px;
+      font-size: 12px;
+    }
+    .tier-license-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tier-mode-pills {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .tier-mode-btn {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid #475569;
+      color: #E2E8F0;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .tier-mode-btn.active {
+      background: #0284C7;
+      border-color: #38BDF8;
+      color: #FFFFFF;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+    }
+    .thirst-blur-row {
+      filter: blur(4.5px);
+      opacity: 0.55;
+      pointer-events: none;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+    .thirst-overlay-cta {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.96));
+      border: 1.5px solid #38BDF8;
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      color: #F8FAFC;
+      margin-top: 10px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+    }
+    .thirst-overlay-cta.visible {
+      display: flex;
+    }
+    .crud-notes-card {
+      background: #F8FAFC;
+      border: 1px dashed #94A3B8;
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-top: 16px;
+    }
+
     /* Print Stylesheet */
     @media print {
       .top-command-bar,
+      .tier-license-bar,
       .module-nav-bar,
       .no-print,
       .btn,
@@ -795,14 +868,33 @@
 </head>
 <body>
 
+    <!-- Phase 10: 1-Click Workspace Export Banner -->
+    <div id="workspace-export-banner" style="
+        background:linear-gradient(135deg,#0B1120 0%,#1E293B 100%);
+        border:1px solid #0D9488; border-radius:8px; padding:12px 18px;
+        display:flex; align-items:center; gap:14px; margin:10px 16px;
+        position:relative; z-index:100;">
+      <span style="font-size:22px;">💾</span>
+      <div style="flex:1;">
+        <strong style="color:#38BDF8; font-size:13px;">Workspace Backup</strong>
+        <div style="color:#94A3B8; font-size:11.5px;">All your Module 1–4 inputs, notes, and custom rows saved locally.</div>
+      </div>
+      <button onclick="exportWorkspace()" style="
+          background:#0D9488; color:#fff; border:none; border-radius:6px;
+          padding:8px 16px; font-size:12.5px; font-weight:700; cursor:pointer;">
+        💾 Export My Workspace
+      </button>
+    </div>
+
+
   <!-- GLOBAL TOP COMMAND BAR -->
   <header class="top-command-bar">
     <div class="top-bar-inner">
       <div class="brand-cluster">
         <div class="brand-logo">OS</div>
         <div>
-          <div class="brand-title">The AI Freelancer Operating System — Interactive Web Companion (v1.0)</div>
-          <div class="brand-subtitle">Offline/Online Practitioner Command Suite • 50 AI Workflows • 12 Boundary Scripts • B.C.R. Pricing • Weekly CEO Scorecard</div>
+          <div class="brand-title">The AI Freelancer Operating System — Interactive Web Companion (v1.0 • By OMAR SUNNY)</div>
+          <div class="brand-subtitle">Full CRUD Practitioner Suite • 50 AI Workflows • 12 Boundary Scripts • B.C.R. Pricing • Weekly CEO Scorecard</div>
         </div>
       </div>
 
@@ -820,8 +912,9 @@
 
         <label for="edition-mode-toggle" style="font-size:11.5px; color:#CBD5E1;">Edition:</label>
         <select id="edition-mode-toggle" class="ctrl-select" onchange="handleEditionModeChange(this.value)">
-          <option value="pro">Tier 3/4: Complete Pro &amp; Living OS Edition</option>
-          <option value="free">Tier 0: Free Diagnostic Edition</option>
+          <option value="free">🟢 Tier 0: Free Diagnostic &amp; Starter Mode</option>
+          <option value="tier2">🔵 Tier 2: Workbook &amp; 50-Prompt Vault Mode (STUDIO-TIER2-2026)</option>
+          <option value="pro">🟣 Tier 3/4: Complete Pro &amp; Living OS Mode (FREELANCER-OS-PRO-2026)</option>
         </select>
 
         <button type="button" class="ctrl-btn teal" onclick="loadMarcusCaseStudyDemo()">Load Marcus V. Demo Data</button>
@@ -833,24 +926,46 @@
     </div>
   </header>
 
+  <!-- 3-TIER PROGRESSIVE LICENSE & PREVIEW BAR -->
+  <div id="tier-license-bar" class="tier-license-bar no-print">
+    <div class="tier-license-inner">
+      <div class="tier-mode-pills">
+        <span style="font-weight:800; color:#38BDF8; letter-spacing:0.5px;">3-TIER ACCESS LADDER:</span>
+        <button type="button" id="pill-mode-free" class="tier-mode-btn" onclick="handleEditionModeChange('free')">
+          🟢 Tier 0: Free Diagnostic &amp; Starter (Default)
+        </button>
+        <button type="button" id="pill-mode-tier2" class="tier-mode-btn" onclick="handleEditionModeChange('tier2')">
+          🔵 Tier 2: Workbook &amp; 50-Prompt Vault ($39 • Code: STUDIO-TIER2-2026)
+        </button>
+        <button type="button" id="pill-mode-pro" class="tier-mode-btn active" onclick="handleEditionModeChange('pro')">
+          🟣 Tier 3/4: Full Flagship Pro OS ($59 • Code: FREELANCER-OS-PRO-2026 / STUDIO-PRO-OS-2026)
+        </button>
+      </div>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <button type="button" class="ctrl-btn teal" onclick="openProActivationModal()">🔑 Enter License Key</button>
+        <a href="https://sunnyomar.gumroad.com/l/ai-freelancer-os" target="_blank" rel="noopener" class="ctrl-btn accent" style="text-decoration:none;">⚡ Get Full Flagship OS ($39 / $59)</a>
+      </div>
+    </div>
+  </div>
+
   <!-- MODULE NAVIGATION TABS -->
   <nav class="module-nav-bar">
     <div class="module-nav-inner">
       <button type="button" class="module-tab-btn active" data-tab="tab-ehr-audit" onclick="switchModuleTab('tab-ehr-audit')">
         <span>Module 1: 7-Day EHR Leak Audit &amp; 3-Block Planner</span>
-        <span class="tier-pill free">Free + Pro</span>
+        <span class="tier-pill free">Tier 0 Free + CRUD</span>
       </button>
       <button type="button" class="module-tab-btn" data-tab="tab-bcr-pricing" onclick="switchModuleTab('tab-bcr-pricing')">
         <span>Module 2: B.C.R. Scope &amp; 3-Tier Pricing Engine</span>
-        <span class="tier-pill pro">Pro OS</span>
+        <span class="tier-pill pro">Tier 3 Pro OS</span>
       </button>
       <button type="button" class="module-tab-btn" data-tab="tab-prompt-vault" onclick="switchModuleTab('tab-prompt-vault')">
-        <span>Module 3: 50-Prompt &amp; 12-Script Studio Builder</span>
-        <span class="tier-pill pro">Pro OS</span>
+        <span>Module 3: 50-Prompt, 12-Script &amp; Checklist Studio</span>
+        <span class="tier-pill pro">Tier 2 + Tier 3</span>
       </button>
       <button type="button" class="module-tab-btn" data-tab="tab-ceo-scorecard" onclick="switchModuleTab('tab-ceo-scorecard')">
-        <span>Module 4: Friday CEO Scorecard &amp; 80/20 Client Roster</span>
-        <span class="tier-pill pro">Pro + Tier 4</span>
+        <span>Module 4: Friday CEO Scorecard &amp; Automation Hub</span>
+        <span class="tier-pill pro">Tier 3 + Tier 4 VIP</span>
       </button>
     </div>
   </nav>
@@ -858,19 +973,57 @@
   <!-- MAIN WORKSPACE CONTAINER -->
   <main class="workspace-container">
 
-    <!-- PRO EDITION ACTIVATION BANNER (Visible on Modules 2-4 only when in Free Diagnostic Mode) -->
+    
+    <!-- Phase 10: Tier 2 Personalized Teaser Banner -->
+    <div id="tier2teaser" class="teaser-banner" style="
+        background:linear-gradient(135deg,#0B1120 0%,#1E3A5F 100%);
+        border:2px solid #0284C7; border-radius:10px; padding:20px 24px;
+        margin:16px 0; position:relative;">
+      <div style="font-size:13px; color:#94A3B8; margin-bottom:6px; font-weight:700; letter-spacing:0.05em;">
+        ⚡ PERSONALIZED AUDIT RESULT
+      </div>
+      <div id="tier2teaser-text" style="font-size:15px; color:#E2E8F0; line-height:1.65; font-weight:500;">
+        Loading your audit results...
+      </div>
+      <div style="margin-top:14px;">
+        <code style="background:#1E3A5F; color:#38BDF8; padding:4px 10px; border-radius:4px; font-size:12px; font-weight:700;">
+          STUDIO-TIER2-2026
+        </code>
+        <span style="color:#64748B; font-size:12px; margin-left:8px;">— Enter this code in the Activate panel above to unlock.</span>
+      </div>
+      <script>
+        (function renderTier2Teaser() {
+          var ehr  = parseFloat(localStorage.getItem('ehr_rate') || '0');
+          var leak = parseFloat(localStorage.getItem('ehr_annual_leak') || '0');
+          var el   = document.getElementById('tier2teaser-text');
+          if (!el) return;
+          if (!ehr && typeof appState !== 'undefined') {
+            ehr  = parseFloat(appState.ehrTrueRate  || appState.ehr_rate || '0');
+            leak = parseFloat(appState.ehrAnnualLeak || appState.ehr_annual_leak || '0');
+          }
+          var ehrStr  = ehr  > 0 ? '$' + ehr.toFixed(2)  : '(enter your data in Module 1)';
+          var leakStr = leak > 0 ? '$' + Math.round(leak).toLocaleString() : '(enter your data in Module 1)';
+          el.innerHTML = '⚡ Based on your audit: Your Effective Hourly Rate is <strong style="color:#38BDF8">' + ehrStr +
+            '</strong> and your annual unbilled revenue leak is <strong style="color:#F59E0B">' + leakStr +
+            '</strong>. Your custom 90-Day Execution Roadmap is ready — Activate Tier 2 ' +
+            '(Code: <strong style="color:#38BDF8">STUDIO-TIER2-2026</strong>) to unlock it.';
+        })();
+      </script>
+    </div>
+
+    <!-- DYNAMIC PERSONALIZED THIRST & CRAVING ENGINE BANNER (Visible on Locked/Preview Tabs in Free/Tier2 Mode) -->
     <div id="pro-gate-banner" class="pro-edition-gate-banner no-print">
-      <div>
-        <div style="font-size:15px; font-weight:800; color:#38BDF8; margin-bottom:3px;">
-          Tier 0 Free Diagnostic Preview Mode Active
+      <div style="max-width:920px;">
+        <div id="thirst-banner-headline" style="font-size:15px; font-weight:800; color:#38BDF8; margin-bottom:4px;">
+          ⚡ Personalized Diagnostic Alert &amp; Live Pro Preview Active
         </div>
-        <div style="font-size:13px; color:#E2E8F0;">
-          You are viewing a preview of this Pro module. Enter your Tier 3/4 license code (<code>FREELANCER-OS-PRO-2026</code>) or click <strong>Activate Pro OS Mode</strong> to enable full interactive controls across Modules 2, 3, and 4.
+        <div id="thirst-personalized-alert" style="font-size:13px; color:#E2E8F0; line-height:1.5;">
+          Based on the numbers you entered in Module 1, our engine calculated your hidden shadow-labor leak and generated your custom 90-Day Execution Roadmap + 3-Tier B.C.R. Proposal Matrix + 4 Automation Triggers below. Activate Tier 2 ($39 — Code: <code>STUDIO-TIER2-2026</code>) or Tier 3 Flagship OS ($59 — Code: <code>FREELANCER-OS-PRO-2026</code> / <code>STUDIO-PRO-OS-2026</code>) to edit your full results immediately.
         </div>
       </div>
-      <div style="display:flex; gap:8px; align-items:center;">
-        <button type="button" class="btn btn-primary" onclick="openProActivationModal()">Activate Pro OS Mode</button>
-        <button type="button" class="btn btn-secondary" onclick="instantActivateProMode()">1-Click Enable Full Pro Suite</button>
+      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" onclick="openProActivationModal()">🔑 Enter License Key</button>
+        <a href="https://sunnyomar.gumroad.com/l/ai-freelancer-os" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration:none;">🚀 Upgrade on Gumroad ($39 / $59)</a>
       </div>
     </div>
 
@@ -1122,6 +1275,46 @@
           <input type="text" id="blk-parking-lot" class="form-input" value="Reorganize Google Drive archive folders (Deferred to Friday 2:30 PM Admin Window); Extract Webflow SEO Pre-Launch SOP via Prompt 1.2." oninput="saveAppState()" />
         </div>
       </div>
+
+      <!-- Step 1C: Interactive 7-Day Leak-Fix Action Tracker (Full CRUD) + Personal Notes -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Step 1C: Interactive 7-Day Leak-Fix Action Tracker &amp; Personal Notes (Full CRUD)</h2>
+            <div class="card-subtitle">Add, edit inline, delete, or reset custom weekly shadow-labor elimination tasks and strategy notes.</div>
+          </div>
+          <div style="display:flex; gap:8px;" class="no-print">
+            <button type="button" class="btn btn-outline" onclick="resetModuleDefaults('mod1')">Reset to Studio Defaults</button>
+            <button type="button" class="btn btn-primary" onclick="addEhrActionRow()">+ Add Custom Row / Item</button>
+            <button type="button" id="addEhrRow" class="btn btn-outline" onclick="addEhrRow()" title="Add a fully custom row with label, hours, and rate">+ Add Custom Row (EHR)</button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table" id="ehr-action-crud-table">
+            <thead>
+              <tr>
+                <th style="width:8%;">Done</th>
+                <th style="width:42%;">Custom Leak-Fix Action / Operational Task</th>
+                <th style="width:24%;">Target Lifecycle Gate</th>
+                <th style="width:16%;">Est. Hrs Saved/Wk</th>
+                <th style="width:10%;" class="no-print">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="ehr-crud-tbody">
+              <!-- Populated dynamically by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="crud-notes-card">
+          <label class="form-label" for="personal-notes-mod1">
+            <span>📝 Module 1 Personal Notes &amp; Action Log (Auto-Saved to Browser LocalStorage)</span>
+            <span class="form-hint">Persists across sessions &amp; JSON exports</span>
+          </label>
+          <textarea id="personal-notes-mod1" class="form-textarea" placeholder="Write your custom 7-Day Time Audit observations, client boundary notes, and morning Maker Block adjustments here..." oninput="saveAppState()"></textarea>
+        </div>
+      </div>
     </section>
 
     <!-- ================================================================== -->
@@ -1143,11 +1336,14 @@
 
         <!-- Step 2A: Work Breakdown Structure (WBS) Deliverable Table -->
         <div style="margin-bottom:22px;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
             <h3 style="font-size:14.5px; font-weight:800; color:var(--primary);">
-              Step 2A: Work Breakdown Structure (WBS) &amp; Hidden Admin Prep Multiplier
+              Step 2A: Work Breakdown Structure (WBS) &amp; Hidden Admin Prep Multiplier (Full CRUD)
             </h3>
-            <button type="button" class="btn btn-outline no-print" onclick="addWbsRow()">+ Add Deliverable Row</button>
+            <div style="display:flex; gap:8px;" class="no-print">
+              <button type="button" class="btn btn-outline" onclick="resetModuleDefaults('mod2')">Reset to Studio Defaults</button>
+              <button type="button" class="btn btn-primary" onclick="addWbsRow()">+ Add Custom Row / Item</button>
+            </div>
           </div>
 
           <div class="table-responsive">
@@ -1165,6 +1361,20 @@
                 <!-- Populated dynamically by JS -->
               </tbody>
             </table>
+          </div>
+
+          <!-- Dynamic Glassmorphism Thirst Preview Callout (Shown when Free/Tier2 Mode views Module 2) -->
+          <div id="thirst-cta-mod2" class="thirst-overlay-cta no-print">
+            <div>
+              <strong style="color:#38BDF8; font-size:13.5px;">🔒 Rows 3–5 &amp; Custom WBS Pricing Simulation Previewed in Glassmorphic Mode</strong>
+              <div style="font-size:12px; color:#CBD5E1; margin-top:2px;">
+                Rows 1–2 above are live-calculated from your inputs. Activate Tier 3 Flagship OS (<code>FREELANCER-OS-PRO-2026</code> / <code>STUDIO-PRO-OS-2026</code>) to edit all WBS rows and generate unlimited 3-Tier B.R.I.E.F. Proposals.
+              </div>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <button type="button" class="btn btn-primary" onclick="openProActivationModal()">Activate Full OS ($39 / $59)</button>
+              <a href="https://sunnyomar.gumroad.com/l/ai-freelancer-os" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration:none;">Get License Key</a>
+            </div>
           </div>
         </div>
 
@@ -1316,6 +1526,14 @@
             </div>
           </div>
         </div>
+
+        <div class="crud-notes-card">
+          <label class="form-label" for="personal-notes-mod2">
+            <span>📝 Module 2 Personal Pricing &amp; Proposal Notes (Auto-Saved to Browser LocalStorage)</span>
+            <span class="form-hint">Persists across sessions &amp; JSON exports</span>
+          </label>
+          <textarea id="personal-notes-mod2" class="form-textarea" placeholder="Record custom client proposal assumptions, milestone payment notes, and scope boundaries here..." oninput="saveAppState()"></textarea>
+        </div>
       </div>
     </section>
 
@@ -1326,10 +1544,13 @@
       <div class="card">
         <div class="card-header">
           <div>
-            <h1 class="card-title">Module 3: Dynamic 50-Prompt &amp; 12-Emergency-Script Studio Builder</h1>
-            <div class="card-subtitle">Select any of the 50 Tested AI Workflows (Prompts 1.1–10.5) or 12 Word-for-Word Client Boundary Scripts (Scripts 1–12), fill in your custom variables, and copy in one click.</div>
+            <h1 class="card-title">Module 3: Dynamic 50-Prompt, 12-Script &amp; 10-Chapter Checklist Studio (Full CRUD)</h1>
+            <div class="card-subtitle">Select any of the 50 Tested AI Workflows or 12 Emergency Boundary Scripts, edit templates inline, add custom prompts, and track your 10-Chapter implementation.</div>
           </div>
-          <span class="badge navy" id="vault-counter-badge">Showing 62 / 62 Assets</span>
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;" class="no-print">
+            <span class="badge navy" id="vault-counter-badge">Showing 62 / 62 Assets</span>
+            <button type="button" class="btn btn-primary" onclick="openCustomPromptModal()">+ Add Custom Prompt / Script</button>
+          </div>
         </div>
 
         <!-- Search & Filter Bar -->
@@ -1340,24 +1561,24 @@
             </div>
             <div>
               <select id="prompt-chapter-select" class="form-select" onchange="filterPromptVault()">
-                <option value="all">All Chapters &amp; Back Matter (62)</option>
-                <option value="1">Chapter 1: 5-Stage Operating Model (5)</option>
-                <option value="2">Chapter 2: Productized Packaging (5)</option>
-                <option value="3">Chapter 3: 10-Min B.R.I.E.F. Proposals (5)</option>
-                <option value="4">Chapter 4: B.C.R. Pricing &amp; Margin Defense (5)</option>
-                <option value="5">Chapter 5: 48-Hr Client Onboarding (5)</option>
-                <option value="6">Chapter 6: 20/60/20 Sandwich Execution (5)</option>
-                <option value="7">Chapter 7: P.V.P. Scope Creep Defense (5)</option>
-                <option value="8">Chapter 8: Async Updates &amp; Feedback (5)</option>
-                <option value="9">Chapter 9: Offboarding &amp; Retainer Bridge (5)</option>
-                <option value="10">Chapter 10: Weekly CEO &amp; 90-Day Scaling (5)</option>
+                <option value="all">All Chapters &amp; Back Matter (62+)</option>
+                <option value="1">Chapter 1: 5-Stage Operating Model (5 • Free Open)</option>
+                <option value="2">Chapter 2: Productized Packaging (5 • Free Open)</option>
+                <option value="3">Chapter 3: 10-Min B.R.I.E.F. Proposals (5 • Tier 2/3)</option>
+                <option value="4">Chapter 4: B.C.R. Pricing &amp; Margin Defense (5 • Tier 2/3)</option>
+                <option value="5">Chapter 5: 48-Hr Client Onboarding (5 • Tier 2/3)</option>
+                <option value="6">Chapter 6: 20/60/20 Sandwich Execution (5 • Tier 2/3)</option>
+                <option value="7">Chapter 7: P.V.P. Scope Creep Defense (5 • Tier 2/3)</option>
+                <option value="8">Chapter 8: Async Updates &amp; Feedback (5 • Tier 2/3)</option>
+                <option value="9">Chapter 9: Offboarding &amp; Retainer Bridge (5 • Tier 2/3)</option>
+                <option value="10">Chapter 10: Weekly CEO &amp; 90-Day Scaling (5 • Tier 2/3)</option>
                 <option value="11">Back Matter: 12 Emergency Client Scripts (12)</option>
               </select>
             </div>
           </div>
 
           <div class="filter-pills" id="stage-filter-pills">
-            <button type="button" class="filter-pill active" data-stage="all" onclick="setStageFilter('all', this)">All (62)</button>
+            <button type="button" class="filter-pill active" data-stage="all" onclick="setStageFilter('all', this)">All Assets</button>
             <button type="button" class="filter-pill" data-stage="Stage 1: Attract & Filter" onclick="setStageFilter('Stage 1: Attract & Filter', this)">Stage 1: Attract (Ch 1–2)</button>
             <button type="button" class="filter-pill" data-stage="Stage 2: Scope & Price" onclick="setStageFilter('Stage 2: Scope & Price', this)">Stage 2: Scope &amp; Price (Ch 3–4)</button>
             <button type="button" class="filter-pill" data-stage="Stage 3: Onboard & Align" onclick="setStageFilter('Stage 3: Onboard & Align', this)">Stage 3: Onboard (Ch 5)</button>
@@ -1386,7 +1607,9 @@
                   Weekly Time-Log &amp; Unbilled Admin Leak Analyzer
                 </h2>
               </div>
-              <div style="display:flex; gap:8px;" class="no-print">
+              <div style="display:flex; gap:6px; flex-wrap:wrap;" class="no-print">
+                <button type="button" class="btn btn-outline" onclick="toggleInlineTemplateEditor()">✏️ Edit Inline</button>
+                <button type="button" class="btn btn-outline" onclick="deleteOrResetActiveVaultItem()">🗑️ Delete / Reset Item</button>
                 <button type="button" class="btn btn-outline" onclick="resetActivePromptVariables()">Reset Variables</button>
                 <button type="button" class="btn btn-secondary" onclick="downloadActivePromptMd()">Download .MD</button>
                 <button type="button" class="btn btn-primary" onclick="copyAssembledPrompt()">Copy Assembled Text</button>
@@ -1398,6 +1621,19 @@
             </div>
             <div style="font-size:13px; color:var(--muted); margin-bottom:14px;">
               <strong>When to Run / Send:</strong> <span id="active-item-when"></span>
+            </div>
+
+            <!-- Inline Master Template Editor (Hidden until "Edit Inline" clicked) -->
+            <div id="inline-template-editor-box" style="display:none; background:#EFF6FF; border:1.5px solid #0284C7; border-radius:var(--radius-sm); padding:14px; margin-bottom:14px;" class="no-print">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <strong style="font-size:12.5px; color:var(--primary);">✏️ Inline Prompt / Script Template Editor (CRUD Auto-Save)</strong>
+                <div style="display:flex; gap:6px;">
+                  <button type="button" class="btn btn-primary" style="padding:4px 10px; font-size:11.5px;" onclick="saveInlineTemplateEdit()">Save Template Edit</button>
+                  <button type="button" class="btn btn-outline" style="padding:4px 10px; font-size:11.5px;" onclick="toggleInlineTemplateEditor()">Close</button>
+                </div>
+              </div>
+              <input type="text" id="inline-edit-title" class="form-input" style="margin-bottom:8px;" placeholder="Prompt / Script Title" />
+              <textarea id="inline-edit-template" class="form-textarea" style="min-height:140px; font-family:var(--font-mono); font-size:12px;"></textarea>
             </div>
 
             <!-- Dynamic Bracketed Variable Input Form -->
@@ -1418,6 +1654,15 @@
                 <button type="button" class="btn btn-primary no-print" style="padding:5px 10px; font-size:11.5px;" onclick="copyAssembledPrompt()">Copy to Clipboard</button>
               </div>
               <pre id="assembled-prompt-output" class="assembled-prompt-box"></pre>
+              <div id="thirst-cta-mod3" class="thirst-overlay-cta no-print">
+                <div>
+                  <strong style="color:#38BDF8; font-size:13.5px;">🔒 Tier 2 / Tier 3 Pro Workflow Asset Preview</strong>
+                  <div style="font-size:12px; color:#CBD5E1; margin-top:2px;">
+                    In Tier 0 Free Mode, Chapters 1–2 (10 Prompts) and Scripts 1–2 are 100% open. Activate Tier 2 (<code>STUDIO-TIER2-2026</code>) for all 50 Prompts or Tier 3 Pro OS (<code>FREELANCER-OS-PRO-2026</code>) for all 62 Prompts &amp; Scripts.
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="openProActivationModal()">Activate Full Vault ($39 / $59)</button>
+              </div>
             </div>
 
             <!-- Mandatory Verification Rule -->
@@ -1426,6 +1671,45 @@
               <span id="active-item-verification"></span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Interactive 10-Chapter Implementation Checklist (Full CRUD) + Personal Notes -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Interactive 10-Chapter Implementation Checklist &amp; Custom Milestone CRUD</h2>
+            <div class="card-subtitle">Track your progress across all 10 chapters, edit milestones inline, or add custom implementation steps.</div>
+          </div>
+          <div style="display:flex; gap:8px;" class="no-print">
+            <button type="button" class="btn btn-outline" onclick="resetModuleDefaults('mod3')">Reset Checklist Defaults</button>
+            <button type="button" class="btn btn-primary" onclick="addChecklistCrudRow()">+ Add Custom Checklist Row</button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width:8%;">Done</th>
+                <th style="width:18%;">Chapter / Gate</th>
+                <th style="width:50%;">Implementation Deliverable / Action Milestone</th>
+                <th style="width:14%;">Target KPI</th>
+                <th style="width:10%;" class="no-print">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="checklist-crud-tbody">
+              <!-- Populated dynamically by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="crud-notes-card">
+          <label class="form-label" for="personal-notes-mod3">
+            <span>📝 Module 3 Personal Prompt &amp; Script Notes (Auto-Saved to Browser LocalStorage)</span>
+            <span class="form-hint">Save your favorite LLM system instructions &amp; custom prompt tweaks</span>
+          </label>
+          <textarea id="personal-notes-mod3" class="form-textarea" placeholder="Store custom AI prompt variations, brand voice rules, and client negotiation notes here..." oninput="saveAppState()"></textarea>
         </div>
       </div>
     </section>
@@ -1437,11 +1721,12 @@
       <div class="card">
         <div class="card-header">
           <div>
-            <h1 class="card-title">Module 4: 20-Minute Friday CEO Dashboard, 80/20 Client Roster &amp; 90-Day Pipeline Tracker</h1>
-            <div class="card-subtitle">Synced with Chapter 10, Prompts 10.1–10.5 &amp; Worksheet 10.1 — Audit client-level EHR, trigger automatic rate raises at 85% capacity, and log weekly CEO retros.</div>
+            <h1 class="card-title">Module 4: 20-Minute Friday CEO Dashboard, 80/20 Client Roster &amp; Automation Configurator</h1>
+            <div class="card-subtitle">Synced with Chapter 10, Prompts 10.1–10.5 &amp; Worksheet 10.1 — Audit client-level EHR, trigger automatic rate raises at 85% capacity, and configure Make/n8n/Zapier webhooks.</div>
           </div>
-          <div style="display:flex; gap:8px;" class="no-print">
+          <div style="display:flex; gap:8px; flex-wrap:wrap;" class="no-print">
             <span class="badge teal">Stage 05: Weekly CEO Scaling Gate</span>
+            <button type="button" class="btn btn-outline" onclick="resetModuleDefaults('mod4')">Reset CEO Defaults</button>
             <button type="button" class="btn btn-outline" onclick="openPromptInVault('10.1')">Open Prompt 10.1</button>
             <button type="button" class="btn btn-secondary" onclick="exportCeoLogCsv()">Export CEO Log (.CSV)</button>
           </div>
@@ -1509,13 +1794,13 @@
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
             <div>
               <h3 style="font-size:14.5px; font-weight:800; color:var(--primary);">
-                Step 4A: 80/20 Client Profitability, Real EHR &amp; Friction Roster (Worksheet 10.1 Part B)
+                Step 4A: 80/20 Client Profitability, Real EHR &amp; Friction Roster (Full CRUD)
               </h3>
               <div style="font-size:12px; color:var(--muted);">
                 Automatically flags "Whale Trap" accounts (high gross fee but high unbilled hours/friction) vs. high-yield retainer candidates.
               </div>
             </div>
-            <button type="button" class="btn btn-outline no-print" onclick="addClientRow()">+ Add Active Client</button>
+            <button type="button" class="btn btn-primary no-print" onclick="addClientRow()">+ Add Custom Client Row</button>
           </div>
 
           <div class="table-responsive">
@@ -1537,17 +1822,27 @@
               </tbody>
             </table>
           </div>
+
+          <div id="thirst-cta-mod4" class="thirst-overlay-cta no-print">
+            <div>
+              <strong style="color:#38BDF8; font-size:13.5px;">🔒 Rows 3–4 &amp; Whale-Trap Pruning Matrix Previewed in Glassmorphic Mode</strong>
+              <div style="font-size:12px; color:#CBD5E1; margin-top:2px;">
+                Rows 1–2 are visible above. Activate Tier 3 Flagship OS (<code>FREELANCER-OS-PRO-2026</code> / <code>STUDIO-PRO-OS-2026</code>) to edit all client roster entries, log weekly CEO snapshots, and configure Make/n8n/Zapier automations.
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="openProActivationModal()">Activate Full OS ($39 / $59)</button>
+          </div>
         </div>
 
         <!-- Step 4B: 12-Week Friday CEO Retrospective Log -->
-        <div style="background:var(--surface); padding:18px; border-radius:var(--radius-md); border:1px solid var(--border);">
+        <div style="background:var(--surface); padding:18px; border-radius:var(--radius-md); border:1px solid var(--border); margin-bottom:20px;">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
             <div>
               <h3 style="font-size:14.5px; font-weight:800; color:var(--primary);">
-                Step 4B: 12-Week Friday CEO Retrospective &amp; System Upgrade Log
+                Step 4B: 12-Week Friday CEO Retrospective &amp; System Upgrade Log (Full CRUD)
               </h3>
               <div style="font-size:12px; color:var(--muted);">
-                Record your weekly Friday 20-minute snapshot to track realized EHR growth across a 90-day operating quarter.
+                Record, edit inline, or delete your weekly Friday 20-minute snapshots across a 90-day operating quarter.
               </div>
             </div>
             <button type="button" class="btn btn-primary no-print" onclick="appendFridayRetroSnapshot()">+ Log Current Week Snapshot</button>
@@ -1585,6 +1880,7 @@
                   <th>Bottleneck Gate</th>
                   <th>System Upgrade Installed</th>
                   <th>Monday Block-1 Priority</th>
+                  <th class="no-print">Del</th>
                 </tr>
               </thead>
               <tbody id="ceo-retro-tbody">
@@ -1593,28 +1889,111 @@
             </table>
           </div>
         </div>
+
+        <!-- Step 4C: Interactive Automation Blueprint Configurator -->
+        <div id="automation-blueprint-configurator" style="background:var(--surface); padding:18px; border-radius:var(--radius-md); border:1px solid var(--border);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
+            <div>
+              <h3 style="font-size:14.5px; font-weight:800; color:var(--primary);">
+                Step 4C: Interactive Make.com / n8n / Zapier Automation Blueprint Configurator
+              </h3>
+              <div style="font-size:12px; color:var(--muted);">
+                Customize your webhook endpoints, Notion database IDs, and P.A.C.E. lead score threshold to generate ready-to-import automation payloads.
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary no-print" onclick="copyAutomationConfigPayload()">Copy Configured Webhook JSON</button>
+          </div>
+          <div class="grid-3" style="margin-bottom:0;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="auto-webhook-url">Make / n8n / Zapier Webhook URL</label>
+              <input type="text" id="auto-webhook-url" class="form-input" value="https://hook.us1.make.com/freelancer-os-pace-triage" oninput="saveAppState()" />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="auto-notion-db">Notion Leads CRM Database ID</label>
+              <input type="text" id="auto-notion-db" class="form-input" value="db_01_leads_crm_pipeline_2026" oninput="saveAppState()" />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="auto-pace-min">Auto-Proposal P.A.C.E. Score Floor</label>
+              <input type="number" id="auto-pace-min" class="form-input" value="14" min="5" max="20" oninput="saveAppState()" />
+            </div>
+          </div>
+        </div>
+
+        <div class="crud-notes-card">
+          <label class="form-label" for="personal-notes-mod4">
+            <span>📝 Module 4 Personal CEO Strategy &amp; Retainer Notes (Auto-Saved to Browser LocalStorage)</span>
+            <span class="form-hint">Persists across sessions &amp; JSON exports</span>
+          </label>
+          <textarea id="personal-notes-mod4" class="form-textarea" placeholder="Document quarterly rate increases, Whale-Trap client replacement plans, and 90-day pipeline goals here..." oninput="saveAppState()"></textarea>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- PRO EDITION ACTIVATION MODAL -->
+  <!-- 3-TIER LICENSE ACTIVATION MODAL -->
   <div id="pro-activation-modal" class="modal-backdrop no-print">
     <div class="modal-card">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-        <h3 style="font-size:18px; font-weight:800; color:var(--primary);">Activate Complete Pro &amp; Living OS Mode</h3>
+        <h3 style="font-size:18px; font-weight:800; color:var(--primary);">Activate Tier 2 or Tier 3/4 Flagship Pro OS Mode</h3>
         <button type="button" class="btn btn-outline" style="padding:4px 9px;" onclick="closeProActivationModal()">✕</button>
       </div>
-      <p style="font-size:13.5px; color:var(--muted); margin-bottom:14px;">
-        Enter your Tier 3 / Tier 4 Companion Access Code from Appendix C of the book (<code>FREELANCER-OS-PRO-2026</code>) or use instant 1-click activation below to enable all 4 modules, 50 AI workflows, and 12 boundary scripts.
+      <p style="font-size:13.5px; color:var(--muted); margin-bottom:12px;">
+        Enter your license key below to activate your edition, or click any 1-click preview button:
       </p>
+      <ul style="font-size:12.5px; color:var(--text); margin-bottom:14px; padding-left:18px;">
+        <li><strong>Tier 2 Workbook &amp; 50-Prompt Vault Key:</strong> <code>STUDIO-TIER2-2026</code></li>
+        <li><strong>Tier 3 / Tier 4 Full Flagship Pro OS Key:</strong> <code>FREELANCER-OS-PRO-2026</code> or <code>STUDIO-PRO-OS-2026</code></li>
+      </ul>
       <div class="form-group">
         <label class="form-label" for="license-code-input">Companion Access Code</label>
         <input type="text" id="license-code-input" class="form-input" value="FREELANCER-OS-PRO-2026" />
       </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+        <a href="https://sunnyomar.gumroad.com/l/ai-freelancer-os" target="_blank" rel="noopener" class="btn btn-outline" style="text-decoration:none;">Get Full Edition on Gumroad ($39 / $59)</a>
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn btn-outline" onclick="closeProActivationModal()">Cancel</button>
+          <button type="button" class="btn btn-primary" onclick="verifyAndActivateProCode()">Activate Edition Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM PROMPT / SCRIPT CREATOR MODAL (CRUD) -->
+  <div id="custom-prompt-modal" class="modal-backdrop no-print">
+    <div class="modal-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h3 style="font-size:18px; font-weight:800; color:var(--primary);">+ Add Custom AI Prompt or Client Script (CRUD)</h3>
+        <button type="button" class="btn btn-outline" style="padding:4px 9px;" onclick="closeCustomPromptModal()">✕</button>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="new-prompt-title">Prompt / Script Title</label>
+        <input type="text" id="new-prompt-title" class="form-input" placeholder="e.g., Custom Discovery Sprint Follow-Up Generator" />
+      </div>
+      <div class="grid-2" style="grid-template-columns:1fr 1fr; gap:10px; margin-bottom:0;">
+        <div class="form-group">
+          <label class="form-label" for="new-prompt-stage">Lifecycle Stage</label>
+          <select id="new-prompt-stage" class="form-select">
+            <option value="Stage 1: Attract & Filter">Stage 1: Attract &amp; Filter</option>
+            <option value="Stage 2: Scope & Price">Stage 2: Scope &amp; Price</option>
+            <option value="Stage 3: Onboard & Align">Stage 3: Onboard &amp; Align</option>
+            <option value="Stage 4: Execute & Protect">Stage 4: Execute &amp; Protect</option>
+            <option value="Stage 5: Offboard & Retain">Stage 5: Offboard &amp; Retain</option>
+            <option value="12 Emergency Client Scripts">12 Emergency Client Scripts</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="new-prompt-objective">Operational Objective</label>
+          <input type="text" id="new-prompt-objective" class="form-input" placeholder="Generate a custom client deliverable or boundary reply" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="new-prompt-template">Template Body (Use [BRACKETS] for automatic interactive variables)</label>
+        <textarea id="new-prompt-template" class="form-textarea" style="min-height:130px; font-family:var(--font-mono);" placeholder="Act as a Principal Freelance Consultant for [CLIENT NAME]. Draft a 3-option scope summary for [PROJECT DELIVERABLE] at [TARGET PRICE]..."></textarea>
+      </div>
       <div style="display:flex; justify-content:flex-end; gap:10px;">
-        <button type="button" class="btn btn-outline" onclick="closeProActivationModal()">Cancel</button>
-        <button type="button" class="btn btn-primary" onclick="verifyAndActivateProCode()">Activate Pro Edition Now</button>
+        <button type="button" class="btn btn-outline" onclick="closeCustomPromptModal()">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="createNewCustomVaultItem()">Save Custom Asset to Vault</button>
       </div>
     </div>
   </div>
@@ -3063,8 +3442,39 @@
 
     let appState = {
       currency: "$",
-      editionMode: "pro",
+      editionMode: "free",
       activeTab: "tab-ehr-audit",
+      notes: {
+        mod1: "Audit Goal: Protect my 08:30-10:00 Morning Maker Block and eliminate 8.0 hrs/wk of unbilled Slack scope creep using Script 7.",
+        mod2: "Pricing Rule: Always anchor clients on Option 2 (1.35x B.C.R.) with 50/25/25 milestone splits.",
+        mod3: "Prompt Customization: Include my 3-sample Brand Voice DNA profile whenever running Chapter 6 & 8 prompts.",
+        mod4: "Friday CEO Target: Raise base rate by +20% once weekly capacity crosses 85% (25.5+ booked hrs/wk)."
+      },
+      ehrActions: [
+        { done: true, task: "Audit last 7 days of calendar & Toggl hours across Buckets A, B, C, D", gate: "Gate 01: Foundation Audit", hrsSaved: 2.5 },
+        { done: false, task: "Send Script 5 (48-Hr Pre-Flight Asset Hold) to new onboarding clients", gate: "Gate 03: 48-Hr Onboarding", hrsSaved: 3.0 },
+        { done: false, task: "Convert next informal Slack request into a $450 P.V.P. Change Order (Script 7)", gate: "Gate 04: P.V.P. Scope Defense", hrsSaved: 4.5 },
+        { done: false, task: "Replace custom 1-option quotes with 3-Tier B.R.I.E.F. Proposal Matrix", gate: "Gate 02: B.C.R. Pricing", hrsSaved: 2.5 }
+      ],
+      chapterChecklist: [
+        { done: true, chapter: "Ch 01 • Gate 01", milestone: "Complete 7-Day Time & EHR Leak Audit + Lock 90-Min Maker Block", kpi: "EHR Baseline Set" },
+        { done: true, chapter: "Ch 02 • Gate 01", milestone: "Package core service into 3-Tier Productized Offer Matrix (1.0x / 1.35x / 1.85x)", kpi: "3 Tiers Live" },
+        { done: false, chapter: "Ch 03 • Gate 02", milestone: "Install 20-Point P.A.C.E. Lead Scorer & 10-Minute B.R.I.E.F. Proposal Template", kpi: "<10m Proposal" },
+        { done: false, chapter: "Ch 04 • Gate 02", milestone: "Price all fixed-scope projects via B.C.R. Formula & Zero-Discount Trade-Down", kpi: "+35% Quote Value" },
+        { done: false, chapter: "Ch 05 • Gate 03", milestone: "Deploy 1-Link Notion Client Portal & 48-Hr Pre-Flight Asset Gate", kpi: "0 Stalled Starts" },
+        { done: false, chapter: "Ch 06 • Gate 04", milestone: "Run 20/60/20 Sandwich Execution & 4-Gate Red-Team Pre-Delivery QA", kpi: "+42% Craft Speed" },
+        { done: false, chapter: "Ch 07 • Gate 04", milestone: "Enforce Pause-Validate-Price (P.V.P.) Change Order Protocol on scope creep", kpi: "100% Scope Paid" },
+        { done: false, chapter: "Ch 08 • Gate 04", milestone: "Send Friday 3-Pillar Async Digest & 3-Minute Loom Walkthrough", kpi: "-85% Meetings" },
+        { done: false, chapter: "Ch 09 • Gate 05", milestone: "Deliver Executive Handover Certificate + 48-Hr Retainer Bridge Pitch", kpi: "40%+ Retainer Conv" },
+        { done: false, chapter: "Ch 10 • Gate 05", milestone: "Execute 20-Minute Friday CEO Review & 85% Capacity Rate-Raise Trigger", kpi: "80/20 Roster Clean" }
+      ],
+      customVaultItems: [],
+      editedTemplates: {},
+      automationConfig: {
+        webhookUrl: "https://hook.us1.make.com/freelancer-os-pace-triage",
+        notionDbId: "db_01_leads_crm_pipeline_2026",
+        paceMinScore: 14
+      },
       ehr: {
         niche: "UX/UI Design & Webflow Development",
         periodMode: "weekly",
@@ -3142,6 +3552,23 @@
       }
     };
 
+    function getCombinedVaultItems() {
+      const customList = Array.isArray(appState.customVaultItems) ? appState.customVaultItems : [];
+      const baseList = ALL_VAULT_ITEMS.map(item => {
+        if (appState.editedTemplates && appState.editedTemplates[item.id]) {
+          const edited = appState.editedTemplates[item.id];
+          const rawVars = Array.from(new Set((edited.template.match(/\[[^\]]+\]/g) || [])));
+          return Object.assign({}, item, {
+            title: edited.title || item.title,
+            template: edited.template || item.template,
+            variables: rawVars.length > 0 ? rawVars : item.variables
+          });
+        }
+        return item;
+      });
+      return [...customList, ...baseList];
+    }
+
     function showToast(msg) {
       const t = document.getElementById("app-toast");
       t.textContent = msg;
@@ -3169,6 +3596,28 @@
         appState.planner.blk3Done = document.getElementById("blk3-done").checked;
         appState.planner.blk3Text = document.getElementById("blk3-text").value;
         appState.planner.parkingLot = document.getElementById("blk-parking-lot").value;
+
+        if (!appState.notes) appState.notes = {};
+        const n1 = document.getElementById("personal-notes-mod1");
+        const n2 = document.getElementById("personal-notes-mod2");
+        const n3 = document.getElementById("personal-notes-mod3");
+        const n4 = document.getElementById("personal-notes-mod4");
+        if (n1) appState.notes.mod1 = n1.value;
+        if (n2) appState.notes.mod2 = n2.value;
+        if (n3) appState.notes.mod3 = n3.value;
+        if (n4) appState.notes.mod4 = n4.value;
+
+        const wh = document.getElementById("auto-webhook-url");
+        const ndb = document.getElementById("auto-notion-db");
+        const pmin = document.getElementById("auto-pace-min");
+        if (wh && ndb && pmin) {
+          appState.automationConfig = {
+            webhookUrl: wh.value,
+            notionDbId: ndb.value,
+            paceMinScore: parseInt(pmin.value, 10) || 14
+          };
+        }
+
         localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
         const badge = document.getElementById("save-status-indicator");
         if (badge) {
@@ -3190,17 +3639,18 @@
         console.warn("LocalStorage load warning:", e);
       }
 
-      // Check URL query parameter ?mode=free or ?mode=pro
+      // Check URL query parameter ?mode=free, ?mode=tier2, or ?mode=pro
       const params = new URLSearchParams(window.location.search);
       const urlMode = params.get("mode");
-      if (urlMode === "free" || urlMode === "pro") {
+      if (urlMode === "free" || urlMode === "tier2" || urlMode === "pro") {
         appState.editionMode = urlMode;
       }
     }
 
     function syncInputsFromState() {
       document.getElementById("currency-select").value = appState.currency || "$";
-      document.getElementById("edition-mode-toggle").value = appState.editionMode || "pro";
+      document.getElementById("edition-mode-toggle").value = appState.editionMode || "free";
+      updateTierModePillsUI();
 
       // Module 1
       document.getElementById("ehr-niche").value = appState.ehr.niche;
@@ -3223,6 +3673,20 @@
       document.getElementById("blk3-text").value = appState.planner.blk3Text || "";
       document.getElementById("blk-parking-lot").value = appState.planner.parkingLot || "";
 
+      // Personal Notes
+      if (appState.notes) {
+        if (document.getElementById("personal-notes-mod1")) document.getElementById("personal-notes-mod1").value = appState.notes.mod1 || "";
+        if (document.getElementById("personal-notes-mod2")) document.getElementById("personal-notes-mod2").value = appState.notes.mod2 || "";
+        if (document.getElementById("personal-notes-mod3")) document.getElementById("personal-notes-mod3").value = appState.notes.mod3 || "";
+        if (document.getElementById("personal-notes-mod4")) document.getElementById("personal-notes-mod4").value = appState.notes.mod4 || "";
+      }
+
+      if (appState.automationConfig) {
+        if (document.getElementById("auto-webhook-url")) document.getElementById("auto-webhook-url").value = appState.automationConfig.webhookUrl || "";
+        if (document.getElementById("auto-notion-db")) document.getElementById("auto-notion-db").value = appState.automationConfig.notionDbId || "";
+        if (document.getElementById("auto-pace-min")) document.getElementById("auto-pace-min").value = appState.automationConfig.paceMinScore || 14;
+      }
+
       // Module 2
       document.getElementById("bcr-hourly-rate").value = appState.bcr.hourlyRate;
       document.getElementById("bcr-complexity").value = String(appState.bcr.complexity);
@@ -3237,6 +3701,18 @@
       document.getElementById("ceo-weekly-cap").value = appState.ceo.weeklyCap;
       document.getElementById("ceo-retainer-base").value = appState.ceo.retainerBase;
       document.getElementById("ceo-pipeline-weighted").value = appState.ceo.pipelineWeighted;
+    }
+
+    function updateTierModePillsUI() {
+      const m = appState.editionMode || "free";
+      const pFree = document.getElementById("pill-mode-free");
+      const pTier2 = document.getElementById("pill-mode-tier2");
+      const pPro = document.getElementById("pill-mode-pro");
+      if (pFree) pFree.classList.toggle("active", m === "free");
+      if (pTier2) pTier2.classList.toggle("active", m === "tier2");
+      if (pPro) pPro.classList.toggle("active", m === "pro");
+      const sel = document.getElementById("edition-mode-toggle");
+      if (sel) sel.value = m;
     }
 
     function switchModuleTab(tabId) {
@@ -3255,12 +3731,42 @@
 
     function updateProGateBannerVisibility() {
       const banner = document.getElementById("pro-gate-banner");
-      const isProTab = appState.activeTab !== "tab-ehr-audit";
-      if (appState.editionMode === "free" && isProTab) {
+      const alertBox = document.getElementById("thirst-personalized-alert");
+      const headlineBox = document.getElementById("thirst-banner-headline");
+      const mode = appState.editionMode || "free";
+      const tab = appState.activeTab;
+
+      // Calculate dynamic personalized metrics from Module 1
+      const weeklyRev = appState.ehr.periodMode === "monthly" ? appState.ehr.grossRev / 4.0 : appState.ehr.grossRev;
+      const totalHours = (appState.ehr.bucketA || 0) + (appState.ehr.bucketB || 0) + (appState.ehr.bucketC || 0) + (appState.ehr.bucketD || 0);
+      const safeTotal = totalHours > 0 ? totalHours : 1;
+      const trueEhr = weeklyRev / safeTotal;
+      const unbilledHours = (appState.ehr.bucketB || 0) + (appState.ehr.bucketC || 0) + (appState.ehr.bucketD || 0);
+      const annualLeak = unbilledHours * (appState.ehr.targetRate || 75) * 48;
+
+      if (alertBox && headlineBox) {
+        headlineBox.innerHTML = `⚡ Personalized Diagnostic Alert for <span style="color:#FBBF24;">${appState.ehr.niche}</span> (${mode === 'tier2' ? 'Tier 2 Workbook Mode' : 'Tier 0 Free Starter Mode'})`;
+        alertBox.innerHTML =
+          `Based on the numbers you just entered in Module 1, our engine calculated <strong>${fmtMoney(annualLeak, 0)}/yr in unbilled shadow labor</strong> ` +
+          `(<strong>${unbilledHours.toFixed(1)} non-billable hrs/wk</strong> at <strong>${fmtMoney(trueEhr, 2)}/hr True EHR</strong>) and generated your custom ` +
+          `<strong>90-Day Execution Roadmap + 3-Tier B.C.R. Proposal Matrix + 4 Automation Triggers</strong> below. ` +
+          `Activate <strong>Tier 2 ($39 — Code: <code>STUDIO-TIER2-2026</code>)</strong> or <strong>Tier 3 Flagship OS ($59 — Code: <code>FREELANCER-OS-PRO-2026</code> / <code>STUDIO-PRO-OS-2026</code>)</strong> to edit and export your full results immediately.`;
+      }
+
+      const needsProBanner =
+        (mode === "free" && tab !== "tab-ehr-audit") ||
+        (mode === "tier2" && (tab === "tab-bcr-pricing" || tab === "tab-ceo-scorecard"));
+
+      if (needsProBanner) {
         banner.classList.add("visible");
       } else {
         banner.classList.remove("visible");
       }
+
+      const cta2 = document.getElementById("thirst-cta-mod2");
+      const cta4 = document.getElementById("thirst-cta-mod4");
+      if (cta2) cta2.classList.toggle("visible", mode !== "pro");
+      if (cta4) cta4.classList.toggle("visible", mode !== "pro");
     }
 
     function handleCurrencyChange(val) {
@@ -3274,9 +3780,19 @@
 
     function handleEditionModeChange(mode) {
       appState.editionMode = mode;
+      updateTierModePillsUI();
+      renderWbsTable();
+      renderClientRoster();
+      renderPromptVault();
       updateProGateBannerVisibility();
       saveAppState();
-      showToast(mode === "pro" ? "Complete Pro OS Mode Active" : "Tier 0 Free Diagnostic Mode Active");
+      if (mode === "pro") {
+        showToast("🟣 Tier 3/4 Full Flagship Pro OS Mode Active!");
+      } else if (mode === "tier2") {
+        showToast("🔵 Tier 2 Workbook & 50-Prompt Vault Mode Active!");
+      } else {
+        showToast("🟢 Tier 0 Free Diagnostic & Starter Mode Active!");
+      }
     }
 
     function openProActivationModal() {
@@ -3289,20 +3805,74 @@
 
     function verifyAndActivateProCode() {
       const code = (document.getElementById("license-code-input").value || "").trim().toUpperCase();
-      if (code.length >= 4) {
+      if (code === "STUDIO-TIER2-2026" || code.includes("TIER2")) {
+        handleEditionModeChange("tier2");
+        closeProActivationModal();
+      } else if (code.length >= 4) {
         instantActivateProMode();
         closeProActivationModal();
       } else {
-        showToast("Please enter access code FREELANCER-OS-PRO-2026");
+        showToast("Enter STUDIO-TIER2-2026 or FREELANCER-OS-PRO-2026");
       }
     }
 
     function instantActivateProMode() {
-      appState.editionMode = "pro";
-      document.getElementById("edition-mode-toggle").value = "pro";
-      updateProGateBannerVisibility();
+      handleEditionModeChange("pro");
+    }
+
+    /* ====================================================================== */
+    /* MODULE 1 CRUD: 7-DAY LEAK-FIX ACTION TRACKER                           */
+    /* ====================================================================== */
+    function renderEhrActionTable() {
+      const tbody = document.getElementById("ehr-crud-tbody");
+      if (!tbody) return;
+      tbody.innerHTML = "";
+      if (!Array.isArray(appState.ehrActions)) appState.ehrActions = [];
+      appState.ehrActions.forEach((item, idx) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><input type="checkbox" ${item.done ? 'checked' : ''} onchange="updateEhrActionRow(${idx}, 'done', this.checked)" /></td>
+          <td><input type="text" class="form-input" value="${(item.task || '').replace(/"/g, '&quot;')}" oninput="updateEhrActionRow(${idx}, 'task', this.value)" /></td>
+          <td><input type="text" class="form-input" value="${(item.gate || '').replace(/"/g, '&quot;')}" oninput="updateEhrActionRow(${idx}, 'gate', this.value)" /></td>
+          <td><input type="number" class="form-input" value="${item.hrsSaved || 1.0}" min="0" step="0.5" oninput="updateEhrActionRow(${idx}, 'hrsSaved', this.value)" /></td>
+          <td class="no-print"><button type="button" class="btn btn-danger" onclick="removeEhrActionRow(${idx})">✕</button></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function addEhrActionRow() {
+      appState.ehrActions.push({
+        done: false,
+        task: "New Custom Leak-Fix Action / Boundary Rule",
+        gate: "Gate 01–05 Custom",
+        hrsSaved: 2.0
+      });
+      renderEhrActionTable();
       saveAppState();
-      showToast("Complete Pro & Living OS Mode Activated!");
+      showToast("Added custom action row to Module 1!");
+    }
+
+    function updateEhrActionRow(idx, field, val) {
+      if (!appState.ehrActions[idx]) return;
+      if (field === "done") {
+        appState.ehrActions[idx].done = !!val;
+      } else if (field === "hrsSaved") {
+        appState.ehrActions[idx].hrsSaved = Math.max(0, parseFloat(val) || 0);
+      } else {
+        appState.ehrActions[idx][field] = val;
+      }
+      saveAppState();
+    }
+
+    function removeEhrActionRow(idx) {
+      if (appState.ehrActions.length <= 1) {
+        showToast("Keep at least 1 action item in the tracker.");
+        return;
+      }
+      appState.ehrActions.splice(idx, 1);
+      renderEhrActionTable();
+      saveAppState();
     }
 
     /* ====================================================================== */
@@ -3401,6 +3971,7 @@
         `1. <strong>${low1.name} (Score ${low1.score}/5):</strong> ${low1.fix}<br/>` +
         `2. <strong>${low2.name} (Score ${low2.score}/5):</strong> ${low2.fix}`;
 
+      updateProGateBannerVisibility();
       saveAppState();
     }
 
@@ -3436,9 +4007,13 @@
     function renderWbsTable() {
       const tbody = document.getElementById("wbs-tbody");
       tbody.innerHTML = "";
+      const isLockedPreview = appState.editionMode !== "pro";
       appState.bcr.wbs.forEach((row, idx) => {
         const weighted = row.baseHrs * (1 + (row.bufferPct / 100));
         const tr = document.createElement("tr");
+        if (isLockedPreview && idx >= 2) {
+          tr.className = "thirst-blur-row";
+        }
         tr.innerHTML = `
           <td><input type="text" class="form-input" value="${row.name.replace(/"/g, '&quot;')}" oninput="updateWbsRow(${idx}, 'name', this.value)" /></td>
           <td><input type="number" class="form-input" value="${row.baseHrs}" min="0.5" step="0.5" oninput="updateWbsRow(${idx}, 'baseHrs', this.value)" /></td>
@@ -3584,8 +4159,21 @@
     }
 
     /* ====================================================================== */
-    /* MODULE 3: INTERACTIVE 50-PROMPT & 12-SCRIPT STUDIO BUILDER             */
+    /* MODULE 3: INTERACTIVE 50-PROMPT, 12-SCRIPT & CHECKLIST CRUD            */
     /* ====================================================================== */
+    function isVaultItemOpenInCurrentMode(item) {
+      const mode = appState.editionMode || "free";
+      if (mode === "pro") return true;
+      if (item.isCustom) return true;
+      if (mode === "tier2") {
+        return item.type === "prompt" || item.script_number <= 2;
+      }
+      // In free mode: Ch 1-2 prompts (10 prompts) and Scripts 1-2 are open
+      if (item.type === "prompt" && (item.chapter === 1 || item.chapter === 2)) return true;
+      if (item.type === "script" && (item.script_number === 1 || item.script_number === 2)) return true;
+      return false;
+    }
+
     function setStageFilter(stage, btnEl) {
       appState.vault.stageFilter = stage;
       document.querySelectorAll("#stage-filter-pills .filter-pill").forEach(b => b.classList.remove("active"));
@@ -3602,8 +4190,9 @@
     function renderPromptVault() {
       const listEl = document.getElementById("vault-item-list");
       listEl.innerHTML = "";
+      const combined = getCombinedVaultItems();
 
-      const filtered = ALL_VAULT_ITEMS.filter(item => {
+      const filtered = combined.filter(item => {
         if (appState.vault.stageFilter !== "all" && item.stage !== appState.vault.stageFilter) return false;
         if (appState.vault.chapterFilter !== "all" && String(item.chapter) !== String(appState.vault.chapterFilter)) return false;
         if (appState.vault.searchQuery) {
@@ -3613,17 +4202,18 @@
         return true;
       });
 
-      document.getElementById("vault-counter-badge").textContent = `Showing ${filtered.length} / ${ALL_VAULT_ITEMS.length} Assets`;
+      document.getElementById("vault-counter-badge").textContent = `Showing ${filtered.length} / ${combined.length} Assets`;
 
       filtered.forEach(item => {
+        const isOpen = isVaultItemOpenInCurrentMode(item);
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "prompt-item-btn" + (item.id === appState.vault.selectedId ? " active" : "");
         btn.onclick = () => selectVaultItem(item.id);
         btn.innerHTML = `
           <div class="prompt-item-header">
-            <span>${item.label}</span>
-            <span style="color:var(--muted); font-weight:600;">${item.type === 'script' ? 'Emergency Script' : 'Ch ' + item.chapter}</span>
+            <span>${item.label} ${isOpen ? '🟢' : '🔒'}</span>
+            <span style="color:var(--muted); font-weight:600;">${item.isCustom ? 'Custom CRUD' : (item.type === 'script' ? 'Emergency Script' : 'Ch ' + item.chapter)}</span>
           </div>
           <div class="prompt-item-title">${item.title}</div>
         `;
@@ -3631,6 +4221,7 @@
       });
 
       renderActiveVaultItem();
+      renderChecklistTable();
     }
 
     function selectVaultItem(id) {
@@ -3651,7 +4242,8 @@
     }
 
     function renderActiveVaultItem() {
-      const item = ALL_VAULT_ITEMS.find(x => x.id === appState.vault.selectedId) || ALL_VAULT_ITEMS[0];
+      const combined = getCombinedVaultItems();
+      const item = combined.find(x => x.id === appState.vault.selectedId) || combined[0];
       if (!item) return;
 
       document.getElementById("active-item-id-badge").textContent = item.label;
@@ -3660,6 +4252,13 @@
       document.getElementById("active-item-objective").textContent = item.objective;
       document.getElementById("active-item-when").textContent = item.when_to_run;
       document.getElementById("active-item-verification").textContent = item.verification;
+
+      const editTitleEl = document.getElementById("inline-edit-title");
+      const editTplEl = document.getElementById("inline-edit-template");
+      if (editTitleEl && editTplEl) {
+        editTitleEl.value = item.title;
+        editTplEl.value = item.template;
+      }
 
       const vars = item.variables || [];
       document.getElementById("active-vars-count").textContent = `${vars.length} customizable variable${vars.length === 1 ? '' : 's'}`;
@@ -3711,7 +4310,149 @@
           assembled = assembled.split(k).join(val.trim());
         }
       });
-      document.getElementById("assembled-prompt-output").textContent = assembled;
+
+      const outBox = document.getElementById("assembled-prompt-output");
+      const cta3 = document.getElementById("thirst-cta-mod3");
+      const isOpen = isVaultItemOpenInCurrentMode(item);
+
+      if (isOpen) {
+        outBox.textContent = assembled;
+        outBox.classList.remove("thirst-blur-row");
+        if (cta3) cta3.classList.remove("visible");
+      } else {
+        const lines = assembled.split("\n");
+        const previewLines = lines.slice(0, 3).join("\n");
+        outBox.textContent = previewLines + "\n\n[🔒 PREVIEW TEASER: Activate Tier 2 (STUDIO-TIER2-2026) or Tier 3 Pro OS (FREELANCER-OS-PRO-2026) to view and edit the remaining " + Math.max(4, lines.length - 3) + " lines of this workflow...]";
+        if (cta3) cta3.classList.add("visible");
+      }
+    }
+
+    function toggleInlineTemplateEditor() {
+      const box = document.getElementById("inline-template-editor-box");
+      if (!box) return;
+      box.style.display = box.style.display === "none" ? "block" : "none";
+    }
+
+    function saveInlineTemplateEdit() {
+      const id = appState.vault.selectedId;
+      const newTitle = (document.getElementById("inline-edit-title").value || "").trim();
+      const newTpl = (document.getElementById("inline-edit-template").value || "").trim();
+      if (!newTitle || !newTpl) {
+        showToast("Title and template body cannot be empty.");
+        return;
+      }
+      const customIdx = (appState.customVaultItems || []).findIndex(x => x.id === id);
+      if (customIdx >= 0) {
+        appState.customVaultItems[customIdx].title = newTitle;
+        appState.customVaultItems[customIdx].template = newTpl;
+        appState.customVaultItems[customIdx].variables = Array.from(new Set((newTpl.match(/\[[^\]]+\]/g) || ["[CUSTOM INPUT]"])));
+      } else {
+        if (!appState.editedTemplates) appState.editedTemplates = {};
+        appState.editedTemplates[id] = { title: newTitle, template: newTpl };
+      }
+      document.getElementById("inline-template-editor-box").style.display = "none";
+      renderPromptVault();
+      saveAppState();
+      showToast("Saved inline template edits to localStorage!");
+    }
+
+    function deleteOrResetActiveVaultItem() {
+      const id = appState.vault.selectedId;
+      const customIdx = (appState.customVaultItems || []).findIndex(x => x.id === id);
+      if (customIdx >= 0) {
+        appState.customVaultItems.splice(customIdx, 1);
+        appState.vault.selectedId = "1.1";
+        renderPromptVault();
+        saveAppState();
+        showToast("Deleted custom vault item.");
+      } else if (appState.editedTemplates && appState.editedTemplates[id]) {
+        delete appState.editedTemplates[id];
+        renderPromptVault();
+        saveAppState();
+        showToast("Reset item template to original studio default!");
+      } else {
+        resetActivePromptVariables();
+      }
+    }
+
+    function openCustomPromptModal() {
+      document.getElementById("custom-prompt-modal").classList.add("open");
+    }
+
+    function closeCustomPromptModal() {
+      document.getElementById("custom-prompt-modal").classList.remove("open");
+    }
+
+    function createNewCustomVaultItem() {
+      const title = (document.getElementById("new-prompt-title").value || "").trim() || "Custom Studio Workflow Prompt";
+      const stage = document.getElementById("new-prompt-stage").value;
+      const obj = (document.getElementById("new-prompt-objective").value || "").trim() || "Custom practitioner workflow";
+      const tpl = (document.getElementById("new-prompt-template").value || "").trim() || "Act as a Principal Freelance Advisor for [CLIENT NAME]. Execute [DELIVERABLE]...";
+      const vars = Array.from(new Set((tpl.match(/\[[^\]]+\]/g) || ["[CLIENT NAME]"])));
+      if (!Array.isArray(appState.customVaultItems)) appState.customVaultItems = [];
+      const newId = "C" + (appState.customVaultItems.length + 1);
+      appState.customVaultItems.unshift({
+        id: newId,
+        label: "Custom " + newId,
+        type: "prompt",
+        isCustom: true,
+        chapter: 1,
+        stage: stage,
+        title: title,
+        objective: obj,
+        when_to_run: "On-demand custom practitioner trigger",
+        template: tpl,
+        variables: vars,
+        verification: "Verify all custom bracketed inputs before sending to client."
+      });
+      appState.vault.selectedId = newId;
+      closeCustomPromptModal();
+      renderPromptVault();
+      saveAppState();
+      showToast("Created & saved custom prompt " + newId + "!");
+    }
+
+    function renderChecklistTable() {
+      const tbody = document.getElementById("checklist-crud-tbody");
+      if (!tbody) return;
+      tbody.innerHTML = "";
+      if (!Array.isArray(appState.chapterChecklist)) appState.chapterChecklist = [];
+      appState.chapterChecklist.forEach((row, idx) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><input type="checkbox" ${row.done ? 'checked' : ''} onchange="updateChecklistCrudRow(${idx}, 'done', this.checked)" /></td>
+          <td><input type="text" class="form-input" value="${(row.chapter || '').replace(/"/g, '&quot;')}" oninput="updateChecklistCrudRow(${idx}, 'chapter', this.value)" /></td>
+          <td><input type="text" class="form-input" value="${(row.milestone || '').replace(/"/g, '&quot;')}" oninput="updateChecklistCrudRow(${idx}, 'milestone', this.value)" /></td>
+          <td><input type="text" class="form-input" value="${(row.kpi || '').replace(/"/g, '&quot;')}" oninput="updateChecklistCrudRow(${idx}, 'kpi', this.value)" /></td>
+          <td class="no-print"><button type="button" class="btn btn-danger" onclick="removeChecklistCrudRow(${idx})">✕</button></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function addChecklistCrudRow() {
+      appState.chapterChecklist.push({
+        done: false,
+        chapter: "Custom Milestone",
+        milestone: "New 10-Chapter Implementation Action Step",
+        kpi: "Verified"
+      });
+      renderChecklistTable();
+      saveAppState();
+      showToast("Added custom implementation checklist row!");
+    }
+
+    function updateChecklistCrudRow(idx, field, val) {
+      if (!appState.chapterChecklist[idx]) return;
+      appState.chapterChecklist[idx][field] = field === "done" ? !!val : val;
+      saveAppState();
+    }
+
+    function removeChecklistCrudRow(idx) {
+      if (appState.chapterChecklist.length <= 1) return;
+      appState.chapterChecklist.splice(idx, 1);
+      renderChecklistTable();
+      saveAppState();
     }
 
     function resetActivePromptVariables() {
@@ -3729,7 +4470,8 @@
     }
 
     function downloadActivePromptMd() {
-      const item = ALL_VAULT_ITEMS.find(x => x.id === appState.vault.selectedId) || ALL_VAULT_ITEMS[0];
+      const combined = getCombinedVaultItems();
+      const item = combined.find(x => x.id === appState.vault.selectedId) || combined[0];
       const txt = document.getElementById("assembled-prompt-output").textContent;
       const fence = "```";
       const md =
@@ -3756,6 +4498,7 @@
       const tbody = document.getElementById("client-roster-tbody");
       tbody.innerHTML = "";
       const targetRate = appState.ehr.targetRate || 75;
+      const isLockedPreview = appState.editionMode !== "pro";
 
       let totalRev = 0;
       appState.ceo.clients.forEach(c => totalRev += (parseFloat(c.revenue) || 0));
@@ -3782,6 +4525,9 @@
         }
 
         const tr = document.createElement("tr");
+        if (isLockedPreview && idx >= 2) {
+          tr.className = "thirst-blur-row";
+        }
         tr.innerHTML = `
           <td><input type="text" class="form-input" value="${client.name.replace(/"/g, '&quot;')}" oninput="updateClientRow(${idx}, 'name', this.value)" /></td>
           <td><input type="number" class="form-input" value="${rev}" min="0" step="50" oninput="updateClientRow(${idx}, 'revenue', this.value)" /></td>
@@ -3886,19 +4632,39 @@
     function renderRetroLog() {
       const tbody = document.getElementById("ceo-retro-tbody");
       tbody.innerHTML = "";
-      appState.ceo.retroLog.forEach(entry => {
+      appState.ceo.retroLog.forEach((entry, idx) => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
-          <td><strong>${entry.date}</strong></td>
-          <td>${fmtMoney(entry.revenue, 0)}</td>
-          <td>${Number(entry.hours).toFixed(1)} hrs</td>
+          <td><input type="text" class="form-input" value="${entry.date}" oninput="updateRetroRow(${idx}, 'date', this.value)" /></td>
+          <td><input type="number" class="form-input" value="${entry.revenue}" oninput="updateRetroRow(${idx}, 'revenue', this.value)" /></td>
+          <td><input type="number" class="form-input" value="${entry.hours}" step="0.5" oninput="updateRetroRow(${idx}, 'hours', this.value)" /></td>
           <td><strong style="font-family:var(--font-mono); color:var(--secondary);">${fmtMoney(entry.ehr, 2)}/hr</strong></td>
-          <td><span class="badge blue">${entry.gate}</span></td>
-          <td>${entry.fix}</td>
-          <td>${entry.mondayP1}</td>
+          <td><input type="text" class="form-input" value="${(entry.gate || '').replace(/"/g, '&quot;')}" oninput="updateRetroRow(${idx}, 'gate', this.value)" /></td>
+          <td><input type="text" class="form-input" value="${(entry.fix || '').replace(/"/g, '&quot;')}" oninput="updateRetroRow(${idx}, 'fix', this.value)" /></td>
+          <td><input type="text" class="form-input" value="${(entry.mondayP1 || '').replace(/"/g, '&quot;')}" oninput="updateRetroRow(${idx}, 'mondayP1', this.value)" /></td>
+          <td class="no-print"><button type="button" class="btn btn-danger" onclick="removeRetroRow(${idx})">✕</button></td>
         `;
         tbody.appendChild(tr);
       });
+    }
+
+    function updateRetroRow(idx, field, val) {
+      if (!appState.ceo.retroLog[idx]) return;
+      if (field === "revenue" || field === "hours") {
+        appState.ceo.retroLog[idx][field] = Math.max(0.5, parseFloat(val) || 0);
+        appState.ceo.retroLog[idx].ehr = appState.ceo.retroLog[idx].revenue / Math.max(1, appState.ceo.retroLog[idx].hours);
+        renderRetroLog();
+      } else {
+        appState.ceo.retroLog[idx][field] = val;
+      }
+      saveAppState();
+    }
+
+    function removeRetroRow(idx) {
+      if (appState.ceo.retroLog.length <= 1) return;
+      appState.ceo.retroLog.splice(idx, 1);
+      renderRetroLog();
+      saveAppState();
     }
 
     function appendFridayRetroSnapshot() {
@@ -3921,6 +4687,22 @@
       renderRetroLog();
       saveAppState();
       showToast("Friday CEO Snapshot logged!");
+    }
+
+    function copyAutomationConfigPayload() {
+      saveAppState();
+      const payload = JSON.stringify({
+        blueprint: "The AI Freelancer OS — Automated P.A.C.E. Lead Triage & Notion Portal Bridge",
+        architect: "OMAR SUNNY",
+        config: appState.automationConfig
+      }, null, 2);
+      navigator.clipboard.writeText(payload);
+      showToast("Copied configured Make/n8n/Zapier JSON payload!");
+    }
+
+    function resetModuleDefaults(modKey) {
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
     }
 
     function exportCeoLogCsv() {
@@ -3948,6 +4730,27 @@
     /* ====================================================================== */
     /* GLOBAL WORKSPACE EXPORT, IMPORT & MARCUS V. CASE-STUDY DEMO DATA       */
     /* ====================================================================== */
+    
+    /* ── Phase 10: exportWorkspace() — exports all ehr_/notes_/bcr_/ceo_ keys ── */
+    function exportWorkspace() {
+      var data = {};
+      for (var i = 0; i < localStorage.length; i++) {
+        var key = localStorage.key(i);
+        if (/^(ehr_|notes_|bcr_|ceo_)/.test(key)) {
+          data[key] = localStorage.getItem(key);
+        }
+      }
+      // also export full appState if available
+      if (typeof appState !== 'undefined') { data['__appState'] = appState; }
+      var blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'freelancer-os-workspace.json';
+      a.click();
+      URL.revokeObjectURL(a.href);
+      if (typeof showToast === 'function') showToast('Workspace exported to freelancer-os-workspace.json');
+    }
+
     function exportWorkspaceJson() {
       saveAppState();
       const jsonStr = JSON.stringify(appState, null, 2);
@@ -3970,6 +4773,7 @@
           const imported = JSON.parse(e.target.result);
           appState = Object.assign({}, appState, imported);
           syncInputsFromState();
+          renderEhrActionTable();
           renderWbsTable();
           renderClientRoster();
           recalcEhrModule();
@@ -4002,6 +4806,7 @@
       appState.bcr.clientName = "Verde Beverage Co. (Marcus Tan)";
       appState.bcr.requestedBudget = 3200;
       syncInputsFromState();
+      renderEhrActionTable();
       renderWbsTable();
       renderClientRoster();
       recalcEhrModule();
@@ -4014,6 +4819,7 @@
     window.addEventListener("DOMContentLoaded", () => {
       loadAppState();
       syncInputsFromState();
+      renderEhrActionTable();
       renderWbsTable();
       renderClientRoster();
       recalcEhrModule();
@@ -4023,5 +4829,20 @@
       updateProGateBannerVisibility();
     });
   </script>
-</body>
+
+    /* ── Phase 10: moduleNotes_ localStorage auto-save/restore ── */
+    (function initModuleNotes() {
+      ['1','2','3','4'].forEach(function(n) {
+        var el = document.getElementById('moduleNotes_' + n) || document.getElementById('personal-notes-mod' + n);
+        if (!el) return;
+        el.id = 'moduleNotes_' + n;
+        var saved = localStorage.getItem('notes_moduleNotes_' + n);
+        if (saved) el.value = saved;
+        el.addEventListener('input', function() {
+          localStorage.setItem('notes_' + el.id, el.value);
+        });
+      });
+    })();
+
+  </body>
 </html>

@@ -1,0 +1,91 @@
+{
+  "blueprint_id": "ai-freelancer-os-automation-01",
+  "name": "01 \u2014 Inbound Lead Intake to P.A.C.E. AI Scorer, 3-Tier B.R.I.E.F. Proposal & Notion CRM",
+  "version": "1.0.0",
+  "compatible_platforms": [
+    "Make.com",
+    "n8n",
+    "Zapier"
+  ],
+  "lifecycle_gate": "Gate 1 & Gate 2: Attract, Filter, Scope & Price",
+  "synced_prompts": [
+    "Prompt 3.1 (P.A.C.E. Lead Scorer)",
+    "Prompt 3.3 (10-Min B.R.I.E.F. Proposal Generator)"
+  ],
+  "synced_notion_database": "01-Leads-CRM-Pipeline.csv",
+  "trigger": {
+    "module_id": "mod_01_webhook_intake",
+    "type": "webhook.custom_intake_form",
+    "description": "Triggers immediately when a prospect submits your Tally, Typeform, Webflow, or Landing Page inquiry form.",
+    "payload_schema": {
+      "prospect_name": "string",
+      "company_name": "string",
+      "contact_email": "string",
+      "service_category": "string",
+      "core_bottleneck_description": "string",
+      "stated_budget_band": "string",
+      "desired_launch_timeline": "string",
+      "decision_authority_spoc": "string"
+    }
+  },
+  "modules": [
+    {
+      "module_id": "mod_02_llm_pace_scorer",
+      "type": "ai.chat_completion",
+      "provider": "OpenAI (gpt-4o) / Anthropic (claude-3-5-sonnet)",
+      "temperature": 0.2,
+      "response_format": "json_object",
+      "system_prompt": "You are the Gate-1 P.A.C.E. Lead Triage Engine from Chapter 3 of The AI Freelancer Operating System. Score the inbound inquiry from 0 to 20 across Problem Pain (0-5), Authority SPOC (0-5), Commercial Budget Fit (0-5), and Execution Timeline Realism (0-5). Detect any scope or micromanagement red flags and recommend Option 1 ($3,200), Option 2 ($4,950), Option 3 ($7,450), or Paid Diagnostic ($750).",
+      "output_fields": [
+        "pace_fit_score_0_to_20",
+        "red_flags_detected",
+        "routing_decision",
+        "recommended_tier",
+        "quoted_package_price_usd",
+        "win_probability_pct"
+      ]
+    },
+    {
+      "module_id": "mod_03_llm_brief_proposal_drafter",
+      "type": "ai.chat_completion",
+      "condition": "{{mod_02_llm_pace_scorer.pace_fit_score_0_to_20 >= 10}}",
+      "provider": "OpenAI / Anthropic",
+      "system_prompt": "You are the Gate-2 10-Minute B.R.I.E.F. Proposal Engine (Prompt 3.3). Draft a complete, client-ready 3-Tier B.R.I.E.F. Proposal (Bottleneck, Result, Implementation, Exclusions, Financial 3-Tier Menu) tailored to the prospect's bottleneck.",
+      "output_fields": [
+        "executive_bottleneck_summary",
+        "option1_baseline_scope",
+        "option2_core_transformation_scope",
+        "option3_turnkey_partner_scope",
+        "script_01_email_reply_draft"
+      ]
+    },
+    {
+      "module_id": "mod_04_notion_crm_create_page",
+      "type": "notion.create_database_item",
+      "target_database": "01-Leads-CRM-Pipeline",
+      "field_mapping": {
+        "Lead ID": "LD-{{formatDate(now, 'YYYY')}}-{{randomInt(100,999)}}",
+        "Prospect / Contact Name": "{{trigger.prospect_name}}",
+        "Company / Brand": "{{trigger.company_name}}",
+        "Pipeline Stage": "02 Qualified (P.A.C.E. >= 14)",
+        "Service Category": "{{trigger.service_category}}",
+        "Fit Score (0-20)": "{{mod_02_llm_pace_scorer.pace_fit_score_0_to_20}}",
+        "Red Flags Detected": "{{mod_02_llm_pace_scorer.red_flags_detected}}",
+        "Recommended Package Tier": "{{mod_02_llm_pace_scorer.recommended_tier}}",
+        "Quoted Package Price ($)": "{{mod_02_llm_pace_scorer.quoted_package_price_usd}}",
+        "Win Probability (%)": "{{mod_02_llm_pace_scorer.win_probability_pct}}",
+        "B.R.I.E.F. Core Bottleneck": "{{trigger.core_bottleneck_description}}",
+        "Assigned AI Prompt ID": "Prompt 3.1 & Prompt 3.3",
+        "Contact Email": "{{trigger.contact_email}}"
+      }
+    },
+    {
+      "module_id": "mod_05_gmail_draft_creation",
+      "type": "email.create_draft_for_human_review",
+      "human_qa_gate": "MANDATORY: Verify B.C.R. package pricing against Tab 02 of the Excel Command Center before clicking Send.",
+      "recipient": "{{trigger.contact_email}}",
+      "subject": "Re: {{trigger.company_name}} \u2014 Diagnostic Summary & 3-Tier Execution Options",
+      "body": "{{mod_03_llm_brief_proposal_drafter.script_01_email_reply_draft}}"
+    }
+  ]
+}

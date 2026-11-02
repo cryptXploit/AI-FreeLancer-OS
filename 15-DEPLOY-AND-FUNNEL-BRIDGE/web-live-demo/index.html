@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description"
+  content="The AI Freelancer Operating System by OMAR SUNNY — 5-Gate Client Lifecycle System. 75,158 words, 50 AI prompts, 83 files." />
+<title>The AI Freelancer OS — Live Demo | OMAR SUNNY</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:      #0B1120;
+    --surface: #0F1A2E;
+    --surf2:   #162035;
+    --border:  #1E3050;
+    --teal:    #0D9488;
+    --teal-lt: #14B8A6;
+    --cyan:    #38BDF8;
+    --gold:    #F59E0B;
+    --gold-lt: #FCD34D;
+    --white:   #F0F4FF;
+    --muted:   #94A3B8;
+    --success: #22C55E;
+    --danger:  #EF4444;
+    --font-mono: "JetBrains Mono", Consolas, monospace;
+    --font-sans: Inter, "Segoe UI", Arial, sans-serif;
+    --r: 10px;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--white); font-family: var(--font-sans); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Nav ── */
+  nav {
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 50;
+  }
+  .nav-brand { font-family: var(--font-mono); font-size: 0.82rem; color: var(--cyan); }
+  .nav-cta {
+    background: var(--teal); color: #fff;
+    padding: 8px 18px; border-radius: 6px;
+    font-size: 0.85rem; font-weight: 700;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--teal-lt); }
+
+  /* ── Hero ── */
+  .hero {
+    text-align: center;
+    padding: 80px 24px 60px;
+    background: radial-gradient(ellipse 90% 55% at 50% -10%, #0D9488 0%, transparent 65%), var(--bg);
+  }
+  .hero-tag {
+    display: inline-block;
+    font-family: var(--font-mono); font-size: 0.72rem;
+    color: var(--teal-lt); letter-spacing: 0.12em; text-transform: uppercase;
+    border: 1px solid var(--teal); border-radius: 20px;
+    padding: 4px 14px; margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(1.8rem, 5vw, 3.4rem);
+    font-weight: 800; line-height: 1.15;
+    color: var(--white); margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 span { color: var(--cyan); }
+  .hero-sub {
+    font-size: 1.05rem; color: var(--muted);
+    max-width: 640px; margin: 0 auto 36px;
+  }
+  .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--teal); color: #fff;
+    padding: 14px 28px; border-radius: var(--r);
+    font-weight: 700; font-size: 0.95rem;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--teal-lt); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 2px solid var(--teal); color: var(--teal-lt);
+    padding: 14px 28px; border-radius: var(--r);
+    font-weight: 700; font-size: 0.95rem;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-outline:hover { background: rgba(13,148,136,0.15); transform: translateY(-2px); }
+
+  /* ── Stats bar ── */
+  .stats-bar {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 24px;
+    display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+    font-family: var(--font-mono); font-size: 0.82rem;
+  }
+  .stat { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .stat-num { color: var(--cyan); font-size: 1.15rem; font-weight: 700; }
+  .stat-label { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* ── Container ── */
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── Section titles ── */
+  .section { padding: 64px 0; }
+  .section-tag {
+    font-family: var(--font-mono); font-size: 0.72rem;
+    color: var(--teal); letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700; color: var(--white);
+    margin-bottom: 40px;
+  }
+
+  /* ── Pricing Cards ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 28px 22px;
+    display: flex; flex-direction: column;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .card:hover { border-color: var(--cyan); transform: translateY(-4px); }
+  .card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(160deg, #1A2A10 0%, #0F1A2E 100%);
+    position: relative;
+  }
+  .card.featured::before {
+    content: "⭐ BEST VALUE";
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: #000;
+    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
+    padding: 3px 12px; border-radius: 12px; white-space: nowrap;
+  }
+  .card-tier {
+    font-family: var(--font-mono); font-size: 0.7rem;
+    color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .card-name {
+    font-size: 1.15rem; font-weight: 700; color: var(--white);
+    margin-bottom: 6px;
+  }
+  .card-price {
+    font-size: 2rem; font-weight: 800; color: var(--cyan);
+    margin-bottom: 16px; line-height: 1;
+  }
+  .card-price .price-sub { font-size: 0.8rem; color: var(--muted); font-weight: 400; }
+  .card-features { list-style: none; flex: 1; margin-bottom: 20px; }
+  .card-features li {
+    font-size: 0.84rem; color: var(--muted);
+    padding: 5px 0; border-bottom: 1px solid var(--border);
+    display: flex; gap: 8px; align-items: flex-start;
+  }
+  .card-features li:last-child { border-bottom: none; }
+  .card-features li span:first-child { flex-shrink: 0; }
+  .card-btn {
+    display: block; text-align: center;
+    padding: 11px 20px; border-radius: 7px;
+    font-weight: 700; font-size: 0.88rem;
+    background: var(--teal); color: #fff;
+    transition: background 0.2s;
+  }
+  .card.featured .card-btn {
+    background: linear-gradient(90deg, #D97706, #F59E0B);
+    color: #000;
+  }
+  .card-btn:hover { filter: brightness(1.1); }
+
+  /* ── Feature highlight strip ── */
+  .highlight-strip {
+    background: var(--surface);
+    border-radius: var(--r); border: 1px solid var(--border);
+    padding: 32px 36px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .hl-item { display: flex; flex-direction: column; gap: 6px; }
+  .hl-icon { font-size: 1.6rem; }
+  .hl-title { font-size: 0.9rem; font-weight: 700; color: var(--white); }
+  .hl-desc { font-size: 0.8rem; color: var(--muted); }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--surface); border-top: 1px solid var(--border);
+    text-align: center; padding: 28px 24px;
+    font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted);
+  }
+  footer a { color: var(--cyan); }
+  footer a:hover { text-decoration: underline; }
+
+  hr.divider {
+    border: none; border-top: 1px solid var(--border);
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <span class="nav-brand">⚡ AI FREELANCER OS — LIVE DEMO</span>
+  <a class="nav-cta" href="https://sunnyomar.gumroad.com/l/ai-freelancer-os" target="_blank" rel="noopener">
+    Get Full Bundle →
+  </a>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-tag">5-Gate Client Lifecycle System</div>
+  <h1>The <span>AI Freelancer</span><br/>Operating System</h1>
+  <p class="hero-sub">
+    By <strong style="color:#F0F4FF">OMAR SUNNY</strong> |
+    Replace Reactive Chaos with a Commercial-Grade Operating System
+  </p>
+  <div class="hero-btns">
+    <a class="btn-primary" href="./app.html">
+      ⚡ Try the Interactive OS Web App Live (Free Mode)
+    </a>
+    <a class="btn-outline" href="https://sunnyomar.gumroad.com/l/ai-freelancer-os"
+       target="_blank" rel="noopener">
+      📥 Download Free Starter Kit (8 Files — $0)
+    </a>
+  </div>
+</section>
+
+<!-- Stats bar -->
+<div class="stats-bar">
+  <div class="stat">
+    <span class="stat-num">75,158</span>
+    <span class="stat-label">Words</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">50</span>
+    <span class="stat-label">AI Prompts</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">12</span>
+    <span class="stat-label">Client Scripts</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">83</span>
+    <span class="stat-label">Files</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num" style="color:var(--gold)">OMAR SUNNY</span>
+    <span class="stat-label">System Architect</span>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<!-- Feature Highlights -->
+<section class="section">
+  <div class="container">
+    <p class="section-tag">// WHAT'S INSIDE</p>
+    <h2 class="section-title">Everything to Run Your Freelance Business Like a Pro</h2>
+
+    <div class="highlight-strip">
+      <div class="hl-item">
+        <span class="hl-icon">📚</span>
+        <span class="hl-title">168-Page Manual</span>
+        <span class="hl-desc">PDF + EPUB — 5 gates, full frameworks</span>
+      </div>
+      <div class="hl-item">
+        <span class="hl-icon">🤖</span>
+        <span class="hl-title">50 AI Prompts</span>
+        <span class="hl-desc">Copy-paste into Claude or ChatGPT instantly</span>
+      </div>
+      <div class="hl-item">
+        <span class="hl-icon">📋</span>
+        <span class="hl-title">12 Client Scripts</span>
+        <span class="hl-desc">Cold outreach to contract close</span>
+      </div>
+      <div class="hl-item">
+        <span class="hl-icon">📊</span>
+        <span class="hl-title">Excel Command Center</span>
+        <span class="hl-desc">8-tab charted financial dashboard</span>
+      </div>
+      <div class="hl-item">
+        <span class="hl-icon">🗂️</span>
+        <span class="hl-title">Notion OS Kit</span>
+        <span class="hl-desc">5 linked databases, ready to import</span>
+      </div>
+      <div class="hl-item">
+        <span class="hl-icon">⚡</span>
+        <span class="hl-title">Automation Blueprints</span>
+        <span class="hl-desc">3 JSON blueprints for n8n / Make / Zapier</span>
+      </div>
+      <div class="hl-item">
+        <span class="hl-icon">📝</span>
+        <span class="hl-title">7 Word Contracts</span>
+        <span class="hl-desc">Editable, attorney-reviewed templates</span>
+      </div>
+      <div class="hl-item">
+        <span class="hl-icon">🎨</span>
+        <span class="hl-title">Visual Shortcut Atlas</span>
+        <span class="hl-desc">12-page iPad-ready cheat sheet</span>
+      </div>
+    </div>
+
+    <!-- Pricing Cards -->
+    <p class="section-tag">// PRICING</p>
+    <h2 class="section-title">Choose Your Tier</h2>
+
+    <div class="cards-grid">
+
+      <!-- Tier 0 -->
+      <div class="card">
+        <p class="card-tier">Tier 0</p>
+        <p class="card-name">Free Starter Kit</p>
+        <p class="card-price">$0 <span class="price-sub">forever free</span></p>
+        <ul class="card-features">
+          <li><span>📖</span><span>Chapter 1 PDF Sample</span></li>
+          <li><span>🤖</span><span>5 AI Prompts</span></li>
+          <li><span>🗂️</span><span>Notion Starter Database</span></li>
+          <li><span>⚡</span><span>Automation Blueprint 1</span></li>
+          <li><span>🚀</span><span>Web App — Module 1</span></li>
+        </ul>
+        <a class="card-btn"
+           href="https://sunnyomar.gumroad.com/l/ai-freelancer-os"
+           target="_blank" rel="noopener">
+          Download Free →
+        </a>
+      </div>
+
+      <!-- Tier 1 -->
+      <div class="card">
+        <p class="card-tier">Tier 1</p>
+        <p class="card-name">Full Digital Book</p>
+        <p class="card-price">$19 <span class="price-sub">one-time</span></p>
+        <ul class="card-features">
+          <li><span>📚</span><span>168-Page PDF + EPUB</span></li>
+          <li><span>🤖</span><span>50 AI Prompts + 12 Scripts</span></li>
+          <li><span>🚀</span><span>Web App — Module 1</span></li>
+          <li><span>✅</span><span>Everything in Tier 0</span></li>
+        </ul>
+        <a class="card-btn"
+           href="https://sunnyomar.gumroad.com/l/ai-freelancer-os"
+           target="_blank" rel="noopener">
+          Get Tier 1 →
+        </a>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="card">
+        <p class="card-tier">Tier 2</p>
+        <p class="card-name">Pro Workbook Bundle</p>
+        <p class="card-price">$39 <span class="price-sub">one-time</span></p>
+        <ul class="card-features">
+          <li><span>📝</span><span>Fillable Workbooks + iPad Planner</span></li>
+          <li><span>🗺️</span><span>12-Page Visual Shortcut Atlas</span></li>
+          <li><span>🚀</span><span>Web App — Modules 1–2</span></li>
+          <li><span>✅</span><span>Everything in Tier 1</span></li>
+        </ul>
+        <a class="card-btn"
+           href="https://sunnyomar.gumroad.com/l/ai-freelancer-os"
+           target="_blank" rel="noopener">
+          Get Tier 2 →
+        </a>
+      </div>
+
+      <!-- Tier 3 — Featured -->
+      <div class="card featured">
+        <p class="card-tier">Tier 3</p>
+        <p class="card-name">Flagship OS Bundle</p>
+        <p class="card-price" style="color:var(--gold-lt)">$59 <span class="price-sub">one-time</span></p>
+        <ul class="card-features">
+          <li><span>📊</span><span>8-Tab Excel Command Center</span></li>
+          <li><span>🗂️</span><span>5-Database Notion OS Kit</span></li>
+          <li><span>📄</span><span>7 Word Contracts + 3 PPTX Decks</span></li>
+          <li><span>⚡</span><span>All 3 Automation Blueprints</span></li>
+          <li><span>🚀</span><span>Web App — All 4 Modules</span></li>
+          <li><span>✅</span><span>All 83 Files Included</span></li>
+        </ul>
+        <a class="card-btn"
+           href="https://sunnyomar.gumroad.com/l/ai-freelancer-os"
+           target="_blank" rel="noopener">
+          ⭐ Get Full Bundle ($59) →
+        </a>
+      </div>
+
+    </div>
+
+    <!-- VIP CTA -->
+    <div style="margin-top:28px; text-align:center;">
+      <a href="https://sunnyomar.gumroad.com/l/ai-freelancer-vip-vault"
+         target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:10px;
+                background:linear-gradient(90deg,#6366F1,#38BDF8);
+                color:#fff;padding:16px 32px;border-radius:10px;
+                font-weight:700;font-size:1rem;
+                transition:filter 0.2s,transform 0.15s;"
+         onmouseover="this.style.filter='brightness(1.12)';this.style.transform='translateY(-2px)'"
+         onmouseout="this.style.filter='';this.style.transform=''">
+        💎 Join VIP Membership — $9/mo or $49/yr (All 84 Files + Monthly Drops)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  System Architect &amp; Author: <strong style="color:#F0F4FF">OMAR SUNNY</strong> |
+  <a href="https://sunnyomar.gumroad.com" target="_blank">sunnyomar.gumroad.com</a> |
+  <a href="https://payhip.com/omarsunny" target="_blank">payhip.com/omarsunny</a> |
+  Live Demo:
+  <a href="LIVE_DEMO_URL" target="_blank">cryptxploit.github.io/AI-FreeLancer-OS</a>
+  &copy; 2026 OMAR SUNNY — All Rights Reserved
+</footer>
+
+</body>
+</html>
